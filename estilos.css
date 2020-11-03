@@ -1,0 +1,99 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #3a3d47;
+	font-family: verdana;
+}
+.container{
+    width: 1200px;
+	background: white;
+	margin: 10px auto;
+	
+}
+.superior{
+	background: #1551a1;
+	overflow: hidden;
+}
+.logo{
+	float: left;
+	width: 300px;
+	padding: 35px;
+
+}
+.menu{
+	float: left;
+	padding: 50px;
+}
+.opciones li{
+	float: left;
+	list-style: none;
+}
+.opciones li a{
+	color: white;
+	padding: 25px;
+	text-decoration: none;
+	border: 1px solid white;
+}
+.opciones li a:hover{
+	background: #005682;
+}
+.cuerpo{
+	text-align: center;
+		
+}
+.caja{
+	width: 300px;
+	margin: 30px;
+	align-self: center;
+	box-sizing: border-box;
+	display: inline-block;
+
+ }
+ 
+
+ }  
+
+ } 
+.subtitulo{
+	background: #046fa0;
+	
+}
+.servicios{
+	color: red;
+    text-align: center;
+	padding: 15px 0;
+ }
+.servicios h3 a:hover{
+	outline-style: none;
+    color: red;
+
+ }
+
+.parrafonosotros{
+	color: rgb(99, 8, 184);
+	align-content: center;
+	font-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif, sans-serif
+ }
+
+.grid-container {
+	 display: flex;
+	 flex-direction: column;
+	 
+	 background-color: blueviolet;
+	 grid-gap: 10px;		
+ }
+
+img {
+	 width: 100%;
+	 height: 100%;
+	 object-fit: cover;
+	 border:2px solid royalblue;
+	 
+ }
+ 
+ h3 {
+	 justify-content: end;
+	 margin-bottom: auto;
+ }
