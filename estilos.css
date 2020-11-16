@@ -6,81 +6,81 @@ body{
 	background: #3a3d47;
 	font-family: verdana;
 }
-.container{
-    width: 1200px;
+.container {
+	width: 100%;
 	background: white;
-	margin: 10px auto;
+	margin: auto;
 	
 }
-.superior{
+.superior {
 	background: #1551a1;
 	overflow: hidden;
 }
-.logo{
-	float: left;
+.logo {
+	display: flex;
 	width: 300px;
 	padding: 35px;
 
 }
-.menu{
-	float: left;
-	padding: 50px;
+.menu {
+	display: flex;
+	padding: 100px;
 }
-.opciones li{
-	float: left;
-	list-style: none;
+.opciones li {
+	margin: auto;
+	display: inline-flex;
+	flex-wrap: wrap;	
+	list-style: 
 }
-.opciones li a{
+.opciones li a {
 	color: white;
 	padding: 25px;
 	text-decoration: none;
 	border: 1px solid white;
 }
-.opciones li a:hover{
+.opciones li a:hover {
 	background: #005682;
 }
-.cuerpo{
+.cuerpo {
+	width: 50%;
+	align-content: center;
+	display: inline-block;
 	text-align: center;
 		
 }
+
 .caja{
+	display: inline-block;
 	width: 300px;
 	margin: 30px;
 	align-self: center;
 	box-sizing: border-box;
-	display: inline-block;
+}
 
- }
- 
-
- }  
-
- } 
-.subtitulo{
+.subtitulo {
 	background: #046fa0;
 	
 }
-.servicios{
+.servicios {
 	color: red;
     text-align: center;
 	padding: 15px 0;
  }
-.servicios h3 a:hover{
+.servicios h3 a:hover {
 	outline-style: none;
     color: red;
 
  }
 
-.parrafonosotros{
+.parrafonosotros {
 	color: rgb(99, 8, 184);
 	align-content: center;
 	font-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif, sans-serif
  }
 
-.grid-container {
+.img-flex {
 	 display: flex;
 	 flex-direction: column;
-	 
 	 background-color: blueviolet;
 	 grid-gap: 10px;		
  }
@@ -97,3 +97,7 @@ img {
 	 justify-content: end;
 	 margin-bottom: auto;
  }
+ @media only screen and (max-width: 800px) {
+	div {
+	display: block;
+	width: 100%;
