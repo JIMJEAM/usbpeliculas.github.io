@@ -97,7 +97,7 @@ img {
 	 justify-content: end;
 	 margin-bottom: auto;
  }
- @media only screen and (max-width: 800px) {
+ @media only screen and (max-width: 500px) {
 	div {
 	display: block;
 	width: 100%;
