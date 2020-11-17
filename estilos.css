@@ -14,6 +14,7 @@ body{
 }
 .superior {
 	background: #1551a1;
+	display: block;
 	overflow: hidden;
 	
 }
@@ -107,13 +108,34 @@ img {
 	 margin-bottom: auto;
  }
  @media only screen and (max-width: 500px) {
+	 div {
+		 display: block;
+		 width: 50%;
+		 max-width: auto;
+		 
+		
+	 }
+
+	.superior {
+		background: #1551a1;
+		display: block;
+		overflow: hidden;
+
+		}
+	.logo {
+		display: flex;
+		width: 150px;
+		height: 150px;
+		padding: 15px;
+		border: hidden;
+	}
 	.menu {
 		display: inline-block;
 		margin: auto;
 		padding: 10px;
 		
-
 	}
+	
 	.opciones li {
 	display: block;
 	margin: auto;
@@ -138,3 +160,19 @@ img {
 		
 
 	}
+
+	.slider {
+		width: 75%;
+		max-width: 375px;
+		
+	}
+
+	.cuerpo {
+		width: 50%;
+		font-size: 10px;
+		align-content: left;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	
