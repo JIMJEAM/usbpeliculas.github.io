@@ -3,17 +3,17 @@
 	padding: 0;
 }
 body{
-	background: #3a3d47;
+	background: darkslateblue;
 	font-family: verdana;
 }
 .container {
 	width: 100%;
-	background: white;
+	background: darkslateblue;
 	margin: auto;
 	
 }
 .superior {
-	background: #1551a1;
+	background: darkslateblue;
 	display: block;
 	overflow: hidden;
 	
@@ -21,13 +21,27 @@ body{
 .logo {
 	display: flex;
 	width: 300px;
+	margin-left: 900px;
 	padding: 35px;
 
 }
+
+.logo2 {
+	display: flex;
+	width: 300px;
+	padding: 35px;
+}
+.logo3 {
+	display: flex;
+	width: 300px;
+	padding: 35px;
+}
+
 .menu {
 	display: flex;
 	flex-direction: row;
-	padding: 100px;
+	padding: 10px;
+	margin: 10px;
 }
 .opciones li {
 	display: inline-flex;
@@ -82,17 +96,28 @@ body{
 
  }
 
-.parrafonosotros {
-	color: rgb(99, 8, 184);
+ .cuerpo h2 {
+	color: black;
+	font-size: 20px;
+	padding: 5px;
+	margin: 3px;
+}
+
+.cuerpo h3, h5 {
+	color: royalblue;
+	font-size: 23px;
+	text-shadow:3px 3px 5px darkmagenta;
 	text-align: left;
-	font-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif, sans-serif
+	font-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif, sans-serif;
+	padding: 3px;
+	margin: 5px;
  }
 
 .img-flex {
 	 display: flex;
 	 flex-direction: column;
-	 background-color: blueviolet;
-	 grid-gap: 10px;		
+	 background-color: slateblue;
+	 		
  }
 
 img {
@@ -112,27 +137,68 @@ img {
 		 display: block;
 		 width: 50%;
 		 max-width: auto;
-		 
-		
-	 }
+		}
+
 
 	.superior {
-		background: #1551a1;
+		background: darkslateblue;
 		display: block;
 		overflow: hidden;
 
 		}
 	.logo {
 		display: flex;
+		margin-left: 57px;
 		width: 150px;
 		height: 150px;
 		padding: 15px;
 		border: hidden;
+		transition-property: transform: translateX(105px);
+		transition-duration: 3s ;
+		
+		
 	}
+	.logo:hover {
+		transform: translateX(150px);
+		
+	
+		}
+
+	.logo2 {
+		display: flex;
+		transform: translate(150px);
+		width: 150px;
+		height: 150px;
+		padding: 15px;
+		border: hidden;
+		transition-property: transform: translateX(0);
+		transition-duration: 3s ;
+		
+	}
+	.logo2:hover {
+		transform: translateX(-212px);
+		}
+
+		.logo3 {
+			display: flex;
+			transform: translate();
+			width: 350px;
+			height: 150px;
+			padding: 15px;
+			border: hidden;
+			transition-property: transform: translateX(0);
+			transition-duration: 3s ;
+		}
+		.logo3:hover {
+			transform: translateY(-155px);
+			
+		
+			}
+		
+
 	.menu {
 		display: inline-block;
 		margin: auto;
-		padding: 10px;
 		
 	}
 	
@@ -162,31 +228,39 @@ img {
 	}
 
 	.slider {
-		width: 100%;
-		max-width: 450px;
-		min-width: 300px;
+		width: 80vh;
+		
 		
 	}
+	.slider video {
+		width: 100%;
 
-	.cuerpo {
-		width: 50%;
-		font-size: 10px;
-		align-content: left;
-		display: flex;
-		flex-direction: column;
-		text-align: right;
 	}
 	
-	.parrafonosotros {
-		color: rgb(99, 8, 184);
-		text-align: left;
-		font-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif, sans-serif;
+	.cuerpo h2 {
+		color: black;
 		font-size: 10px;
 		padding: 5px;
-		}
-.cuerpo h2 {
-	font-size: 10px;
-	ont-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif, sans-serif;
-	text-align: left;
-	padding: 5px;
-}
+		margin: 3px;
+	}	
+
+	.cuerpo h3, h5 {
+		display: grid;
+		text-align: left;
+		color: #4488ee;
+		text-shadow:1px 1px 2px rgb(49, 4, 121);
+		text-align: left;
+		font-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif, sans-serif;
+		font-size: 14px;
+		padding: 5px;
+		margin: 3px;
+	}
+	h1 {
+		font-size: 14px;
+		padding:5px;
+		margin:3px;
+		
+
+	}
+	
+	
