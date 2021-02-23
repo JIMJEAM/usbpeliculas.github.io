@@ -2,18 +2,21 @@
 	margin: 0;
 	padding: 0;
 }
-body{
-	background: darkslateblue;
+body {
+	background: #ff00cc;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
 	font-family: verdana;
 }
 .container {
 	width: 100%;
-	background: darkslateblue;
+	background: inherit;
 	margin: auto;
 	
 }
 .superior {
-	background: darkslateblue;
+	background: inherit;
 	display: block;
 	overflow: hidden;
 	
@@ -59,7 +62,11 @@ body{
 	padding: 15px;
 	text-decoration: none;
 	border: 1px solid white;
+	
 }
+a:visited {
+	text-decoration: none; }
+
 .opciones li a:hover {
 	background: #005682;
 }
@@ -141,7 +148,7 @@ img {
 
 
 	.superior {
-		background: darkslateblue;
+		background: inherit;
 		display: block;
 		overflow: hidden;
 
@@ -153,7 +160,7 @@ img {
 		height: 150px;
 		padding: 15px;
 		border: hidden;
-		transition-property: transform: translateX(105px);
+		transition-property: translateX(105px);
 		transition-duration: 3s ;
 		
 		
@@ -171,12 +178,12 @@ img {
 		height: 150px;
 		padding: 15px;
 		border: hidden;
-		transition-property: transform: translateX(0);
+		transition-property: translateX(0);
 		transition-duration: 3s ;
 		
 	}
 	.logo2:hover {
-		transform: translateX(-212px);
+		transform: translateX(-182px);
 		}
 
 		.logo3 {
@@ -186,7 +193,7 @@ img {
 			height: 150px;
 			padding: 15px;
 			border: hidden;
-			transition-property: transform: translateX(0);
+			transition-property: translateX(0);
 			transition-duration: 3s ;
 		}
 		.logo3:hover {
@@ -237,8 +244,8 @@ img {
 
 	}
 	
-	.cuerpo h2 {
-		color: black;
+	.cuerpo h2, h1 {
+		color: white;
 		font-size: 10px;
 		padding: 5px;
 		margin: 3px;
@@ -255,12 +262,5 @@ img {
 		padding: 5px;
 		margin: 3px;
 	}
-	h1 {
-		font-size: 14px;
-		padding:5px;
-		margin:3px;
-		
-
-	}
 	
-	
+ }
