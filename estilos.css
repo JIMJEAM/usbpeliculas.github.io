@@ -195,7 +195,7 @@ h3 {
 @media only screen and (max-width: 500px) {
     div {
         display: block;
-        width: 50%;
+        width: 360px;
         max-width: auto;
     }
     .superior {
