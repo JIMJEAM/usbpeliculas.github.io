@@ -192,6 +192,12 @@ h3 {
     flex-grow: 1;
 }
 
+.img-thumbnail {
+    display: inline-flex;
+    flex-direction: row;
+    width: 30%;
+}
+
 @media only screen and (max-width: 500px) {
     div {
         display: block;
