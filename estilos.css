@@ -195,7 +195,7 @@ h3 {
 .img-thumbnail {
     display: inline-flex;
     flex-direction: row;
-    width: 300px;
+    flex-basis: 300px;
     max-width: 30%;
 }
 
