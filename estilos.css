@@ -193,9 +193,9 @@ h3 {
 }
 
 .flex-container {
-    display: -webkit-inline-flex;
-    flex-wrap: wrap;
+    display: inherit;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
 }
 
