@@ -283,7 +283,15 @@
                                                                                      height: auto;
                                                                                      font-size: 14px;
                                                                                  }
+                                                                                 .pelicula-principal2 {
+                                                                                     width: 78%;
+                                                                                     height: auto;
+                                                                                     font-size: 14px;
+                                                                                 }
                                                                                  .pelicula-principal .descripcion {
+                                                                                     max-width: 100%;
+                                                                                 }
+                                                                                 .pelicula-principal2 .descripcion {
                                                                                      max-width: 100%;
                                                                                  }
                                                                                  .peliculas-recomendadas .contenedor-carousel {
