@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        IPTV </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous">
+    </script>
+    <meta name="viewport" content="width=500, initial-scale=1">
+
+    <script src="http://jwpsrv.com/library/ejuoyqCsEeK4ayIACpYGxA.js"></script>
+    <style type="text/css">
+        </head>body {
+            bgcolor: #f0f0f0;
+        }
+        
+        #reproductor_aspect {
+            display: none;
+        }
+        
+        #reproductor_jwpsrv {
+            position: absolute;
+            top: 0px;
+            z-index: 10;
+        }
+        
+        #reproductor_wrapper {
+            position: relative;
+            display: block;
+            width: 700px;
+            height: 400px;
+        }
+    </style>
+    <script>
+        // <![CDATA[
+        //La Key que debes conseguir en la web de JWPlayer en Hexadecimal
+        jwplayer.key = "6RfMdMqZkkH88h026pcTaaEtxNCWrhiF6ACoxKXjjiI=";
+        // ]]>
+    </script>
+
+
+
+    <body>
+        <div class="container-fluid">
+            <header class="superior">
+                <div class="logo2">
+                    <img src="imagenes/androd navidad.png" alt="androidtv" width="180px">
+                </div>
+                <header class="superior">
+                    <div class="logo3">
+                        <img src="imagenes/iptv.png" alt="androidtv" width="180px">
+                    </div>
+                    <nav class="menu">
+                        <ul class="opciones">
+                            <li><a href="index.html">INICIO</a></li>
+                            <li><a href="nosotros.html">NOSOTROS</a></li>
+                            <li><a href="peliculas.html">PELICULAS</a></li>
+                            <li><a href="IPTV.html">IPTV</a></li>
+                            <li><a href="https://wa.me/529842121969"><i class="fab fa-whatsapp">CONTACTO</a></i>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <div id="reproductor_wrapper">
+                    <object type="application/x-shockwave-flash" data="http://p.jwpcdn.com/6/8/jwplayer.flash.swf" width="100%" height="100%" bgcolor="#000000" id="reproductor" name="reproductor" tabindex="0">
+                  <param name="allowfullscreen" value="true">
+                  <param name="allowscriptaccess" value="always">
+                  <param name="seamlesstabbing" value="true">
+                  <param name="wmode" value="opaque">
+                </object>
+                    <div id="reproductor_aspect"></div>
+                    <div id="reproductor_jwpsrv"></div>
+                </div>
+                <script>
+                    // <![CDATA[
+                    jwplayer('reproductor').setup({
+                        //URL m3u8 que queremos reproducir
+                        file: "http://gma2.blab.email/espnu.m3u8",
+                        width: "700",
+                        skin: "five",
+                        height: "400",
+                        title: 'IPTV playa del carmen',
+                        image: "",
+                        logo: {
+                            file: "",
+                            position: 'top-right',
+                            margin: '0',
+                            link: ""
+                        },
+                        stretching: "fill",
+                        autostart: "true",
+                        abouttext: '',
+                        aboutlink: '',
+                    });
+                    // ]]>
+                </script>
+                <span> Smart tv, Tv box y dispositivos android <br> 
+                    🔁 gira la pantalla <i class="fas fa-mobile-alt"></i> y dale play! <i class="fas fa-play"></i> </span>
+                <nav class="flex-container d-lg-flex">
+                    <a href="http://usbplaya.herokuapp.com/IPTV.html">
+                        <img src="/imagenes/music-top.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV2.html">
+                        <img src="/imagenes/liga.jpg" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV3.html">
+                        <img src="/imagenes/champions.jpg" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV4.html">
+                        <img src="/imagenes/izzitv.jpg" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV5.html">
+                        <img src="/imagenes/tudn.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV6.html">
+                        <img src="/imagenes/bein1.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV7.html">
+                        <img src="/imagenes/nbatnt.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV8.html">
+                        <img src="/imagenes/mmatv.jpg" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV9.html">
+                        <img src="/imagenes/redbulltv.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV10.html">
+                        <img src="/imagenes/world.jpg" class="img-thumbnail" alt="..." class="w-50"></a>
+                </nav>
+                <nav class="flex-container d-lg-flex">
+                    <a href="http://usbplaya.herokuapp.com/IPTV11.html">
+                        <img src="/imagenes/tenisHD.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV12.html">
+                        <img src="/imagenes/espnu.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV13.html">
+                        <img src="/imagenes/espnu.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV14.html">
+                        <img src="/imagenes/Edgesport.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV15.html">
+                        <img src="/imagenes/golfchannel.jpg" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV16.html">
+                        <img src="/imagenes/mblnetwork.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV17.html">
+                        <img src="/imagenes/nflnetwort.jpg" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV18.html">
+                        <img src="/imagenes/nhlnetwork.jpg" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV19.html">
+                        <img src="/imagenes/wwenetwork.jpg" class="img-thumbnail" alt="..." class="w-50"></a>
+                    <a href="http://usbplaya.herokuapp.com/IPTV20.html">
+                        <img src="/imagenes/fightnetwork.png" class="img-thumbnail" alt="..." class="w-50"></a>
+                </nav>
+                <main class="container-fluid">
+                    <div class="col-12 col-lg-12 p-2 ">
+                        <div class="row">
+                            <article class="main">
+                                <h5>Internet Protocol Television, Televisión por Protocolo<br> de Internet se ha convertido en la denominación<br> más común para los sistemas de distribución por<br> suscripción de señales de televisión de pago usando<br>                                    conexiones de banda ancha sobre el protocolo IP.</h5>
+                                <article>
+                                    <img src="/imagenes/iptact.png" alt="" class="w-100 p-3 border-0"></article>
+                            </article>
+
+                            <div class="col-12 col-sm-12 col-lg-6 p-2">
+
+                                <aside class="aside ">
+                                    <h6>Aplicaciones IPTV para Smart TV A la hora de echar mano de una aplicación que nos permita ver la televisión por Internet, en streaming, es importante saber que el sistema operativo de nuestra Smart TV nos limitará el
+                                        uso de ciertas aplicaciones. Si disponemos de un televisor inteligente con sistema operativo Android TV, la cosa es bastante sencilla, mientras que si el sistema operativo es Tizen o Web OS, entonces la cosa cambia.
+                                        En el caso de contar con una smart TV con sistema operativo Android TV la oferta es muy amplia, ya que podemos encontrar un montón de aplicaciones IPTV para ver nuestros canales favoritos por Internet.<br><br> SSIPTV
+                                        Esta aplicación permite ver la televisión online en Smart TV Samsung, LG o Android. Ahora bien, para ello, es posible que sea necesario realizar ciertos ajustes, como es el caso de los televisores de Samsung. Por
+                                        lo tanto, tendremos que entrar en los ajustes del televisor, iniciar sesión Samsung de Smart TV en cuenta desde Smart Hub y elegir el usuario develop o desarrollador. Una vez que nos hemos identificado como usuario
+                                        desarrollador en Samsung, nos vamos a la sección de aplicaciones, nos situamos sobre una de ellas y presionamos el botón del medio o OK del mando durante 5 segundos aproximadamente. Hasta que nos salga el menú oculto.<br><br><br>                                        DuplexPlay es el reproductor multimedia más avanzado y fácil de usar. Con DuplexPlay disfrutará de sus listas de reproducción en sus dispositivos Android, incluidos televisores, TV Box, teléfonos y tabletas. Características:
+                                        - Admite la selección de pistas de audio (si los medios contienen información de pistas de audio) - Guarda listas reproducidas recientemente y reanuda la reproducción desde la última posición guardada. - Permite
+                                        buscar una posición precisa, puede arrastrar el control deslizante de tiempo a la posición precisa. - Permite la creación y personalización de grupos favoritos para un acceso rápido. - Admite grupos integrados en
+                                        listas de reproducción. - Busque elementos rápidamente en listas de reproducción. ** DuplexPlay no incluye ningún contenido, debes subir tus propias listas de reproducción ** El autor de la aplicación y Google Play
+                                        Store no son responsables del contenido que cargue en la aplicación. ** La aplicación es gratuita para probar durante 7 días.
+                                    </h6>
+                                </aside>
+
+                            </diV>
+
+                            <section class="slider">
+
+
+                                <section class="cuerpo">
+                                    <h1>Activacion de canales iptv</h1>
+
+                                </section>
+
+                                <articule>
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="" title="YouTube video" allowfullscreen></iframe>
+                                    </div>
+                                </articule>
+                        </div>
+                    </div>
+                </main>
+                <footer class="bg-transparent   h-auto d-inline-block ">
+                    <p class=" h3 ">IPTV 2021 &copy;</p>
+                </footer>
+
+    </body>
+
+</html>
