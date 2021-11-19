@@ -227,6 +227,8 @@
                     height: 100%;
                     max-width: auto;
                     margin-left: 62.5px;
+                    padding: calc(20px - 2.5px);
+                    padding-left: 10px;
                 }
                 .logo {
                     display: flex;
@@ -329,7 +331,7 @@
                     padding-left: 100px;
                 }
                 .padd {
-                    margin-left: 10px;
+                    margin-left: 0px;
                 }
                 .header {
                     grid-column: 1 / span 3;
