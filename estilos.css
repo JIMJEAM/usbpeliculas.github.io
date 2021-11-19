@@ -223,8 +223,8 @@
                     }
                     img {
                         display: block;
-                        width: 100%;
-                        height: 100%;
+                        width: 150%;
+                        height: 150%;
                         max-width: auto;
                         margin-left: 62.5px;
                         padding: calc(20px - 2.5px);
