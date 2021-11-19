@@ -324,6 +324,13 @@
                     grid-template-rows: 80px 1fr 1fr 1fr 1fr 80px;
                     grid-template-columns: repeat(3, 1fr);
                 }
+                .contenido {
+                    display: block;
+                    padding-left: 100px;
+                }
+                .padd {
+                    margin-left: 10px;
+                }
                 .header {
                     grid-column: 1 / span 3;
                 }
