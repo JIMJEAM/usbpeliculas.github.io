@@ -221,7 +221,7 @@
                         display: block;
                         overflow: hidden;
                     }
-                    img {
+                    .padd {
                         display: block;
                         width: 150%;
                         height: 150%;
