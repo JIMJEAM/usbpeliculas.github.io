@@ -328,7 +328,8 @@
                         text-align: left;
                         width: 100%;
                     }
-                    .opciones li a {
+                    .opciones,
+                    .bag-shop li a {
                         display: block;
                         margin: auto;
                         align-content: flex-start;
@@ -336,7 +337,10 @@
                         color: white;
                         padding: 15px;
                         text-decoration: none;
-                        border: 1px solid white;
+                        border: none;
+                    }
+                    .bag-shop {
+                        margin-top: 10px;
                     }
                     .slider {
                         width: 80vh;
