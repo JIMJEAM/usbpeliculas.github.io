@@ -62,9 +62,31 @@
                 .opciones li {
                     display: inline-flex;
                     flex-direction: row;
-                    margin-right: 0px;
+                    margin-right: 10px;
                     align-items: flex-start;
                     list-style: none;
+                }
+                
+                .bag-shop {
+                    margin-left: 22px;
+                    height: fit-content;
+                    background-color: #25d366;
+                    border-radius: 30px;
+                    border: none;
+                    text-decoration: none;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+                
+                .bag-shop img {
+                    margin-left: 22px;
+                    height: fit-content;
+                    background-color: #25d366;
+                    border-radius: 30px;
+                    border: none;
+                    text-decoration: none;
+                    overflow: hidden;
+                    cursor: pointer;
                 }
                 
                 .opciones li a {
