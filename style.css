@@ -10,8 +10,8 @@ body {
     height: 100vh;
     background: linear-gradient(to right, #005C98, #505BDA);
     position: relative;
-    overflow: hidden;
-    color: #ffffff;
+    overflow: scroll-y;
+    color: #f1f1f1;
 }
 
 .contenedor {
