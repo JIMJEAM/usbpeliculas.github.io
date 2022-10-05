@@ -264,6 +264,9 @@
                 }
                 
                 @media only screen and (max-width: 576px) {
+                    #reproducir {
+                    width: 350px;
+                }
                     div {
                         display: block;
                         width: 355px;
