@@ -16,10 +16,13 @@
     </script>
     <meta name="viewport" content="width=500, initial-scale=1">
     <script defer src="js/main.js"></script>
+    <script defer src="js/pelis.js"></script>
 </head>
 
 <body>
     <div class="container-fluid">
+        <div class="col-12 col-lg-12 p-2 ">
+            <div class="row">
         <header class="superior">
             <div class="logo2">
                 <img src="imagenes/androd navidad.png" alt="" width="300px">
@@ -53,7 +56,7 @@
                 <button role="button" class="boton"><i class="fas fa-play">Reproducir</i></button>
             </div>
         </div>
-        <video id="reproducir" width="700" height="400" src="https://ia801500.us.archive.org/3/items/t-h-0-r/T_h0-r.mp4" controls></video>
+        <video id="reproducir" id="" width="700" height="400" src="https://ia801500.us.archive.org/3/items/t-h-0-r/T_h0-r.mp4" controls></video>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -220,6 +223,12 @@
         <p class=" h3 ">usbplaya 2022 &copy;</p>
 
     </footer>
+</div>
+</div>
+    <!--video-control&web-componet-->
+ <div id="videos"> <video class="video_item" id="video" width="320" height="240" autoplay muted loop controls> <source src=""> </video>  </div> 
+ 
+ <menu-component></menu-componet>
 </body>
 
 

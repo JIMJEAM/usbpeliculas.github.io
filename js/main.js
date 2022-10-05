@@ -58,3 +58,11 @@ peliculas.forEach((pelicula) => {
 fila.addEventListener('mouseleave', () => {
 	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
 });
+
+//video-control
+
+var video = document.getElementById('video'); 
+function videoUrl(url){ video.pause();
+const source = video.querySelector("source"); 
+source.setAttribute('src', url); 
+video.load(); video.play(); }
