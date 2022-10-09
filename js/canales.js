@@ -25,7 +25,9 @@ class Menu extends HTMLElement {
         <a href="http://usbplaya.herokuapp.com/IPTV9.html " target="_blank">
             <img src="/imagenes/clarosport.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://usbplaya.herokuapp.com/IPTV10.html " target="_blank">
-            <img src="/imagenes/Dazn1.png " class="img-thumbnail " alt="... " class="w-50 "></a>                    
+            <img src="/imagenes/Sky-bundes-liga.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://usbplaya.herokuapp.com/IPTV11.html " target="_blank">
+            <img src="/imagenes/sky-sports-premier-league.png " class="img-thumbnail " alt="... " class="w-50 "></a>                        
     </nav>
 </nav>
     `
