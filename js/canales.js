@@ -4,6 +4,7 @@ class Menu extends HTMLElement {
 	constructor() {
 	super();
 	this.innerHTML = `
+    
     <nav class="flex-container d-lg-flex">
     <nav class="flex-container d-lg-flex ">
         <a href="http://usbplaya.herokuapp.com/IPTV.html ">
