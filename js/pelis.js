@@ -31,7 +31,7 @@ class Menu extends HTMLElement {
    
 
  </div>
-  </ul>
+
 </div>
 </ul> 
 
@@ -53,7 +53,7 @@ class Menu extends HTMLElement {
      <li><a href="#reproducir↑">  ► ↑ </a></li>
 
  </div>
-  </ul>
+ 
 </div>
 </ul>
 
@@ -73,7 +73,7 @@ class Menu extends HTMLElement {
      <li> <img src="https://pics.filmaffinity.com/chip_n_dale_rescue_rangers-335785940-large.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601508.us.archive.org/20/items/ch-1-p-n/Ch_1P%20%27n%20.mp4')"> </li> 
 
  </div>
-  </ul>
+ 
 </div>
 </ul>
 
@@ -95,7 +95,7 @@ class Menu extends HTMLElement {
      <li><a href="#reproducir↑">  ► ↑ </a></li>
 
  </div>
-  </ul>
+ 
 </div>
 </ul>
 
@@ -115,7 +115,7 @@ class Menu extends HTMLElement {
      <li> <img src="https://pics.filmaffinity.com/ghostbusters_afterlife-667822266-large.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601504.us.archive.org/31/items/c4s42021/c4s42021.mp4')"> </li> 
 
  </div>
-  </ul>
+ 
 </div>
 </ul>
 
