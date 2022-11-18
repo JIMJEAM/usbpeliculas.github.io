@@ -13,9 +13,185 @@ class Menu extends HTMLElement {
 	super();
 	this.innerHTML = `
 
- 
- 
+    
+
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+    <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/11/3eQMzMd2qsZkAJbk4wekp3Crg54.jpg?ssl=1" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/adam.mp4')"> </li>
+
+
+    <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/q1I02yesCWTLn1C1o64k0ezZgf9.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/bros.mp4')"></li>
+   </div>
+
+
+
+   <li> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/09/9azVNvLVswNn1dj43YbJ5sZiykd.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://proteiosmorelia.site/stuff/till.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul> 
+
+
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+        
+    <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/huZhrNzGlzO9DFkO7ymGU8nwCuO.jpg?ssl=1" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/tubo.mp4')"> </li>
+
+
+    <li > <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/dRaAyoHr3Zs1njTrn0F201d9H2k.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/clerks3.mp4')"> </li>
+   </div>
+
+
+
+    <li> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/tQstTS2Q3ZaeWu3fsGDDIr0EBnW.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/halloween.mp4')"> </li> 
+
+
+</div>
+
+</div>
+</ul> 
+
+
+   
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+        
+    <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/ebZLD9PD1YGU15QoY1PfVOj2x1n.jpg?ssl=1" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/cerveza.mp4')"> </li>
+
+
+    <li > <img src="https://pics.filmaffinity.com/Cyrano-850889711-large.jpg" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://casiano.store/stuff/cyrano.mp4')"> </li>
+   </div>
+
+
+
+    <li> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/j14T7JfdN0XEgLao56aYKQoGwq7.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://casiano.store/stuff/dulce.mp4')"> </li> 
+
+    <li><a href="#reproducir↑">  ► ↑ </a></li>
+  
+
+</div>
+
+</div>
+</ul> 
+
+
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+    <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/f37G0xxPdWw6IeeuMHxU05mMU2A.jpg?ssl=1" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://casiano.store/stuff/forgiven.mp4')"> </li>
+
+
+    <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/bYnlT2TbgSMytw0mVTQWAZ4mXNq.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://polimor.club/movies/marnorte.mp4')"></li>
+   </div>
+
+
+   <li> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/vYhPCfSDlLObeV5bUIkmeUyR4gl.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/extrano.mp4')"> </li> 
+
+</div>
+
+</div>
+</ul>
+
+
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+    <li > <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/39908-115310-20220812023302.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.alianzajuridicainteramericana.com/movies/esperando.mp4')"> </li>
+
+
+    <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/09/wDLthZ6Hgn8RY55p0bkcmLV4Nw6.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://www.alianzajuridicainteramericana.com/movies/war.mp4')"></li>
+   </div>
+
+
+
+    <li> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/09/h8gyJKvIHzXo5HrGOe2WOJEe0IV.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://casiano.store/stuff/emergenciabien.mp4')"> </li> 
+
+
+</div>
+
+</div>
+</ul>
+
+
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+        
+    <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/09/cKnaBlyhclpCMKAMQg96Lih1oab.jpg?ssl=1" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://proteiosmorelia.site/stuff/pinocho.mp4')"> </li>
+
+
+    <li > <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/09/lGIkv9fQ3i7yVcJXDvG0Vry00LI.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://polimor.club/movies/bestia.mp4')"> </li>
+   </div>
+
+
+
+    <li> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/39753-784619-20220722063400.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://polimor.club/movies/vertigo.mp4')"> </li> 
+
+    
+  
+
+</div>
+
+</div>
+</ul> 
+
+
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+        
+    <li > <img  src="https://pics.filmaffinity.com/pig-271208833-large.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/pig.mp4')"> </li>
+
+
+    <li > <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/11/kXmnXE5RhLtmF9kGUMFA13KPSsN.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/caida.mp4')"> </li>
+   </div>
+
+
+
+    <li> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/11/4njdAkiBdC5LnFApeXSkFQ78GdT.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/medieval.mp4')"> </li> 
+
+    
+  
+
+</div>
+
+</div>
+</ul> 
+
+
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+    <li > <img  src="https://pics.filmaffinity.com/causeway-924344630-mmed.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/resurgir.mp4')"> </li>
+
+
+    <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/11/aw05OSgJFxsMiLAN0UQG2gCdTGY.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/smile2.mp4')"></li>
+   </div>
+
+
+
+    <li> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/11/2Aame7mFIgHd7leTubAVAg66bdo.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/viaje.mp4')"> </li> 
+
+    <li><a href="#reproducir↑">  ► ↑ </a></li>
+
+</div>
+
+</div>
+</ul>
+
+
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
         
     <li > <img  src="https://pics.filmaffinity.com/Abracadabra_2-412182137-mmed.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/228022/Hocus.Pocus.2.2022.lati.mp4')"> </li>
@@ -51,6 +227,9 @@ class Menu extends HTMLElement {
     <li> <img src="https://m.media-amazon.com/images/M/MV5BZDU1OGM0YzUtMzM2ZC00Y2VjLTliOWItY2IyOTQyODJhNTczXkEyXkFqcGdeQXVyMTI2MDIxOTY0._V1_.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/228022/Las.leyendas.El.origen.2021.lati.mp4')"> </li> 
 
     <li><a href="#reproducir↑">  ► ↑ </a></li>
+        
+    </a>
+</section>
 
 </div>
 
@@ -179,6 +358,11 @@ class Menu extends HTMLElement {
      <li> <img src="https://pics.filmaffinity.com/moonfall-138176660-large.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia802505.us.archive.org/7/items/m-0-0n-f-4l-l/M0%200n%20f4lL.mp4')"> </li>
      
      <li><a href="#reproducir↑">  ► ↑ </a></li>
+
+     <section class="cuerpo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <a href="#reproducir↑" class="float-pelis">
+        <i class="fas fa-film my-float-pelis"></i>
 `
 
  }
