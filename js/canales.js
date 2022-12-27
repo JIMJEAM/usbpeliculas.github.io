@@ -28,7 +28,7 @@ class Menu extends HTMLElement {
         <a href="http://peliculasplaya.netlify.app/IPTV10.html " target="_blank">
             <img src="/imagenes/Tennis-Channel.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://peliculasplaya.netlify.app/IPTV11.html " target="_blank">
-            <img src="/imagenes/FoxDeportes.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <img src="/imagenes/allsport.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://peliculasplaya.netlify.app/IPTV12.html " target="_blank">
             <img src="/imagenes/nfl.png " class="img-thumbnail " alt="... " class="w-50 "></a>                            
     </nav>
