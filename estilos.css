@@ -30,7 +30,12 @@
                     flex-wrap: wrap;
                     height: 100%;
                 }
-                
+.container-pelis
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+}
                 .superior {
                     background: inherit;
                     display: block;
@@ -407,6 +412,7 @@
                         padding: 5px;
                         margin: 3px;
                     }
+                    
                 }
                 
                 @media screen and (min-width: 900px) {
