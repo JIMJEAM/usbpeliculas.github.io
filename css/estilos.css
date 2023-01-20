@@ -692,3 +692,14 @@
                                                                                                                                                                        display: none;
                                                                                                                                                                    }
                                                                                                                                                                }
+                                                                                                                                                               @media screen and (max-width: 560px) {
+                                                                                                                                                                .ratio {
+                                                                                                                                                                display: flex;
+                                                                                                                                                                flex-direction: column;
+                                                                                                                                                                width: 77vw;
+                                                                                                                                                
+                                                                                                                                                                }
+                                                                                                                                                                   #video_navigation {
+                                                                                                                                                                    display: flex;
+                 width: 87vw;                                                                                                                                    }
+                                                                                                                                                            }
