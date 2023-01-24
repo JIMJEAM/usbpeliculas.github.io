@@ -17,6 +17,30 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li > <img  src="https://static.cinepolis.com/img/peliculas/41139/1/1/41139.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/701023/Puss.in.Boots.The.Last.Wish.2022.lati.mp4')"> </li>
+
+
+    <li > <img  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjl9iV9tc_Oc3k-YGGanZbjkW2BIXjVzhzZaxclapKn9m9A8NCoD_74t039ghYsUkP7VnC8_GxBYShF1QNrrDwzWLGv66z3vkMqiUhBXii0C3qhceqW0fV1BtR5-MFJncyV3Qv0e98CTLKr1t5Km-uOHbuiArqGBzR8wXBbpeYTbLH91HlBAS9MGCI6vQ/s1600/poster-huevitos-congelados.jpg" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('http://regioplay.xyz/701023/Huevitos.congelados.2022.lati.mp4')"></li>
+   </div>
+
+
+
+
+   <li> <img src="https://pbs.twimg.com/media/FYrp2tQXwAArECL.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/701023/Guillermo.del.Toros.Pinocchio.2022.lati.mp4
+   ')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>     
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li > <img  src="https://www.lavanguardia.com/peliculas-series/images/movie/poster/2022/11/w1280/p6HNFpXiXIdyMRJTrfkgaPkFCK.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://objectstorage.us-phoenix-1.oraclecloud.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/2022pelicu%2Fnoviembr%2FVer%20Bala%20perdida%202%20(2022)%20Online%20%E2%80%93%20CineHDPlus.mp4')"> </li>
 
 
