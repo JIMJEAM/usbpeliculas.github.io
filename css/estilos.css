@@ -696,7 +696,7 @@
                                                                                                                                                                 .ratio {
                                                                                                                                                                 display: -moz-inline-grid
             -moz-stacK, -ms-inline-grid;
-                                                                                                                                                                width: calc(93% + 10vw);
+                                                                                                                                                                width: 87%;
                                                                                                                                                     
            grid-template-columns: repeat(auto-fit, min-max(100px, 1fr));                                                                                                                                  grid-auto-flow: row dense;
                                                                                                                                                 

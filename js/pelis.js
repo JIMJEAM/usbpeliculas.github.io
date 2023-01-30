@@ -26,8 +26,7 @@ class Menu extends HTMLElement {
 
 
 
-   <li> <img src="https://pbs.twimg.com/media/FYrp2tQXwAArECL.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/701023/Guillermo.del.Toros.Pinocchio.2022.lati.mp4
-   ')"> </li> 
+   <li> <img src="https://pbs.twimg.com/media/FYrp2tQXwAArECL.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/701023/Guillermo.del.Toros.Pinocchio.2022.lati.mp4')"> </li> 
 
 
     </a>
