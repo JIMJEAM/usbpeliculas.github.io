@@ -12,6 +12,28 @@ class Menu extends HTMLElement {
 	constructor() {
 	super();
 	this.innerHTML = `
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+    <li > <img  src="https://www.nextgame.es/wp-content/uploads/2022/10/Una-Boda-Explosiva-trailer.png" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://ia804706.us.archive.org/13/items/b0d_45-pl0M0/b0d_45-pl0M0.mp4')"> </li>
+
+
+    <li > <img  src="https://www.cartelera.com.uy/imagenes_espectaculos/moviedetail13/33404.jpg" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://ia804706.us.archive.org/27/items/4v-a-t-4-r/4v_aT4-r.mp4')"></li>
+   </div>
+
+
+
+
+   <li> <img src="https://pics.filmaffinity.com/M_rame-350956231-mmed.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia804700.us.archive.org/13/items/m_1r4-m3/m_1r4-m3.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul> 
 
     
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
