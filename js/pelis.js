@@ -265,15 +265,15 @@ class Menu extends HTMLElement {
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
         
-    <li > <img  src="https://pics.filmaffinity.com/Abracadabra_2-412182137-mmed.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/228022/Hocus.Pocus.2.2022.lati.mp4')"> </li>
+    <li > <img  src="https://pics.filmaffinity.com/Abracadabra_2-412182137-mmed.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/701023/Hocus.Pocus.2.2022.lati.mp4')"> </li>
 
 
-    <li > <img src="https://d2iltjk184xms5.cloudfront.net/uploads/photo/file/432245/small_7c1513335e89b414939c6a26486f4117-994_poster.jpg" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('http://regioplay.xyz/228022/Nope.2022.lati.mp4')"> </li>
+    <li > <img src="https://d2iltjk184xms5.cloudfront.net/uploads/photo/file/432245/small_7c1513335e89b414939c6a26486f4117-994_poster.jpg" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('http://regioplay.xyz/701023/Nope.2022.lati.mp4')"> </li>
    </div>
 
 
 
-    <li> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/38356-635259-20220708040700.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/228022/DC.League.of.Super.Pets.2022.lati.mp4')"> </li> 
+    <li> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/38356-635259-20220708040700.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/701023/DC.League.of.Super.Pets.2022.lati.mp4')"> </li> 
 
   
 
@@ -287,15 +287,15 @@ class Menu extends HTMLElement {
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
-    <li > <img  src="https://pics.filmaffinity.com/Mentada_de_padre-636355999-large.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/228022/Mentada.de.padre.2019.lati.mp4')"> </li>
+    <li > <img  src="https://pics.filmaffinity.com/Mentada_de_padre-636355999-large.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/701023/Mentada.de.padre.2019.lati.mp4')"> </li>
 
 
-    <li > <img  src="https://pics.filmaffinity.com/Luck-722224530-mmed.jpg" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl(http://regioplay.xyz/228022/Luck.2022.lati.mp4')"></li>
+    <li > <img  src="https://pics.filmaffinity.com/Luck-722224530-mmed.jpg" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('http://regioplay.xyz/701023/Luck.2022.lati.mp4')"></li>
    </div>
 
 
 
-    <li> <img src="https://m.media-amazon.com/images/M/MV5BZDU1OGM0YzUtMzM2ZC00Y2VjLTliOWItY2IyOTQyODJhNTczXkEyXkFqcGdeQXVyMTI2MDIxOTY0._V1_.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/228022/Las.leyendas.El.origen.2021.lati.mp4')"> </li> 
+    <li> <img src="https://m.media-amazon.com/images/M/MV5BZDU1OGM0YzUtMzM2ZC00Y2VjLTliOWItY2IyOTQyODJhNTczXkEyXkFqcGdeQXVyMTI2MDIxOTY0._V1_.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/701023/Las.leyendas.El.origen.2021.lati.mp4')"> </li> 
 
     <li><a href="#reproducir↑">  ► ↑ </a></li>
         
