@@ -12,6 +12,10 @@
                     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                     font-family: verdana;
                 }
+                .contador {
+                    display: block;
+                    width: 180px;
+            }
                 
                 .btn-floating {
                     background-color: #3b5998;
@@ -237,11 +241,8 @@
                     height: 88px;
                 }
                 
-                .contador {
-                    display: block;
-                    height: 350px;
-                    width: 350px;
-                }
+                   
+    
 
                 /*Boton de whatssap*/
                 
@@ -298,6 +299,7 @@
                 }
                 
                 @media only screen and (max-width: 576px) {
+                    
                     #reproducir {
                     width: 350px;
                 }
@@ -320,6 +322,7 @@
                         padding: calc(20px - 2.5px);
                         padding-left: 10px;
                     }
+                   
                     .logo {
                         display: flex;
                         margin-left: 57px;
@@ -390,15 +393,18 @@
                     .slider {
                         width: 80vh;
                     }
+                  
+                }
                     /* .slider video {
         width: 100%;
     } */
                     .cuerpo h2,
                     h1 {
-                        color: white;
-                        font-size: 10px;
+                        color: azure;
+                        font-size: 15px;
                         padding: 5px;
                         margin: 3px;
+                        font-weight: 800;
                     }
                     .cuerpo h3,
                     h5 {
@@ -412,8 +418,7 @@
                         padding: 5px;
                         margin: 3px;
                     }
-                    
-                }
+                
                 
                 @media screen and (min-width: 900px) {
                     .content {
@@ -471,7 +476,8 @@
                     .padd {
                         margin-left: 0px;
                     }
-                    .contador{
-                        display: none;
+                    .contador {
+                        display: block;
+                        width: 180px;
                 }
             }
