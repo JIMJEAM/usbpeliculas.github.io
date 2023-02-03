@@ -130,31 +130,7 @@
                     text-align: left;
                 }
                 
-                .caja {
-                    display: flex;
-                    flex-direction: column;
-                    width: 300px;
-                    margin: 0 auto;
-                    margin-bottom: 30px;
-                    margin-top: 30px;
-                    margin-right: 69%;
-                    align-self: flex-start;
-                }
                 
-                .subtitulo {
-                    background: #046fa0;
-                }
-                
-                .servicios {
-                    color: red;
-                    text-align: center;
-                    padding: 20px 0;
-                }
-                
-                .servicios h3 a:hover {
-                    outline-style: none;
-                    color: red;
-                }
                 
                 .cuerpo h2 {
                     color: rgb(241, 235, 235);

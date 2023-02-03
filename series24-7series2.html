@@ -20,13 +20,8 @@
 
 <body>
     <div class="container-fluid">
-        <header class="superior">
-            <div class="logo2">
-                <img src="imagenes/androd navidad.png" alt="" width="300px">
-                <div class="logo"></div>
-                <img src="imagenes/usbmp4.png" alt="" width="300px">
-            </div>
-            <nav class="menu">
+        <header>
+            <nav class="menu d-sm-flex justify-content-evenly">
                 <ul class="opciones">
                     <li><a href="index.html">INICIO</a></li>
                     <li><a href="series24-7.html">SERIES 24-7</a></li>
@@ -37,63 +32,28 @@
                 </ul>
             </nav>
         </header>
+        <main class="container-fluid g-5">
         <!--reproductor-->
-  <div id="player" class="d-flex justify-content-start d-flex align-items-center"></div>
+  <div style="margin-left: -2em;" id="player" class="d-flex justify-content-sm-start"></div>
   <script>
     var player = new Clappr.Player({source: "https://linear-309.frequency.stream/dist/localnow/309/hls/master/playlist.m3u8", parentId: "#player"});
   </script>           
   <span> Smart tv, Tv box y dispositivos android <br> 
       🔁 gira la pantalla <i class="fas fa-mobile-alt"></i> y dale play! <i class="fas fa-play"></i> </span>
-      
+      <br><br>
       <div><menu-component></menu-componet></div>
        
       </div>
-        <main>
+       
                <!--video-control&web-componet-->
   
-        
-        <section class="slider">
-            <section class="cuerpo">
-                <h2>series completas en usb compatibles con smart tv blue ray, pantallas y dispositivos android y ios.</h2>
-
-                <h5>entregamos a domicilio y punto medio de lunes a viernes de 9am a 9pm en playa del camen. contactanos para pedidos. conseguimos cualquier series de tv o peliculas.</h5>
-
-            </section>
-    </div>
-    <articule class="caja">
-        <div class="subtitulo">
-            <img src="imagenes/imagen1.jpg" alt="" width="500px;">
-            <h3 class="servicios">
-                USB DE 16GB
-            </h3>
-        </div>
-
-    </articule>
-
-    <articule class="caja">
-        <div class="subtitulo">
-            <img src="imagenes/imagen2.jpg" alt="" width="500ppx;">
-            <h3 class="servicios">
-                USB DE 32GB
-            </h3>
-        </div>
-
-    </articule>
-
-    <articule class="caja">
-        <div class="subtitulo">
-            <img src="imagenes/imagen3.jpg" alt="" width="500px;">
-            <h3 class="servicios">
-                <a href="">  USB DE 64 Y 128 </a>
-            </h3>
-        </div>
-
-    </articule>
-    </section>
-    </div>
+     </div>   
+       
 </main>
+    
+
     <footer class="bg-transparent   h-auto d-inline-block ">
-        <section class="mb-4">
+        <section class="container-fluid">
             <!-- Facebook -->
             <h5 class="font-weight-bold mb-3">Síguenos en facebook:</h5>
             <a class="btn btn-primary btn-floating m-1" href="https://www.facebook.com/Peliculas-y-series-playa-107290698586340/" target="_Blank" role="button"><i class="fab fa-facebook-f"></i
