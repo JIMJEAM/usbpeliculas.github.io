@@ -148,7 +148,7 @@
                 .servicios {
                     color: red;
                     text-align: center;
-                    padding: 15px 0;
+                    padding: 20px 0;
                 }
                 
                 .servicios h3 a:hover {
@@ -299,7 +299,10 @@
                 }
                 
                 @media only screen and (max-width: 576px) {
-                    
+                    .container-fluid {
+                    overflow-x: hidden;
+                    max-width: fit-content;
+                    }
                     #reproducir {
                     width: 350px;
                 }
@@ -391,7 +394,8 @@
                         margin-top: 10px;
                     }
                     .slider {
-                        width: 80vh;
+                        width: 0 auto;
+                        align-self: start;
                     }
                   
                 }
