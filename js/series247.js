@@ -14,8 +14,10 @@ class Menu extends HTMLElement {
 	this.innerHTML = `
 
     
-    <nav class="flex-container d-lg-flex">
-    <nav class="flex-container d-lg-flex">
+    <nav class="flex-container">
+    <nav class="flex-container row">
+    <nav class="flex-container col-lg-12 m-auto">
+    
 
         <a href="series24-7.html ">
             <img src="https://phantom-marca.unidadeditorial.es/ff129bbe4e38ec6dd131e989f544d6bf/resize/1320/f/jpg/assets/multimedia/imagenes/2021/03/04/16148576621458.jpg" class="img-thumbnail " alt="... " class="w-50 "></a>
@@ -50,11 +52,38 @@ class Menu extends HTMLElement {
             <a href="series24-7Fpeluche.html ">
             <img src="https://images.vix.com/prd/videos/video:mcp:2938580/650c3f327a024e2301af1ed5e548e3b7?tr=w-1200,h-627,f-jpeg " class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7cine2.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:2961743/82d38de8b493aa4bc7689d9468300422?tr=w-1200,h-627,f-jpeg " class="img-thumbnail " alt="... " class="w-50 "></a>
-            <nav/>
-            <nav/>
+            <a href="series24-7Djefe.html ">
+            <img src="https://images.vix.com/prd/videos/video:mcp:2961743/82d38de8b493aa4bc7689d9468300422?tr=w-1200,h-627,f-jpeg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
             
+            <a href="series24-7elprilegiodM.html ">
+            <img src="https://video-assets.televisa.com/823743/snapshot-716x403.jpg?v=1669090051 " class="img-thumbnail " alt="... " class="w-50 "></a>
+            
+            <a href="series24-7vecinos.html ">
+            <img src="https://tecolotito.elsiglodedurango.com.mx/i/2022/06/1082460.jpeg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
+            <a href="series24-7cAngel.html ">
+            <img src="https://images.vix.com/prd/videos/video:mcp:2751164/60fd39b18535c4661bdd43d9e4852680 " class="img-thumbnail " alt="... " class="w-50 "></a>
+            
+            <a href="series24-7delmercadoP.html ">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/0138580a821f86d1e91c4c07593cb66cc4151f007963910cef4c5bad5068feb0._V_SX268_.jpg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
+            <a href="series24-7alebrijesR.html ">
+            <img src="https://heraldodemexico.com.mx/u/fotografias/m/2022/9/21/f850x638-581837_659326_5050.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
+            
+            <a href="series24-7amigasyrivales.html ">
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/QYEZGNGEEBEEBCIQGF4YAIDYTQ.jpeg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+            
+            
+            
+            <nav/>
+            <nav/>
+
+    
 `
 
  }
