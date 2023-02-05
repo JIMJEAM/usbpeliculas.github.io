@@ -6,7 +6,7 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     
     <nav class="flex-container">
-    <nav class="flex-container row">
+    <nav class="row">
     <nav class="flex-container col-lg-12 m-auto">
     
         <a href="http://pelisplaya.net/IPTV.html ">

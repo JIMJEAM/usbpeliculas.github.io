@@ -23,7 +23,7 @@
 
 
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid m-0">
             <header class="superior">
                 <div class="logo2">
                     <img src="imagenes/androd navidad.png" alt="androidtv" width="180px">
@@ -32,7 +32,7 @@
                     <div class="logo3">
                         <img src="imagenes/iptv.png" alt="androidtv" width="180px">
                     </div>
-                    <nav class="menu">
+                    <nav class="menu d-sm-flex justify-content-evenly">
                         <ul class="opciones">
                             <li><a href="index.html">INICIO</a></li>
                             <li><a href="series24-7.html">SERIES 24-7</a></li>
@@ -45,7 +45,7 @@
                 </header>
 
                 <!--reproductor-->
-                <div id="player" class="d-flex justify-content-start d-flex align-items-center"></div>
+                <div id="player" class="d-flex justify-content-center d-flex align-items-center m-0"></div>
                 <script>
                   var player = new Clappr.Player({source: "https://live-edge01.telecentro.net.ar/live/musictop.smil/.m3u8", parentId: "#player"});
                 </script>           
@@ -56,7 +56,7 @@
                     
 
                 <main class="container-fluid">
-                    <div class="col-12 col-lg-12 p-2 ">
+                    <div class="col-12 col-lg-12">
                         <div class="row">
                             <article class="main">
                                 <h5>Internet Protocol Television, Televisión por Protocolo<br> de Internet se ha convertido en la denominación<br> más común para los sistemas de distribución por<br> suscripción de señales de televisión de pago usando<br>                                    conexiones de banda ancha sobre el protocolo IP.</h5>

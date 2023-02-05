@@ -11,18 +11,19 @@
     <link rel="stylesheet" type="text/css" href="estilos.css">
     <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous">
     </script>
- <!--REPRODUCTOR-->
- <script type="text/javascript"
+    <!--REPRODUCTOR-->
+    <script type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js">
   </script>
     <script defer src="js/canales.js"></script>
     <meta name="viewport" content="width=500, initial-scale=1">
 </head>
-
+        
+      
 
 
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid m-0">
             <header class="superior">
                 <div class="logo2">
                     <img src="imagenes/androd navidad.png" alt="androidtv" width="180px">
@@ -31,7 +32,7 @@
                     <div class="logo3">
                         <img src="imagenes/iptv.png" alt="androidtv" width="180px">
                     </div>
-                    <nav class="menu">
+                    <nav class="menu d-sm-flex justify-content-evenly">
                         <ul class="opciones">
                             <li><a href="index.html">INICIO</a></li>
                             <li><a href="series24-7.html">SERIES 24-7</a></li>
@@ -43,26 +44,26 @@
                     </nav>
                 </header>
 
-                 <!--reproductor-->
-<div id="player" class="d-flex justify-content-start d-flex align-items-center"></div>
-<script>
-  var player = new Clappr.Player({source: "https://video.twimg.com/amplify_video/1424185046706003968/pl/1280x720/Dc-CRvYm19mD9jGj.m3u8", parentId: "#player"});
-</script> 
-
+                <!--reproductor-->
+                <div id="player" class="d-flex justify-content-center d-flex align-items-center m-0"></div>
+                <script>
+                  var player = new Clappr.Player({source: "https://video.twimg.com/amplify_video/1424185046706003968/pl/1280x720/Dc-CRvYm19mD9jGj.m3u8", parentId: "#player"});
+                </script>           
                 <span> Smart tv, Tv box y dispositivos android <br> 
                     🔁 gira la pantalla <i class="fas fa-mobile-alt"></i> y dale play! <i class="fas fa-play"></i> </span>
-
+                    
                     <div><menu-component></menu-componet></div>
+                    
 
-                </nav>
                 <main class="container-fluid">
-                    <div class="col-12 col-lg-12 p-2 ">
+                    <div class="col-12 col-lg-12">
                         <div class="row">
                             <article class="main">
                                 <h5>Internet Protocol Television, Televisión por Protocolo<br> de Internet se ha convertido en la denominación<br> más común para los sistemas de distribución por<br> suscripción de señales de televisión de pago usando<br>                                    conexiones de banda ancha sobre el protocolo IP.</h5>
                                 <article>
                                     <img src="/imagenes/iptact.png" alt="" class="w-100 p-3 border-0"></article>
                             </article>
+
 
                             <div class="col-12 col-sm-12 col-lg-6 p-2">
 
@@ -92,10 +93,9 @@
                                         <img src="/imagenes/plex.png" alt="plex" class="w-25 pS-2 border-0 padd">
 
                                     </article>
-                                    <article class="d-flex justify-content-start d-flex align-items-start ps-5 ms-2  article-inline-block img-block">
+                                    <article class="d-flex justify-content-start d-flex align-items-start ps-5 ms-2  article-inline-block img-block ">
                                         <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js" data-preference-id="54141614-884605bc-b8a5-43cb-959b-f956880f5834" data-source="button">
                                         </script>
-
 
                                         <article class="d-flex justify-content-end d-flex align-items-end ps-4 article-inline-block ms-5 img-block">
                                             <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js" data-preference-id="54141614-2a2cdba2-0dd3-4bc3-8e52-a2f2fc0f9f13" data-source="button">
@@ -129,12 +129,13 @@
                         <a class="btn btn-primary btn-floating m-1" href="https://www.facebook.com/profile.php?id=100067755996971" target="_Blank" role="button"><i class="fab fa-facebook-f"></i
                     ></a>
 
-
-                    </section>
-                    <p class=" h3 ">usbplaya 2022 &copy;</p>
-
                     
+                    </section>
+                    <p class=" h3 ">usbplaya 2023 &copy;</p>
+                    
+                  
                 </footer>
+                
     </body>
 
 </html>
