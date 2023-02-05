@@ -1,12 +1,14 @@
 //web-component
 
 class Menu extends HTMLElement {
-	constructor() {
-	super();
-	this.innerHTML = `
+  constructor() {
+    super();
+    this.innerHTML = `
     
-    <nav class="flex-container d-lg-flex">
-    <nav class="flex-container d-lg-flex ">
+    nav class="flex-container">
+    <nav class="flex-container row">
+    <nav class="flex-container col-lg-12 m-auto">
+    
         <a href="http://pelisplaya.net/IPTV.html ">
             <img src="/imagenes/music-top.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://pelisplaya.net/IPTV2.html ">
@@ -33,9 +35,9 @@ class Menu extends HTMLElement {
             <img src="/imagenes/nfl.png " class="img-thumbnail " alt="... " class="w-50 "></a>                            
     </nav>
 </nav>
-    `
-
- }
+</nav>
+    `;
+  }
 }
 
-customElements.define('menu-component', Menu);
+customElements.define("menu-component", Menu);
