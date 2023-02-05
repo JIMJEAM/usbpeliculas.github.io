@@ -5,7 +5,7 @@ class Menu extends HTMLElement {
     super();
     this.innerHTML = `
     
-    nav class="flex-container">
+    <nav class="flex-container">
     <nav class="flex-container row">
     <nav class="flex-container col-lg-12 m-auto">
     
