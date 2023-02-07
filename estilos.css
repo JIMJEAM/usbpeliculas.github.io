@@ -275,6 +275,8 @@
                 }
                 
                 @media only screen and (max-width: 576px) {
+
+
                     .container-fluid {
                     overflow-x: hidden;
                     max-width: fit-content;
@@ -282,11 +284,7 @@
                     #reproducir {
                     width: 350px;
                 }
-                    div {
-                        display: block;
-                        width: 355px;
-                        max-width: auto;
-                    }
+                    
                     .superior {
                         background: inherit;
                         display: block;
@@ -456,8 +454,4 @@
                     .padd {
                         margin-left: 0px;
                     }
-                    .contador {
-                        display: block;
-                        width: 180px;
-                }
             }
