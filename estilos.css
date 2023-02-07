@@ -179,25 +179,28 @@
                 .main,
                 .aside,
                 .footer {
-                    padding: 20px;
+                    padding: 5px;
                 }
                 
                 .main {
                     background: slateblue;
-                    flex-basis: 300px;
-                    flex-grow: 2;
+                    flex-basis: 240px;
+                    flex-grow: 1;
                     flex-shrink: 0;
                 }
                 
                 .aside {
+                    display: grid;
+                    grid-template-columns: 1fr;
                     background: royalblue;
                     color: rgba(12, 11, 12, 0.336);
-                    font-size: 23px;
+                    font-size: 10px;
                     text-shadow: 3px 3px 5px rgba(27, 122, 247, 0.945);
                     text-align: left;
                     font-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif, sans-serif;
                     padding: 3px;
-                    margin: 5px;
+                    margin: 3px;
+                    align-self: start;
                 }
                 
                 .footer {
@@ -275,8 +278,20 @@
                 }
                 
                 @media only screen and (max-width: 576px) {
-
-
+                     .float {
+                    position: 85% top sticky;
+                    width: 60px;
+                    height: 60px;
+                    bottom: 40px;
+                    left: 250px;
+                    background-color: #25d366;
+                    color: #FFF;
+                    border-radius: 50px;
+                    text-align: center;
+                    font-size: 30px;
+                    box-shadow: 2px 2px 3px #999;
+                    z-index: 1000;
+                }
                     .container-fluid {
                     overflow-x: hidden;
                     max-width: fit-content;
@@ -370,6 +385,12 @@
                     .slider {
                         width: 0 auto;
                         align-self: start;
+                    }
+                    .aside {
+                        display: block;
+                        flex-direction: column;
+                        flex-basis: 250px;
+                        font-size: small;
                     }
                   
                 }
