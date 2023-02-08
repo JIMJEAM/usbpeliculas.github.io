@@ -78,8 +78,43 @@ class Menu extends HTMLElement {
             <img src="https://cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/QYEZGNGEEBEEBCIQGF4YAIDYTQ.jpeg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
+            <a href="series24-7tresvecesana.html ">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmqjupyIk66bgBxSy_E-zehcKXIfz5U-hL9WINrNEsIYLbycM6TeAC0Tz-5R4j6kfdljA&usqp=CAU " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
+            <a href="series24-7heroesnorte.html ">
+            <img src="https://images.vix.com/prd/videos/video:mcp:2794377/1594bd054a81f9d09bb3bcece691b3fe " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
+            <a href="series24-7juanlaV.html ">
+            <img src="https://is2-ssl.mzstatic.com/image/thumb/9g4J8TwAScs_sfjQCgPDAQ/1200x675.jpg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
             
+            <a href="series24-7quebonitoamor.html ">
+            <img src="https://m1.paperblog.com/i/165/1655475/que-bonito-amoropinion-L-MMpDdq.jpeg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
+            <a href="series24-7migordaB.html ">
+            <img src="https://images.vix.com/prd/videos/video:mcp:3982734/634a4c6558b3f922083b32f60c1fcdbe?tr=w-1200,h-627,f-jpeg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
+            <a href="series24-7rebelde.html ">
+            <img src="https://images.vix.com/prd/videos/video:mcp:2684226/db41658be8db5d3cf765639960083595 " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
+            <a href="series24-7sortilegio.html ">
+            <img src="https://images.vix.com/prd/videos/video:mcp:3503290/dbe984221908bb0dac19b9309710388a?tr=w-1200,h-627,f-jpeg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
             
+            <a href="series24-7eltriunfoA.html ">
+            <img src="https://images.vix.com/prd/videos/video:mcp:3087836/a4908fe03931fa15ade0b2fd05805f10?tr=w-1200,h-627,f-jpeg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
+            <a href="series24-740y20.html ">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/83fbc04c75cfc3fb780ed9bd7299f2e5777e4fd062f7cc93042e514b23f8eadf._UY500_UX667_RI_V_TTW_.jpg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+            
+
             <nav/>
             <nav/>
 
