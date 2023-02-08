@@ -427,6 +427,16 @@ class Menu extends HTMLElement {
 
 
      <li> <img src="https://pics.filmaffinity.com/moonfall-138176660-large.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia802505.us.archive.org/7/items/m-0-0n-f-4l-l/M0%200n%20f4lL.mp4')"> </li>
+
+     <li > <img  src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/poster-joker-2-1567010576.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/j-0k-3r_202106/J0k3r.mp4')"> </li>
+
+ 
+     <li > <img  src="https://pics.filmaffinity.com/Mortal_Kombat-143448809-large.jpg" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/m-0rt-4l-k-0mb-4/M0rt4l%20K0mb4%2B.mp4')"></li>
+    </div>
+
+
+
+     <li> <img src="https://mundosuperman.com/wp-content/uploads/2020/05/Snyder-Cut.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://ia601506.us.archive.org/6/items/meme-5/jus.mp4')"> </li>
      
      <li><a href="#reproducir↑">  ► ↑ </a></li>
 
