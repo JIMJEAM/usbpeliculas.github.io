@@ -24,7 +24,7 @@ class Menu extends HTMLElement {
 
 
 
-   <li> <img src="https://pics.filmaffinity.com/M_rame-350956231-mmed.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia804700.us.archive.org/13/items/m_1r4-m3/m_1r4-m3.mp4')"> </li> 
+   <li> <img src="https://pics.filmaffinity.com/M3GAN-614109678-large.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/m-333gan-dual-latino-ingles/M333gan DUAL(Latino-Inglés).mp4')"> </li> 
 
 
     </a>
@@ -91,7 +91,7 @@ class Menu extends HTMLElement {
     <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/11/3eQMzMd2qsZkAJbk4wekp3Crg54.jpg?ssl=1" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://199.188.103.26/rombwgshgfhgdsjr/85455532potroxvix/Pel%C3%ADculas/Black%20Adam%202022latHD.mp4')"> </li>
 
 
-    <li > <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/q1I02yesCWTLn1C1o64k0ezZgf9.jpg?ssl=1" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/bros.mp4')"></li>
+    <li> <img src="https://pics.filmaffinity.com/M_rame-350956231-mmed.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia804700.us.archive.org/13/items/m_1r4-m3/m_1r4-m3.mp4')"> </li> 
    </div>
 
 
@@ -428,7 +428,7 @@ class Menu extends HTMLElement {
 
      <li> <img src="https://pics.filmaffinity.com/moonfall-138176660-large.jpg" alt="moon" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia802505.us.archive.org/7/items/m-0-0n-f-4l-l/M0%200n%20f4lL.mp4')"> </li>
 
-     <li > <img  src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/poster-joker-2-1567010576.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/j-0k-3r_202106/J0k3r.mp4')"> </li>
+     <li > <img  src="https://www.universalpictures.com.mx/tl_files/content/movies/fast9/posters/01.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/701023/R%C3%A1pidos.Y.Furiosos.9.%282021%29.1080P-Dual-Lat-SRREGIO.NET.mkv')"> </li>
 
  
      <li > <img  src="https://pics.filmaffinity.com/Mortal_Kombat-143448809-large.jpg" alt="moon" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/m-0rt-4l-k-0mb-4/M0rt4l%20K0mb4%2B.mp4')"></li>
