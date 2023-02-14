@@ -38,13 +38,13 @@ class Menu extends HTMLElement {
         <a href="http://pelisplaya.net/IPTV14.html " target="_blank">
             <img src="/imagenes/foxsport1.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://pelisplaya.net/IPTV15.html " target="_blank">
-            <img src="/imagenes/Paramount+PremierLeague.png " class="img-thumbnail " alt="... " class="w-50 "></a> 
+            <img src="/imagenes/Sonychannel.png " class="img-thumbnail " alt="... " class="w-50 "></a> 
         <a href="http://pelisplaya.net/IPTV16.html " target="_blank">
-            <img src="/imagenes/Univision.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <img src="/imagenes/Paramount.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://pelisplaya.net/IPTV17.html " target="_blank">
             <img src="/imagenes/Adrenalinasport.png " class="img-thumbnail " alt="... " class="w-50 "></a> 
         <a href="http://pelisplaya.net/IPTV18.html " target="_blank">
-            <img src="/imagenes/Space.png " class="img-thumbnail " alt="... " class="w-50 "></a>                             
+            <img src="/imagenes/Starchannel.png " class="img-thumbnail " alt="... " class="w-50 "></a>                             
     </nav>
 </nav>
 </nav>
