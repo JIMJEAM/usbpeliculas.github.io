@@ -32,7 +32,19 @@ class Menu extends HTMLElement {
         <a href="http://pelisplaya.net/IPTV11.html " target="_blank">
             <img src="/imagenes/allsport.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://pelisplaya.net/IPTV12.html " target="_blank">
-            <img src="/imagenes/nfl.png " class="img-thumbnail " alt="... " class="w-50 "></a>                            
+            <img src="/imagenes/nfl.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV13.html " target="_blank">
+            <img src="/imagenes/tudn.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV14.html " target="_blank">
+            <img src="/imagenes/foxsport1.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV15.html " target="_blank">
+            <img src="/imagenes/Paramount+PremierLeague.png " class="img-thumbnail " alt="... " class="w-50 "></a> 
+        <a href="http://pelisplaya.net/IPTV16.html " target="_blank">
+            <img src="/imagenes/Univision.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV17.html " target="_blank">
+            <img src="/imagenes/Adrenalinasport.png " class="img-thumbnail " alt="... " class="w-50 "></a> 
+        <a href="http://pelisplaya.net/IPTV18.html " target="_blank">
+            <img src="/imagenes/Space.png " class="img-thumbnail " alt="... " class="w-50 "></a>                             
     </nav>
 </nav>
 </nav>
