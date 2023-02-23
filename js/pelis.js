@@ -13,7 +13,7 @@ class Menu extends HTMLElement {
 	super();
 	this.innerHTML = `
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-
+        
        
     <li class="cursor-pointer"> <img  src="https://www.nextgame.es/wp-content/uploads/2022/10/Una-Boda-Explosiva-trailer.png" alt="Una boda Explosiva" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://ia804706.us.archive.org/13/items/b0d_45-pl0M0/b0d_45-pl0M0.mp4')"> </li>
 
@@ -84,7 +84,19 @@ class Menu extends HTMLElement {
 </ul> 
 
 
+ <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
+       
+    <li class="cursor-pointer"> <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/11/3eQMzMd2qsZkAJbk4wekp3Crg54.jpg?ssl=1" alt="Black Adam" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://199.188.103.26/rombwgshgfhgdsjr/85455532potroxvix/Pel%C3%ADculas/Black%20Adam%202022latHD.mp4')"> </li>
+
+
+    <li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/M_rame-350956231-mmed.jpg" alt="Mírame" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia804700.us.archive.org/13/items/m_1r4-m3/m_1r4-m3.mp4')"> </li> 
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/09/9azVNvLVswNn1dj43YbJ5sZiykd.jpg?ssl=1" alt="Hasta la muerte" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://proteiosmorelia.site/stuff/till.mp4')"> </li> 
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
