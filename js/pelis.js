@@ -430,7 +430,7 @@ class Menu extends HTMLElement {
 
 
 
-     <li class="cursor-pointer"> <img src="" alt="Thor: Amor y trueno" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia801500.us.archive.org/3/items/t-h-0-r/T_h0-r.mp4')"> </li>
+     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/img/peliculas/39361/1/1/39361.jpg" alt="Thor: Amor y trueno" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia801500.us.archive.org/3/items/t-h-0-r/T_h0-r.mp4')"> </li>
 
      <li class="cursor-pointer"> <img  src="https://www.universalpictures.com.mx/tl_files/content/movies/fast9/posters/01.jpg" alt="Rápidos y Furiosos 9" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/701023/R%C3%A1pidos.Y.Furiosos.9.%282021%29.1080P-Dual-Lat-SRREGIO.NET.mkv')"> </li>
 
