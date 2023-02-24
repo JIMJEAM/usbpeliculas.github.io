@@ -54,11 +54,24 @@
             </nav>
         </header>
         <main class="container-fluid">
-            <!--reproductor-->
+            <!--twitch-->
+        </div>
+        <div id="twitch-embed"></div>
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 300,
+            height: 250,
+            channel: "fileld026",
+            layout: "video",
+            parent: ["pelisplaya.net"]
+          });
+    </script>
+            <!--reproductor
             <div id="player" class="d-flex justify-content-center d-flex align-items-center m-0 w-75"></div>
             <script>
                 var player = new Clappr.Player({ source: "https://srv5.zcast.com.br/simpsons/simpsons/playlist.m3u8", parentId: "#player" });
-            </script>
+            </script>-->
             <span> Smart tv, Tv box y dispositivos android <br>
                 🔁 gira la pantalla <i class="fas fa-mobile-alt"></i> y dale play! <i class="fas fa-play"></i> </span>
             <br><br>
@@ -68,18 +81,7 @@
 
     <!--video-control&web-componet-->
 
-    </div>
-    <div id="twitch-embed"></div>
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 300,
-        height: 250,
-        channel: "fileld026",
-        layout: "video",
-        parent: ["pelisplaya.net/series24-7.html"]
-      });
-</script>
+
     </main>
 
 
