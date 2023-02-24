@@ -69,7 +69,17 @@
     <!--video-control&web-componet-->
 
     </div>
-
+    <div id="twitch-embed"></div>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 300,
+        height: 250,
+        channel: "fileld026",
+        layout: "video",
+        parent: ["pelisplaya.net/series24-7.html"]
+      });
+</script>
     </main>
 
 
@@ -88,7 +98,7 @@
     </footer>
 
 
-
+    
 
 </body>
 
