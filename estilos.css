@@ -283,6 +283,7 @@
                 }
                 
                 @media only screen and (max-width: 576px) {
+                    
                      .float {
                     position: 85% top sticky;
                     width: 60px;
