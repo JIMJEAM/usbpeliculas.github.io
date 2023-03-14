@@ -114,6 +114,13 @@ class Menu extends HTMLElement {
             <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/83fbc04c75cfc3fb780ed9bd7299f2e5777e4fd062f7cc93042e514b23f8eadf._UY500_UX667_RI_V_TTW_.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
+            <a href="series24-7nosotroslosguapos.html ">
+            <img src="https://pbs.twimg.com/profile_images/1215777653812355074/lkVpBAWK_400x400.jpg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
+            <a href="series24-7futboltmx.html ">
+            <img src="https://assets-global.website-files.com/61afa06b50eade7608de2f59/62e2f768dce10977294e87fc_LIGAMX_PLAYERS_VERSION2_HOR_POSTER_VIX-min.jpg " 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <nav/>
             <nav/>
