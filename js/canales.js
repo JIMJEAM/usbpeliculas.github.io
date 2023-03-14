@@ -44,8 +44,25 @@ class Menu extends HTMLElement {
         <a href="http://pelisplaya.net/IPTV17.html " target="_blank">
             <img src="/imagenes/Adrenalinasport.png " class="img-thumbnail " alt="... " class="w-50 "></a> 
         <a href="http://pelisplaya.net/IPTV18.html " target="_blank">
-            <img src="/imagenes/Starchannel.png " class="img-thumbnail " alt="... " class="w-50 "></a>                             
-    </nav>
+            <img src="/imagenes/Starchannel.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV19.html " target="_blank">
+            <img src="/imagenes/Unicable.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV20.html " target="_blank">
+            <img src="/imagenes/Distritocomedia.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV21.html " target="_blank">
+            <img src="/imagenes/golden.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV22.html " target="_blank">
+            <img src="/imagenes/goldenplus.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV23.html " target="_blank">
+            <img src="/imagenes/goldenedge.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV24.html " target="_blank">
+            <img src="/imagenes/cinecanal.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV25.html " target="_blank">
+            <img src="/imagenes/Fx.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV26.html " target="_blank">
+            <img src="/imagenes/Ae.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+        <a href="http://pelisplaya.net/IPTV27.html " target="_blank">
+            <img src="/imagenes/Amc.png " class="img-thumbnail " alt="... " class="w-50 "></a>
 </nav>
 </nav>
     `;
