@@ -82,7 +82,34 @@ class Menu extends HTMLElement {
 </div>
 
 </div>
-</ul>     
+</ul>  
+
+
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//gU4mmINWUF294Wzi8mqRvi6peMe.jpg" alt="Narvik" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230130_20230130_2041/01.mp4')"> </li>
+
+
+    <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS7f6Ya7WpgKXzR2Ha6WPJXnz1DQcjEg9egl6AfZlu-pZjUOC_eLtw8iPgnm06mCGx9Do&usqp=CAU" alt="Magic mike's last dance" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://tgdownloads.dltelegram.workers.dev/1001829780398/55685')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500//abBDzmy35A3Nkupn6wK2DKyFamd.jpg" alt="Viking Wolf" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230207_20230207_2245/01.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul> 
+
+
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
@@ -113,19 +140,44 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
-    <li class="cursor-pointer"> <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/11/3eQMzMd2qsZkAJbk4wekp3Crg54.jpg?ssl=1" alt="Black Adam" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://199.188.103.26/rombwgshgfhgdsjr/85455532potroxvix/Pel%C3%ADculas/Black%20Adam%202022latHD.mp4')"> </li>
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//wjOHjWCUE0YzDiEzKv8AfqHj3ir.jpg"Babylon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230203_20230203/01.mp4')"> </li>
 
 
-    <li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/M_rame-350956231-mmed.jpg" alt="Mírame" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia804700.us.archive.org/13/items/m_1r4-m3/m_1r4-m3.mp4')"> </li> 
+    <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500//wAkpPm3wcHRqZl8XjUI3Y2chYq2.jpg" alt="Teen Wolf" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230130_20230130_2101/01.mp4')"> </li> 
    </div>
 
 
 
 
-   <li class="cursor-pointer"> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/09/9azVNvLVswNn1dj43YbJ5sZiykd.jpg?ssl=1" alt="Hasta la muerte" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://proteiosmorelia.site/stuff/till.mp4')"> </li> 
+   <li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/A_todas_partes-867357163-mmed.jpg" alt="A todas partes" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230217_20230217_1536/01.mp4')"> </li> 
 
 
     </a>
+</section>
+
+</div>
+
+</div>
+</ul>
+
+
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+<li class="cursor-pointer"> <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/11/3eQMzMd2qsZkAJbk4wekp3Crg54.jpg?ssl=1" alt="Black Adam" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://199.188.103.26/rombwgshgfhgdsjr/85455532potroxvix/Pel%C3%ADculas/Black%20Adam%202022latHD.mp4')"> </li>
+
+
+<li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/M_rame-350956231-mmed.jpg" alt="Mírame" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia804700.us.archive.org/13/items/m_1r4-m3/m_1r4-m3.mp4')"> </li> 
+</div>
+
+
+
+
+<li class="cursor-pointer"> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/09/9azVNvLVswNn1dj43YbJ5sZiykd.jpg?ssl=1" alt="Hasta la muerte" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://proteiosmorelia.site/stuff/till.mp4')"> </li> 
+
+
+</a>
 </section>
 
 </div>
@@ -346,7 +398,7 @@ class Menu extends HTMLElement {
 
 
 
-     <li class="cursor-pointer"> <img src="https://descargasenhd.net/wp-content/uploads/2022/09/sNAMqQ9T7YnXnvUSufeWzaRgK6Y-200x300.jpg" alt="}Depredador la presa" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601502.us.archive.org/31/items/p.R3_y/p.R3_y0k.mp4')"> </li> 
+     <li class="cursor-pointer"> <img src="https://i0.wp.com/cinecalidad.icu/wp-content/uploads/2022/08/sNAMqQ9T7YnXnvUSufeWzaRgK6Y.jpg?fit=200%2C300&ssl=1" alt="Depredador la presa" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601502.us.archive.org/31/items/p.R3_y/p.R3_y0k.mp4')"> </li> 
  
    
 
