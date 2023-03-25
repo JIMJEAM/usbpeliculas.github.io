@@ -37,6 +37,33 @@ class Menu extends HTMLElement {
 </ul> 
 
 
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+    <li class="cursor-pointer"> <img  src="https://posterspy.com/wp-content/uploads/2022/12/Cocaine_Bear_Poster.jpg" alt="
+    Bear cocaine" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tgdownloads.dltelegram.workers.dev/1001829780398/57009')"> </li>
+
+
+    <li class="cursor-pointer"> <img  src="https://s3-eu-west-1.amazonaws.com/abandomedia/db/poster/db_posters_55914.jpg" alt="Llaman a la puerta" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/llaman-a-la-puerta_202302/Llaman a la puerta.ia.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500//oGHr8yUOXtVK0mGoZURZqqbwXXj.jpg" alt="Identidad desbloqueada" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230227_20230227_1914/01.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul> 
+
+
+
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
@@ -321,7 +348,7 @@ class Menu extends HTMLElement {
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
-    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/causeway-924344630-mmed.jpg" alt="Causeway" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/resurgir.mp4')"> </li>
+    <li class="cursor-pointer"> <img  src="https://images.justwatch.com/poster/300974125/s718/causeway.%7Bformat%7D" alt="Causeway" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/resurgir.mp4')"> </li>
 
 
     <li class="cursor-pointer"> <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/11/aw05OSgJFxsMiLAN0UQG2gCdTGY.jpg?ssl=1" alt="Sonríe" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/smile2.mp4')"></li>
