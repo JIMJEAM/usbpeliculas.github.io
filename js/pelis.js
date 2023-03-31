@@ -67,6 +67,32 @@ class Menu extends HTMLElement {
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://i.ebayimg.com/images/g/8EoAAOSw5W5j6eML/s-l500.jpg" alt="
+    Scream 6" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tgdownloads.dltelegram.workers.dev/1001829780398/59433')"> </li>
+
+
+    <li class="cursor-pointer"> <img  src="https://www.andesfilms.com.pe/wp-content/thumbgen_cache/7728cf289d0227910838d9e0e55cd3f1.jpg" alt="65: Al Borde de la Extinción" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://tgdownloads.dltelegram.workers.dev/1001829780398/58180')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/b5952b644d35ab311c10c63c178727e0e2d2dcd796c1081566129423497c6410._RI_V_TTW_.jpg" alt="Duro de cuidar 2" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230227_20230227_2250/01.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul> 
+
+
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://www.nextgame.es/wp-content/uploads/2022/10/Una-Boda-Explosiva-trailer.png" alt="Una boda Explosiva" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://ia804706.us.archive.org/13/items/b0d_45-pl0M0/b0d_45-pl0M0.mp4')"> </li>
 
 
