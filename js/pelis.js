@@ -116,17 +116,17 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
-    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/img/peliculas/41139/1/1/41139.jpg" alt="Gato con botas: el último deseo" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/701023/Puss.in.Boots.The.Last.Wish.2022.lati.mp4')"> </li>
+    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/img/peliculas/41139/1/1/41139.jpg" alt="Gato con botas: el último deseo" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/604023/Puss.in.Boots.The.Last.Wish.2022.lati.mp4')"> </li>
 
 
-    <li class="cursor-pointer"> <img  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjl9iV9tc_Oc3k-YGGanZbjkW2BIXjVzhzZaxclapKn9m9A8NCoD_74t039ghYsUkP7VnC8_GxBYShF1QNrrDwzWLGv66z3vkMqiUhBXii0C3qhceqW0fV1BtR5-MFJncyV3Qv0e98CTLKr1t5Km-uOHbuiArqGBzR8wXBbpeYTbLH91HlBAS9MGCI6vQ/s1600/poster-huevitos-congelados.jpg" alt="Huevitos congelados" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('http://regioplay.xyz/701023/Huevitos.congelados.2022.lati.mp4')"></li>
+    <li class="cursor-pointer"> <img  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjl9iV9tc_Oc3k-YGGanZbjkW2BIXjVzhzZaxclapKn9m9A8NCoD_74t039ghYsUkP7VnC8_GxBYShF1QNrrDwzWLGv66z3vkMqiUhBXii0C3qhceqW0fV1BtR5-MFJncyV3Qv0e98CTLKr1t5Km-uOHbuiArqGBzR8wXBbpeYTbLH91HlBAS9MGCI6vQ/s1600/poster-huevitos-congelados.jpg" alt="Huevitos congelados" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('http://regioplay.xyz/604023/Huevitos.congelados.2022.lati.mp4')"></li>
    </div>
 
 
 
 
    <li class="cursor-pointer"> <img src="https://pbs.twimg.com/media/FYrp2tQXwAArECL.jpg" alt="
-   Pinocho de Guillermo del Toro" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/701023/Guillermo.del.Toros.Pinocchio.2022.lati.mp4')"> </li> 
+   Pinocho de Guillermo del Toro" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/604023/Guillermo.del.Toros.Pinocchio.2022.lati.mp4')"> </li> 
 
 
     </a>
@@ -396,15 +396,15 @@ class Menu extends HTMLElement {
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
         
-    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Abracadabra_2-412182137-mmed.jpg" alt="Abracadabra 2" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/701023/Hocus.Pocus.2.2022.lati.mp4')"> </li>
+    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Abracadabra_2-412182137-mmed.jpg" alt="Abracadabra 2" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/604023/Hocus.Pocus.2.2022.lati.mp4')"> </li>
 
 
-    <li class="cursor-pointer"> <img src="https://d2iltjk184xms5.cloudfront.net/uploads/photo/file/432245/small_7c1513335e89b414939c6a26486f4117-994_poster.jpg" alt="¡Nop!" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('http://regioplay.xyz/701023/Nope.2022.lati.mp4')"> </li>
+    <li class="cursor-pointer"> <img src="https://d2iltjk184xms5.cloudfront.net/uploads/photo/file/432245/small_7c1513335e89b414939c6a26486f4117-994_poster.jpg" alt="¡Nop!" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('http://regioplay.xyz/604023/Nope.2022.lati.mp4')"> </li>
    </div>
 
 
 
-    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/38356-635259-20220708040700.jpg" alt="DC Liga de Supermascotas" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/701023/DC.League.of.Super.Pets.2022.lati.mp4')"> </li> 
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/38356-635259-20220708040700.jpg" alt="DC Liga de Supermascotas" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/604023/DC.League.of.Super.Pets.2022.lati.mp4')"> </li> 
 
   
 
@@ -418,15 +418,15 @@ class Menu extends HTMLElement {
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
-    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Mentada_de_padre-636355999-large.jpg" alt="Mentada de padre" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/701023/Mentada.de.padre.2019.lati.mp4')"> </li>
+    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Mentada_de_padre-636355999-large.jpg" alt="Mentada de padre" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/604023/Mentada.de.padre.2019.lati.mp4')"> </li>
 
 
-    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Luck-722224530-large.jpg" alt="Suerte" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('http://regioplay.xyz/701023/Luck.2022.lati.mp4')"></li>
+    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Luck-722224530-large.jpg" alt="Suerte" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('http://regioplay.xyz/604023/Luck.2022.lati.mp4')"></li>
    </div>
 
 
 
-    <li class="cursor-pointer"> <img src="https://m.media-amazon.com/images/M/MV5BZDU1OGM0YzUtMzM2ZC00Y2VjLTliOWItY2IyOTQyODJhNTczXkEyXkFqcGdeQXVyMTI2MDIxOTY0._V1_.jpg" alt="Las leyendas: el origen" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/701023/Las.leyendas.El.origen.2021.lati.mp4')"> </li> 
+    <li class="cursor-pointer"> <img src="https://m.media-amazon.com/images/M/MV5BZDU1OGM0YzUtMzM2ZC00Y2VjLTliOWItY2IyOTQyODJhNTczXkEyXkFqcGdeQXVyMTI2MDIxOTY0._V1_.jpg" alt="Las leyendas: el origen" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://regioplay.xyz/604023/Las.leyendas.El.origen.2021.lati.mp4')"> </li> 
 
     <li class="cursor-pointer"><a href="#reproducir↑">  ► ↑ </a></li>
         
@@ -561,7 +561,7 @@ class Menu extends HTMLElement {
 
      <li class="cursor-pointer"> <img src="https://static.cinepolis.com/img/peliculas/39361/1/1/39361.jpg" alt="Thor: Amor y trueno" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia801500.us.archive.org/3/items/t-h-0-r/T_h0-r.mp4')"> </li>
 
-     <li class="cursor-pointer"> <img  src="https://www.universalpictures.com.mx/tl_files/content/movies/fast9/posters/01.jpg" alt="Rápidos y Furiosos 9" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/701023/R%C3%A1pidos.Y.Furiosos.9.%282021%29.1080P-Dual-Lat-SRREGIO.NET.mkv')"> </li>
+     <li class="cursor-pointer"> <img  src="https://www.universalpictures.com.mx/tl_files/content/movies/fast9/posters/01.jpg" alt="Rápidos y Furiosos 9" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://regioplay.xyz/604023/R%C3%A1pidos.Y.Furiosos.9.%282021%29.1080P-Dual-Lat-SRREGIO.NET.mkv')"> </li>
 
  
      <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Mortal_Kombat-143448809-large.jpg" alt="Mortal Combat" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/m-0rt-4l-k-0mb-4/M0rt4l%20K0mb4%2B.mp4')"></li>
