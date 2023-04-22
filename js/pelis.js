@@ -16,7 +16,7 @@ class Menu extends HTMLElement {
 
        
     <li class="cursor-pointer"> <img  src="https://lumiere-a.akamaihd.net/v1/images/ant-man_and_the_wasp_quantumania_poster_2_la_6eea32a6.jpeg?region=0,0,743,1100" alt="
-    Ant-Man and the Wasp: Quantumania" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230217_20230217_2304/01.mp4')"> </li>
+    Ant-Man and the Wasp: Quantumania" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tgdownloads.dltelegram.workers.dev/1001886225227/2413')"> </li>
 
 
     <li class="cursor-pointer"> <img  src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/ZX4JT7D7BJDJNIUZYUBD7EFKAU.jpg" alt="Creed III" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://objectstorage.us-phoenix-1.oraclecloud.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/2023pelis%2Ffeb%2FVer%20Creed%20III%20online%20HD%20-%20Cuevana%202%20Espa%C3%B1ol.mp4')"></li>
