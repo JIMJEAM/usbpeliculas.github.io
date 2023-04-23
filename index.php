@@ -1,5 +1,7 @@
 <?php require_once("index.html") ?>
+
 <?php
+/*
 <div class="contador">
 <div id="sfcayl819t4zgej2sfrmt16nu977pbluxgp"></div>
 <div id="sfctu62ql65gfupfp6jjxf8cap21qe2bpxf"></div>
@@ -10,5 +12,5 @@
 
 
 </div>
-</div>
+</div>*/
 ?>
