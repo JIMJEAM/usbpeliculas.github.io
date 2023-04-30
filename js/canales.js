@@ -50,7 +50,7 @@ class Menu extends HTMLElement {
         <a href="http://pelisplaya.net/IPTV20.html " target="_blank">
             <img src="/imagenes/amas.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://pelisplaya.net/IPTV21.html " target="_blank">
-            <img src="/imagenes/multimediosmty.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <img src="/imagenes/chiquilines.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://pelisplaya.net/IPTV22.html " target="_blank">
             <img src="/imagenes/topcine.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://pelisplaya.net/IPTV23.html " target="_blank">
