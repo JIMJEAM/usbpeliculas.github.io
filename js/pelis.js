@@ -15,6 +15,32 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//9NXAlFEE7WDssbXSMgdacsUD58Y.jpg" alt="
+    Peter pan & Wendy " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230429_20230429/01.mp4')"> </li>
+
+
+    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/41961-584178-20230310125105.jpg" alt="El exorcista del Papa" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230504_20230504_1822/01.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/41760-508243-20230221105251.png" alt="Las Momias y El Anillo Perdido" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_(2023)0409_(2023)0409_2336/01.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul> 
+
+
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/41749-830563-20230329061508.jpg" alt="
     Dungeons & Dragons: Honor entre ladrones" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_(2023)0408_(2023)0408_2027/01.mp4')"> </li>
 
