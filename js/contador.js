@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
 		if(current > $this.data('count')){
 			$this.html($this.data('count'));
 		} else {
-			setTimeout(function(){count($this)}, 0);
+			setTimeout(function(){count($this)}, 50);
 		}
 	}
 
