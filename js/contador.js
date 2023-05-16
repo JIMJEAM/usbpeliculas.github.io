@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
 
 	jQuery(".stat-count").each(function() {
 	  jQuery(this).data('count', parseInt(jQuery(this).html(), 10));
-	  jQuery(this).html('0');
+	  jQuery(this).html('0 ' + jQuery(this).data('after text') + 1 + '');
 	  count(jQuery(this));
 	});
 });
