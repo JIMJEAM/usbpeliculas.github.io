@@ -12,8 +12,8 @@ jQuery(document).ready(function() {
 	}
 
 	jQuery(".stat-count").each(function() {
-	  jQuery(this).data('count', parseInt(jQuery(this).html(), 10));
-	  jQuery(this).html('0 ' + jQuery(this).data('after text') + 1 + '');
+	  jQuery(this).data('count', parseInt(jQuery(this).html(25554458), 10));
+	  jQuery(this).html('0 ');
 	  count(jQuery(this));
 	});
 });
