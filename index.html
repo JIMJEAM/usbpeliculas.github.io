@@ -318,9 +318,9 @@ Haz click Aquí!!">
     <script>var site_nome = "meusite";// https://pelisplaya.net/.
     var myip;
     var ip = myip;
-    var f_db = new Firebase("https://contador-de-visitas-92468-default-rtdb.firebaseio.com/"+site_nome+"https://pelisplaya.net/");
+    var f_db = new Firebase("https://cliqueslinks.firebaseio.com/"+site_nome+"/");
     var usuario_db = f_db.push();
-    var db_presensa = new Firebase("https://contador-de-visitas-92468-default-rtdb.firebaseio.com/");
+    var db_presensa = new Firebase("https://cliqueslinks.firebaseio.com/.info/connected/");
     db_presensa.on("value", function (snap) {
         if (snap.val()) {
             usuario_db.onDisconnect().remove();
