@@ -7,13 +7,13 @@ jQuery(document).ready(function() {
 		if(current > $this.data('count')){
 			$this.html($this.data('count'));
 		} else {
-			setTimeout(function(){count($this)}, 50);
+			setTimeout(function(){count($this)}, 0);
 		}
 	}
 
 	jQuery(".stat-count").each(function() {
 	  jQuery(this).data('count', parseInt(jQuery(this).html(), 10));
-	  jQuery(this).html('23357580');
+	  jQuery(this).html('0');
 	  count(jQuery(this));
 	});
 });
