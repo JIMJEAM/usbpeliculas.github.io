@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
 		current = current + 1; /* Where 1 is increment */
 
 		$this.html(++current);
-		if(current > $this.data('count')){
+		if(current > $this.data('count').count + 1){
 			$this.html($this.data('count'));
 		} else {
 			setTimeout(function(){count($this)}, 50);
@@ -12,8 +12,8 @@ jQuery(document).ready(function() {
 	}
 
 	jQuery(".stat-count").each(function() {
-	  jQuery(this).data('count', parseInt(jQuery(this).html(25554458), 10));
-	  jQuery(this).html('0 ');
+	  jQuery(this).data('count', parseInt(jQuery(this).html(), 10));
+	  jQuery(this).html('0');
 	  count(jQuery(this));
 	});
 });
