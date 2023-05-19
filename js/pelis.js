@@ -40,6 +40,31 @@ class Menu extends HTMLElement {
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+<li class="cursor-pointer"> <img  src="https://www.lavanguardia.com/peliculas-series/images/movie/poster/2023/5/w1280/1OJDfBoMXYrkSkLQOqtWD3bHnKX.jpg" alt="
+Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230514_20230514_2224/01.mp4')"> </li>
+
+
+<li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/La_madre-219102487-large.jpg" alt="La madre" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230512_20230512_2326/01.mp4')"></li>
+</div>
+
+
+
+
+<li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/Renfield-758566468-large.jpg" alt="Renfield" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230504_20230504_1831/01.mp4')"> </li> 
+
+
+</a>
+</section>
+
+</div>
+
+</div>
+</ul> 
+
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//9NXAlFEE7WDssbXSMgdacsUD58Y.jpg" alt="
     Peter pan & Wendy " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230429_20230429/01.mp4')"> </li>
 
