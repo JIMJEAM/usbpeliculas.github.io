@@ -15,6 +15,31 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/78W8tIM3PgIO6OIMfugi6p1GHNT.jpg" alt="
+    Black Knight " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230514_20230514_2127/01.mp4')"> </li>
+
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//n8ZpMwYT02XjpQHpSxn1eJw5Zpz.jpg" alt="Crater" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230514_20230514_2220/01.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/41753-892183-20230217030119.jpg" alt="Sombras de un crimen" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230513/01.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul> 
+
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//9NXAlFEE7WDssbXSMgdacsUD58Y.jpg" alt="
     Peter pan & Wendy " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230429_20230429/01.mp4')"> </li>
 
@@ -34,7 +59,7 @@ class Menu extends HTMLElement {
 </div>
 
 </div>
-</ul> 
+</ul>
 
 
 
