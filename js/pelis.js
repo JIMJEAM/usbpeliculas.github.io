@@ -688,7 +688,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
 
      <li class="cursor-pointer"> <img src="https://static.cinepolis.com/img/peliculas/39361/1/1/39361.jpg" alt="Thor: Amor y trueno" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia801500.us.archive.org/3/items/t-h-0-r/T_h0-r.mp4')"> </li>
 
-     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/ovHxxphDgjyEpYriDoGoIHfrdZL.jpg" alt="A quien solia conocer" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tgdownloads.dltelegram.workers.dev/1001886225227/2392')"> </li>
+     <li class="cursor-pointer"> <img  src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/086a3ff3-cfc9-4353-b023-f99822788b9a/df3v63t-c19e83aa-1008-4bed-a072-90b87e74aede.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA4NmEzZmYzLWNmYzktNDM1My1iMDIzLWY5OTgyMjc4OGI5YVwvZGYzdjYzdC1jMTllODNhYS0xMDA4LTRiZWQtYTA3Mi05MGI4N2U3NGFlZGUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.omw8Igy8csWoQHmfKpeWegP7FGMvOOVEDdNqNORCEJw" alt="Morbius" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://ia902507.us.archive.org/14/items/m-0r-b-1-u-5./M0r_b1%20u5..mp4')"> </li>
 
  
      <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Mortal_Kombat-143448809-large.jpg" alt="Mortal Combat" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/m-0rt-4l-k-0mb-4/M0rt4l%20K0mb4%2B.mp4')"></li>
