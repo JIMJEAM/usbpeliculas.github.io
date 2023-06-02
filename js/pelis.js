@@ -37,6 +37,31 @@ class Menu extends HTMLElement {
 </ul> 
 
 
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+<li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/ogDXuVkO92GcETZfSofXXemw7gb.jpg" alt="
+One Piece Film Red " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_(2023)0408_(2023)0408_1938/01.mp4')"> </li>
+
+
+<li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/41150-106834-20221205043048.jpg" alt="Agente Fortune: El gran engaño" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_(2023)0409_(2023)0409_2310/01.mp4')"></li>
+</div>
+
+
+
+
+<li class="cursor-pointer"> <img src="https://www.cinepremiere.com.mx/wp-content/uploads/2023/04/Fuga-de-Reinas-900x1125.jpg" alt="Fuga de reinas" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230415_20230415_2331/01.mp4')"> </li> 
+
+
+</a>
+</section>
+
+</div>
+
+</div>
+</ul> 
+
+
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
