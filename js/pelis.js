@@ -15,6 +15,31 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//ym1dxyOk4jFcSl4Q2zmRrA5BEEN.jpg" alt="
+    La sirenita " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://objectstorage.us-phoenix-1.oraclecloud.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/2023pelis%2Fmayooo%2FVer%20La%20sirenita%20online%20HD%20-%20Cuevana%202%20Espa%C3%B1ol.mp4')"> </li>
+
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/liLN69YgoovHVgmlHJ876PKi5Yi.jpg" alt="Ghosting" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230423/01.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500/y2d2SBqK33mGOG2CqAYMo3YbWE4.jpg" alt="El Club de los Asesinos" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230504_20230504_1804/01.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul> 
+
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/78W8tIM3PgIO6OIMfugi6p1GHNT.jpg" alt="
     Black Knight " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230514_20230514_2127/01.mp4')"> </li>
 
