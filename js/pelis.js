@@ -15,6 +15,31 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://s3-eu-west-1.amazonaws.com/abandomedia/db/foto/db_40861_30.jpg" alt="
+    Transformers: el despertar de las bestias " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://main.cinedecalidad.xyz/mexicanas/TransformersDespertar.mp4')"> </li>
+
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//jNO8smUkyNbL2t6HU6EBnJCSf6r.jpg" alt="Un Año Inolvidable – Verano 2023" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230609_20230609_2029/01.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500//gwVAb3hMYl5F68mvKGl2eqDOj0G.jpg" alt="Tin & Tina" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230602_20230602_2101/01.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>         
+
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//ym1dxyOk4jFcSl4Q2zmRrA5BEEN.jpg" alt="
     La sirenita " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://objectstorage.us-phoenix-1.oraclecloud.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/2023pelis%2Fmayooo%2FVer%20La%20sirenita%20online%20HD%20-%20Cuevana%202%20Espa%C3%B1ol.mp4')"> </li>
 
