@@ -20,7 +20,7 @@ class Menu extends HTMLElement {
     
 
         <a href="series24-7.html ">
-            <img src="https://phantom-marca.unidadeditorial.es/ff129bbe4e38ec6dd131e989f544d6bf/resize/1320/f/jpg/assets/multimedia/imagenes/2021/03/04/16148576621458.jpg" class="img-thumbnail " alt="... " class="w-50 "></a>
+            <img src="../imagenes/twitch247.png" class="img-thumbnail " alt="... " class="w-50 "></a>
            
             <a href="series24-7retro.html ">
             <img src="https://m.media-amazon.com/images/I/B1d2i--qjtS._SL500_.png " class="img-thumbnail " alt="... " class="w-50 "></a>
