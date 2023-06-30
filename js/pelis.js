@@ -16,7 +16,7 @@ class Menu extends HTMLElement {
 
        
     <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Flash-205686824-mmed.jpg" alt="
-    Flash " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://objectstorage.us-phoenix-1.oraclecloud.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/2023pelis%2Fjunn%2FVer%20Flash%20Online%20Castellano%20Latino%20Subtitulada%20HD%20-%20HDFull_2.mp4')"> </li>
+    Flash " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230623_20230623_1636/01.mp4')"> </li>
 
 
     <li class="cursor-pointer"> <img  src="https://i0.wp.com/cinemedios.com/wp-content/uploads/2023/05/misionderescate2_poster-1.jpg?w=210&h=310&ssl=1" alt="Misión de rescate 2" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://objectstorage.us-phoenix-1.oraclecloud.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/2023pelis%2Fjunn%2FVer%20Tyler%20Rake%202%20Online%20Castellano%20Latino%20Subtitulada%20HD%20-%20HDFull.mp4')"></li>
@@ -26,6 +26,31 @@ class Menu extends HTMLElement {
 
 
    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/42319-658122-20230428091407.jpg" alt="Demonio negro" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://objectstorage.us-phoenix-1.oraclecloud.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/2023pelis%2Fmayooo%2FVer%20Demonio%20negro%20online%20HD%20-%20Cuevana%202%20Espa%C3%B1ol.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>    
+
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//9YEGawvjaRgnyW6QVcUhFJPFDco.jpg" alt="
+    Black Clover: La espada del rey mago " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230623_20230623_1636/01.mp4')"> </li>
+
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/u3M1bVxEbIe3BVkFJWwMi8DIea1.jpg" alt="Sustitutos" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230509_20230509/01.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500//3IhGkkalwXguTlceGSl8XUJZOVI.jpg" alt="Hynoptic" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://objectstorage.us-phoenix-1.oraclecloud.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/2023pelis%2Fmayooo%2FVer%20Hypnotic%20online%20HD%20-%20Cuevana%202%20Espa%C3%B1ol.mp4')"> </li> 
 
 
     </a>
@@ -329,7 +354,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
 
 
 
-   <li class="cursor-pointer"> <img src="https://assets.cinepolisklic.com/cmsklicia/movieimages/megan/poster_originalsize_250X375.jpg" alt="M3gan" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/m-333gan-dual-latino-ingles/M333gan DUAL(Latino-Inglés).mp4')"> </li> 
+   <li class="cursor-pointer"> <img src="https://i.ebayimg.com/images/g/mIgAAOSwUX5kZIV3/s-l400.jpg" alt="M3gan" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/m-333gan-dual-latino-ingles/M333gan DUAL(Latino-Inglés).mp4')"> </li> 
 
 
     </a>
@@ -631,7 +656,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
 
 
 
-    <li class="cursor-pointer"> <img src="https://assets.cinepolisklic.com/cmsklicia/movieimages/chernobil-la-pelicula/poster_originalsize_250X375.jpg" alt="Chernóbil: La Película" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia802601.us.archive.org/3/items/ch-3rn-0/Ch3rn_0.mp4')"> </li> 
+    <li class="cursor-pointer"> <img src="https://culturizarte.cl/wp-content/uploads/2021/10/chernobil.jpg" alt="Chernóbil: La Película" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia802601.us.archive.org/3/items/ch-3rn-0/Ch3rn_0.mp4')"> </li> 
 
   
 
