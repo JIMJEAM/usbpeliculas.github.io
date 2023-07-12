@@ -19,7 +19,7 @@ class Menu extends HTMLElement {
     Indiana Jones dial del destino " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tvinnov.online/CINECAN/ndiana%20Jones%20and%20the%20Dial%20of%20Destiny/ndiana%20Jones%20and%20the%20Dial%20of%20Destiny%20lat%20cam.mp4')"> </li>
 
 
-    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/6oDvtk9ODUMSdXBawId2B8L12vx.jpg" alt="Wwe- Backlash (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://71.105.189.194/iptv/peliculas/NUEVAS%2031/Wwe-.Backlash.2023.720p-dual-lat.mp4')"></li>
+    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/42321-262149-20230616020218.jpg" alt="Krakens y Sirenas: Conoce a Los Gillman" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://tvinnov.online/CINECAN/Ruby%20Gillman%20Teenage%20Kraken/Ruby%20Gillman,%20Teenage%20Kraken%20LAT%20CAM.mp4')"></li>
    </div>
 
 
