@@ -15,6 +15,56 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdjMbKlNLq7dHJ1bHnFL9Fc5uU_uaDn7sSJT_7qZAxYRb-OvlPIX-S87nJe6dJom6a570xQ4aOTRQfMx69ivcgwqR8TGkqwQKJQmckkFkimwpTrlftL1wqawRQJcUB3D8jpt92VV2IGHYx2lhLI7x7jedKOdlzJPGDhI_7cfSv1HYdilAMhoUzzZQzpycf/s791/355095296_6236710693044644_3531237923405411584_n.jpg" alt="
+    Indiana Jones dial del destino " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tvinnov.online/CINECAN/ndiana%20Jones%20and%20the%20Dial%20of%20Destiny/ndiana%20Jones%20and%20the%20Dial%20of%20Destiny%20lat%20cam.mp4')"> </li>
+
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/6oDvtk9ODUMSdXBawId2B8L12vx.jpg" alt="Wwe- Backlash (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://71.105.189.194/iptv/peliculas/NUEVAS%2031/Wwe-.Backlash.2023.720p-dual-lat.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/41816-371949-20230505020537.jpg" alt="Elementos" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/elementos_202306/EL-1080_PeliculasySeriesHD.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>
+
+    
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/42099-134368-20230427103539.jpg" alt="
+    Los caballeros del zodiaco " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://objectstorage.us-phoenix-1.oraclecloud.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/2023pelis%2Fmayooo%2FVer%20Los%20Caballeros%20del%20Zodiaco-%20Saint%20Seiya%20-%20El%20inicio%20online%20HD%20-%20Cuevana%202%20Espa%C3%B1ol.mp4')"> </li>
+
+
+    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Culpa_maia-785263687-large.jpg" alt="Culpa mia" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230623_20230623_2005/01.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://es.web.img3.acsta.net/pictures/23/05/12/09/32/0877136.jpg" alt="Reality" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230602_20230602_1730/01.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>
+
+    
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Flash-205686824-mmed.jpg" alt="
     Flash " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230623_20230623_1636/01.mp4')"> </li>
 
@@ -41,7 +91,7 @@ class Menu extends HTMLElement {
 
        
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//9YEGawvjaRgnyW6QVcUhFJPFDco.jpg" alt="
-    Black Clover: La espada del rey mago " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230623_20230623_1636/01.mp4')"> </li>
+    Black Clover: La espada del rey mago " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230623_20230623_1910/01.mp4')"> </li>
 
 
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/u3M1bVxEbIe3BVkFJWwMi8DIea1.jpg" alt="Sustitutos" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230509_20230509/01.mp4')"></li>
