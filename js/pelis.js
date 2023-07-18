@@ -16,8 +16,7 @@ class Menu extends HTMLElement {
 
        
     <li class="cursor-pointer"> <img  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdjMbKlNLq7dHJ1bHnFL9Fc5uU_uaDn7sSJT_7qZAxYRb-OvlPIX-S87nJe6dJom6a570xQ4aOTRQfMx69ivcgwqR8TGkqwQKJQmckkFkimwpTrlftL1wqawRQJcUB3D8jpt92VV2IGHYx2lhLI7x7jedKOdlzJPGDhI_7cfSv1HYdilAMhoUzzZQzpycf/s791/355095296_6236710693044644_3531237923405411584_n.jpg" alt="
-    Indiana Jones dial del destino " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tvinnov.online/CINECAN/ndiana%20Jones%20and%20the%20Dial%20of%20Destiny/ndiana%20Jones%20and%20the%20Dial%20of%20Destiny%20lat%20cam.mp4')"> </li>
-
+    Indiana Jones dial del destino " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tvinnov.online/CINECAN/ndiana%20Jones%20and%20the%20Dial%20of%20Destiny/ndiana%20Jones%20and%20the%20Dial%20of%20Destiny%20lat%20cam.mp4')"></li> 
 
     <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/42321-262149-20230616020218.jpg" alt="Krakens y Sirenas: Conoce a Los Gillman" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://tvinnov.online/CINECAN/Ruby%20Gillman%20Teenage%20Kraken/Ruby%20Gillman,%20Teenage%20Kraken%20LAT%20CAM.mp4')"></li>
    </div>
