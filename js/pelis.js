@@ -16,9 +16,9 @@ class Menu extends HTMLElement {
 
        
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/5dliMQ2ODbGNoq0hlefdnuXQxMw.jpg" alt="
-    Unos suegros de armas tomar " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tvinnov.online/CINECAN/ndiana%20Jones%20and%20the%20Dial%20of%20Destiny/ndiana%20Jones%20and%20the%20Dial%20of%20Destiny%20lat%20cam.mp4')"></li> 
+    Unos suegros de armas tomar " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230718_20230718_1833/01.mp4')"></li> 
 
-    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/2NQljeavtfl22207D1kxLpa4LS3.jpg" alt="Nimona" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230718_20230718_1825/01.mp4')"></li>
+    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Anna_Nicole_Smith_Tau_no_me_conoces-396663730-large.jpg" alt="nna Nicole Smith: Tú no me conoces" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230520_20230520_2211/01.mp4')"></li>
    </div>
 
 
