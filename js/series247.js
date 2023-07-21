@@ -90,8 +90,8 @@ class Menu extends HTMLElement {
             <img src="https://is2-ssl.mzstatic.com/image/thumb/9g4J8TwAScs_sfjQCgPDAQ/1200x675.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7dragonballgt.html ">
-            <img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/5de444edf50cfe5dc4b8b9c93546c150.jpe " 
+            <a href="series24-7vevo90s.html ">
+            <img src="https://f9q4g5j6.ssl.hwcdn.net/640a5eaf0606eb634d038662/200?webp=1 " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7migordaB.html ">
