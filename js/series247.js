@@ -74,8 +74,8 @@ class Menu extends HTMLElement {
             <a href="series24-7alebrijesR.html ">
             <img src="https://heraldodemexico.com.mx/u/fotografias/m/2022/9/21/f850x638-581837_659326_5050.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7amigasyrivales.html ">
-            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/QYEZGNGEEBEEBCIQGF4YAIDYTQ.jpeg " 
+            <a href="series24-780s.html ">
+            <img src="https://d14c63magvk61v.cloudfront.net/hls/22865/stringray-remember-the-80s/poster_20200717_232723.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7alternative.html ">
