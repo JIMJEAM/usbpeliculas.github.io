@@ -71,8 +71,8 @@ class Menu extends HTMLElement {
             <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/0138580a821f86d1e91c4c07593cb66cc4151f007963910cef4c5bad5068feb0._V_SX268_.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7alebrijesR.html ">
-            <img src="https://heraldodemexico.com.mx/u/fotografias/m/2022/9/21/f850x638-581837_659326_5050.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="series24-7lospitufos.html ">
+            <img src="https://i.ytimg.com/vi/5-irFyYPGIQ/maxresdefault.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-780s.html ">
             <img src="https://d14c63magvk61v.cloudfront.net/hls/22865/stringray-remember-the-80s/poster_20200717_232723.jpg " 
