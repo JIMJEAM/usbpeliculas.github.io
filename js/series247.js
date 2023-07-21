@@ -37,11 +37,11 @@ class Menu extends HTMLElement {
             <a href="series24-7chistosos2.html ">
             <img src="https://i.ytimg.com/vi/vqRC9xVxN5g/maxresdefault.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7amoreV.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:2764953/497e1bf9f560d85fe83bfd66b50231b2?tr=w-1200,h-627,f-jpeg " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="series24-7seriesretro.html ">
+            <img src="https://apksos.com/storage/images/series/retro7/series.retro7_1.png " class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7aquiyahora.html ">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyMgDImwSXvoIT0hmKWJhMh6uec5qttFbAjrR4yhFf1g9h0F7TX3Zn0Qy_6Xv_ku_0tPI&usqp=CAU " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="series24-7retrotoons.html ">
+            <img src="https://yt3.googleusercontent.com/ytc/AOPolaRr0hJkdPUOXJ1r5v7vrcj1mS4M9Ru0RxEXUnnjBQ=s900-c-k-c0x00ffffff-no-rj " class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7cine1.html ">
             <img src="https://i0.wp.com/zoomf7.net/wp-content/uploads/2020/03/sala-de-cine.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
@@ -49,8 +49,8 @@ class Menu extends HTMLElement {
             <a href="series24-7cine2.html ">
             <img src="https://www.lavoz.com.ar/resizer/GCZpJeNMLMBeqQKGN7gWLzG-2cU=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/TKK7KZEVE5HYFBLCEN3O4AZXMA.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7Fpeluche.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:2938580/650c3f327a024e2301af1ed5e548e3b7?tr=w-1200,h-627,f-jpeg " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="series24-7tvseries.html ">
+            <img src="https://cdn-icons-png.flaticon.com/512/6209/6209965.png " class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7Djefe.html ">
             <img src="https://images.vix.com/prd/videos/video:mcp:2961743/82d38de8b493aa4bc7689d9468300422?tr=w-1200,h-627,f-jpeg " 
@@ -60,8 +60,8 @@ class Menu extends HTMLElement {
             <a href="series24-7elprilegiodM.html ">
             <img src="https://video-assets.televisa.com/823743/snapshot-716x403.jpg?v=1669090051 " class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7vecinos.html ">
-            <img src="https://tecolotito.elsiglodedurango.com.mx/i/2022/06/1082460.jpeg " 
+            <a href="series24-7cartoonnetwork.html ">
+            <img src="https://i.ytimg.com/vi/0BkSC197-ss/maxresdefault.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7cAngel.html ">
