@@ -776,7 +776,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
 
 
 
-     <li class="cursor-pointer"> <img src="https://i0.wp.com/cinecalidad.icu/wp-content/uploads/2022/08/sNAMqQ9T7YnXnvUSufeWzaRgK6Y.jpg?fit=200%2C300&ssl=1" alt="Depredador la presa" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601502.us.archive.org/31/items/p.R3_y/p.R3_y0k.mp4')"> </li> 
+     <li class="cursor-pointer"> <img src="https://lumiere-a.akamaihd.net/v1/images/depredador_la_presa_poster_2_496bbe49.jpeg?region=0,0,770,1100" alt="Depredador la presa" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601502.us.archive.org/31/items/p.R3_y/p.R3_y0k.mp4')"> </li> 
  
    
 
