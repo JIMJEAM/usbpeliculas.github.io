@@ -78,16 +78,16 @@ class Menu extends HTMLElement {
             <img src="https://cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/QYEZGNGEEBEEBCIQGF4YAIDYTQ.jpeg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7tresvecesana.html ">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmqjupyIk66bgBxSy_E-zehcKXIfz5U-hL9WINrNEsIYLbycM6TeAC0Tz-5R4j6kfdljA&usqp=CAU " 
+            <a href="series24-7alternative.html ">
+            <img src="https://d14c63magvk61v.cloudfront.net/hls/22865/stingray-rock-alternative/poster_20200717_232723.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7heroesnorte.html ">
             <img src="https://images.vix.com/prd/videos/video:mcp:2794377/1594bd054a81f9d09bb3bcece691b3fe " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7juanlaV.html ">
-            <img src="https://is2-ssl.mzstatic.com/image/thumb/9g4J8TwAScs_sfjQCgPDAQ/1200x675.jpg " 
+            <a href="series24-7rockon.html ">
+            <img src="https://i.etsystatic.com/24478728/r/il/d0df00/3129267801/il_fullxfull.3129267801_l9um.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7vevo90s.html ">
