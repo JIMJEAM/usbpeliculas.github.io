@@ -90,36 +90,36 @@ class Menu extends HTMLElement {
             <img src="https://is2-ssl.mzstatic.com/image/thumb/9g4J8TwAScs_sfjQCgPDAQ/1200x675.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7quebonitoamor.html ">
-            <img src="https://m1.paperblog.com/i/165/1655475/que-bonito-amoropinion-L-MMpDdq.jpeg " 
+            <a href="series24-7dragonballgt.html ">
+            <img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/5de444edf50cfe5dc4b8b9c93546c150.jpe " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7migordaB.html ">
             <img src="https://images.vix.com/prd/videos/video:mcp:3982734/634a4c6558b3f922083b32f60c1fcdbe?tr=w-1200,h-627,f-jpeg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7rebelde.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:2684226/db41658be8db5d3cf765639960083595 " 
+            <a href="series24-7cronicas.html ">
+            <img src="https://images.vix.com/prd/videos/video:mcp:3474572/3b981efc5b0813ba18792c5c48ca2cc1?tr=w-1200,h-627,f-jpeg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7sortilegio.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:3503290/dbe984221908bb0dac19b9309710388a?tr=w-1200,h-627,f-jpeg " 
+            <a href="series24-7rctv.html ">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/RCTV_Producciones.png " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7eltriunfoA.html ">
             <img src="https://images.vix.com/prd/videos/video:mcp:3087836/a4908fe03931fa15ade0b2fd05805f10?tr=w-1200,h-627,f-jpeg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-740y20.html ">
-            <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/83fbc04c75cfc3fb780ed9bd7299f2e5777e4fd062f7cc93042e514b23f8eadf._UY500_UX667_RI_V_TTW_.jpg " 
+            <a href="series24-lapromesa.html ">
+            <img src="https://images.vix.com/prd/videos/video:mcp:3993404/841f639eb43c7db5c7aaaa2d4e7fc286 " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7nosotroslosguapos.html ">
-            <img src="https://pbs.twimg.com/profile_images/1215777653812355074/lkVpBAWK_400x400.jpg " 
+            <a href="series24-7babyshark.html ">
+            <img src="https://www.hoyesarte.com/constelac10n/files/2020/01/006.png " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7futboltmx.html ">
-            <img src="https://assets-global.website-files.com/61afa06b50eade7608de2f59/62e2f768dce10977294e87fc_LIGAMX_PLAYERS_VERSION2_HOR_POSTER_VIX-min.jpg " 
+            <a href="series24-7weatherchannel.html ">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4fpJUp6RJeGPaRErrdMEhO5Bdk0hyQ_axHYpDOu6vUb64iO8Ra3EuEQrRf9szwYNK0kw&usqp=CAU" 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <nav/>

@@ -28,7 +28,7 @@ class Menu extends HTMLElement {
         <a href="http://pelisplaya.net/IPTV9.html " target="_blank">
             <img src="/imagenes/clarosport.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://pelisplaya.net/IPTV10.html " target="_blank">
-            <img src="/imagenes/Tennis-Channel.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <img src="/imagenes/goldenplus.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://pelisplaya.net/IPTV11.html " target="_blank">
             <img src="/imagenes/allsport.png " class="img-thumbnail " alt="... " class="w-50 "></a>
         <a href="http://pelisplaya.net/IPTV12.html " target="_blank">
