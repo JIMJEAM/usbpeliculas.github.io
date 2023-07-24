@@ -284,15 +284,10 @@
                 }
                 
                 @media only screen and (max-width: 576px) {
-                    .container {
-                        display: flex;
-                        flex-direction: column;
-                        flex-wrap: wrap;
-                        height: 100%;
-                    }
                     .container-fluid {
-                    overflow-x: hidden;
-                    max-width: fit-content;
+                        width: 90%;
+                        margin: 0 auto;
+                        overflow: hidden;
                     }
                     #reproducir {
                     width: 350px;
