@@ -287,6 +287,7 @@
                     .container-fluid {
                         width: 90%;
                         margin: 0 auto;
+                        margin-right: 0%;
                         overflow: hidden;
                     }
                     #reproducir {
@@ -296,6 +297,7 @@
                     .superior {
                         background: inherit;
                         display: block;
+                        margin-right: 0%;
                         overflow: hidden;
                     }
                     .padd {
