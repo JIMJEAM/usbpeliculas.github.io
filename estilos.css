@@ -284,21 +284,12 @@
                 }
                 
                 @media only screen and (max-width: 576px) {
-                    
-                     .float {
-                    position: 85% top sticky;
-                    width: 60px;
-                    height: 60px;
-                    bottom: 40px;
-                    left: 250px;
-                    background-color: #25d366;
-                    color: #FFF;
-                    border-radius: 50px;
-                    text-align: center;
-                    font-size: 30px;
-                    box-shadow: 2px 2px 3px #999;
-                    z-index: 1000;
-                }
+                    .container {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        height: 100%;
+                    }
                     .container-fluid {
                     overflow-x: hidden;
                     max-width: fit-content;
