@@ -47,6 +47,14 @@ img {
     max-width: 100%;
 }
 
+.container-fluid{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+    inset: 0;
+}
                 .superior {
                     background: inherit;
                     display: block;
