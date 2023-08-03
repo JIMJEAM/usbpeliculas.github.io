@@ -7,7 +7,6 @@
                     background: linear-gradient(to right, #333399, #ff00cc);
                     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                     font-family: verdana;
-                    margin: 0;
                 }
 
                 .cursor-pointer {
@@ -47,18 +46,11 @@ img {
     max-width: 100%;
 }
 
-.container-fluid{
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 20px 0;
-    inset: 0;
-}
                 .superior {
                     background: inherit;
                     display: block;
                     overflow: hidden;
+                    width: 100%;
                 }
                 
                 .logo img {
@@ -139,7 +131,7 @@ img {
                 }
                 
                 .cuerpo {
-                    width: 50%;
+                    width: 33.33%;
                     align-content: left;
                     display: flex;
                     flex-direction: column;
@@ -294,6 +286,13 @@ img {
                 }
                 
                 @media only screen and (max-width: 576px) {
+                    .container-fluid {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        align-content: center;
+                        justify-content: space-between;
+                        padding: 0 auto;
+                        max-width: 100%; }
                     
                      .float {
                     position: 85% top sticky;
