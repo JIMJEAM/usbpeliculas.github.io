@@ -288,7 +288,7 @@ img {
                 @media only screen and (max-width: 576px) {
                     body {
                         display: grid;
-                        grid-template-columns: min-content;
+                        grid-template-columns: auto;
                         grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
                         align-content: center;
                         justify-content: space-between;
