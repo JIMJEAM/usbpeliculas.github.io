@@ -289,7 +289,7 @@ img {
                     body {
                         display: grid;
                         grid-template-columns: 1fr;
-                        grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
+                        grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, fit-content);
                         align-content: center;
                         justify-content: space-between;
                         padding: 0;
