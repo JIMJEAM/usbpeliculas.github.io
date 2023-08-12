@@ -15,6 +15,29 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/42650-169278-20230602013018.jpg" alt="
+    MEGALODÓN 2: EL GRAN ABISMO " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230804_20230804_1500/01.mp4')"></li> 
+
+    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Mansiaon_encantada-851868317-large.jpg" alt="Mansión Encantada" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://main.cinedecalidad.xyz/mexicanas/mansionencantada.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500//qmevjlNDaWoEughGlXFWHbQ4TaR.jpg" alt="Liga de la justicia: mundo de guerra" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230801_20230801_2043/01.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>    
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="
     Oppenheimer " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230722_20230722_1605/01.mp4')"></li> 
 
