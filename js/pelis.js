@@ -15,6 +15,29 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/qmW8mPhcdOP3v36Gz8WEeDdewFN.jpg" alt="
+    La Dama del Silencio: El caso Mataviejitas " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230805_20230805_2010/01.mp4')"></li> 
+
+    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Blood-252460606-large.jpg" alt="Blood (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230811_20230811_1800/01.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqoRrig1CMfY9RfzWxEdEzzl9KhyggVp2gxLO7Rc35owV4qxut56pR3dOCcd5atFw2nmY&usqp=CAU" alt="Resident Evil: Isla de la Muerte (2023)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230801_20230801_2328/01.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Agente_Stone-282567254-mmed.jpg" alt="
     Agente Stone " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fagosto%2FWatch%20Blue%20Beetle%202023%201080p%20CAMRip%20LAT%20DUB%20mp4.mp4')"></li> 
 
