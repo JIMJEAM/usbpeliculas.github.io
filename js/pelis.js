@@ -38,7 +38,7 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
-    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Agente_Stone-282567254-mmed.jpg" alt="
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/original/682SlpyatX0HjgjQPOKu0VwpKfl.jpg" alt="
     Agente Stone " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fagosto%2FWatch%20Blue%20Beetle%202023%201080p%20CAMRip%20LAT%20DUB%20mp4.mp4')"></li> 
 
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/516MFML05KWiPfiQNAsVCGMySc7.jpg" alt="The Seven Deadly Sins: El rencor de Edimburgo 2" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230808_20230808_2003/01.mp4')"></li>
