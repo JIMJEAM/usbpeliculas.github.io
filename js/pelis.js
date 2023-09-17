@@ -751,7 +751,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
     <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/39908-115310-20220812023302.jpg" alt="Érase Una Vez Un Genio" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.alianzajuridicainteramericana.com/movies/esperando.mp4')"> </li>
 
 
-    <li class="cursor-pointer"> <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/09/wDLthZ6Hgn8RY55p0bkcmLV4Nw6.jpg?ssl=1" alt="Fantasmas de guerra" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://www.alianzajuridicainteramericana.com/movies/war.mp4')"></li>
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/wDLthZ6Hgn8RY55p0bkcmLV4Nw6.jpg" alt="Fantasmas de guerra" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://www.alianzajuridicainteramericana.com/movies/war.mp4')"></li>
    </div>
 
 
