@@ -15,6 +15,29 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/42401-631342-20230712030354.png" alt="
+    Mision: Imposible - Sentencia mortal parte uno (2023) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://main.cinedecalidad.xyz/mexicanas/mision7.mp4')"></li> 
+
+    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/A_travaes_del_mar-918065562-large.jpg" alt="A través del mar (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230623_20230623_1813/01.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://static.wikia.nocookie.net/miraculousladybug/images/e/ec/P%C3%B3ster_pel%C3%ADcula_-_Latinoam%C3%A9rica_%28oficial%29.jpg/revision/latest/scale-to-width-down/1200?cb=20230517180434&path-prefix=es" alt=Ladybug and Cat Noir Awakening (2023)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://tvinnov.online/CINECAN/Ladybug.and.Cat.Noir.Awakening.2023/Ladybug.and.Cat.Noir.Awakening.2023.HDCAM.c1nem4..mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>   
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/qmW8mPhcdOP3v36Gz8WEeDdewFN.jpg" alt="
     La Dama del Silencio: El caso Mataviejitas " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230805_20230805_2010/01.mp4')"></li> 
 
