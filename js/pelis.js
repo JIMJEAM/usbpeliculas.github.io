@@ -24,7 +24,7 @@ class Menu extends HTMLElement {
 
 
 
-   <li class="cursor-pointer"> <img src="https://static.wikia.nocookie.net/miraculousladybug/images/e/ec/P%C3%B3ster_pel%C3%ADcula_-_Latinoam%C3%A9rica_%28oficial%29.jpg/revision/latest/scale-to-width-down/1200?cb=20230517180434&path-prefix=es" alt=Ladybug and Cat Noir Awakening (2023)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://tvinnov.online/CINECAN/Ladybug.and.Cat.Noir.Awakening.2023/Ladybug.and.Cat.Noir.Awakening.2023.HDCAM.c1nem4..mp4')"> </li> 
+   <li class="cursor-pointer"> <img src="https://www.ibs.it/images/9788891586049_0_536_0_75.jpg" alt=Ladybug and Cat Noir Awakening (2023)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://tvinnov.online/CINECAN/Ladybug.and.Cat.Noir.Awakening.2023/Ladybug.and.Cat.Noir.Awakening.2023.HDCAM.c1nem4..mp4')"> </li> 
 
 
     </a>
@@ -140,7 +140,7 @@ class Menu extends HTMLElement {
 
 
 
-   <li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/Prodigiosa_Las_aventuras_de_Ladybug_La_pelaicula-953825511-large.jpg" alt="Insidious: La puerta roja" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://main.cinedecalidad.xyz/mexicanas/insidiousroja.mp4')"> </li> 
+   <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500/uS1AIL7I1Ycgs8PTfqUeN6jYNsQ.jpg" alt="Insidious: La puerta roja" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://main.cinedecalidad.xyz/mexicanas/insidiousroja.mp4')"> </li> 
 
 
     </a>
