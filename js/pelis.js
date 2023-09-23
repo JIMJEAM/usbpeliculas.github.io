@@ -140,7 +140,7 @@ class Menu extends HTMLElement {
 
 
 
-   <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500/uS1AIL7I1Ycgs8PTfqUeN6jYNsQ.jpg" alt="Insidious: La puerta roja" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://main.cinedecalidad.xyz/mexicanas/insidiousroja.mp4')"> </li> 
+   <li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/Prodigiosa_Las_aventuras_de_Ladybug_La_pelaicula-953825511-large.jpg" alt="Insidious: La puerta roja" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://main.cinedecalidad.xyz/mexicanas/insidiousroja.mp4')"> </li> 
 
 
     </a>
