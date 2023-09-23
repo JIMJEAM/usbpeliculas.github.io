@@ -16,7 +16,7 @@ class Menu extends HTMLElement {
 
        
     <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/42401-631342-20230712030354.png" alt="
-    Mision: Imposible - Sentencia mortal parte uno (2023) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://main.cinedecalidad.xyz/mexicanas/mision7.mp4')"></li> 
+    Mision: Imposible - Sentencia mortal parte uno (2023) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/mision-imposible-sentencia-mortal-parte-uno_202308/Misión_Imposible_-_Sentencia_mortal_parte_uno.mp4')"></li> 
 
     <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/A_travaes_del_mar-918065562-large.jpg" alt="A través del mar (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230623_20230623_1813/01.mp4')"></li>
    </div>
