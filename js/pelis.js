@@ -15,6 +15,29 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://www.ecartelera.com/carteles/11500/11562/006.jpg" alt="
+    La monja 2 (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/la-monja-2-cam/6552782978082155877.ia.mp4')"></li> 
+
+    <li class="cursor-pointer"> <img  src="https://www.cinepremiere.com.mx/wp-content/uploads/2023/06/Indestructibles-4-Poster.jpg" alt="Los indestructibles 4 (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fseptiembre%2FVer%20Los%20indestructibles%204%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500//vd8YdaH7dzeIMGTNwQinlSiA1gV.jpg" alt="Mini Espias: El armagedón (2023)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fseptiembre%2FVer%20Miniesp%C3%ADas-%20Armaged%C3%B3n%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>   
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/42401-631342-20230712030354.png" alt="
     Mision: Imposible - Sentencia mortal parte uno (2023) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/mision-imposible-sentencia-mortal-parte-uno_202308/Misión_Imposible_-_Sentencia_mortal_parte_uno.mp4')"></li> 
 
