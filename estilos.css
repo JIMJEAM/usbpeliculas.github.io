@@ -419,10 +419,12 @@ img {
                     .cuerpo h2,
                     h1 {
                         color: azure;
-                        font-size: 15px;
+                        font-size: 25px;
                         padding: 5px;
                         margin: 3px;
                         font-weight: 800;
+                        text-align: center;
+                        justify-content: center;
                     }
                     .cuerpo h3,
                     h5 {
