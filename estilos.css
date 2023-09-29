@@ -285,6 +285,11 @@ img {
                 .my-float-pelis {
                     margin-top: 16px;
                 }
+
+                .hotmart {
+                    list-style: none;
+
+                }
                 
                 @media only screen and (max-width: 576px) {
                     body {
