@@ -15,6 +15,30 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/wUvUcLTxc83k4l8psyO2pDYHHB3.jpg" alt="
+    La libreta negra (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fseptiembre%2FVer%20La%20Libreta%20Negra%20online%20HD%20-%20Cuevana%202.mp4')"></li> 
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/19CG7aTgNRF8DvM3Cla4Zn2qWzh.jpg" alt="Soltera codiciada 2 (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fseptiembre%2FVer%20Soltera%20codiciada%202%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500/9GuvODahvuFqdhuZ16aBLR4UJoP.jpg" alt="¿Quieres ser mi hijo? (2023)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fseptiembre%2FVer%20%C2%BFQuieres%20ser%20mi...%20hijo-%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>   
+   
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
     <li class="cursor-pointer"> <img  src="https://www.ecartelera.com/carteles/11500/11562/006.jpg" alt="
     La monja 2 (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/la-monja-2-cam/6552782978082155877.ia.mp4')"></li> 
 
