@@ -763,7 +763,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
 
 
 
-    <li class="cursor-pointer"> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/tQstTS2Q3ZaeWu3fsGDDIr0EBnW.jpg?ssl=1" alt="Hallowen el final" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/halloween.mp4')"> </li> 
+    <li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/Halloween_El_final-885815456-large.jpg" alt="Hallowen el final" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/halloween.mp4')"> </li> 
 
 
 </div>
@@ -776,7 +776,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
         
-    <li class="cursor-pointer"> <img  src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/ebZLD9PD1YGU15QoY1PfVOj2x1n.jpg?ssl=1" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/cerveza.mp4')"> </li>
+    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/deo_mun-579180002-mmed.jpg" alt="moon" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/cerveza.mp4')"> </li>
 
 
     <li class="cursor-pointer"> <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Cyrano_poster.jpg/220px-Cyrano_poster.jpg" alt="Cyrano" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://casiano.store/stuff/cyrano.mp4')"> </li>
@@ -784,7 +784,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
 
 
 
-    <li class="cursor-pointer"> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/10/j14T7JfdN0XEgLao56aYKQoGwq7.jpg?ssl=1" alt="Mi dulce monstruo" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://casiano.store/stuff/dulce.mp4')"> </li> 
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/39643-378416-20220708041757.jpg" alt="Mi dulce monstruo" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://casiano.store/stuff/dulce.mp4')"> </li> 
 
     <li class="cursor-pointer"><a href="#reproducir↑">  ► ↑ </a></li>
   
@@ -842,7 +842,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
     <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Pinocho-256590713-large.jpg" alt="Pinocho" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://proteiosmorelia.site/stuff/pinocho.mp4')"> </li>
 
 
-    <li class="cursor-pointer"> <img src="https://i0.wp.com/polimor.club/wp-content/uploads/2022/09/lGIkv9fQ3i7yVcJXDvG0Vry00LI.jpg?ssl=1" alt="La bestia" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://polimor.club/movies/bestia.mp4')"> </li>
+    <li class="cursor-pointer"> <img src="https://es.web.img3.acsta.net/c_310_420/pictures/22/06/20/14/53/4061901.jpg" alt="La bestia" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://polimor.club/movies/bestia.mp4')"> </li>
    </div>
 
 
