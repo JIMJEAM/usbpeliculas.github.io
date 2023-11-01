@@ -16,7 +16,7 @@ class Menu extends HTMLElement {
 
        
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/original/9pn4g9FDivCyuT7OBdnNcCopGKY.jpg" alt="
-    Saw X" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://208.88.245.85/nuevo/saw.x.dual.2023.mkv')"></li> 
+    Saw X (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20231030_20231030/01.mp4')"></li> 
 
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/krA2iXd1PK1vhg4jeWfbSD4fSJi.jpg" alt="Papás a la antigua (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://od.lk/s/NV8xODg4OTAyNzZf/HDVer%20Pap%C3%A1s%20a%20la%20antigua%202023.mp4')"></li>
    </div>
