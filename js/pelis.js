@@ -16,7 +16,31 @@ class Menu extends HTMLElement {
 
        
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/original/9pn4g9FDivCyuT7OBdnNcCopGKY.jpg" alt="
-    Saw X (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://ia801201.us.archive.org/3/items/saw-x-el-juego-del-miedo-2023-1080p-web-dl-latino-descargatepelis.com/Saw%20X%20El%20juego%20del%20miedo%20%282023%29%201080p%20WEB-DL%20Latino%20-%20Descargatepelis.com.mp4')"></li> 
+    Saw X (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://ia801201.us.archive.org/3/items/saw-x-el-juego-del-miedo-2023-1080p-web-dl-latino-descargatepelis.com/Saw%20X%20El%20juego%20del%20miedo%20%282023%29%201080p%20WEB-DL%20Latino%20-%20Descargatepelis.com.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://www.lahiguera.net/cinemania/pelicula/10653/los_asesinos_de_la_luna-cartel-11388.jpg" alt="Los asesinos de la luna (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Foctubre%2FVer%20Los%20asesinos%20de%20la%20luna%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+
+
+
+   <li class="cursor-pointer"> <img src="https://www.cartelera.com.uy/imagenes_espectaculos/moviedetail13/35268.jpg" alt="https://archive.org/download/01_20231030/01.mp4" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://89.187.179.11:88/Latino/Movies/Dual_Movies/2019/100.Dinge.2018.mp4')"> </li> 
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>   
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+    <li class="cursor-pointer"> <img  src="https://www.lavanguardia.com/peliculas-series/images/movie/poster/2022/9/w1280/qDukjmqZsgyLN7UKsaGoO69Txcq.jpg" alt="
+    La maldición del hombre lobo (2022)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Foctubre%2FVer%20Hombre%20Lobo%20por%20la%20Noche%20a%20color%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>    
 
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/krA2iXd1PK1vhg4jeWfbSD4fSJi.jpg" alt="Papás a la antigua (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://od.lk/s/NV8xODg4OTAyNzZf/HDVer%20Pap%C3%A1s%20a%20la%20antigua%202023.mp4')"></li>
    </div>
