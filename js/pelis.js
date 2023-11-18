@@ -1,17 +1,18 @@
-var video = document.getElementById('video'); 
-function videoUrl(url){ video.pause();
-const source = video.querySelector("source"); 
-source.setAttribute('src', url); 
-video.load(); video.play(); }
-
-
+var video = document.getElementById("video");
+function videoUrl(url) {
+  video.pause();
+  const source = video.querySelector("source");
+  source.setAttribute("src", url);
+  video.load();
+  video.play();
+}
 
 //web-component
 
 class Menu extends HTMLElement {
-	constructor() {
-	super();
-	this.innerHTML = `
+  constructor() {
+    super();
+    this.innerHTML = `
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
@@ -35,6 +36,30 @@ class Menu extends HTMLElement {
 
 </div>
 </ul>   
+
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+       
+<li class="cursor-pointer"> <img  src="https://media.filmelier.com/tit/8tKDaY/poster/plan-de-estudios_uxRsh_Q.jpeg" alt="
+Plan de estudios" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tvinnov.online/CINECAN/The.Lesson.2023.HDCAM/The.Lesson.2023.HDCAM.c1nem4.x264-SUNSCREEN.mp4')">
+</li>
+
+<li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/nowhere-676226361-mmed.jpg" alt="Nowhere (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fseptiembre%2FVer%20Nowhere%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+</div>
+
+
+
+
+<li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500/3MxgXI3VO7QCNnP0mPBjxLIemNM.jpg" alt="El lado dulce de la traición (2023)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://od.lk/s/NV8xODg5NDUwOTFf/HDVER%20El%20lado%20dulce%20de%20la%20traici%C3%B3n%202023.mp4')"> </li> 
+
+
+</a>
+</section>
+
+</div>
+
+</div>
+</ul>     
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
@@ -1137,11 +1162,8 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
     <a href="#reproducir↑" class="float-pelis">
         <i class="fas fa-film my-float-pelis"></i>
         
-`
-
- }
+`;
+  }
 }
 
-customElements.define('menu-component', Menu);
-
-
+customElements.define("menu-component", Menu);
