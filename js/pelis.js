@@ -26,7 +26,7 @@ class Menu extends HTMLElement {
 
 
 
-   <li class="cursor-pointer"> <img src="https://www.cartelera.com.uy/imagenes_espectaculos/moviedetail13/35268.jpg" alt="https://archive.org/download/01_20231030/01.mp4" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://89.187.179.11:88/Latino/Movies/Dual_Movies/2019/The.equalizer.2.2018.1080p-dual-lat-cinecalidad.to.mp4')"> </li> 
+   <li class="cursor-pointer"> <img src="https://www.cartelera.com.uy/imagenes_espectaculos/moviedetail13/35268.jpg" alt="el justiciero capitulo final" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://cdnst28.tokyvideo.com/videos/332/332934/mp4/6b02aa11efea77de0356b2b88582e4398a5985ac7e0fdb26c6ca6016f2e2e035.mp4?secure=GUAqqCjVnpuXHi9TlQmCfA%3D%3D%2C1700440555')"> </li> 
 
 
     </a>
