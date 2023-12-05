@@ -332,7 +332,7 @@ Plan de estudios" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl(
 
 
 
-   <li class="cursor-pointer"> <img src="https://es.web.img3.acsta.net/pictures/23/05/12/09/32/0877136.jpg" alt="Reality" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230602_20230602_1730/01.mp4')"> </li> 
+   <li class="cursor-pointer"> <img src="https://static.cinepolis.com/img/peliculas/42459/1/1/42459.jpg" alt="Spider Man Across The Spider Verse(2023)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://cdnst14.tokyvideo.com/videos/267/267927/mp4/34f477892eb6ccb82def0268c9303fcc9e85fa3dc52a3fea828877ff4d9b4021.mp4?secure=D2MqoKUPtE_iXLwvYjt2bQ%3D%3D%2C1701839153')"> </li> 
 
 
     </a>
