@@ -251,7 +251,7 @@ Plan de estudios" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl(
 
        
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="
-    Oppenheimer " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/01_20230722_20230722_1605/01.mp4')"></li> 
+    Oppenheimer " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl(' https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fjulio%2FVer%20Oppenheimer-%20el%20dilema%20de%20la%20bomba%20at%C3%B3mica%20online%20HD%20-%20Cuevana%202%20Espa%C3%B1ol.mp4')"></li> 
 
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg" alt="Barbie (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/01_20230722_20230722_1543/01.mp4')"></li>
    </div>
