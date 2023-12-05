@@ -17,7 +17,7 @@ class Menu extends HTMLElement {
 
        
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/original/9pn4g9FDivCyuT7OBdnNcCopGKY.jpg" alt="
-    Saw X (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://cdnst31.tokyvideo.com/videos/343/343625/mp4/9e3059e66c82d6a4996e1db9259c767913182cd1941a21514c01691090a2a89b.mp4?secure=MkcT5NG1gHlrZP02sZu_zw%3D%3D%2C1701621166')">
+    Saw X (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://cdnst10.tokyvideo.com/videos/155/155312/mp4/203f65287dd81c27be50866fd552592e85bcf4087b63d59ac402f7cccbc6a010.mp4?secure=Du5vq__9zd4dUMVTdpj_lw%3D%3D%2C1701824302')">
     </li>
 
     <li class="cursor-pointer"> <img  src="https://www.lahiguera.net/cinemania/pelicula/10653/los_asesinos_de_la_luna-cartel-11388.jpg" alt="Los asesinos de la luna (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Foctubre%2FVer%20Los%20asesinos%20de%20la%20luna%20online%20HD%20-%20Cuevana%202.mp4')"></li>
