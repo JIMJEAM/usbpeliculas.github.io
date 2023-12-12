@@ -16,8 +16,8 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
-    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/original/9pn4g9FDivCyuT7OBdnNcCopGKY.jpg" alt="
-    Saw X (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://newyorkstream.ddns.net/iptv/peliculas/NUEVAS%2052/07/Saw%20X%20El%20juego%20del%20miedo%20(2023).1080p.dual.lat.cinecalidad.com.mx.mkv')">
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/zwcmjn3qKhP7kUmpgNT0f61xzU3.jpg" alt="
+    Radical (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Foctubre%2FVer%20Radical%20online%20HD%20-%20Cuevana%202.mp4')">
     </li>
 
     <li class="cursor-pointer"> <img  src="https://www.lahiguera.net/cinemania/pelicula/10653/los_asesinos_de_la_luna-cartel-11388.jpg" alt="Los asesinos de la luna (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Foctubre%2FVer%20Los%20asesinos%20de%20la%20luna%20online%20HD%20-%20Cuevana%202.mp4')"></li>
@@ -112,7 +112,7 @@ Plan de estudios" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl(
 
        
     <li class="cursor-pointer"> <img  src="https://www.ecartelera.com/carteles/11500/11562/006.jpg" alt="
-    La monja 2 (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://archive.org/download/la-monja-2-cam/6552782978082155877.ia.mp4')"></li> 
+    La monja 2 (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('http://vod169.myworldtv.net:9090/vod/mwtv/movies/The%20Num%202%20720p%20Dual%202023.mp4?token=UyQpomRtneDv8ZoQodXnzw&exp=1702445236')"></li> 
 
     <li class="cursor-pointer"> <img  src="https://www.cinepremiere.com.mx/wp-content/uploads/2023/06/Indestructibles-4-Poster.jpg" alt="Los indestructibles 4 (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fseptiembre%2FVer%20Los%20indestructibles%204%20online%20HD%20-%20Cuevana%202.mp4')"></li>
    </div>
