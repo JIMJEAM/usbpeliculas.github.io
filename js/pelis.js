@@ -17,7 +17,7 @@ class Menu extends HTMLElement {
 
        
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/original/9pn4g9FDivCyuT7OBdnNcCopGKY.jpg" alt="
-    Saw X (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://cdnst38.tokyvideo.com/videos/381/381025/mp4/10f367c093a066824d91ca8e18499ef65b1df6e319be5e3f2a0522b9ef05034f.mp4?secure=jIb-tDesdYB4umB6X6vl7Q%3D%3D%2C1702238672')">
+    Saw X (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://newyorkstream.ddns.net/iptv/peliculas/NUEVAS%2052/07/Saw%20X%20El%20juego%20del%20miedo%20(2023).1080p.dual.lat.cinecalidad.com.mx.mkv')">
     </li>
 
     <li class="cursor-pointer"> <img  src="https://www.lahiguera.net/cinemania/pelicula/10653/los_asesinos_de_la_luna-cartel-11388.jpg" alt="Los asesinos de la luna (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Foctubre%2FVer%20Los%20asesinos%20de%20la%20luna%20online%20HD%20-%20Cuevana%202.mp4')"></li>
@@ -680,7 +680,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
     <li class="cursor-pointer"> <img  src="https://www.nextgame.es/wp-content/uploads/2022/10/Una-Boda-Explosiva-trailer.png" alt="Una boda Explosiva" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://ia804706.us.archive.org/13/items/b0d_45-pl0M0/b0d_45-pl0M0.mp4')"> </li>
 
 
-    <li class="cursor-pointer"> <img  src="https://www.cartelera.com.uy/imagenes_espectaculos/moviedetail13/33404.jpg" alt="Avatar: El Camino del Agua" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://ia804706.us.archive.org/27/items/4v-a-t-4-r/4v_aT4-r.mp4')"></li>
+    <li class="cursor-pointer"> <img  src="https://www.cartelera.com.uy/imagenes_espectaculos/moviedetail13/33404.jpg" alt="Avatar: El Camino del Agua" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://objectstorage.us-phoenix-1.oraclecloud.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/2022pelicu%2Fdici%2FVer%20Avatar-%20El%20sentido%20del%20agua%20Online%20Castellano%20Latino%20Subtitulada%20HD%20-%20HDFull.mp4')"></li>
    </div>
 
 
