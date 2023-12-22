@@ -16,18 +16,20 @@ class Menu extends HTMLElement {
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
+    <li class="cursor-pointer"> <img src="/imagenes/Aquaman Y El Reino Perdido.jpg" alt="Aquaman y el reino perdido (2023) " class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://nv1038la.video-delivery.net/u5kj6zoiaddlsdgge5equziykk4kft7qjg2pivd3gitjdumkvwiurs43cyhq/rfyxm9j8ih~LwDUUlVjDV?token=uh841ts8cdp40bclpipb072a&expiry=1703277268805')"> </li> 
+
        
-    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/img/peliculas/43451/1/1/43451.jpg" alt="
+    <li class="cursor-pointer"> <img  src="https://www.serantes.com/wp-content/uploads/2023/10/SKATROLLS3.jpg" alt="
     Trolls 3: Se Armó La Banda (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://notabasica.com/612132/Trolls%203%20-%20Se%20Arm%C3%B3%20la%20Banda.mp4')">
     </li>
 
-    <li class="cursor-pointer"> <img  src="https://www.lahiguera.net/cinemania/pelicula/10653/los_asesinos_de_la_luna-cartel-11388.jpg" alt="Los asesinos de la luna (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Foctubre%2FVer%20Los%20asesinos%20de%20la%20luna%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+    <li class="cursor-pointer"> <img  src="https://es.web.img3.acsta.net/c_310_420/pictures/23/09/20/15/05/0470801.jpg" alt="Five Nights at Freddy's" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://notabasica.com/612132/FiveNightsAtFreddys.mp4')"></li>
    </div>
 
 
 
 
-   <li class="cursor-pointer"> <img src="https://www.cartelera.com.uy/imagenes_espectaculos/moviedetail13/35268.jpg" alt="el justiciero capitulo final" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Foctubre%2FVer%20El%20Justiciero-%20Cap%C3%ADtulo%20final%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+  
 
 
     </a>
