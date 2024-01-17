@@ -16,7 +16,7 @@ class Menu extends HTMLElement {
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
-    <li class="cursor-pointer"> <img src="/imagenes/Aquaman Y El Reino Perdido.jpg" alt="Aquaman y el reino perdido (2023) " class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://cdnst50.tokyvideo.com/videos/457/457764/mp4/0cd206c9b00e92162e724ac8502094bc723f25d1ea09663a7961b4917196269a.mp4?secure=_xwWEPk0qqdQ3cEIO_NzDA%3D%3D%2C1705251957')"> </li> 
+    <li class="cursor-pointer"> <img src="/imagenes/Aquaman Y El Reino Perdido.jpg" alt="Aquaman y el reino perdido (2023) " class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://cdnst52.tokyvideo.com/videos/468/468114/mp4/e183a255c262fd792de81584f57fa7d6210ce7202024d4a38577a3e687734cce.mp4?secure=yqwAvqmQRgUUVZEC1TqF8Q%3D%3D%2C1705582883')"> </li> 
 
        
     <li class="cursor-pointer"> <img  src="https://www.serantes.com/wp-content/uploads/2023/10/SKATROLLS3.jpg" alt="
