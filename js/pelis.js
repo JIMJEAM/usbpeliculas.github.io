@@ -40,6 +40,32 @@ class Menu extends HTMLElement {
 </div>
 </ul>
 
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+    <li class="cursor-pointer"> <img src="https://i.blogs.es/946bf1/balada-de-pajaros-cantores/650_1200.jpg" alt="Los juegos del hambre: balada de pájaros cantores y serpientes (2023)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://dl.dropbox.com/scl/fi/9b5sq647zyj29oyz9i9ir/Ju3g0S-h4mbr3-s0ngs.mp4?rlkey=dghwp74cu106iym294iyqlra9')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://lh3.googleusercontent.com/pw/ABLVV86Ga2famZkrKXZ6tP-8oqKNnR9-0rB5tA49e3yungHQVkX1lr3rueikAqw0CiWUj4vDX77zxikaDY_Gjho7H7i9ZUMBs4IAouK66ToRKC5C9PICmrqL=w2400" alt="
+    Rebel Moon - Parte 1: La niña del fuego (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://dl.dropbox.com/scl/fi/n2xzfsarg89aw4ap17bct/R3B3LM00N.mp4?rlkey=ralcj5sys67jqekkburpotcyt')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://upload.wikimedia.org/wikipedia/en/9/9f/Obi_Wan_Kenobi_Patterson_Cut_poster.png" alt="Obi-Wan Kenobi Patterson Cut (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://dl.dropbox.com/scl/fi/0yy8fzh9ek2ga3frkqxmf/0B1W4N.mp4?rlkey=0xjaggovyhslntruukbufes3r')"></li>
+   </div>
+
+
+
+
+  
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>
+
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
