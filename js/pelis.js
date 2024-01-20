@@ -45,8 +45,8 @@ class Menu extends HTMLElement {
     <li class="cursor-pointer"> <img src="https://i.blogs.es/946bf1/balada-de-pajaros-cantores/650_1200.jpg" alt="Los juegos del hambre: balada de pájaros cantores y serpientes (2023)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://dl.dropbox.com/scl/fi/9b5sq647zyj29oyz9i9ir/Ju3g0S-h4mbr3-s0ngs.mp4?rlkey=dghwp74cu106iym294iyqlra9')"> </li> 
 
        
-    <li class="cursor-pointer"> <img  src="https://lh3.googleusercontent.com/pw/ABLVV86Ga2famZkrKXZ6tP-8oqKNnR9-0rB5tA49e3yungHQVkX1lr3rueikAqw0CiWUj4vDX77zxikaDY_Gjho7H7i9ZUMBs4IAouK66ToRKC5C9PICmrqL=w2400" alt="
-    Rebel Moon - Parte 1: La niña del fuego (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://dl.dropbox.com/scl/fi/n2xzfsarg89aw4ap17bct/R3B3LM00N.mp4?rlkey=ralcj5sys67jqekkburpotcyt')">
+    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/43631-480432-20230908013228.jpg" alt="
+    Resistencia (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://dl.dropbox.com/scl/fi/c2nsu7t0pph2pv60v2x2k/creator.mkv?rlkey=80ib396dostkw9vgnuxawqu03')">
     </li>
 
     <li class="cursor-pointer"> <img  src="https://upload.wikimedia.org/wikipedia/en/9/9f/Obi_Wan_Kenobi_Patterson_Cut_poster.png" alt="Obi-Wan Kenobi Patterson Cut (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://dl.dropbox.com/scl/fi/0yy8fzh9ek2ga3frkqxmf/0B1W4N.mp4?rlkey=0xjaggovyhslntruukbufes3r')"></li>
