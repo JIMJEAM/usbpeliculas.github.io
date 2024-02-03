@@ -98,8 +98,8 @@ class Menu extends HTMLElement {
             <img src="https://ml83w0xirk9x.i.optimole.com/cb:PcBh~22e5d/w:auto/h:auto/q:mauto/ig:avif/f:best/https://sonicaargentina.com.ar/portada.webp " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7cronicas.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:3474572/3b981efc5b0813ba18792c5c48ca2cc1?tr=w-1200,h-627,f-jpeg " 
+            <a href="series24-7latinatv.html ">
+            <img src="https://pbs.twimg.com/profile_images/1720997460418428928/FZCgbK0S_400x400.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7rctv.html ">
