@@ -102,8 +102,8 @@ class Menu extends HTMLElement {
             <img src="https://pbs.twimg.com/profile_images/1720997460418428928/FZCgbK0S_400x400.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7rctv.html ">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/RCTV_Producciones.png " 
+            <a href="series24-7toplatino.html ">
+            <img src="https://toplatino.net/wp-content/uploads/2019/04/cropped-LogoTL-300-new-9.png " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7eltriunfoA.html ">
