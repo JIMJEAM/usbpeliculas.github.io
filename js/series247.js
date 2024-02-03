@@ -82,8 +82,8 @@ class Menu extends HTMLElement {
             <img src="https://d14c63magvk61v.cloudfront.net/hls/22865/stingray-rock-alternative/poster_20200717_232723.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7heroesnorte.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:2794377/1594bd054a81f9d09bb3bcece691b3fe " 
+            <a href="series24-7neotv.html ">
+            <img src="https://neotvdigital.com.ar/imagenes/fb.png " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7rockon.html ">
