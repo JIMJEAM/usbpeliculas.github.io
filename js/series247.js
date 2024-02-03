@@ -94,7 +94,7 @@ class Menu extends HTMLElement {
             <img src="https://f9q4g5j6.ssl.hwcdn.net/640a5eaf0606eb634d038662/200?webp=1 " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7migordaB.html ">
+            <a href="series24-7neoxtv.html ">
             <img src="https://images.vix.com/prd/videos/video:mcp:3982734/634a4c6558b3f922083b32f60c1fcdbe?tr=w-1200,h-627,f-jpeg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
