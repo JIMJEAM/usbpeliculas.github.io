@@ -118,8 +118,8 @@ class Menu extends HTMLElement {
             <img src="https://www.las2orillas.co/wp-content/uploads/2022/05/Nuevo-proyecto-16-4.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7weatherchannel.html ">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4fpJUp6RJeGPaRErrdMEhO5Bdk0hyQ_axHYpDOu6vUb64iO8Ra3EuEQrRf9szwYNK0kw&usqp=CAU" 
+            <a href="series24-7supertoonstv.html ">
+            <img src="https://tvpdotcomdynamiclogopeu.samsungcloud.tv/resize?url=https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/ESBA33000233H_20220824T005421SQUARE.png_20220824005421.png&h=250" 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <nav/>
