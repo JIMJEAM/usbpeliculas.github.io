@@ -57,8 +57,8 @@ class Menu extends HTMLElement {
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             
-            <a href="series24-7elprilegiodM.html ">
-            <img src="https://video-assets.televisa.com/823743/snapshot-716x403.jpg?v=1669090051 " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="series24-7comodice.html ">
+            <img src="https://images.vix.com/prd/videos/video:mcp:2894482/2d34a437be9a0ad3ea691cccad6a7be5 " class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7cartoonnetwork.html ">
             <img src="https://i.ytimg.com/vi/0BkSC197-ss/maxresdefault.jpg " 
