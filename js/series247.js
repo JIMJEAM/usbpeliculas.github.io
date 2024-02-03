@@ -64,8 +64,8 @@ class Menu extends HTMLElement {
             <img src="https://i.ytimg.com/vi/0BkSC197-ss/maxresdefault.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7cAngel.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:2751164/60fd39b18535c4661bdd43d9e4852680 " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="series27telemax.html ">
+            <img src="https://3.bp.blogspot.com/-Rj3GihMSCD4/VmDSmjQYmTI/AAAAAAAAANA/ARhShYiOjvI/s1600/gallery_1164_2_21487.png " class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7delmercadoP.html ">
             <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/0138580a821f86d1e91c4c07593cb66cc4151f007963910cef4c5bad5068feb0._V_SX268_.jpg " 
