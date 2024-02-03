@@ -95,7 +95,7 @@ class Menu extends HTMLElement {
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7neoxtv.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:3982734/634a4c6558b3f922083b32f60c1fcdbe?tr=w-1200,h-627,f-jpeg " 
+            <img src="https://ml83w0xirk9x.i.optimole.com/cb:PcBh~22e5d/w:auto/h:auto/q:mauto/ig:avif/f:best/https://sonicaargentina.com.ar/portada.webp " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7cronicas.html ">
