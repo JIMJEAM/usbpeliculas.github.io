@@ -52,8 +52,8 @@ class Menu extends HTMLElement {
             <a href="series24-7tvseries.html ">
             <img src="https://cdn-icons-png.flaticon.com/512/6209/6209965.png " class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7Rguadalupe.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:2961743/82d38de8b493aa4bc7689d9468300422?tr=w-1200,h-627,f-jpeg " 
+            <a href="series24-7Videoclub.html ">
+            <img src="https://www.billetweb.fr/files/page/thumb/video-club.jpg?v=1673042814 " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             
