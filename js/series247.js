@@ -106,8 +106,8 @@ class Menu extends HTMLElement {
             <img src="https://toplatino.net/wp-content/uploads/2019/04/cropped-LogoTL-300-new-9.png " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7eltriunfoA.html ">
-            <img src="https://images.vix.com/prd/videos/video:mcp:3087836/a4908fe03931fa15ade0b2fd05805f10?tr=w-1200,h-627,f-jpeg " 
+            <a href="series24-7theretroch.html ">
+            <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/223693973_222094553250827_8970225291809685823_n.jpg?stp=cp0_dst-jpg_e15_p240x240_q65&_nc_cat=110&ccb=1-7&_nc_sid=fa004d&efg=eyJpIjoiYiJ9&_nc_eui2=AeEr3nzIhm8u2QpyOgfogxReM-rCqyDTgAUz6sKrINOABbfA8DQF2_VXYHZDNdGsQWlvEg7cw2MmC1CZgduSS728&_nc_ohc=GaXdz9_h2hAAX_-iaxB&_nc_ht=scontent-dfw5-1.xx&oh=00_AfA5AlMnL_rmjIClXC6pHHy_uaFDGWl4Tvh1KSI0rFU4ug&oe=65C2BE18 " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-lapromesa.html ">
