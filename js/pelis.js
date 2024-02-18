@@ -16,7 +16,7 @@ class Menu extends HTMLElement {
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
-    <li class="cursor-pointer"> <img src="/imagenes/Aquaman Y El Reino Perdido.jpg" alt="Aquaman y el reino perdido (2023) " class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://908459553.tapecontent.net/radosgw/7wBj8ZLXLzCxBZ/boDFH1eKRejcuoSJpN8-B_JlyiKOqHC8oYG1-oH_2UrMFbkvPppx4OLKiGvK6RvBwGY-CIkF4RTEwzRKFtxEHS0A-VoJJhabTo3O-9v1kF52FbxIyeRIcsNTVnWutZYeQ24Hy5_DxXiqeXTyAtMSSFni81dqG3YwQKy_xRgQq6HMKzb0zEFqUPhC3Ev6s9HcjBIdzAVouADQrPJqX9qsn9AZ523dMhqNQbP_nnE2qSaAdZuQJnmDqQIqiHTQk2vDcle7w8au57fJMsqer9ZdjSAeneytKixPVrkNP2UsXmmWmRskIqp9jDNviKvXmBUc1nWvUMNi_xIPZ5Ib/238409--bb3c8c52-ca22-4844-80f6-cf49a3c3e3a9--ljcp--2022339-streamtape.mp4?stream=1')"> </li> 
+    <li class="cursor-pointer"> <img src="/imagenes/Aquaman Y El Reino Perdido.jpg" alt="Aquaman y el reino perdido (2023) " class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://xs710so.video-delivery.net/u5kj6jjluldlsdgge4qq2iqeklxjryrn6qa4wlhmrig3fhf7gen4ottlkwsa/z3obuh6yiy~fPI9bWhQ1E?token=annfotcqizxjo5jpe2a92xk1&expiry=1708239402471')"> </li> 
 
        
     <li class="cursor-pointer"> <img  src="https://www.serantes.com/wp-content/uploads/2023/10/SKATROLLS3.jpg" alt="
