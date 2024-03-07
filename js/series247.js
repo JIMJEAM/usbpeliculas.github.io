@@ -38,7 +38,7 @@ class Menu extends HTMLElement {
             <img src="https://i.ytimg.com/vi/vqRC9xVxN5g/maxresdefault.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7seriesretro.html ">
-            <img src="https://seriesretro.com/wp-content/uploads/2020/06/5ed8d22a4ac42_originalcursi1.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <img src="https://platcon.tv/img/p/1/1/7/117-large_default.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7retrotoons.html ">
             <img src="https://yt3.googleusercontent.com/ytc/AOPolaRr0hJkdPUOXJ1r5v7vrcj1mS4M9Ru0RxEXUnnjBQ=s900-c-k-c0x00ffffff-no-rj " class="img-thumbnail " alt="... " class="w-50 "></a>
