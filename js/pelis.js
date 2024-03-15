@@ -41,6 +41,32 @@ class Menu extends HTMLElement {
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
+    <li class="cursor-pointer"> <img src="https://www.mubis.es/media/movies/7837/322026/el-arte-de-matar-original.jpg" alt="El arte de matar (2023) " class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fdiciembre%2FVer%20El%20arte%20de%20matar%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2G0LGxj8psURJiZfYnzupQ3xdbs42eEotxkaJQ9mUCPTSF9xjVJlfgD7sI1JPmNn-q6I&usqp=CAU" alt="
+    Los Archies (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fdiciembre%2FVer%20Los%20Archies%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://www.sonypictures.com.mx/sites/mexico/files/2024-01/Key-Art_1400x2100_Napoleon_Mx.jpg" alt="Napoleón (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fnoviembre%2FWatch%20Napoleon%202023%201080p%20CAMRip%20LAT%20DUB%20Juga%20Bet%20mkv.mp4')"></li>
+   </div>
+
+
+
+
+  
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
     <li class="cursor-pointer"> <img src="https://22minutoscon.com/wp-content/uploads/2023/10/portada-foto-destacada.jpg" alt="La sociedad de la nieve (2023) " class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://axa4wow3dcia.objectstorage.us-phoenix-1.oci.customer-oci.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/Ver%20La%20sociedad%20de%20la%20nieve%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
 
        
