@@ -96,7 +96,7 @@ class Menu extends HTMLElement {
     <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/original/6EJUEeC9dQglAJhLqluX70hE7Xs.jpg" alt="Mavka: Guardiana del bosque (2023) " class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fdiciembre%2FVer%20Mavka-%20Guardiana%20del%20bosque%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
 
        
-    <li class="cursor-pointer"> <img  src="https://cinecalidad.fi/wp-content/uploads/2023/12/45pDkZ986FayuGEkXz5paF6X6BO-400x600.jpg" alt="
+    <li class="cursor-pointer"> <img  src="https://media.filmelier.com/tit/DBhKZS/poster/en-el-desierto_TvySbTo.jpeg" alt="
     En el desierto (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fdiciembre%2FVer%20%D9%86%D8%A7%D9%82%D8%A9%20online%20HD%20-%20Cuevana%202.mp4')">
     </li>
 
