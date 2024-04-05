@@ -15,6 +15,84 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
+    <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500/sMp34cNKjIb18UBOCoAv4DpCxwY.jpg" alt="Damsel (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmar24%2FVer%20Damsel%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/wkfG7DaExmcVsGLR4kLouMwxeT5.jpg" alt="
+    Kung Fu Panda 4 (2024)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmar24%2FWatch%20Kung%20Panda%202024%201080p%20CAMRip%20LAT%20DUB%201XBET%20mp4.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk9oxWy9BXcuoHYuggc43qush4yRTiQ6rfbL6S2X-WCPlVYxzr4xtyrYmSWE7gd6gADeg&usqp=CAU" alt="Megamente el sindicato del mal (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmar24%2FVer%20Megamente%20contra%20el%20sindicato%20de%20Doom%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+
+
+
+  
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+    <li class="cursor-pointer"> <img src="https://mx.web.img2.acsta.net/pictures/24/01/24/20/40/2403201.jpg" alt="Duna - Parte dos (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmar24%2FVer%20Duna-%20Parte%20dos%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVTijhP5A--1pwgp21Ra9GqI7mYYC0n101WA&s" alt="
+    Bob Marley: la leyenda (2024)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Ffeb24%2FVer%20Bob%20Marley-%20La%20leyenda%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg" alt="Madame Web (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Ffeb24%2FVer%20Madame%20Web%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+
+
+
+  
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+    <li class="cursor-pointer"> <img src="https://play-lh.googleusercontent.com/b4brmc3O6UtWP7W1jlAPPC35i8tfRZztnn6-GCFjAobAKP7P8vkl0H-RhRtLZUbeuEyTWp7B6NpuJvJNYW8=w240-h480-rw" alt="Ricky Stanicky: El impostor (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Ffeb24%2FVer%20Chicas%20pesadas%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://cdn.playpilot.tech/4aa32664e19c11ee83270a58a9feac02/src/img?optimizer=image&quality=75&width=320&aspect_ratio=2%3A3" alt="
+    Pobres criaturas (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Ffeb24%2FVer%20Pobres%20Criaturas%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9k15gwJdGQMfLFsIIX5Qo6KMxPY2UAo_mQB_nA9TsBkdMgsBDRlHIafOdMorQ62sxMj8&usqp=CAU" alt="El astronauta (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmar24%2FVer%20El%20astronauta%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+
+
+
+  
+
+
+    </a>
+</section>
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
     <li class="cursor-pointer"> <img src="https://media.filmelier.com/tit/kRiequ/poster/el-bufon_3A3gQuA.jpeg" alt="El bufón (2023) " class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fdiciembre%2FVer%20El%20buf%C3%B3n%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
 
        
