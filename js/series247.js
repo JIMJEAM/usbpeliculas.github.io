@@ -91,7 +91,7 @@ class Menu extends HTMLElement {
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7vevo90s.html ">
-            <img src="https://f9q4g5j6.ssl.hwcdn.net/640a5eaf0606eb634d038662/200?webp=1 " 
+            <img src="https://hoyeeh.com/upload/190s&80s.png " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7neoxtv.html ">
