@@ -15,6 +15,26 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
+    <li class="cursor-pointer"> <img src="https://www.mubis.es/media/movies/7895/324462/la-primera-profecia-original.jpg" alt="La primera profecía" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fabr24%2FVer%20La%20primera%20profec%C3%ADa%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://es.web.img2.acsta.net/pictures/24/01/10/17/08/1200463.jpg" alt="
+    Arthur (2024)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fabr24%2FVer%20Arthur%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://es.web.img2.acsta.net/pictures/24/02/27/16/28/3250275.jpg" alt="Godzilla y Kong: El nuevo imperio (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fabr24%2FVer%20Godzilla%20y%20Kong-%20El%20nuevo%20imperio%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+    </a>
+</section>    
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
     <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500/sMp34cNKjIb18UBOCoAv4DpCxwY.jpg" alt="Damsel (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmar24%2FVer%20Damsel%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
 
        
@@ -25,14 +45,8 @@ class Menu extends HTMLElement {
     <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk9oxWy9BXcuoHYuggc43qush4yRTiQ6rfbL6S2X-WCPlVYxzr4xtyrYmSWE7gd6gADeg&usqp=CAU" alt="Megamente el sindicato del mal (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmar24%2FVer%20Megamente%20contra%20el%20sindicato%20de%20Doom%20online%20HD%20-%20Cuevana%202.mp4')"></li>
    </div>
 
-
-
-
-  
-
-
     </a>
-</section>
+</section>    
 
 </div>
 
@@ -50,12 +64,6 @@ class Menu extends HTMLElement {
 
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg" alt="Madame Web (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Ffeb24%2FVer%20Madame%20Web%20online%20HD%20-%20Cuevana%202.mp4')"></li>
    </div>
-
-
-
-
-  
-
 
     </a>
 </section>
@@ -77,12 +85,6 @@ class Menu extends HTMLElement {
     <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9k15gwJdGQMfLFsIIX5Qo6KMxPY2UAo_mQB_nA9TsBkdMgsBDRlHIafOdMorQ62sxMj8&usqp=CAU" alt="El astronauta (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmar24%2FVer%20El%20astronauta%20online%20HD%20-%20Cuevana%202.mp4')"></li>
    </div>
 
-
-
-
-  
-
-
     </a>
 </section>
 
@@ -102,12 +104,6 @@ class Menu extends HTMLElement {
 
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/t2gpwYUF5xZUOiJKKg23ydpmjKk.jpg" alt="1962 Halloween Masacre (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fnoviembre%2FVer%201962%20Halloween%20Massacre%20online%20HD%20-%20Cuevana%202.mp4')"></li>
    </div>
-
-
-
-
-  
-
 
     </a>
 </section>
@@ -129,12 +125,6 @@ class Menu extends HTMLElement {
     <li class="cursor-pointer"> <img  src="https://www.sonypictures.com.mx/sites/mexico/files/2024-01/Key-Art_1400x2100_Napoleon_Mx.jpg" alt="Napoleón (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fnoviembre%2FWatch%20Napoleon%202023%201080p%20CAMRip%20LAT%20DUB%20Juga%20Bet%20mkv.mp4')"></li>
    </div>
 
-
-
-
-  
-
-
     </a>
 </section>
 
@@ -154,12 +144,6 @@ class Menu extends HTMLElement {
 
     <li class="cursor-pointer"> <img  src="https://media.filmelier.com/tit/1JSFKK/poster/pollitos-en-fuga-el-origen-de-los-nuggets_LU38SRk.jpeg" alt="Pollitos en fuga: el origen de los nuggets (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fdiciembre%2FVer%20Pollitos%20en%20fuga-%20El%20origen%20de%20los%20nuggets%20online%20HD%20-%20Cuevana%202.mp4')"></li>
    </div>
-
-
-
-
-  
-
 
     </a>
 </section>
@@ -181,12 +165,6 @@ class Menu extends HTMLElement {
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/original/yD6A6BFYl8crNfZ3vs6LzxD8c1g.jpg" alt="Silber y el libro de los sueños (2023) " class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fdiciembre%2FVer%20Silber%20y%20el%20libro%20de%20los%20sue%C3%B1os%20online%20HD%20-%20Cuevana%202.mp4')"></li>
    </div>
 
-
-
-
-  
-
-
     </a>
 </section>
 
@@ -206,12 +184,6 @@ class Menu extends HTMLElement {
 
     <li class="cursor-pointer"> <img  src="https://play-lh.googleusercontent.com/mPZOhdgclWR_E8v5XPJVcq5-814EU5dvmBHOWYdqubm___k-00E4F3uaFcc_vNhiYbudMSZPChsMSuNNVg" alt="Pollitos en fuga: el origen de los nuggets (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fdiciembre%2FVer%20El%20Sexto%20Bus%20online%20HD%20-%20Cuevana%202.mp4')"></li>
    </div>
-
-
-
-
-  
-
 
     </a>
 </section>
@@ -233,12 +205,6 @@ class Menu extends HTMLElement {
     <li class="cursor-pointer"> <img  src="https://es.web.img3.acsta.net/c_310_420/pictures/23/09/20/15/05/0470801.jpg" alt="Five Nights at Freddy's" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://notabasica.com/612132/FiveNightsAtFreddys.mp4')"></li>
    </div>
 
-
-
-
-  
-
-
     </a>
 </section>
 
@@ -258,12 +224,6 @@ class Menu extends HTMLElement {
 
     <li class="cursor-pointer"> <img  src="https://upload.wikimedia.org/wikipedia/en/9/9f/Obi_Wan_Kenobi_Patterson_Cut_poster.png" alt="Obi-Wan Kenobi Patterson Cut (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://dl.dropbox.com/scl/fi/0yy8fzh9ek2ga3frkqxmf/0B1W4N.mp4?rlkey=0xjaggovyhslntruukbufes3r')"></li>
    </div>
-
-
-
-
-  
-
 
     </a>
 </section>
