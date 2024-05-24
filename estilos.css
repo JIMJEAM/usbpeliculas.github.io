@@ -63,14 +63,12 @@ img {
                 }
                 
                 .logo2 img {
-                    display: flex;
-                    width: 300px;
-                    padding: 35px;
-                    border: none;
+                    display: none;
+            
                 }
                 
                 .logo3 {
-                    display: flex;
+                    display: none;
                     width: 300px;
                     padding: 35px;
                 }
@@ -372,6 +370,12 @@ img {
                     }
                     .logo2:hover {
                         transform: translateX(-182px);
+                    }
+                    .logo2 img {
+                        display: flex;
+                        width: 300px;
+                        padding: 35px;
+                        border: none;
                     }
                     .logo3 {
                         display: flex;
