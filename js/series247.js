@@ -122,6 +122,10 @@ class Menu extends HTMLElement {
             <img src="https://tvpdotcomdynamiclogopeu.samsungcloud.tv/resize?url=https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/ESBA33000233H_20220824T005421SQUARE.png_20220824005421.png&h=250" 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
+            <a href="series24-7bobesponja.html ">
+            <img src="https://m.media-amazon.com/images/S/pv-target-images/b72e47f544ddc54b33a902bb69f7e76f68f38374684d781987d84d58978f7869.jpg" 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
             <nav/>
             <nav/>
 
