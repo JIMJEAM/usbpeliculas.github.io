@@ -95,11 +95,11 @@ class Menu extends HTMLElement {
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7neoxtv.html ">
-            <img src="https://ml83w0xirk9x.i.optimole.com/cb:PcBh~22e5d/w:auto/h:auto/q:mauto/ig:avif/f:best/https://sonicaargentina.com.ar/portada.webp " 
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh3OUrdRsoIBoguJ00VCTAIqR7l6HVi0XikA&s " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7latinatv.html ">
-            <img src="https://pbs.twimg.com/profile_images/1720997460418428928/FZCgbK0S_400x400.jpg " 
+            <img src="https://yt3.googleusercontent.com/Brh94gn82_uzy3hwYDmiJAmHskgWOYSp3Xi4EOsxm66-R9gpiy8TQW8s3n48z49k3cWJH-KYMw=s900-c-k-c0x00ffffff-no-rj " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7toplatino.html ">
