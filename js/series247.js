@@ -64,7 +64,7 @@ class Menu extends HTMLElement {
             <img src="https://i.ytimg.com/vi/0BkSC197-ss/maxresdefault.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series247telemax.html ">
+            <a href="series24-7telemax.html ">
             <img src="https://3.bp.blogspot.com/-Rj3GihMSCD4/VmDSmjQYmTI/AAAAAAAAANA/ARhShYiOjvI/s1600/gallery_1164_2_21487.png " class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7delmercadoP.html ">
