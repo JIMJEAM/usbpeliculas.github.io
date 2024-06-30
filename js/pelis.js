@@ -15,6 +15,106 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
+    <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500/bcM2Tl5HlsvPBnL8DKP9Ie6vU4r.jpg" alt="Atlas (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FVer%20Atlas%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/k69kkwsipkPn7Nzq488kHGQTPo.jpg" alt="
+    Mi Querida Oni (2024) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FVer%20Mi%20Querida%20Oni%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/46315-649869-20240605010322.jpg" alt="Bad Boys: Hasta la muerte (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fjun24%2FVer%20Bad%20Boys-%20Hasta%20la%20muerte%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+    </a>
+</section>    
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+    <li class="cursor-pointer"> <img src="https://storage.googleapis.com/citicinemas-store/Movie-1723/poster/E7hGtIrEAXzs/46045-576386-20240410104502.jpg" alt="El planeta de los simios: nuevo reino (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FVer%20El%20planeta%20de%20los%20simios-%20Nuevo%20reino%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-mWDsHg6vmNN6cYUiSo2_MksBvQJpe2tnsA&s" alt="
+    Furiosa: De la saga Mad Max (2024) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FVer%20Furiosa-%20De%20la%20saga%20Mad%20Max%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/45970-108450-20240403081904.jpg" alt="Tarot de la muerte (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FVer%20Tarot%20de%20la%20muerte%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+    </a>
+</section>    
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+    <li class="cursor-pointer"> <img src="https://media.filmelier.com/tit/9F7PZQ/poster/sin-glasear_Gsg31pQ.jpeg" alt="Sin glasear (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FVer%20Sin%20glasear%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/v2YJ94cEfV8ORTPUqdBrwMosJbR.jpg" alt="
+    Luna sin miel (2024) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FVer%20Luna%20Sin%20Miel%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://pics.filmaffinity.com/Fiesta_en_la_madriguera-375852656-large.jpg" alt="Fiesta en la Madriguera (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FVer%20Fiesta%20en%20la%20Madriguera%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+    </a>
+</section>    
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/46123-684523-20240430031929.jpg" alt="Garfield: La película (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FGarfield%20Fuera%20de%20Casa%20fastplay.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs2mFO9J3RgyBZsobQwi2-yTPZXsOknAN4zkfsDVqbdbjeENaFWLqihChov-NChFc-uA&usqp=CAU" alt="
+    El especialista (2024) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fabr24%2FVer%20Profesi%C3%B3n%20peligro%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/5Ggf38fEAhOCdgvfLOfUcfEQTQT.jpg" alt="Abigail (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FVer%20Abigail%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+    </a>
+</section>    
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+    <li class="cursor-pointer"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsRyAwfEhE0LMmjXQsOVTyLzAF7lANPpKCQUK4dYOUWjn3kpaakaDhvT6ham5FlfW5z_g&usqp=CAU" alt="El Pájaro Loco se va de campamento (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fabr24%2FVer%20El%20P%C3%A1jaro%20Loco%20se%20va%20de%20campamento%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/cxevDYdeFkiixRShbObdwAHBZry.jpg" alt="
+    Rebel Moon (Parte dos) (2024)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fabr24%2FVer%20Rebel%20Moon%20-%20Parte%20Dos-%20La%20Guerrera%20que%20Deja%20Marcas%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/H6vke7zGiuLsz4v4RPeReb9rsv.jpg" alt="Desafiantes (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fabr24%2FVer%20Desafiantes%20online%20HD%20-%20Cuevana%202.mp4')"></li>
+   </div>
+
+    </a>
+</section>    
+
+</div>
+
+</div>
+</ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
     <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w342/fRaBjht3S1HU6lJrz2SoFwwOZQM.jpg" alt="El Arca de Noé (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmar24%2FVer%20Arca%20de%20No%C3%A9%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
 
        
