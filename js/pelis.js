@@ -15,6 +15,27 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
+    <li class="cursor-pointer"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEHfhTF0oy6skJekzn-urBiUqvITm35cc_Hf0TZgHDYn3XF8AnShEj7tsymx88fGU5npQ&usqp=CAU" alt="En las profundidades del Sena (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fjun24%2FVer%20En%20las%20profundidades%20del%20Sena%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/46050-191463-20240411040001.jpg" alt="
+    Winnie the Pooh: Sangre y miel 2 (2024) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fjun24%2FWatch%20Winnie%20the%20Pooh%20Blood%20and%20Honey%202024%20WEBDLSCR1080L4T%20mp4.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAsMHxazymkapJQdamK14_mH4GX4yj7j9nPg&s" alt="Winnie the Pooh: Sangre y miel 1 (2023)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Foctubre%2FWatch%20Winnie%20the%20Pooh%20Miel%20Y%20Sangre%20mp4.mp4')"></li>
+   </div>
+
+    </a>
+</section>    
+
+</div>
+
+</div>
+</ul>
+
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
     <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/w500/bcM2Tl5HlsvPBnL8DKP9Ie6vU4r.jpg" alt="Atlas (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fmay24%2FVer%20Atlas%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
 
        
