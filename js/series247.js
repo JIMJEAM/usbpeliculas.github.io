@@ -126,6 +126,10 @@ class Menu extends HTMLElement {
             <img src="https://m.media-amazon.com/images/S/pv-target-images/b72e47f544ddc54b33a902bb69f7e76f68f38374684d781987d84d58978f7869.jpg" 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
+            <a href="series24-7x-men.html ">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/t0gu16p897z71-png-1644415515.jpg?crop=1xw:0.8619617224880383xh;center,top&resize=1200:*" 
+            class="img-thumbnail " alt="... " class="w-50 "></a>
+
             <nav/>
             <nav/>
 
