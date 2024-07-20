@@ -128,7 +128,12 @@ class Menu extends HTMLElement {
 
             <a href="series24-7x-men.html ">
             <img src="https://hips.hearstapps.com/hmg-prod/images/t0gu16p897z71-png-1644415515.jpg?crop=1xw:0.8619617224880383xh;center,top&resize=1200:*" 
-            class="img-thumbnail " alt="... " class="w-50 "></a>
+            class="img-thumbnail " alt="x-men " class="w-50 "></a>
+
+            <a href="series24-saintseiya.html ">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhb9KotQJQw2DutMWK7QR1STZTQjy2-sLam2olhhh5w1wQ5eRpRwIctntb9SnoU6NtDuCSjZRYGvHXLkQ5vw9dKzjKsmwD-k8Hw78sqwKh3LzmjJ-hGyH5tLimRr_heG5mGW3CwbL29bKM/s1600/caballerosdelzodiacoimganmtv.png" 
+            class="img-thumbnail " alt="Los caballeros del zodiaco " class="w-50 "></a>
+
 
             <nav/>
             <nav/>
