@@ -136,8 +136,11 @@ class Menu extends HTMLElement {
 
             <a href="series24-7narutoshippuden.html ">
             <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/3f283002b47c62b1e5d311c45f95c97e.jpe" 
-            class="img-thumbnail " alt="Los caballeros del zodiaco " class="w-50 "></a>
+            class="img-thumbnail " alt="Naruto Shippuden " class="w-50 "></a>
 
+            <a href="series24-7dragon-ball.html ">
+            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/ce1e64ed1cb39a718b070960c86e0db2.jpe" 
+            class="img-thumbnail " alt="Naruto Shippuden " class="w-50 "></a>
 
             <nav/>
             <nav/>
