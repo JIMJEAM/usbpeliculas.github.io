@@ -1337,7 +1337,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
 
 
 
-    <li class="cursor-pointer"> <img src="https://www.cine.com/peliculas4/105662/cartel/105662_cartel_orig.jpg" alt="Medieval" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/medieval.mp4')"> </li> 
+    <li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/Medieval-943570499-large.jpg" alt="Medieval" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://www.colegiofederaldeperitos.org/stuff/medieval.mp4')"> </li> 
 
     
   
