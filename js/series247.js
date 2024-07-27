@@ -140,7 +140,17 @@ class Menu extends HTMLElement {
 
             <a href="series24-7dragon-ball.html ">
             <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/ce1e64ed1cb39a718b070960c86e0db2.jpe" 
-            class="img-thumbnail " alt="Naruto Shippuden " class="w-50 "></a>
+            class="img-thumbnail " alt="
+            Dragon Ball " class="w-50 "></a>
+
+            <a href="series24-7dragon-ball-z.html ">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202302/2107/4f15fe511e0062262a894493e6dcdbee2f615abb4024b384.png" 
+            class="img-thumbnail " alt="
+            Dragon Ball Z " class="w-50 "></a>
+
+            <a href="series24-7dragon-ball-gt.html ">
+            <img src="https://sm.ign.com/ign_latam/screenshot/default/dbgt_nwhj.jpg" 
+            class="img-thumbnail " alt="Dragon Ball Gt " class="w-50 "></a>
 
             <nav/>
             <nav/>
