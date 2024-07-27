@@ -134,6 +134,10 @@ class Menu extends HTMLElement {
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhb9KotQJQw2DutMWK7QR1STZTQjy2-sLam2olhhh5w1wQ5eRpRwIctntb9SnoU6NtDuCSjZRYGvHXLkQ5vw9dKzjKsmwD-k8Hw78sqwKh3LzmjJ-hGyH5tLimRr_heG5mGW3CwbL29bKM/s1600/caballerosdelzodiacoimganmtv.png" 
             class="img-thumbnail " alt="Los caballeros del zodiaco " class="w-50 "></a>
 
+            <a href="series24-7narutishippuden.html ">
+            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/3f283002b47c62b1e5d311c45f95c97e.jpe" 
+            class="img-thumbnail " alt="Los caballeros del zodiaco " class="w-50 "></a>
+
 
             <nav/>
             <nav/>
