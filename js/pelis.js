@@ -15,7 +15,7 @@ class Menu extends HTMLElement {
     this.innerHTML = `
  <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
-    <li class="cursor-pointer"> <img src="https://detodopeliculas.nu/wp-content/uploads/2024/07/deadpool_and_wolverine-poster-nuevo.jpg" alt="Deadpool and Wolverine (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://stream-4491-212-99.cdnpvd.co/keohohecbmikkfn2mdr7qn2knu4h5tsaz25qj635u6dhudkxslouk4h7ny/v.mp4')"> </li> 
+    <li class="cursor-pointer"> <img src="https://detodopeliculas.nu/wp-content/uploads/2024/07/deadpool_and_wolverine-poster-nuevo.jpg" alt="Deadpool and Wolverine (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://stream-4491-212-99.cdnpvd.co/keohohecbmikkfn2mdr7qn2knu4h5tsaz25qj635u6dhudkxslou72h7ny/v.mp4')"> </li> 
 
        
     <li class="cursor-pointer"> <img  src="https://www.lavanguardia.com/peliculas-series/images/movie/poster/2024/5/w1280/oyQXRZD0CHC4sf3lMph3X3cJzSw.jpg" alt="
