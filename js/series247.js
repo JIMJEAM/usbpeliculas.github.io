@@ -156,6 +156,10 @@ class Menu extends HTMLElement {
             <img src="https://lumiere-a.akamaihd.net/v1/images/futurama_season12_social_static_4x5_1080x1350_date_es-e_3f76326a.png?region=0,0,1080,609&width=960" 
             class="img-thumbnail " alt="Dragon Ball Gt " class="w-50 "></a>
 
+             <a href="series24-7simpsons.html ">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4D2862466468107185C7B763815ABC608AE56ECCACF5C0DB11F15919A072F569/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp" 
+            class="img-thumbnail " alt="Dragon Ball Gt " class="w-50 "></a>
+
             <nav/>
             <nav/>
 
