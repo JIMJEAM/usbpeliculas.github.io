@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        series24-7</title>
+        <link rel="icon" type="image/x-icon" href="/imagenes/247-32x32.png" alt="AndroidTV">
+        <link rel="canonical" href="https://pelisplaya.net/series24-7futurama">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous">
+    </script>
+    <script defer src="js/series247.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js">
+    </script>
+    <meta name="viewport" content="width=500, initial-scale=1">
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '863787428252192');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=863787428252192&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+    <!--boton megusta y compartir fb-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v16.0" nonce="RCOVilpN"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5508051489946137"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid m-0">
+        <header>
+            <nav class="menu d-sm-flex justify-content-evenly">
+                <ul class="opciones">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="series24-7.html">SERIES 24-7</a></li>
+                    <li><a href="peliculas.html">PELICULAS</a></li>
+                    <li><a href="IPTV.html">IPTV</a></li>
+                    <li><a href="https://wa.me/529842121969"><i class="fab fa-whatsapp">CONTACTO</a></i>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container-fluid">
+            <!--reproductor-->
+            <div id="player" class="justify-content-center d-grid align-items-start m-0">
+            <video id="videoPlayer" controls class="w-100  mw-100">
+                Tu navegador no soporta el elemento de video.
+            </video></div>
+
+            <script>// Supongamos que tienes una lista de URLs de archivos .m3u
+                var playlist = ['https://dl.dropbox.com/s/hqiw4mfcghgruxf/Futurama%20-%2001%20-%20Piloto%20Espacial%203000.mp4',
+'https://dl.dropbox.com/s/m958lp958iok0hm/Futurama%20-%2002%20-%20La%20Serie%20Ha%20Aterrizado.mp4',
+'https://dl.dropbox.com/s/gxo1f0iwsljq4r2/Futurama%20-%2003%20-%20Yo%2C%20compa%C3%B1ero%20de%20piso.mp4',
+'https://dl.dropbox.com/s/h1kp8mo5kqs13x2/Futurama%20-%2004%20-%20Obras%20de%20amor%20perdidas%20en%20el%20espacio.mp4',
+'https://dl.dropbox.com/s/35b1dr39iup7ap0/Futurama%20-%2005%20-%20Temor%20a%20un%20planeta%20robot.mp4',
+'https://dl.dropbox.com/s/kybvxqpx09h5smz/Futurama%20-%2007%20-%20Mis%20Tres%20Soles.mp4',
+'https://dl.dropbox.com/s/sxwvsbnzxbdk9rd/Futurama%20-%2008%20-%20una%20enorme%20bola%20de%20basura.mp4',
+'https://dl.dropbox.com/s/cai2c00quax1jmq/Futurama%20-%2009%20-%20El%20Infierno%20Robot.mp4',
+'https://dl.dropbox.com/s/lt45kgdafo70e9v/Futurama%20-%2010%20-%20Un%20vuelo%20para%20recordar.mp4',
+'https://dl.dropbox.com/s/9jzjpxbwr49bxci/Futurama%20-%2011%20-%20Universidad%20marte.mp4',
+'https://dl.dropbox.com/s/c21jbjn7a2sym2u/Futurama%20-%2012%20-%20Cuando%20los%20Extraterrestres%20Atacan.mp4',
+'https://dl.dropbox.com/s/gogzzgax7hftz2d/Futurama%20-%2013%20-%20Fry%20y%20la%20fabrica%20de%20Slurm.mp4',
+'https://dl.dropbox.com/s/9mksipdl2uyiwqy/Futurama%20-%20Temporada%202x01.mp4',
+'https://dl.dropbox.com/s/o3d1x7dg6hhpytg/Futurama%20-%20Temporada%202x02.mp4',
+'https://dl.dropbox.com/s/p96o0viqhx671jw/Futurama%20-%20Temporada%202x03.mp4',
+'https://dl.dropbox.com/s/hixcj8wmrcmeroe/Futurama%20-%20Temporada%202x04.mp4',
+'https://dl.dropbox.com/s/vm3yiq477s3323t/Futurama%20-%20Temporada%202x05.mp4',
+'https://dl.dropbox.com/s/n88gd3bamsq7zyj/Futurama%20-%20Temporada%202x06.mp4',
+'https://dl.dropbox.com/s/a1pdm2dgj5sde6s/Futurama%20-%20Temporada%202x07.mp4',
+'https://dl.dropbox.com/s/x25lootosy4w2tt/Futurama%20-%20Temporada%202x08.mp4',
+'https://dl.dropbox.com/s/3w3cdjtuxlu94t1/Futurama%20-%20Temporada%202x09.mp4',
+'https://dl.dropbox.com/s/mkm0uxcvyp6uct1/Futurama%20-%20Temporada%202x10.mp4',
+'https://dl.dropbox.com/s/5k9tmwwsbrf89bf/Futurama%20-%20Temporada%202x11.mp4',
+'https://dl.dropbox.com/s/b4g7avhxru4jk0g/Futurama%20-%20Temporada%202x12.mp4',
+'https://dl.dropbox.com/s/z8niwp2yxlf7wua/Futurama%20-%20Temporada%202x13.mp4',
+'https://dl.dropbox.com/s/mf7hhx5800p5fim/Futurama%20-%20Temporada%202x16.mp4',
+'https://dl.dropbox.com/s/hdveu668p240h3m/Futurama%20-%20Temporada%202x17.mp4',
+'https://dl.dropbox.com/s/sw5xe2esojvsalk/Futurama%20-%20Temporada%202x18.mp4',
+'https://dl.dropbox.com/s/pkrc6hsccis8frx/Futurama%20-%20Temporada%202x19.mp4',
+'https://dl.dropbox.com/s/ziox0sj0zp2ithm/Futurama%20-%2001%20-%20Amazonas%20Enamoradas.mp4',
+'https://dl.dropbox.com/s/lgzfu2rxyaw94jq/Futurama%20-%2002%20-%20Par%C3%A1sitos%20Perdidos.mp4',
+'https://dl.dropbox.com/s/4gq60zg9p6sqp6q/Futurama%20-%2003%20-%20Historia%20de%20dos%20Santa%20Claus.mp4',
+'https://dl.dropbox.com/s/5g0f53vaa1xqiaq/Futurama%20-%2004%20-%20La%20suerte%20del%20los%20Fryrish.mp4',
+'https://dl.dropbox.com/s/ab6w001zdsimkov/Futurama%20-%2005%20-%20El%20ave%20robot%20de%20Alcatraz.mp4',
+'https://dl.dropbox.com/s/yr7kdh2xagx0my6/Futurama%20-%2006%20-%20Amor%20que%20no%20se%20Dobla.mp4',
+'https://dl.dropbox.com/s/9ruiezft29dxnsp/Futurama%20-%2007%20-%20El%20dia%20que%20la%20Tierra%20se%20quedo%20estupida.mp4',
+'https://dl.dropbox.com/s/w9xfhqgji33yxus/Futurama%20-%2008%20-%20Espectaculo%20de%20langosta.mp4',
+'https://dl.dropbox.com/s/214iuw0bq0lysuh/Futurama%20-%2009%20-%20Las%20reglas%20de%20la%20casa.mp4',
+'https://dl.dropbox.com/s/mgvj1avmy10gn7l/Futurama%20-%2010%20-%20Donde%20deambulan%20los%20Buggalos.mp4',
+'https://dl.dropbox.com/s/un0b3iwpvfsk7st/Futurama%20-%2011%20-%20En%20el%20manicomio.mp4',
+'https://dl.dropbox.com/s/6r44m7hu28xrto4/Futurama%20-%2012%20-%20La%20Ruta%20de%20Todo%20Mal.mp4',
+'https://dl.dropbox.com/s/agxpf8nobxmv97r/Futurama%20-%2013%20-%20Cantando%20al%20viento.mp4',
+'https://dl.dropbox.com/s/exsc0k6sv7cboxg/Futurama%20-%2014%20-%20El%20tiempo%20sigue%20saltando.mp4',
+'https://dl.dropbox.com/s/leepud1mxk61rex/Futurama%20-%2015%20-%20Yo%20Sal%C3%AD%20con%20una%20Robot.mp4',
+'https://dl.dropbox.com/s/w8in60blea8y7a8/Futurama%20-%2016%20-%20Leela%2C%20la%20estrella%20del%20deporte.mp4',
+'https://dl.dropbox.com/s/gfdn2rus94xs7w6/Futurama%20-%2017%20-%20Un%20Fara%C3%B3n%20para%20Recordar.mp4',
+'https://dl.dropbox.com/s/kfmym558a94pwq6/Futurama%20-%2018%20-%20Antologia%20De%20Interes%20%232.mp4',
+'https://dl.dropbox.com/s/a1dece4stofeped/Futurama%20-%2019%20-%20Todo%20anda%20bien%20en%20Roswell.mp4',
+'https://dl.dropbox.com/s/rqcmy83vjjo12bp/Futurama%20-%2020%20-Un%20Dios%20entre%20nosotros.mp4',
+'https://dl.dropbox.com/s/y5kpahld0fogufm/Futurama%20-%2021%20-%20Los%20accionistas%20del%20futuro.mp4',
+'https://dl.dropbox.com/s/qvy11j1l7656ivc/Futurama%20-%2022%20-%20Cocinero%20de%20Hierro.mp4',
+'https://dl.dropbox.com/s/2ei64iygg9onlqc/Futurama%20-%2001%20-%20Kif%20queda%20ligeramente%20embarazado.mp4',
+'https://dl.dropbox.com/s/7fi83zxh9i3vpdw/Futurama%20-%2002%20-%20El%20mundo%20de%20Leela.mp4',
+'https://dl.dropbox.com/s/zecfrbvf0dl7zqe/Futurama%20-%2003%20-%20Amor%20y%20cohete.mp4',
+'https://dl.dropbox.com/s/qub3yrfk9alpje0/Futurama%20-%2004%20-%20Menos%20que%20un%20heroe.mp4',
+'https://dl.dropbox.com/s/xbjsshxd678thu9/Futurama%20-%2005%20-%20Una%20Probadita%20De%20Libertad.mp4',
+'https://dl.dropbox.com/s/8670v2d95kk3azi/Futurama%20-%2006%20-%20Bender%20el%20gran%20ejemplo.mp4',
+'https://dl.dropbox.com/s/330wu3lptriiuvw/Futurama%20-%2007%20-%20Ladrido%20jurasico.mp4',
+'https://dl.dropbox.com/s/j9hg21i6aiebtsb/Futurama%20-%2008%20-%20Crimenes%20de%20calor.mp4',
+'https://dl.dropbox.com/s/rvbpvex0tsdcun6/Futurama%20-%2009%20-%20Leela%20la%20adolecente%20mutante.mp4',
+'https://dl.dropbox.com/s/muk9xm48cd1cest/Futurama%20-%2010%20-%20El%20Porque%20De%20Fry.mp4',
+'https://dl.dropbox.com/s/xe7zvh7730zfei4/Futurama%20-%2011%20-%20%20Donde%20ning%C3%BAn%20aficionado%20ha%20ido.mp4',
+'https://dl.dropbox.com/s/3056k4osbueq8uj/Futurama%20-%2012%20-%20El%20Aguijon.mp4',
+'https://dl.dropbox.com/s/vasn6g6he3so9vt/Futurama%20-%2013%20-%20Bend%20es%20ella.mp4',
+'https://dl.dropbox.com/s/fujd62a4wqphe19/Futurama%20-%2014%20-%20Obsolutamente%20fabuloso.mp4',
+'https://dl.dropbox.com/s/1zdaax65epmze9j/Futurama%20-%2015%20-%20El%20Par%20De%20Cajas%20De%20Farnsworth.mp4',
+'https://dl.dropbox.com/s/njb9qwid0jd1gkl/Futurama%20-%2016%20-%20300%20dolares.mp4',
+'https://dl.dropbox.com/s/ylnld5k39x6hx5a/Futurama%20-%2017%20-%20El%20codiciado%20Fry.mp4',
+'https://dl.dropbox.com/s/xo19ptsoqxgo72x/Futurama%20-%2018%20-%20Las%20Manos%20Del%20Diablo%20Son%20Jugutes%20Ociosos.mp4',
+'https://dl.dropbox.com/s/gcd6afv4eq1w8r0/01%20-%20El%20Gran%20Golpe%20de%20Bender.mp4',
+'https://dl.dropbox.com/s/7jx5ukuuw2ftsmu/02%20-%20La%20Bestia%20con%20Billones%20de%20Brazos.mp4',
+'https://dl.dropbox.com/s/ggr1ioo8hz7zjj5/04%20-%20En%20el%20Lejano%20y%20Salvaje%20Verde.mp4',
+'https://dl.dropbox.com/s/oxx8lx0h9xcvm9i/01%20-%20Renacimiento.mkv',
+'https://dl.dropbox.com/s/sit4c7pvj0ajhqj/02%20-%20La%20haza%C3%B1a%20de%20leela.mkv',
+'https://dl.dropbox.com/s/lwho0e09bwmlyhw/03%20-%20Ataque%20de%20la%20aplicacion%20asesina.mkv',
+'https://dl.dropbox.com/s/8yer5y5ze0d1gxc/04%20-%20propuesta%20infinidad.mkv',
+'https://dl.dropbox.com/s/ekwgyg0eg4e4ynj/06%20-%20El%20codigo%20leonardo.mkv',
+'https://dl.dropbox.com/s/m0ffrpli8al3bh7/06%20-%20inspeccion%20letal.mkv',
+'https://dl.dropbox.com/s/gxfakl0f6n9o3s9/07%20-%20El%20difunto%20Philip%20J.%20Fry.mkv',
+'https://dl.dropbox.com/s/skoxjj30o4awdek/08%20-ese%20dichoso%20gato.mkv',
+'https://dl.dropbox.com/s/skuu2rqwxwkzfi9/09%20-%20origen%20mecanico.mkv',
+'https://dl.dropbox.com/s/a9d8mt09nv6800j/10%20-%20el%20pricionero%20de%20benda.mkv',
+'https://dl.dropbox.com/s/ne5dnq5q9kqaioj/11%20-%20Diferencias%20Irreconciliables.mkv',
+'https://dl.dropbox.com/s/e36eir4xw5h8lu2/12%20-%20Los%20Mutantes%20Se%20Revelan.mkv',
+'https://dl.dropbox.com/s/82kzu4j83xd9vny/13%20-%20Espectacular%20De%20Navidad.mkv',
+'https://dl.dropbox.com/s/lpl8iwrj4ip0que/14%20-%20Neutopia.mkv',
+'https://dl.dropbox.com/s/0zrlvd1nwurplft/15%20-%20Benderama.mkv',
+'https://dl.dropbox.com/s/jxzuheuh6bjh7dy/16%20-%20Fantasma%20En%20Las%20Maquinas.mkv',
+'https://dl.dropbox.com/s/ifrx4kq5rcmkkje/17%20-%20Ley%20y%20Or%C3%A1culo.mkv',
+'https://dl.dropbox.com/s/l9cohepfbvbt61j/18%20-%20El%20Silencio%20De%20Las%20Pinzas.mkv',
+'https://dl.dropbox.com/s/wn330bpdklh43hu/19%20-%20Yo%2C%20Leela.mkv',
+'https://dl.dropbox.com/s/rm00fu09bch1gjk/20%20-%20Las%20Cabezas%20de%20los%20Presidentes.mkv',
+'https://dl.dropbox.com/s/af1vq4uyjkb70qb/21%20-%20La%20Ballena%20Espacial.mkv',
+'https://dl.dropbox.com/s/38a8nuodvrmdyc1/22%20-%20Fry%20el%20Incubador.mkv',
+'https://dl.dropbox.com/s/ui4slm07vato4i3/23%20-%20La%20Punta%20de%20Zoidberg.mkv',
+'https://dl.dropbox.com/s/8yj6wzudf1at1xe/24%20-%20Guerreros%20del%20Resfriado.mkv',
+'https://dl.dropbox.com/s/bl0hpwlfygrs5n7/25%20-%20Aceleraci%C3%B3n.mkv',
+'https://dl.dropbox.com/s/6ulphp3o68q6k07/26%20-%20Reencarnaci%C3%B3n.mkv',
+'https://dl.dropbox.com/s/3b2nrdznylod7xv/07x01%20-%20Robots%20Y%20Abejas.mp4',
+'https://dl.dropbox.com/s/13j2fv24mt1q64r/07x02-%20Adios%20A%20los%20Brazos.mp4',
+'https://dl.dropbox.com/s/c54sg5oaw29no17/07x03-%20Desicion%203012.mp4',
+'https://dl.dropbox.com/s/f4hgescdg2s8zaw/07x04%20-%20El%20Ladron%20Cabeza%20De%20Bolsa.mp4',
+'https://dl.dropbox.com/s/us0gatzb5ox1qo2/07x05%20-Zapp%2CEl%20Tonto.mp4',
+'https://dl.dropbox.com/s/kxxrs3qc8fwtblb/07x06-%20El%20nectar%20mariposa.mp4',
+'https://dl.dropbox.com/s/8b0khfw32fwcio1/07x07-El%20Burocrata%20de%20Seis%20Millones%20de%20Dolares.mp4',
+'https://dl.dropbox.com/s/szqw2o545qvfj12/07x08-Fry%2C%20El%20Cavernicola.mp4',
+'https://dl.dropbox.com/s/4udblfq8af31kzt/07x09-%20Libre%20Albedrio.mp4',
+'https://dl.dropbox.com/s/opeyn9lrl5c1tyq/07x10-%20Deseo%20Cercano%20A%20la%20Muerte.mp4',
+'https://dl.dropbox.com/s/dgdyi204ccgqfy0/07x11-Viva%20Marte%20Vegas.mp4',
+'https://dl.dropbox.com/s/ieii3dz7ozrwq6b/07x12-%20Zorra%20Del%20Siglo%20XXXI.mp4',
+'https://dl.dropbox.com/s/8hvnye3yokpkryg/07x13-Naturama.mp4',
+'https://dl.dropbox.com/s/ef7d6yfx7femzs1/07x14%20-%20Aventura%20En%20Dos%20Dimensiones.mp4',
+'https://dl.dropbox.com/s/clua3yeb2d87291/07x15-La%20Gran%20Escapada%20De%20Fry%20y%20Leela.mp4',
+'https://dl.dropbox.com/s/kkx0953w45pnu4k/07x16-T%20el%20terrestre.mp4',
+'https://dl.dropbox.com/s/tuwlp81c4whk79n/07x17%20-40%20Por%20ciento%20barriga%20de%20plomo.mp4',
+'https://dl.dropbox.com/s/kbl2gdsgrlsw7dg/07x18-La%20Antorcha%20Inhumana.mp4',
+'https://dl.dropbox.com/s/970tvd8ilr0v2ny/07x19-El%20Pozo%20De%20Diversion%20Del%20Sabado%20Por%20La%20Manana.mp4',
+'https://dl.dropbox.com/s/fj0gfheqyb1ys4z/07x20-Calculon%202.0.mp4',
+'https://dl.dropbox.com/s/faekj0ke0s24cqe/07x21-Trassie%20Vuelve%20A%20Casa.mp4',
+'https://dl.dropbox.com/s/uqdkik3utovpe2g/07x22-Leela%20y%20El%20Tallo%20De%20Genes.mp4',
+'https://dl.dropbox.com/s/9618b6ac1vsvrpu/07x23-Juego%20de%20Tonos.mp4',
+'https://dl.dropbox.com/s/6mi605as900zu1w/07x24-%20Muerte%20en%20Planet%20Express.mp4',
+'https://dl.dropbox.com/s/35eyym0zjx7foxy/07x25-Peste%20y%20Pestilencia.mp4',
+'https://dl.dropbox.com/s/thdhgga7ue84ou7/07x26-Mientras%20tanto.mp4',
+];
+                var currentTrack = 0;
+                
+                // Obtén una referencia al reproductor de video
+                var player = document.getElementById('videoPlayer');
+                
+                // Función para cargar y reproducir una pista
+                function playTrack(track) {
+                    player.src = track;
+                    player.play();
+                }
+                
+                // Carga la primera pista para empezar
+                playTrack(playlist[currentTrack]);
+                
+                // Cuando una pista termina, pasa a la siguiente
+                player.addEventListener('ended', function() {
+                    currentTrack++;
+                    if (currentTrack < playlist.length) {
+                        playTrack(playlist[currentTrack]);
+                    }
+                });
+                </script>
+                <br>
+            <span> Smart tv, Tv box y dispositivos android <br>
+                🔁 gira la pantalla <i class="fas fa-mobile-alt"></i> y dale play! <i class="fas fa-play"></i> </span>
+            <br><br>
+            <div><menu-component></menu-componet></div>
+
+    </div>
+
+    <!--video-control&web-componet-->
+
+    </div>
+
+    </main>
+
+
+    <footer class="bg-transparent   h-auto d-inline-block ">
+        <section class="mb-4">
+            <!-- Facebook -->
+            <h5 class="font-weight-bold mb-3">Síguenos en facebook:</h5>
+            <a class="btn btn-primary btn-floating m-1" href="https://www.facebook.com/profile.php?id=100067755996971"
+                target="_Blank" role="button"><i class="fab fa-facebook-f"></i></a>
+                <!--boton me gusta y seguir fb-->
+                <div class="fb-like"  data-href="https://www.facebook.com/profile.php?id=100067755996971" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+
+                <p class=" h3 ">usbplaya 2023 &copy;</p>
+                <a href="https://t.me/Pelisplaya"><i class="fab fa-telegram-plane"> Telegram </i></i></a>
+                <br><br>
+                <!--Boton Donar-->   
+                <form action="https://www.paypal.com/donate" method="post" target="_top">
+                    <input type="hidden" name="hosted_button_id" value="8U79DPTLEF2JN" />
+                    <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donar con el botón PayPal" />
+                    </form>          
+        </section>
+        <section>
+            <!-- Page Content -->
+<div class="container">
+
+<h1 class="fw-light text-center text-lg-start mt-4 mb-0">Temu Shop Like a Billionaire</h1>
+
+<hr class="mt-2 mb-5">
+
+<div class="row text-center text-lg-start">
+
+<div class="col-lg-3 col-md-4 col-12">
+<a href=" https://temu.to/m/udcwww0iksc" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/ut0u4dykwz9.png" alt="temu">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href="https://temu.to/m/ubgv8hsdfae" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/90051e93-e785-4820-8481-4ef76dd643ca.png" alt="temu">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href="https://temu.to/m/ubnzmag3c7x" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/f9d1aad4-feb3-4424-876a-c16aa678f5f3.png" alt="temu">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href="https://temu.to/m/uurnw6fdqsc" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/91659d29-3af9-4b7e-b318-6473a809ec22.png" alt="">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href="https://temu.to/m/uv85aqr6w2n" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/70ca3600-6153-434c-8464-c0d10abb8268.png" alt="">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href="https://temu.to/m/uf56ngp38n9" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/e18c3a29-236a-4011-9b18-a509f1ec9236.png" alt="">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href=" https://temu.to/m/uwzi8un8sah" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/b2cf8e1c-ad2f-4d02-aaa1-ae6fa5ba984a.png" alt="">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href="https://temu.to/m/ucppb4omc1m" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/1f679213-4263-4e1f-9d9c-e490b24b957f.png" alt="">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href="https://temu.to/m/ucxi8ngri56" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/7f7f06a9-d93d-472f-b178-31f80cd360d4.png" alt="">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href="https://temu.to/m/u0wjda9bg0z" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/282ae456-cd8a-49d6-a2c8-a06c6e8fcb0f.png" alt="">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href="https://temu.to/m/uw5isel2rg6" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/f54f651b-fc56-4ca3-97b1-50f998a3658a.png" alt="">
+</a>
+</div>
+<div class="col-lg-3 col-md-4 col-12">
+<a href="https://temu.to/m/u9qo95294q0" target="_blank" class="d-block mb-4 h-100">
+<img class="img-fluid" src="/temu-img/927a3238-2315-44df-afe4-1292f840e41b.png" alt="">
+</a>
+</div>
+</div>
+
+</div>
+
+                </section>
+    </footer>
+
+<!--popC4sh-->
+<script type="text/javascript">
+    var uid = '466237';
+    var wid = '701708';
+    var pop_tag = document.createElement('script');pop_tag.src='//cdn.popcash.net/show.js';document.body.appendChild(pop_tag);
+    pop_tag.onerror = function() {pop_tag = document.createElement('script');pop_tag.src='//cdn2.popcash.net/show.js';document.body.appendChild(pop_tag)};
+ </script>
+<!--popC4sh-->
+<script type="text/javascript">
+    var p$00a = 'p$00a' + (new Date().getTime()) + 'zz'; window[p$00a] = {a:'abcdefghijklmnopqrstuvwxyz0123456789thjoxe3nv7mpc49lbisyk8aqfu256gz0d1wr', b:'{"AZIb":"zdd6g1", "BVIb":"12512w", "CXrr1":"k4oxi", "DLtag":"5", "Emjk5":"", "XCge1s":"j7pln.j9c" , "Zt1":"l9ljtsn.4xy", "ZZ1":"itl9p9m.j9c" }', c:'{"Abkr221":"sjivly", "Bo9ssm":"//jo4.j7pln.j9c/tll.7s"}', d:'{"Ag4":"h9of", "Bx1":"tllx4oCnvpo", "Cky":"sij", "Dmg":"jixtyxEpxcx4y"}'};
+   var _0x5d4b=['235913QVfbwv','slice','length','162209QBmAmV','14238hyOOTq','323207DTbifh','split','1DqiKtq','135866HTbavB','indexOf','call','27654SKXHbY','parse','undefined','32Ijckmz','keys','map','ceil','115980hcFVDy','values','join'];var _0x208c=function(_0x31a8d7,_0x5f36b3){_0x31a8d7=_0x31a8d7-0x167;var _0x5d4be1=_0x5d4b[_0x31a8d7];return _0x5d4be1;};(function(_0x276f94,_0x57c4ff){var _0x50057c=_0x208c;while(!![]){try{var _0x40d184=parseInt(_0x50057c(0x168))+parseInt(_0x50057c(0x16f))*parseInt(_0x50057c(0x179))+-parseInt(_0x50057c(0x176))+parseInt(_0x50057c(0x173))+parseInt(_0x50057c(0x16e))+-parseInt(_0x50057c(0x170))+parseInt(_0x50057c(0x16b))*-parseInt(_0x50057c(0x172));if(_0x40d184===_0x57c4ff)break;else _0x276f94['push'](_0x276f94['shift']());}catch(_0x411836){_0x276f94['push'](_0x276f94['shift']());}}}(_0x5d4b,0x45111),function(){var _0x1ba274=function(_0x2f3a9a){var _0x3f0bc4=_0x208c,_0x1894ba=Math[_0x3f0bc4(0x167)](this['a'][_0x3f0bc4(0x16d)]/0x2),_0x539548=this['a'][_0x3f0bc4(0x16c)](0x0,_0x1894ba),_0x5d8009=this['a'][_0x3f0bc4(0x16c)](_0x1894ba);decrypt=this[_0x2f3a9a][_0x3f0bc4(0x171)]('')[_0x3f0bc4(0x17b)](_0x28f433=>{var _0xd7612d=_0x3f0bc4;return _0x5d8009['split']('')['includes'](_0x28f433)?_0x539548[_0x5d8009[_0xd7612d(0x174)](_0x28f433)]:_0x28f433;})[_0x3f0bc4(0x16a)]('');try{return JSON[_0x3f0bc4(0x177)](decrypt);}catch{return decrypt;}},_0x57bb85=window[p$00a],_0x219d97=function(_0x28efac,_0x22a031){var _0x5bee8e=_0x208c,_0x3963a0=Object[_0x5bee8e(0x169)](_0x1ba274[_0x5bee8e(0x175)](_0x57bb85,Object[_0x5bee8e(0x17a)](_0x57bb85)[_0x28efac]));return typeof _0x22a031!=_0x5bee8e(0x178)?_0x3963a0[_0x22a031]:_0x3963a0;};window[p$00a]['x']=function(){return _0x219d97(0x1);};var _0xf1db57=document[_0x219d97(0x3,0x3)](_0x219d97(0x2,0x0));_0xf1db57[_0x219d97(0x3,0x2)]=_0x219d97(0x2,0x1),document[_0x219d97(0x3,0x0)][_0x219d97(0x3,0x1)](_0xf1db57),p$00a=undefined;}());
+    
+    </script>
+
+
+</body>
+
+
+</html>

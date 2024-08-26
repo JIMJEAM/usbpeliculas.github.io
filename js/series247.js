@@ -152,6 +152,10 @@ class Menu extends HTMLElement {
             <img src="https://sm.ign.com/ign_latam/screenshot/default/dbgt_nwhj.jpg" 
             class="img-thumbnail " alt="Dragon Ball Gt " class="w-50 "></a>
 
+            <a href="series24-7futurama.html ">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/futurama_season12_social_static_4x5_1080x1350_date_es-e_3f76326a.png?region=0,0,1080,609&width=960" 
+            class="img-thumbnail " alt="Dragon Ball Gt " class="w-50 "></a>
+
             <nav/>
             <nav/>
 
