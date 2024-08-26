@@ -301,7 +301,7 @@ class Menu extends HTMLElement {
     <li class="cursor-pointer"> <img src="https://play-lh.googleusercontent.com/b4brmc3O6UtWP7W1jlAPPC35i8tfRZztnn6-GCFjAobAKP7P8vkl0H-RhRtLZUbeuEyTWp7B6NpuJvJNYW8=w240-h480-rw" alt="Ricky Stanicky: El impostor (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Ffeb24%2FVer%20Chicas%20pesadas%20online%20HD%20-%20Cuevana%202.mp4')"> </li> 
 
        
-    <li class="cursor-pointer"> <img  src="https://cdn.playpilot.tech/4aa32664e19c11ee83270a58a9feac02/src/img?optimizer=image&quality=75&width=320&aspect_ratio=2%3A3" alt="
+    <li class="cursor-pointer"> <img  src="https://images.justwatch.com/poster/312181920/s718/pobres-criaturas.jpg" alt="
     Pobres criaturas (2023)" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Ffeb24%2FVer%20Pobres%20Criaturas%20online%20HD%20-%20Cuevana%202.mp4')">
     </li>
 
