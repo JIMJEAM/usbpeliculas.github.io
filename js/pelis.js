@@ -920,7 +920,7 @@ One Piece Film Red " class="img_video_nav  img-thumbnail  w-50"  onclick="videoU
 
 
 
-<li class="cursor-pointer"> <img src="https://www.cinepremiere.com.mx/wp-content/uploads/2023/04/Fuga-de-Reinas-900x1125.jpg" alt="Fuga de reinas" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://archive.org/download/01_20230415_20230415_2331/01.mp4')"> </li> 
+<li class="cursor-pointer"> <img src="https://cinembrollos.com/wp-content/uploads/2023/09/saw_x_ver5.jpg" alt="Saw X" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://dl.dropbox.com/scl/fi/7w27cklxw9ieg2izoom6z/S4WX.mp4?rlkey=6tt829to3rtb6puuvg380h7n6')"> </li> 
 
 
 </a>
