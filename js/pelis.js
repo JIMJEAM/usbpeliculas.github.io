@@ -15,6 +15,26 @@ class Menu extends HTMLElement {
     this.innerHTML = `
  <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47141-607088-20240904070840.jpg" alt="Beetlejuice Beetlejuice (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600801.us.archive.org/28/items/beetlejuice-beetlejuice-2024/Beetlejuice%20Beetlejuice%20%282024%29.mp4?cnt=0')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/sIFz9N45kbGHScotbeK1r1LZXQi.jpg" alt="
+    Miller (2024) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://grrfff66me7t.objectstorage.sa-saopaulo-1.oci.customer-oci.com/n/grrfff66me7t/b/Cubojoselyn/o/reset%2Fpeliculas%2Fjul24%2FVer%20Un%20lugar%20en%20silencio-%20D%C3%ADa%20uno%20online%20HD%20-%20Cuevana%202.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500/46sp1Z9b2PPTgCMyA87g9aTLUXi.jpg" alt="Lift: Un robo de primera clase (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://axa4wow3dcia.objectstorage.us-phoenix-1.oci.customer-oci.com/n/axa4wow3dcia/b/bucket-20201001-1658/o/pelis2024%2FVer%20Lift-%20Un%20robo%20de%20primera%20clase%20Online%20Castellano%20Latino%20Subtitulada%20HD%20-%20HDFull.mp4')"></li>
+   </div>
+
+    </a>
+</section>    
+
+</div>
+
+</div>
+</ul>   
+
+ <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
     <li class="cursor-pointer"> <img src="https://detodopeliculas.nu/wp-content/uploads/2024/07/deadpool_and_wolverine-poster-nuevo.jpg" alt="Deadpool and Wolverine (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800505.us.archive.org/29/items/dead-pool-3/Dead%20Pool%203.MP4')"> </li> 
 
        
