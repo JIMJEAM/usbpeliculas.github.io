@@ -37,11 +37,11 @@ class Menu extends HTMLElement {
             <a href="series24-7chistosos2.html ">
             <img src="https://i.ytimg.com/vi/vqRC9xVxN5g/maxresdefault.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7seriesretro.html ">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOIEthUQIEbMb1i7Ni0fEUAzldVJEeNqR67yQGB2mvaie8HQqJ19imuJGynDDmPdhP6ms&usqp=CAU " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="series24-7retromagico.html ">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/525b2544-96a9-41eb-b61f-947526294ebd-profile_banner-480.jpeg " class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7retrotoons.html ">
-            <img src="https://yt3.googleusercontent.com/ytc/AOPolaRr0hJkdPUOXJ1r5v7vrcj1mS4M9Ru0RxEXUnnjBQ=s900-c-k-c0x00ffffff-no-rj " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="series24-7toonami.html ">
+            <img src="https://i.ytimg.com/vi/EX2hKdZE9O0/maxresdefault.jpg " class="img-thumbnail alt="... " class="w-50 "></a>
 
             <a href="series24-7cine1.html ">
             <img src="https://i0.wp.com/zoomf7.net/wp-content/uploads/2020/03/sala-de-cine.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
@@ -102,8 +102,8 @@ class Menu extends HTMLElement {
             <img src="https://yt3.googleusercontent.com/Brh94gn82_uzy3hwYDmiJAmHskgWOYSp3Xi4EOsxm66-R9gpiy8TQW8s3n48z49k3cWJH-KYMw=s900-c-k-c0x00ffffff-no-rj " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
-            <a href="series24-7toplatino.html ">
-            <img src="https://toplatino.net/wp-content/uploads/2019/04/cropped-LogoTL-300-new-9.png " 
+            <a href="series24-7conectatv.html ">
+            <img src="https://play-lh.googleusercontent.com/7Rvs0rCdmfWjm-srLmJ5a2UM8hnvGzLC7QCDrUtBxuclIGymGLjVsVHHrv2kdIDZiQ " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7theretroch.html ">
