@@ -18,16 +18,17 @@ class Menu extends HTMLElement {
     <nav class="flex-container row">
     <nav class="flex-container col-lg-12 m-auto">
     
+        <a href="series24-7anime.html ">
+            <img src="https://www.apkvisit.com/wp-content/uploads/2022/10/anime-tv-anime-watching-app.png " class="img-thumbnail " alt="... " class="w-50 "></a>
 
+        
         <a href="series24-7.html ">
             <img src="../imagenes/twitch247.png" class="img-thumbnail " alt="... " class="w-50 "></a>
            
             <a href="series24-7retro.html ">
             <img src="https://m.media-amazon.com/images/I/B1d2i--qjtS._SL500_.png " class="img-thumbnail " alt="... " class="w-50 "></a>
            
-            <a href="series24-7anime.html ">
-            <img src="https://www.apkvisit.com/wp-content/uploads/2022/10/anime-tv-anime-watching-app.png " class="img-thumbnail " alt="... " class="w-50 "></a>
-
+            
             <a href="series24-7series2.html ">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZSt__saWKZI-WHtXjPchZ8joqqqscW-Lnk3wgzZv8DVs9vR2bUhqsvskXJg40ooBXtBw&usqp=CAU " class="img-thumbnail " alt="... " class="w-50 "></a>
            
