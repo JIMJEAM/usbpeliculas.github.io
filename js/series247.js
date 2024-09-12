@@ -74,8 +74,8 @@ class Menu extends HTMLElement {
             <a href="series24-7lospitufos.html ">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxxCXPtuC-tJhEA_5mhom7Fu8YizY1Ns7HQyMPOndUbd6EgsGifTDDib5QwboAAZJgA4c&usqp=CAU " class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-780s.html ">
-            <img src="https://d14c63magvk61v.cloudfront.net/hls/22865/stringray-remember-the-80s/poster_20200717_232723.jpg " 
+            <a href="series24-7ranma.html ">
+            <img src="https://m.media-amazon.com/images/S/pv-target-images/6bcfa534ac8997e83a715ab0d09a562390e7f3312149d6647442798fa7d58eaa.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7alternative.html ">
