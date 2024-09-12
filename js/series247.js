@@ -114,8 +114,8 @@ class Menu extends HTMLElement {
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVsFyfGMJsQQUv1FOn5IjG0_Afn1l0x7HeaUw266GNYbmeLaCrqXEaAbRkxuw7rWiYqKGCsR1yN1dPvtjMsf-k7uS4pyEq_VeBKDMDdikPj2F6Ob4W__t42pTzaaE554e5OVlF_6JoBzqNdqnnNH-zZCVH7rO1_QPhFr-JT5d0p9qAaDwRX6uHh3QL/w640-h480-rw/zaz-logoroku.png " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
-            <a href="series24-7yogioh.html ">
-            <img src="https://www.las2orillas.co/wp-content/uploads/2022/05/Nuevo-proyecto-16-4.jpg " 
+            <a href="series24-7pokemon.html ">
+            <img src="https://www.venus.com.py/wp-content/uploads/2018/02/Pokemon.jpg " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7supertoonstv.html ">

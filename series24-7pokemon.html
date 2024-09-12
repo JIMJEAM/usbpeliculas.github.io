@@ -62,13 +62,125 @@
         </header>
         <main class="container-fluid">
             <!--reproductor-->
-            <div id="player" class="d-flex justify-content-center d-flex align-items-center m-0 w-75"></div>
-            <script>
-                var player = new Clappr.Player({ source: "https://i.mjh.nz/SamsungTVPlus/ESBA1400007MR.m3u8", parentId: "#player" });
-            </script>
-            <span> Smart tv, Tv box y dispositivos android <br>
-                🔁 gira la pantalla <i class="fas fa-mobile-alt"></i> y dale play! <i class="fas fa-play"></i> </span>
-            <br><br>
+            <div id="player" class="justify-content-center d-grid align-items-start m-0">
+                <video id="videoPlayer" controls class="w-100  mw-100">
+                    Tu navegador no soporta el elemento de video.
+                </video></div>
+    
+                <script>// Supongamos que tienes una lista de URLs de archivos .m3u
+                    var playlist = [
+                    
+    'https://archive.org/download/19_20200429/01.mp4',
+'https://archive.org/download/19_20200429/02.mp4',
+'https://archive.org/download/19_20200429/03.mp4',
+'https://archive.org/download/19_20200429/04.mp4',
+'https://archive.org/download/19_20200429/05.mp4',
+'https://archive.org/download/19_20200429/06.mp4',
+'https://archive.org/download/19_20200429/07.mp4',
+'https://archive.org/download/19_20200429/08.mp4',
+'https://archive.org/download/19_20200429/09.mp4',
+'https://archive.org/download/19_20200429/10.mp4',
+'https://archive.org/download/19_20200429/11.mp4',
+'https://archive.org/download/19_20200429/12.mp4',
+'https://archive.org/download/19_20200429/13.mp4',
+'https://archive.org/download/19_20200429/14.mp4',
+'https://archive.org/download/19_20200429/15.mp4',
+'https://archive.org/download/19_20200429/16.mp4',
+'https://archive.org/download/19_20200429/17.mp4',
+'https://archive.org/download/19_20200429/18.mp4',
+'https://archive.org/download/19_20200429/19.mp4',
+'https://archive.org/download/19_20200429/20.mp4',
+'https://archive.org/download/19_20200429/21.mp4',
+'https://archive.org/download/19_20200429/22.mp4',
+'https://archive.org/download/19_20200429/23.mp4',
+'https://archive.org/download/19_20200429/24.mp4',
+'https://archive.org/download/19_20200429/25.mp4',
+'https://archive.org/download/19_20200429/26.mp4',
+'https://archive.org/download/19_20200429/27.mp4',
+'https://archive.org/download/19_20200429/28.mp4',
+'https://archive.org/download/19_20200429/29.mp4',
+'https://archive.org/download/19_20200429/30.mp4',
+'https://archive.org/download/19_20200429/31.mp4',
+'https://archive.org/download/19_20200429/32.mp4',
+'https://archive.org/download/19_20200429/33.mp4',
+'https://archive.org/download/19_20200429/34.mp4',
+'https://archive.org/download/19_20200429/35.mp4',
+'https://archive.org/download/19_20200429/36.mp4',
+'https://archive.org/download/19_20200429/37.mp4',
+'https://archive.org/download/19_20200429/38.mp4',
+'https://archive.org/download/19_20200429/39.mp4',
+'https://archive.org/download/19_20200429/40.mp4',
+'https://archive.org/download/19_20200429/41.mp4',
+'https://archive.org/download/19_20200429/42.mp4',
+'https://archive.org/download/67_20200429/43.mp4',
+'https://archive.org/download/67_20200429/44.mp4',
+'https://archive.org/download/67_20200429/45.mp4',
+'https://archive.org/download/67_20200429/46.mp4',
+'https://archive.org/download/67_20200429/47.mp4',
+'https://archive.org/download/67_20200429/48.mp4',
+'https://archive.org/download/67_20200429/49.mp4',
+'https://archive.org/download/67_20200429/50.mp4',
+'https://archive.org/download/67_20200429/51.mp4',
+'https://archive.org/download/67_20200429/52.mp4',
+'https://archive.org/download/67_20200429/53.mp4',
+'https://archive.org/download/67_20200429/54.mp4',
+'https://archive.org/download/67_20200429/55.mp4',
+'https://archive.org/download/67_20200429/56.mp4',
+'https://archive.org/download/67_20200429/57.mp4',
+'https://archive.org/download/67_20200429/58.mp4',
+'https://archive.org/download/67_20200429/59.mp4',
+'https://archive.org/download/67_20200429/60.mp4',
+'https://archive.org/download/67_20200429/61.mp4',
+'https://archive.org/download/67_20200429/62.mp4',
+'https://archive.org/download/67_20200429/63.mp4',
+'https://archive.org/download/67_20200429/64.mp4',
+'https://archive.org/download/67_20200429/65.mp4',
+'https://archive.org/download/67_20200429/66.mp4',
+'https://archive.org/download/67_20200429/67.mp4',
+'https://archive.org/download/67_20200429/68.mp4',
+'https://archive.org/download/67_20200429/69.mp4',
+'https://archive.org/download/67_20200429/70.mp4',
+'https://archive.org/download/67_20200429/71.mp4',
+'https://archive.org/download/67_20200429/72.mp4',
+'https://archive.org/download/67_20200429/73.mp4',
+'https://archive.org/download/67_20200429/74.mp4',
+'https://archive.org/download/67_20200429/75.mp4',
+'https://archive.org/download/67_20200429/76.mp4',
+'https://archive.org/download/67_20200429/77.mp4',
+'https://archive.org/download/67_20200429/78.mp4',
+'https://archive.org/download/67_20200429/79.mp4',
+'https://archive.org/download/67_20200429/80.mp4',
+'https://archive.org/download/67_20200429/81.mp4',
+'https://archive.org/download/67_20200429/82.mp4',
+
+
+    ];
+                    var currentTrack = 0;
+                    
+                    // Obtén una referencia al reproductor de video
+                    var player = document.getElementById('videoPlayer');
+                    
+                    // Función para cargar y reproducir una pista
+                    function playTrack(track) {
+                        player.src = track;
+                        player.play();
+                    }
+                    
+                    // Carga la primera pista para empezar
+                    playTrack(playlist[currentTrack]);
+                    
+                    // Cuando una pista termina, pasa a la siguiente
+                    player.addEventListener('ended', function() {
+                        currentTrack++;
+                        if (currentTrack < playlist.length) {
+                            playTrack(playlist[currentTrack]);
+                        }
+                    });
+                    </script>
+                    <br>
+                <span> Smart tv, Tv box y dispositivos android <br>
+                    🔁 gira la pantalla <i class="fas fa-mobile-alt"></i> y dale play! <i class="fas fa-play"></i> </span>
+                <br><br>
             <div><menu-component></menu-componet></div>
 
     </div>
