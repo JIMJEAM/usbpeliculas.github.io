@@ -21,7 +21,6 @@ class Menu extends HTMLElement {
          <a href="series24-7retro.html ">
             <img src="https://m.media-amazon.com/images/I/B1d2i--qjtS._SL500_.png " class="img-thumbnail " alt="... " class="w-50 "></a>
            
-    
         <a href="series24-7anime.html ">
             <img src="https://www.apkvisit.com/wp-content/uploads/2022/10/anime-tv-anime-watching-app.png " class="img-thumbnail " alt="... " class="w-50 "></a>
 
