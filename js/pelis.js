@@ -13,6 +13,27 @@ class Menu extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `
+<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+    <li class="cursor-pointer"> <img src="https://images.justwatch.com/poster/318099780/s718/al-rescate-de-fondo-de-bikini-la-pelicula-de-arenita-mejillas.jpg" alt="Al rescate de Fondo de Bikini (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia902307.us.archive.org/29/items/al-rescate-de-fondo-de-bikini/Al%20rescate%20de%20Fondo%20de%20Bikini.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//865DntZzOdX6rLMd405R0nFkLmL.jpg" alt="
+    Borderlands (2024) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://ia800701.us.archive.org/1/items/bordeland_202409/Bordeland.mp4?cnt=0')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://megustaelcine.com/wp-content/uploads/2024/08/POSTER-El-cuervo-2024-717x1024.jpg" alt="
+    El cuervo (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://ia600101.us.archive.org/23/items/el-cuervo-2024-camrip-v-3-lat/El%20Cuervo%202024%20CAMRip%20V3%20LAT.mp4?cnt=0')"></li>
+   </div>
+
+    </a>
+</section>    
+
+</div>
+
+</div>
+</ul>  
+
  <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47141-607088-20240904070840.jpg" alt="Beetlejuice Beetlejuice (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600801.us.archive.org/28/items/beetlejuice-beetlejuice-2024/Beetlejuice%20Beetlejuice%20%282024%29.mp4?cnt=0')"> </li> 
