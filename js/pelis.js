@@ -901,7 +901,7 @@ Plan de estudios" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl(
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
        
-    <li class="cursor-pointer"> <img  src="https://s3-eu-west-1.amazonaws.com/abandomedia/db/foto/db_40861_30.jpg" alt="
+    <li class="cursor-pointer"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEHK8yn3u06A4VWfSFI3AywzAenBuxPJbmnw&s" alt="
     Transformers: el despertar de las bestias " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://main.cinedecalidad.xyz/mexicanas/TransformersDespertar.mp4')"> </li>
 
 
@@ -1133,7 +1133,7 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
     Bear Cocaine" class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://tgdownloads.dltelegram.workers.dev/1001829780398/57009')"> </li>
 
 
-    <li class="cursor-pointer"> <img  src="https://s3-eu-west-1.amazonaws.com/abandomedia/db/poster/db_posters_55914.jpg" alt="Llaman a la puerta" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/llaman-a-la-puerta_202302/Llaman a la puerta.ia.mp4')"></li>
+    <li class="cursor-pointer"> <img  src="https://www.mubis.es/media/users/12828/309855/FB_IMG_1669667935584-original.jpg" alt="Llaman a la puerta" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://archive.org/download/llaman-a-la-puerta_202302/Llaman a la puerta.ia.mp4')"></li>
    </div>
 
 
