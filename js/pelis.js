@@ -15,7 +15,7 @@ class Menu extends HTMLElement {
     this.innerHTML = `
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
-    <li class="cursor-pointer"> <img src="https://images.justwatch.com/poster/318099780/s718/al-rescate-de-fondo-de-bikini-la-pelicula-de-arenita-mejillas.jpg" alt="Al rescate de Fondo de Bikini (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia902307.us.archive.org/29/items/al-rescate-de-fondo-de-bikini/Al%20rescate%20de%20Fondo%20de%20Bikini.mp4')"> </li> 
+    <li class="cursor-pointer"> <img src="https://images.justwatch.com/poster/318099780/s718/al-rescate-de-fondo-de-bikini-la-pelicula-de-arenita-mejillas.jpg" alt="Al rescate de Fondo de Bikini (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600102.us.archive.org/8/items/al-rescate-de-fondo-de-bikini_202409/Al%20rescate%20de%20Fondo%20de%20Bikini.ia.mp4?cnt=0')"> </li> 
 
        
     <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//865DntZzOdX6rLMd405R0nFkLmL.jpg" alt="
