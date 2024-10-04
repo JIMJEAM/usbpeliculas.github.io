@@ -67,6 +67,8 @@ class Menu extends HTMLElement {
             <img src="/imagenes/impact.png " class="img-thumbnail " alt="... " class="w-50 "></a>
             <a href="http://pelisplaya.net/IPTV29.html " target="_blank">
             <img src="/imagenes/GenTv.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+              <a href="http://pelisplaya.net/IPTV30.html " target="_blank">
+            <img src="/imagenes/telemundo.png " class="img-thumbnail " alt="... " class="w-50 "></a>
 </nav>
 </nav>
     `;
