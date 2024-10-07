@@ -76,7 +76,7 @@ class Menu extends HTMLElement {
 
  <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
-    <li class="cursor-pointer"> <img src="https://detodopeliculas.nu/wp-content/uploads/2024/07/deadpool_and_wolverine-poster-nuevo.jpg" alt="Deadpool and Wolverine (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800505.us.archive.org/29/items/dead-pool-3/Dead%20Pool%203.MP4')"> </li> 
+    <li class="cursor-pointer"> <img src="https://detodopeliculas.nu/wp-content/uploads/2024/07/deadpool_and_wolverine-poster-nuevo.jpg" alt="Deadpool and Wolverine (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600803.us.archive.org/1/items/deadpool-wolverine-2024/Deadpool%20%26%20Wolverine%20%282024%29.mp4?cnt=0')"> </li> 
 
        
     <li class="cursor-pointer"> <img  src="https://www.lavanguardia.com/peliculas-series/images/movie/poster/2024/5/w1280/oyQXRZD0CHC4sf3lMph3X3cJzSw.jpg" alt="
