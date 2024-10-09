@@ -13,6 +13,27 @@ class Menu extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+
+    <li class="cursor-pointer"> <img src="https://cdn.mallmarina.cl/mallconcepcion/uploads/2024/09/Joker-2.jpg" alt="Joker: Folie à Deux (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://stream-4338-55-56.cdnpvd.co/kyohppyybmikkfn2manpsnsmefhszetp5wyysfddndn5hcl35w2vcg2k3e/v.mp4')"> </li> 
+
+       
+    <li class="cursor-pointer"> <img  src="https://moviecrazyplanet.com/wp-content/uploads/2024/07/Transformers-Uno-Chris-Hemsworth-.jpg" alt="
+    Transformers Uno (2024) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://stream-3591-48-222.cdnpvd.co/lyohombfbmikkfn2mds7qjqretq7cmf4kz44gzghqfmuuahymutorixpuq/v.mp4')">
+    </li>
+
+    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/original/wIDulcEDrbW5tLaAHIUqODaTGG6.jpg" alt="
+    Instintos asesinos (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://stream-4491-212-99.cdnpvd.co/keohouaqbmikkfn2mds7qp2hmoo2ses3bulrizz4dyc2ovyjzvjgs4pygm/v.mp4')"></li>
+   </div>
+
+    </a>
+</section>    
+
+</div>
+
+</div>
+</ul>  
+
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47098-323896-20240812011446.jpg" alt="Tipos de Gentileza (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600802.us.archive.org/3/items/tipos-de-gentileza-2024_202410/Tipos%20de%20Gentileza%20%282024%29.mp4')"> </li> 
