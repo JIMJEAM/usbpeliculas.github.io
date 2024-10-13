@@ -22,6 +22,15 @@ class Menu extends HTMLElement {
    Instintos asesinos (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     </ul>
 
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"><a href="https://gamovideo.com/86zg4j4qc25y"  target=”_blank ""><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47098-323896-20240812011446.jpg" alt="
+   Tipos de Gentileza (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://gamovideo.com/uv8ulhzazwg5"  target=”_blank ""><img src="https://image.tmdb.org/t/p/w500//865DntZzOdX6rLMd405R0nFkLmL.jpg" alt="
+   Borderlands (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://gamovideo.com/s2d9kxwzm81w"  target=”_blank ""><img src="https://megustaelcine.com/wp-content/uploads/2024/08/POSTER-El-cuervo-2024-717x1024.jpg" alt="
+   El cuervo (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    </ul>
+
    
 
 <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
