@@ -33,24 +33,7 @@ class Menu extends HTMLElement {
 
    
 
-<ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-
-    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47098-323896-20240812011446.jpg" alt="Tipos de Gentileza (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600802.us.archive.org/3/items/tipos-de-gentileza-2024_202410/Tipos%20de%20Gentileza%20%282024%29.mp4')"> </li> 
-
-       
-    <li class="cursor-pointer"> <img  src="https://image.tmdb.org/t/p/w500//865DntZzOdX6rLMd405R0nFkLmL.jpg" alt="
-    Borderlands (2024) " class="img_video_nav  img-thumbnail  w-50"  onclick="videoUrl('https://ia800701.us.archive.org/1/items/bordeland_202409/Bordeland.mp4?cnt=0')">
-    </li>
-
-    <li class="cursor-pointer"> <img  src="https://megustaelcine.com/wp-content/uploads/2024/08/POSTER-El-cuervo-2024-717x1024.jpg" alt="
-    El cuervo (2024)" class="img_video_nav img-thumbnail   w-50" onclick="videoUrl('https://ia600101.us.archive.org/23/items/el-cuervo-2024-camrip-v-3-lat/El%20Cuervo%202024%20CAMRip%20V3%20LAT.mp4?cnt=0')"></li>
-   
-  
-
-
-
-
-</ul>  
+ 
 
  <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
 
