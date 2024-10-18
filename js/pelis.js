@@ -72,7 +72,7 @@ class Menu extends HTMLElement {
 </ul> 
 
  <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-    <li class="cursor-pointer"><a href="https://gamovideo.com/h9il74hz9lsv"  target=”_blank ""><img src="https://detodopeliculas.nu/wp-content/uploads/2024/07/deadpool_and_wolverine-poster-nuevo.jpg" alt="
+    <li class="cursor-pointer"><a href="https://powstream.info/2s2prhr199jb"  target=”_blank ""><img src="https://detodopeliculas.nu/wp-content/uploads/2024/07/deadpool_and_wolverine-poster-nuevo.jpg" alt="
    Deadpool and Wolverine (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
    
 
