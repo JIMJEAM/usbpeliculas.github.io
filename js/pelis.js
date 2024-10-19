@@ -12,7 +12,16 @@ function videoUrl(url) {
 class Menu extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = `
+    this.innerHTML = `<div style="conten-visivility: auto;">
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"><a href="https://gamovideo.com/y2771ewq4nxn"  target=”_blank ""><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47427-649819-20240911011247.jpg" alt="
+   Robot Salvaje (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://gamovideo.com/pf3hyceeus8s"  target=”_blank ""><img src="https://www.justwatch.com/images/poster/318099780/s718/al-rescate-de-fondo-de-bikini-la-pelicula-de-arenita-mejillas.jpg" alt="
+   Al rescate de Fondo de Bikini (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://gamovideo.com/1z9yyz1wl4e1"  target=”_blank ""><img src="https://pics.filmaffinity.com/La_sustancia-259383439-large.jpg" alt="
+   La Sustancia (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    </ul>
+
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"><a href="https://gamovideo.com/gqtg2wddawqy"  target=”_blank ""><img src="https://cdn.mallmarina.cl/mallconcepcion/uploads/2024/09/Joker-2.jpg" alt="
    Joker: Folie à Deux (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
@@ -1562,6 +1571,11 @@ Royalteen: La princesa Margrethe" class="img_video_nav  img-thumbnail  w-50"  on
      <li class="cursor-pointer"> <img  src="https://mundosuperman.com/wp-content/uploads/2020/05/Snyder-Cut.jpg" alt="La Liga de la Justicia de Zack Snyder" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('http://ia601506.us.archive.org/6/items/meme-5/jus.mp4')"> </li>
      
      <li class="cursor-pointer"><a href="#reproducir↑">  ► ↑ </a></li>
+
+ 
+
+</ul>
+</div>
 
      <section class="cuerpo">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
