@@ -85,6 +85,18 @@ class Menu extends HTMLElement {
             <img src="/imagenes/Vallevision.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
             <a href="http://pelisplaya.net/IPTV38.html " target="_blank">
             <img src="/imagenes/DjingTv.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="http://pelisplaya.net/IPTV39.html " target="_blank">
+            <img src="/imagenes/Canal22Arg.webp " class="img-thumbnail " alt="... " class="w-50 "></a>
+             <a href="http://pelisplaya.net/IPTV40.html " target="_blank">
+            <img src="/imagenes/PowerTv.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="http://pelisplaya.net/IPTV41.html " target="_blank">
+            <img src="/imagenes/SicardiTv.webp " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="http://pelisplaya.net/IPTV42.html " target="_blank">
+            <img src="/imagenes/Tvdos.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="http://pelisplaya.net/IPTV43.html " target="_blank">
+            <img src="/imagenes/AireSantaFe.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="http://pelisplaya.net/IPTV44.html " target="_blank">
+            <img src="/imagenes/BayresTv.jpg " class="img-thumbnail " alt="... " class="w-50 "></a>
             
 </nav>
 </nav>
