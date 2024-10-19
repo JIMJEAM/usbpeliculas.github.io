@@ -71,8 +71,11 @@ class Menu extends HTMLElement {
             <img src="/imagenes/telemundo.png " class="img-thumbnail " alt="... " class="w-50 "></a>
             <a href="http://pelisplaya.net/IPTV31.html " target="_blank">
             <img src="/imagenes/bein-sport-extra.webp " class="img-thumbnail " alt="... " class="w-50 "></a>
-            <a href="http://pelisplaya.net/IPTV31.html " target="_blank">
+            <a href="http://pelisplaya.net/IPTV32.html " target="_blank">
             <img src="/imagenes/Fubosports.png " class="img-thumbnail " alt="... " class="w-50 "></a>
+            <a href="http://pelisplaya.net/IPTV33.html " target="_blank">
+            <img src="/imagenes/OxigenoTv.webp " class="img-thumbnail " alt="... " class="w-50 "></a>
+            
 </nav>
 </nav>
     `;
