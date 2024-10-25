@@ -14,6 +14,15 @@ class Menu extends HTMLElement {
     super();
     this.innerHTML = `<div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"><a href="https://gamovideo.com/8sg3l5lmy605"  target=”_blank ""><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47607-774281-20241024062218.jpg" alt="
+   Venom el ultimo baile (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://gamovideo.com/ng2jodyt3gfa"  target=”_blank ""><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48015-422893-20241017113401.jpg" alt="
+   Terrifier 3: Payaso Siniestro (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://gamovideo.com/h0wrlzshkxxd"  target=”_blank ""><img src="https://www.findelahistoria.com/web/wp-content/uploads/2024/07/Hellboy-The-Crooked-Man-poster.jpg" alt="
+   Hellboy: The Crooked Man (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    </ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"><a href="https://gamovideo.com/y2771ewq4nxn"  target=”_blank ""><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47427-649819-20240911011247.jpg" alt="
    Robot Salvaje (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     <li class="cursor-pointer"><a href="https://gamovideo.com/pf3hyceeus8s"  target=”_blank ""><img src="https://www.justwatch.com/images/poster/318099780/s718/al-rescate-de-fondo-de-bikini-la-pelicula-de-arenita-mejillas.jpg" alt="
