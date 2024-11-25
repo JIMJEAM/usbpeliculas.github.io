@@ -13,6 +13,15 @@ class Menu extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `<div style="conten-visivility: auto;">
+     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"><a href="https://gamovideo.com/08wfa6ub9ng3"  target=”_blank ""><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47963-399604-20241120081300.jpg" alt="
+   Wicked (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://gamovideo.com/ad2b42v568jk"  target=”_blank ""><img src="https://pics.filmaffinity.com/Gladiator_II-808387712-large.jpg" alt="
+   Gladiator 2 (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://gamovideo.com/hmw4xaxvck1q"  target=”_blank ""><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47213-327845-20240822060321.jpg" alt="
+   No hables con extraños (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    </ul>
+
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"><a href="https://gamovideo.com/8sg3l5lmy605"  target=”_blank ""><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47607-774281-20241024062218.jpg" alt="
    Venom el ultimo baile (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
