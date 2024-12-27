@@ -98,7 +98,7 @@ class Menu extends HTMLElement {
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7latinatv.html ">
-            <img src="https://yt3.googleusercontent.com/Brh94gn82_uzy3hwYDmiJAmHskgWOYSp3Xi4EOsxm66-R9gpiy8TQW8s3n48z49k3cWJH-KYMw=s900-c-k-c0x00ffffff-no-rj " 
+            <img src="https://www.latina.pe/_templates/globals/img/placeholder.png " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7conectatv.html ">
