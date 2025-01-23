@@ -14,12 +14,10 @@ class Menu extends HTMLElement {
     super();
     this.innerHTML = `<div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-    <li class="cursor-pointer"><a href="https://gamovideo.com/m5ie83aukjiy"  target=_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47807-327301-20241010043952.jpg" alt="
-  Código: Traje Rojo (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
-    <li class="cursor-pointer"><a href="https://gamovideo.com/dxwph55xsrqu"  target="_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48461-436544-20241217084917.jpg" alt="
- Maxxxine (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
-    <li class="cursor-pointer"><a href="https://gamovideo.com/maxrepk1tj0i"  target="_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47299-843109-20240830022501.jpg" alt="
-  El conde de Montecristo (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47807-327301-20241010043952.jpg" alt="Código: Traje Rojo (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://wv4q599efn.takeplcdn.art/d/ekzoibkjo7hvw4m632vyh4kx3dqbi2needtwpaetfixrge2nwtumav4yd7cpa2yxcpm4wtat/TWlmYXNhLkxhdGluby4xV0lO.LAT.mp4')"> </li>
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48461-436544-20241217084917.jpg" alt="Mufasa el rey leon (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://wv4q599efn.takeplcdn.art/d/ekzoibkjo7hvw4m632vyh4kx3dqbi2needtwpaetfixrge2nwtumav4yd7cpa2yxcpm4wtat/TWlmYXNhLkxhdGluby4xV0lO.LAT.mp4')"> </li> 
+     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47299-843109-20240830022501.jpg" alt="
+     // EL Conde de montecristo (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://hetbuild860092.takeplcdn.art/d/e2zp67sjo7hvw4m62gv5dksuzb7xcfwsbo5puetas5thbj66ihybrhaux6vwxwzztetf47nt/TGUgQ29tdGUgZGUgTW9udGUtQ3Jpc3RvIDIwMjQ=.VOSE.mp4')"> </li>
     </ul>
 
 
