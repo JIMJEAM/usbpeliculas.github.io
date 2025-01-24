@@ -30,17 +30,15 @@ class Menu extends HTMLElement {
 
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-    <li class="cursor-pointer"><a href="https://gamovideo.com/5fbp3h2m1c1m"  target=_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/46698-644406-20240621115458.jpg" alt="
- MaXXXine (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
-    <li class="cursor-pointer"><a href="https://gamovideo.com/w4ykafy5wa2q"  target="_blank "><img src="https://megustaelcine.com/wp-content/uploads/2024/10/POSTER-El-aprendiz.jpg" alt="
- The Apprentice. La historia de Trump (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
-    <li class="cursor-pointer"><a href="https://gamovideo.com/pez1u2tphamg"  target="_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48347-701766-20241210092337.jpg" alt="
-  Kraven el cazador (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48621-607155-20241218051239.jpg" alt="El robo perfecto: Pantera (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://hetbuild860092.takeplcdn.art/d/e2zdbjkxo7hvw4m6zcv5r4shtbr4qf63axxswzjkvddalmgc3lnwrulbzz75fdyfc4pg42am/SnVlZ28uZGUuTGFkcm9uZXMuTGF0aW5vLjFXSU4=.LAT.mp4')"> </li>
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/46698-644406-20240621115458.jpg" alt="MaXXXine (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://wv4q599efn.takeplcdn.art/d/ekzaqocjo7hvw4m63sv475yxypns3l4jirqt2orcnbzhutqizj7fndl5cdz54cjw3d5h6hyw/TWFYWFhpbmUgMjAyNA==.LAT.mp4')"> </li> 
+     <li class="cursor-pointer"> <img src="https://megustaelcine.com/wp-content/uploads/2024/10/POSTER-El-aprendiz.jpg" alt="
+     The Apprentice. La historia de Trump (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://077421022372868.historytotell.art/d/h2zdwocjo7hvw4m63sv47isotwc3atevii2tpwuxhyskyjdxkh2o2bw2zblnjpqkkervw66u/VGhlLkFwcHJlbnRpY2UuMjAyNA==.LAT.mp4')"> </li>
     </ul>
 
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-    <li class="cursor-pointer"><a href="https://gamovideo.com/8qod0vucyflc"  target=_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47893-122524-20241010010020.jpg" alt="
+    <li class="cursor-pointer"><a href="https://gamovideo.com/8qod0vucyflc"  target="_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47893-122524-20241010010020.jpg" alt="
   Superman: La historia de Christopher Reeve (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     <li class="cursor-pointer"><a href="https://gamovideo.com/kgnx1n6ud14y"  target="_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48111-551207-20241128085911.jpg" alt="
    Moana 2 (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
