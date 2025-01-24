@@ -14,6 +14,14 @@ class Menu extends HTMLElement {
     super();
     this.innerHTML = `<div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"> <img src="https://es.web.img2.acsta.net/c_210_280/img/c3/70/c3703dc747fb19cf232978ea08e8e9f4.jpg" alt="Sonic (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600808.us.archive.org/1/items/sonet-3.5/Sonet3.5-.mp4')"> </li>
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48347-701766-20241210092337.jpg" alt="Kraven el cazador (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800609.us.archive.org/14/items/Crackets/Crackets.mp4')"> </li> 
+     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48473-746696-20241216112244.jpg" alt="
+     Paddington: Aventura en la selva (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600806.us.archive.org/5/items/padding-pillow/Padding%20pillow.mp4')"> </li>
+    </ul>
+
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47807-327301-20241010043952.jpg" alt="Código: Traje Rojo (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://wv4q599efn.takeplcdn.art/d/ekzoibkjo7hvw4m632vyh4kx3dqbi2needtwpaetfixrge2nwtumav4yd7cpa2yxcpm4wtat/TWlmYXNhLkxhdGluby4xV0lO.LAT.mp4')"> </li>
     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48461-436544-20241217084917.jpg" alt="Mufasa el rey leon (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://wv4q599efn.takeplcdn.art/d/ekzoibkjo7hvw4m632vyh4kx3dqbi2needtwpaetfixrge2nwtumav4yd7cpa2yxcpm4wtat/TWlmYXNhLkxhdGluby4xV0lO.LAT.mp4')"> </li> 
      <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47299-843109-20240830022501.jpg" alt="
