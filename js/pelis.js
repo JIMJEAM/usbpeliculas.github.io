@@ -57,8 +57,8 @@ class Menu extends HTMLElement {
     </ul>
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-    <li class="cursor-pointer"><a href="https://gamovideo.com/8sg3l5lmy605"  target="_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47607-774281-20241024062218.jpg" alt="
-   Venom el ultimo baile (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47607-774281-20241024062218.jpg" alt="
+    Venom el ultimo baile (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600409.us.archive.org/20/items/Bennim/Bennim.mp4')"> </li>
     <li class="cursor-pointer"><a href="https://gamovideo.com/ng2jodyt3gfa"  target="_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48015-422893-20241017113401.jpg" alt="
    Terrifier 3: Payaso Siniestro (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     <li class="cursor-pointer"><a href="https://gamovideo.com/h0wrlzshkxxd"  target="_blank "><img src="https://www.findelahistoria.com/web/wp-content/uploads/2024/07/Hellboy-The-Crooked-Man-poster.jpg" alt="
