@@ -38,12 +38,9 @@ class Menu extends HTMLElement {
 
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-    <li class="cursor-pointer"><a href="https://gamovideo.com/8qod0vucyflc"  target="_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47893-122524-20241010010020.jpg" alt="
-  Superman: La historia de Christopher Reeve (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
-    <li class="cursor-pointer"><a href="https://gamovideo.com/kgnx1n6ud14y"  target="_blank "><img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48111-551207-20241128085911.jpg" alt="
-   Moana 2 (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
-    <li class="cursor-pointer"><a href="https://gamovideo.com/6i9w2py244bl"  target="_blank "><img src="https://www.ecartelera.com/carteles/18700/18710/001_p.jpg" alt="
-   Jurado Nº 2 (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47893-122524-20241010010020.jpg" alt=" Superman: La historia de Christopher Reeve (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://wv4q599efn.takeplcdn.art/d/ekzdmr2lo7hvw4m6hgwnl7sbt6qnno7wuqdtpyfq4sfjxqw744q4n27ettzvv7cq3h46suel/U3VwZXIuTWFuLlRoZS5DaHJpc3RvcGhlci5SZWV2ZS5TdG9yeS4yMDI0.VOSE.mp4')"> </li>
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48111-551207-20241128085911.jpg" alt=" Moana 2 (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://hetbuild860092.takeplcdn.art/d/e2zpbf2io7hvw4m6ysvyfksgth5cm5sgobyr32hxql6c47x53lvpxi22ud4vdwyngzwte6va/TW9hbmEuMi4yMDI0LmJycw==LAT.mp4')"> </li>
+    <li class="cursor-pointer"> <img src=""https://www.ecartelera.com/carteles/18700/18710/001_p.jpg" alt=" Jurado Nº 2 (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://077421022372868.historytotell.art/d/h2zjtrcjo7hvw4m62sv4d3y5tpsnf6oblte64zvbisoxqdhmjk3rmv5ylj6qexi76qup33sl/SnVyb3IuMi4yMDI0.LAT.mp4')"> </li
     </ul>
 
 
