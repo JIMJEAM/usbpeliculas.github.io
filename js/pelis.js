@@ -65,7 +65,7 @@ class Menu extends HTMLElement {
     <li class="cursor-pointer"> <img src="https://www.justwatch.com/images/poster/318099780/s718/al-rescate-de-fondo-de-bikini-la-pelicula-de-arenita-mejillas.jpg" alt="
     Al rescate de Fondo de Bikini (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800109.us.archive.org/13/items/bob-toronja/BobToronja.ia.mp4')"> </li>
     <li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/La_sustancia-259383439-large.jpg" alt="
-    La Sustancia (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://stream-4191-31-165.cdnpvd.co/kqohot52baikkfn2mappsz2ogvlimx5cpsytmjcesembixaervgbeslsty/v.mp4')"> </li>
+    La Sustancia (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600608.us.archive.org/26/items/simi-active/SimiActive.mp4')"> </li>
     </ul>
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
