@@ -37,9 +37,9 @@ class Menu extends HTMLElement {
 
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47893-122524-20241010010020.jpg" alt=" Superman: La historia de Christopher Reeve (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://wv4q599efn.takeplcdn.art/d/ekzdmr2lo7hvw4m6hgwnl7sbt6qnno7wuqdtpyfq4sfjxqw744q4n27ettzvv7cq3h46suel/U3VwZXIuTWFuLlRoZS5DaHJpc3RvcGhlci5SZWV2ZS5TdG9yeS4yMDI0.VOSE.mp4')"> </li>
-    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48111-551207-20241128085911.jpg" alt=" Moana 2 (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://hetbuild860092.takeplcdn.art/d/e2zpbf2io7hvw4m6ysvyfksgth5cm5sgobyr32hxql6c47x53lvpxi22ud4vdwyngzwte6va/TW9hbmEuMi4yMDI0LmJycw==LAT.mp4')"> </li>
-    <li class="cursor-pointer"> <img src="https://m.media-amazon.com/images/S/pv-target-images/709d19ee83c23c1cff8d6114545decf12e5f66bba1ed844f4222ae31bd468e5d.jpg" alt=" Jurado Nº 2 (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://077421022372868.historytotell.art/d/h2zjtrcjo7hvw4m62sv4d3y5tpsnf6oblte64zvbisoxqdhmjk3rmv5ylj6qexi76qup33sl/SnVyb3IuMi4yMDI0.LAT.mp4')"> </li>
+     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47893-122524-20241010010020.jpg" alt=" Superman: La historia de Christopher Reeve (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600808.us.archive.org/29/items/ese-man/Ese-man.mp4')"> </li>
+    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48111-551207-20241128085911.jpg" alt=" Moana 2 (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia903201.us.archive.org/7/items/mamona-2/Mamona2.mp4')"> </li>
+    <li class="cursor-pointer"> <img src="https://m.media-amazon.com/images/S/pv-target-images/709d19ee83c23c1cff8d6114545decf12e5f66bba1ed844f4222ae31bd468e5d.jpg" alt=" Jurado Nº 2 (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601408.us.archive.org/15/items/neta-melo-juras-num-2/NetaMeloJurasNum2.mp4')"> </li>
     </ul>
 
 
