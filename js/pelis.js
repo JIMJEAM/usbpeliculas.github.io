@@ -53,9 +53,9 @@ class Menu extends HTMLElement {
     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/47607-774281-20241024062218.jpg" alt="
     Venom el ultimo baile (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600409.us.archive.org/20/items/Bennim/Bennim.mp4')"> </li>
     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48015-422893-20241017113401.jpg" alt="
-    Terrifier 3: Payaso Siniestro (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://wv4q599efn.takeplcdn.art/d/ekzk75kio7hvw4m636v4nlsayp7rwjwzkkxieiuvpn4sps4qvw2yl7mmgalgm5h7gnd4jlsj/VGVycmlmaWVyLjM=.LAT.mp4')"> </li>
+    Terrifier 3: Payaso Siniestro (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800806.us.archive.org/34/items/yaso-3/Yaso3.mp4')"> </li>
     <li class="cursor-pointer"> <img src="https://www.findelahistoria.com/web/wp-content/uploads/2024/07/Hellboy-The-Crooked-Man-poster.jpg" alt="
-    Hellboy: The Crooked Man (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://wv4q599efn.takeplcdn.art/d/ekzasc2mo7hvw4m6gcwibisd2t7lqeyuxl2loxtnxfqxsnshqionuszfvgzursph4yhdrdnb/SGVsbGJveS5UaGUuQ3Jvb2tlZCBNYW4uMjAyNA==LAT.mp4')"> </li>
+    Hellboy: The Crooked Man (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601709.us.archive.org/0/items/diablillo-pillo/DiablilloPillo.mp4')"> </li>
     </ul>
 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
