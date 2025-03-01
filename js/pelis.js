@@ -14,6 +14,14 @@ class Menu extends HTMLElement {
     super();
     this.innerHTML = `<div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"> <img src="https://assets.biggerpicture.ai/assets/HO-1600/eventmaster/1136_4.png" alt="El mono (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia903207.us.archive.org/9/items/Kmonito/Kmonito.mp4')"> </li>
+    <li class="cursor-pointer"> <img src="https://static.cinemarkhoyts.com.ar/Images/Posters/93fd0bfdd3b1999695cef992824fafaa.jpg" alt="La compañera perfecta (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601502.us.archive.org/8/items/perfect-co/PerfectCo.mp4')"> </li> 
+     <li class="cursor-pointer"> <img src="https://lumiere-a.akamaihd.net/v1/images/rochelle_teaser2_poster_las_9a24549d.jpeg?region=0%2C0%2C770%2C1100" alt="
+     Paddington: Aventura en la selva (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600806.us.archive.org/5/items/padding-pillow/Padding%20pillow.mp4')"> </li>
+    </ul>
+
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"> <img src="https://es.web.img2.acsta.net/c_210_280/img/c3/70/c3703dc747fb19cf232978ea08e8e9f4.jpg" alt="Sonic (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600808.us.archive.org/1/items/sonet-3.5/Sonet3.5-.mp4')"> </li>
     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48347-701766-20241210092337.jpg" alt="Kraven el cazador (2024)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800609.us.archive.org/14/items/Crackets/Crackets.mp4')"> </li> 
      <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/48473-746696-20241216112244.jpg" alt="
