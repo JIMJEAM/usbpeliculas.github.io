@@ -90,7 +90,7 @@ class Menu extends HTMLElement {
             class="img-thumbnail " alt="... " class="w-50 "></a>
             
             <a href="series24-7vevo90s.html ">
-            <img src="https://hoyeeh.com/upload/190s&80s.png " 
+            <img src="https://images.samsung.com/is/image/samsung/assets/nz/tvs/smart-tv/samsung-tv-plus/all-channels/Vevo-90s_1839.png?$212_119_PNG$ " 
             class="img-thumbnail " alt="... " class="w-50 "></a>
 
             <a href="series24-7neoxtv.html ">
