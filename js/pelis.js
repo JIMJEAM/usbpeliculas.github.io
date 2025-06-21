@@ -23,7 +23,7 @@ class Menu extends HTMLElement {
 
     <div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-    <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/original/5GZeoDCS9kIeTKT7oPejIr0r7LG.jpg" alt="Minecraft (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601202.us.archive.org/16/items/ddddesti6/ddddesti6.mp4 ')"> </li>
+    <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/original/5GZeoDCS9kIeTKT7oPejIr0r7LG.jpg" alt="Minecraft (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800308.us.archive.org/27/items/666fatal/666fatal.mp4 ')"> </li>
     <li class="cursor-pointer"> <img src="https://http2.mlstatic.com/D_NQ_NP_952522-MLM82846236583_032025-O-poster-adherible-lilo-stitch-2025-5-40x28cm.webp" alt="Rescate implacable (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800103.us.archive.org/20/items/tuliquitaka25/tuliquitaka25.ia.mp4')"> </li> 
      <li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/Misiaon_imposible_Sentencia_final-672350282-large.jpg" alt="
      Código Negro (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601202.us.archive.org/27/items/mimimifinal/mimimifinal.mp4')"> </li>
