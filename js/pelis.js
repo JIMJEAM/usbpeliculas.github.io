@@ -12,7 +12,16 @@ function videoUrl(url) {
 class Menu extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = `<div style="conten-visivility: auto;">
+    this.innerHTML = `
+    <div style="conten-visivility: auto;">
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"> <img src="https://imgs.search.brave.com/aLfEclq-Nlxaq_XiskyTyuS8d_90YGoIt3faLeaT6jk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS50bWRiLm9yZy90/L3Avb3JpZ2luYWwv/MUxLWFJYeWNRQXg3/c2xTN0FWTlBVZzJx/dnBZLmpwZw" alt="El amateur: Operación Venganza (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800204.us.archive.org/0/items/molotov-amateaur/MolotovAmateaur.mp4 ')"> </li>
+    <li class="cursor-pointer"> <img src="https://imgs.search.brave.com/k3IWVycpKJLWWF-AdBbWwcPI8IevTmzl45P6jZEIU40/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bXViaXMuZXMvbWVk/aWEvbW92aWVzLzgx/NDUvMzQ1NTM3LzI4/LWFub3MtZGVzcHVl/cy1sX2NvdmVyLmpw/Zw" alt="28 años después (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800406.us.archive.org/17/items/ventiocho-aaa/VentiochoAAA.ia.mp4')"> </li> 
+     <li class="cursor-pointer"> <img src="https://imgs.search.brave.com/isph-YadexmVGwxSVNfwH2xOz5sU4gxrFK0oPMW9Rls/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QlkyRTVZakUy/WVRRdFpHSXhZaTAw/WVRVNExUazNZekl0/WW1NeVpUTTNNMkk1/WlRNM1hrRXlYa0Zx/Y0djQC5qcGc" alt="
+     Cómo entrenar a tu dragón (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800205.us.archive.org/6/items/Trainingeecko/Trainingeecko.ia.mp4')"> </li>
+    </ul>
+
+    <div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/original/5GZeoDCS9kIeTKT7oPejIr0r7LG.jpg" alt="Minecraft (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia601202.us.archive.org/16/items/ddddesti6/ddddesti6.mp4 ')"> </li>
     <li class="cursor-pointer"> <img src="https://http2.mlstatic.com/D_NQ_NP_952522-MLM82846236583_032025-O-poster-adherible-lilo-stitch-2025-5-40x28cm.webp" alt="Rescate implacable (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800103.us.archive.org/20/items/tuliquitaka25/tuliquitaka25.ia.mp4')"> </li> 
