@@ -15,6 +15,15 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     <div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"><a href="https://pixeldrain.com/u/crxtuuCX"  target="_blank "><img src="https://imgs.search.brave.com/sxCslCUrDBNKOGB3KzkvnDR1-bf3uxI3hplIm6O9cc4/rs:fit:860:0:0:0/g:ce/aHR0cDovL3d3dy5p/bXBhd2FyZHMuY29t/LzIwMjUvcG9zdGVy/cy9tZWdhbl90d29f/cG9pbnRfb192ZXIy/LmpwZw" alt="
+M3GAN 2.0 (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://powcloud.one/lh2jjh6e6085"  target="_blank "><img src="https://imgs.search.brave.com/fKXi2kDwSXVZCfA_dUCEV7mspH5aNPGsvDQ3P0rEfNg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmFuZGFuZ28u/Y29tL0ltYWdlUmVu/ZGVyZXIvODIwLzAv/cmVkZXNpZ24vc3Rh/dGljL2ltZy9kZWZh/dWx0X3Bvc3Rlci5w/bmcvMC9pbWFnZXMv/bWFzdGVycmVwb3Np/dG9yeS9mYW5kYW5n/by8yMzIyMTcvRUxJ/T19QYXlvZmZfUnVu/bmluZ18xc192NDBf/TWVjaDRiX0ZTLmpw/Zw" alt="
+ Elio (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://powcloud.one/b0jdcgvwtwr4"  target="_blank "><img src="https://imgs.search.brave.com/A1q420dan4Z7bjSLo106auQM--EARUzQPrKMVwOB87U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly92ZXJ0/aWdvZmlsbXMuZXMv/d3AtY29udGVudC91/cGxvYWRzLzIwMjQv/MTEvQXVuLUVzdG95/LUFxdWktUG9zdGVy/LTcweDEwMGNtLWdv/eWEtc2NhbGVkLmpw/Zw" alt="
+ Aún Estoy Aquí (2024)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    </ul>
+
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"><a href="https://powcloud.one/wtizxn0d50zd"  target="_blank "><img src="https://imgs.search.brave.com/Sdau3-_66R-y3bF4jn5465A41kTjW1T2g_pLkDTJCxk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9HV1RDSzNE/MlRSQ1JYT05QUE1N/SUlTMzJIVS5wbmc_/YXV0aD00OWQ4MGMw/ZDhhNjEwODQzZTdj/MzlhMDBjZTk3ZWM2/ODQxZDdmNTMzZTM3/Yzk5ZmM3NTVjZDQ5/MjA5YTRkZDM1Jndp/ZHRoPTIxMCZoZWln/aHQ9MzAwJnNtYXJ0/PXRydWU" alt="
  El amateur: Operación Venganza (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     <li class="cursor-pointer"><a href="https://powcloud.one/1kvyd0t99xdi"  target="_blank "><img src="https://imgs.search.brave.com/k3IWVycpKJLWWF-AdBbWwcPI8IevTmzl45P6jZEIU40/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bXViaXMuZXMvbWVk/aWEvbW92aWVzLzgx/NDUvMzQ1NTM3LzI4/LWFub3MtZGVzcHVl/cy1sX2NvdmVyLmpw/Zw" alt="
