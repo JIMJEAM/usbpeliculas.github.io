@@ -27,13 +27,15 @@ class Menu extends HTMLElement {
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"><a href="https://powcloud.one/ww4pyheq03v2"  target="_blank "><img src="https://image.tmdb.org/t/p/original/5GZeoDCS9kIeTKT7oPejIr0r7LG.jpg" alt="
  Destino final: Lazos de sangre (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
-    <li class="cursor-pointer"> <img src="https://http2.mlstatic.com/D_NQ_NP_952522-MLM82846236583_032025-O-poster-adherible-lilo-stitch-2025-5-40x28cm.webp" alt="Rescate implacable (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia800103.us.archive.org/20/items/tuliquitaka25/tuliquitaka25.ia.mp4')"> </li> 
+    <li class="cursor-pointer"><a href="https://powcloud.one/xli7m3dg4yh5"  target="_blank "><img src="https://http2.mlstatic.com/D_NQ_NP_952522-MLM82846236583_032025-O-poster-adherible-lilo-stitch-2025-5-40x28cm.webp" alt="
+ Lilo y Stitch (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
       <li class="cursor-pointer"><a href="https://powcloud.one/oa9i5cqk1x2l"  target="_blank "><img src="https://pics.filmaffinity.com/Misiaon_imposible_Sentencia_final-672350282-large.jpg" alt="
 Misión imposible: La sentencia final (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     </ul>
 
      <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-    <li class="cursor-pointer"> <img src="https://pics.filmaffinity.com/Una_pelaicula_de_Minecraft-276344892-large.jpg" alt="Minecraft (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600707.us.archive.org/13/items/Cubicuates/Cubicuates.mp4 ')"> </li>
+   <li class="cursor-pointer"><a href="https://powcloud.one/fg6nb2t1bb5g"  target="_blank "><img src="https://pics.filmaffinity.com/Una_pelaicula_de_Minecraft-276344892-large.jpg" alt="
+Minecraft (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/49551-615592-20250314041252.jpg" alt="Rescate implacable (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600708.us.archive.org/28/items/vaca-super-rescue/vaca%20super%20Rescue.mp4')"> </li> 
      <li class="cursor-pointer"> <img src=https://m.media-amazon.com/images/M/MV5BYmY0M2Y1YzgtM2FkMC00M2ZjLTljNzgtZDM0NzM2ZTIwZDM5XkEyXkFqcGc@._V1_.jpg" alt="
      Código Negro (2025)" class="img_video_nav img-thumbnail w-50" onclick="videoUrl('https://ia600709.us.archive.org/28/items/codigo-de-barras/Codigo%20de%20barras.mp4')"> </li>
