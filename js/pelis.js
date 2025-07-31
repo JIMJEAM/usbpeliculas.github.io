@@ -15,6 +15,17 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     <div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"><a href="hhttps://powcloud.org/k0g52e5kfxrn"  target="_blank "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzQMlwlxMXb5b8HtRFveEc6EZr9Smw9TFVGw&s" alt="
+Jurassic World: Renace (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://pixeldrain.com/u/4UfaL5ie"  target="_blank "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-uBUVC6frdpV_7j9uPI_fIoQWU2wqRZV5A&s" alt="
+ Pitufos (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://hexload.com/174npjwm3b0e"  target="_blank "><img src="https://m.media-amazon.com/images/M/MV5BNmZjODEzNGMtYjdiNi00ZGEyLWE5MGUtYTUxZmMyOThkNTY0XkEyXkFqcGc@._V1_.jpg" alt="
+ Los Cuatro Fantásticos: Primeros pasos (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    </ul>
+
+
+    <div style="conten-visivility: auto;">
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"><a href="https://pixeldrain.com/u/crxtuuCX"  target="_blank "><img src="https://imgs.search.brave.com/sxCslCUrDBNKOGB3KzkvnDR1-bf3uxI3hplIm6O9cc4/rs:fit:860:0:0:0/g:ce/aHR0cDovL3d3dy5p/bXBhd2FyZHMuY29t/LzIwMjUvcG9zdGVy/cy9tZWdhbl90d29f/cG9pbnRfb192ZXIy/LmpwZw" alt="
 M3GAN 2.0 (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     <li class="cursor-pointer"><a href="https://powcloud.one/lh2jjh6e6085"  target="_blank "><img src="https://imgs.search.brave.com/fKXi2kDwSXVZCfA_dUCEV7mspH5aNPGsvDQ3P0rEfNg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmFuZGFuZ28u/Y29tL0ltYWdlUmVu/ZGVyZXIvODIwLzAv/cmVkZXNpZ24vc3Rh/dGljL2ltZy9kZWZh/dWx0X3Bvc3Rlci5w/bmcvMC9pbWFnZXMv/bWFzdGVycmVwb3Np/dG9yeS9mYW5kYW5n/by8yMzIyMTcvRUxJ/T19QYXlvZmZfUnVu/bmluZ18xc192NDBf/TWVjaDRiX0ZTLmpw/Zw" alt="
