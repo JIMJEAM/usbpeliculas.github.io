@@ -15,7 +15,7 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     <div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-    <li class="cursor-pointer"><a href="https://powcloud.org/k0g52e5kfxrn"  target="_blank "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzQMlwlxMXb5b8HtRFveEc6EZr9Smw9TFVGw&s" alt="
+    <li class="cursor-pointer"><a href="https://hexload.com/tllvx16t3lmk"  target="_blank "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzQMlwlxMXb5b8HtRFveEc6EZr9Smw9TFVGw&s" alt="
 Jurassic World: Renace (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     <li class="cursor-pointer"><a href="https://pixeldrain.com/u/4UfaL5ie"  target="_blank "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-uBUVC6frdpV_7j9uPI_fIoQWU2wqRZV5A&s" alt="
  Pitufos (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
