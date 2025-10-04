@@ -13,18 +13,19 @@ class Menu extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `
+    
     <div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
-    <li class="cursor-pointer"><a href="https://hexload.com/tllvx16t3lmk"  target="_blank "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzQMlwlxMXb5b8HtRFveEc6EZr9Smw9TFVGw&s" alt="
-Jurassic World: Renace (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
-    <li class="cursor-pointer"><a href="https://pixeldrain.com/u/4UfaL5ie"  target="_blank "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-uBUVC6frdpV_7j9uPI_fIoQWU2wqRZV5A&s" alt="
- Pitufos (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/174npjwm3b0e"  target="_blank "><img src="https://m.media-amazon.com/images/M/MV5BNmZjODEzNGMtYjdiNi00ZGEyLWE5MGUtYTUxZmMyOThkNTY0XkEyXkFqcGc@._V1_.jpg" alt="
- Los Cuatro Fantásticos: Primeros pasos (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://hexload.com/3nbki8jiqopb"  target="_blank "><img src="https://m.media-amazon.com/images/M/MV5BNjUwNDBjZmUtOGI3OC00YzcwLWJhZWMtMWQ1ZDg5OWVjOWQ4XkEyXkFqcGc@._V1_.jpg" alt="
+Rockstar: DUKI desde el fin del mundo (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://hexload.com/ok3clqd8ri7w"  target="_blank "><img src="https://image.tmdb.org/t/p/w342/m4MRICGqqwf76GgVrVm3qObyaGw.jpg" alt="
+ A través del fuego (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://hexload.com/ff34trfve9sd"  target="_blank "><img src="https://m.media-amazon.com/images/M/MV5BYTY4ODFkZTgtMWI2ZS00ZDRhLTk1MmItNmQ1Y2UyMjdjMWFmXkEyXkFqcGc@._V1_.jpg" alt="
+ Putin (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     </ul>
 
 
-    <div style="conten-visivility: auto;">
+ 
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"><a href="https://pixeldrain.com/u/crxtuuCX"  target="_blank "><img src="https://imgs.search.brave.com/sxCslCUrDBNKOGB3KzkvnDR1-bf3uxI3hplIm6O9cc4/rs:fit:860:0:0:0/g:ce/aHR0cDovL3d3dy5p/bXBhd2FyZHMuY29t/LzIwMjUvcG9zdGVy/cy9tZWdhbl90d29f/cG9pbnRfb192ZXIy/LmpwZw" alt="
 M3GAN 2.0 (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
@@ -43,7 +44,6 @@ M3GAN 2.0 (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
  Cómo entrenar a tu dragón (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
     </ul>
 
-    <div style="conten-visivility: auto;">
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"><a href="https://powcloud.one/ww4pyheq03v2"  target="_blank "><img src="https://image.tmdb.org/t/p/original/5GZeoDCS9kIeTKT7oPejIr0r7LG.jpg" alt="
  Destino final: Lazos de sangre (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
