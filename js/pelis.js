@@ -15,6 +15,15 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     
     <div style="conten-visivility: auto;">
+     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"><a href="https://mdfx9dc8n.net/f/67rwlxgwcve87r"  target="_blank "><img src="https://lumiere-a.akamaihd.net/v1/images/image002_eef65ea3.jpeg?region=0,0,670,957" alt="
+Un virernes loco (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://hexload.com/qm0n0ggp27j6"  target="_blank "><img src="https://www.universalpictures.com.mx/tl_files/content/movies/him/posters/01.jpg" alt="
+ Him el elegido (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://hexload.com/60akuqm8zkk9"  target="_blank "><img src="https://image.tmdb.org/t/p/w342/kn63tQpkGoOqbncnrGhpr1tFHsJ.jpg" alt="
+ Regalo maldito (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    </ul>
+
     <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"><a href="https://hexload.com/3nbki8jiqopb"  target="_blank "><img src="https://m.media-amazon.com/images/M/MV5BNjUwNDBjZmUtOGI3OC00YzcwLWJhZWMtMWQ1ZDg5OWVjOWQ4XkEyXkFqcGc@._V1_.jpg" alt="
 Rockstar: DUKI desde el fin del mundo (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
