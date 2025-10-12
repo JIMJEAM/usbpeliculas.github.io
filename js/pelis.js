@@ -15,6 +15,15 @@ class Menu extends HTMLElement {
     this.innerHTML = `
     
     <div style="conten-visivility: auto;">
+    <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
+    <li class="cursor-pointer"><a href="https://hexload.com/indmtl38v919"  target="_blank "><img src="https://m.media-amazon.com/images/M/MV5BNzljZTg5NGUtOTQ3YS00MTlkLTkwMmYtYzRiZmI5YTQ0Yzg5XkEyXkFqcGc@._V1_.jpg" alt="
+El valiente (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://hexload.com/m5t2ovrv51h7"  target="_blank "><img src="https://image.tmdb.org/t/p/w342//lUJIBUjEab71fJ8U9gs0NouUJ18.jpg" alt="
+ La muejer del camarote 10 (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    <li class="cursor-pointer"><a href="https://hexload.com/rzmtig2ry2cd"  target="_blank "><img src="https://es.web.img3.acsta.net/c_310_420/img/a8/de/a8debcd65ea85d53243a3aacd3468fa4.jpg" alt="
+ Regalo maldito (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
+    </ul>
+
      <ul id="video_navigation" style="list-style-type: none; display: grid; grid-template-columns: repeat(3 , 1fr);">
     <li class="cursor-pointer"><a href="https://mdfx9dc8n.net/f/67rwlxgwcve87r"  target="_blank "><img src="https://lumiere-a.akamaihd.net/v1/images/image002_eef65ea3.jpeg?region=0,0,670,957" alt="
 Un virernes loco (2025)" class="img_video_nav img-thumbnail   w-50 "></a></li>
