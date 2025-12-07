@@ -44,6 +44,16 @@ class Menu extends HTMLElement {
     
     <div style="conten-visivility: auto;">
     <ul id="video_navigation" class="video-grid-responsive">
+    <li class="cursor-pointer"><a href="https://hexload.com/hlwyd0hpk23k"  target="_blank "><img src="https://image.tmdb.org/t/p/w500/am6O7221qGtb5ba5uJKw7PfPZkJ.jpg" alt="
+El valiente (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://hexload.com/p4e6ldzrfrxx"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/aR4JhzROYwxYp1D6EvyGFrSLo80.jpg" alt="
+ La muejer del camarote 10 (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://hexload.com/psa636tzevac"  target="_blank "><img src="https://image.tmdb.org/t/p/w500/hHvNNxbg5kU0jhsTrsef2oR80yR.jpg" alt="
+ Regalo maldito (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
+    </ul>
+
+    <div style="conten-visivility: auto;">
+    <ul id="video_navigation" class="video-grid-responsive">
     <li class="cursor-pointer"><a href="https://hexload.com/indmtl38v919"  target="_blank "><img src="https://m.media-amazon.com/images/M/MV5BNzljZTg5NGUtOTQ3YS00MTlkLTkwMmYtYzRiZmI5YTQ0Yzg5XkEyXkFqcGc@._V1_.jpg" alt="
 El valiente (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
     <li class="cursor-pointer"><a href="https://hexload.com/m5t2ovrv51h7"  target="_blank "><img src="https://image.tmdb.org/t/p/w342//lUJIBUjEab71fJ8U9gs0NouUJ18.jpg" alt="
