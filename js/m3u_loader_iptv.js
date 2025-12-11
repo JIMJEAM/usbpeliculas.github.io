@@ -25,7 +25,7 @@ if (!document.getElementById('responsive-grid-style')) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const M3U_URL = 'https://raw.githubusercontent.com/TVPRO20/Newpelis22/master/pelis22.m3u';
+    const M3U_URL = 'https://raw.githubusercontent.com/TVPRO20/Megatv23/master/tv23.m3u';
     const ITEMS_PER_PAGE = 27; 
     let allVideos = [];
     let currentIndex = 0;
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             li.onclick = () => {
                 if (typeof videoUrl === 'function') {
                     videoUrl(video.url);
-                    document.getElementById('video')?.scrollIntoView({behavior: 'smooth'});
+                    document.getElementById('player')?.scrollIntoView({behavior: 'smooth'});
                 } else {
                     console.error('videoUrl function not found');
                 }
