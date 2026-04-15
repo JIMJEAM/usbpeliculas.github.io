@@ -92,16 +92,162 @@
                 </section>
                 <div><menu-component></menu-componet></div><br>
 <div class="container mt-5 mb-3">
-    <button id="toggle-dynamic-gallery" class="btn btn-warning btn-lg btn-block w-100 fw-bold">
-        📂 Cargar Catálogo Completo (Beta)
-    </button>
-    <div id="dynamic-gallery-wrapper" style="display: none; margin-top: 20px;">
-        <div id="dynamic-gallery-container"></div>
-        <div class="text-center mt-3 mb-5">
-            <button id="load-more-btn" class="btn btn-primary btn-lg">Cargar más resultados</button>
-        </div>
-    </div>
-</div>
+
+<!-- ===== BARRA DE BÚSQUEDA DE CANALES ===== -->
+                <div class="container mt-4 mb-2" id="search-bar-section">
+                    <style>
+                        #search-wrapper-container {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            max-width: 800px;
+                            margin: 0 auto 18px;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                        }
+                        #channel-search-wrapper {
+                            position: relative;
+                            flex: 1;
+                            min-width: 250px;
+                            max-width: 680px;
+                        }
+                        #channel-search-input {
+                            width: 100%;
+                            padding: 14px 54px 14px 20px;
+                            border-radius: 50px;
+                            border: 2px solid #f59e0b;
+                            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                            color: #fff;
+                            font-size: 1rem;
+                            outline: none;
+                            box-shadow: 0 4px 20px rgba(245,158,11,0.25);
+                            transition: box-shadow 0.3s, border-color 0.3s;
+                        }
+                        #channel-search-input::placeholder { color: #9ca3af; }
+                        #channel-search-input:focus {
+                            box-shadow: 0 4px 28px rgba(245,158,11,0.55);
+                            border-color: #fbbf24;
+                        }
+                        #search-icon {
+                            position: absolute;
+                            right: 18px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            color: #f59e0b;
+                            font-size: 1.25rem;
+                            pointer-events: none;
+                        }
+                        #load-search-more-btn {
+                            padding: 12px 24px;
+                            border-radius: 50px;
+                            border: none;
+                            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+                            color: #1a1a2e;
+                            font-weight: bold;
+                            font-size: 0.95rem;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+                            white-space: nowrap;
+                            min-width: 160px;
+                            display: inline-block;
+                        }
+                        #load-search-more-btn:hover:not(:disabled) {
+                            transform: translateY(-2px);
+                            box-shadow: 0 6px 25px rgba(245, 158, 11, 0.55);
+                            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+                        }
+                        #load-search-more-btn:active:not(:disabled) {
+                            transform: translateY(0);
+                        }
+                        #load-search-more-btn:disabled {
+                            opacity: 0.5;
+                            cursor: not-allowed;
+                            transform: none;
+                        }
+                        #search-status {
+                            text-align: center;
+                            color: #9ca3af;
+                            font-size: 0.85rem;
+                            min-height: 20px;
+                            margin-bottom: 6px;
+                        }
+                        #search-results-container {
+                            display: none;
+                            margin-top: 10px;
+                        }
+                        .search-results-grid {
+                            list-style: none;
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 10px;
+                            padding: 0;
+                        }
+                        @media (min-width: 768px) { .search-results-grid { grid-template-columns: repeat(4, 1fr); } }
+                        @media (min-width: 992px) { .search-results-grid { grid-template-columns: repeat(6, 1fr); } }
+                        .search-results-grid li {
+                            cursor: pointer;
+                            transition: transform 0.18s, box-shadow 0.18s;
+                        }
+                        .search-results-grid li:hover {
+                            transform: scale(1.06);
+                            box-shadow: 0 6px 20px rgba(245,158,11,0.4);
+                            border-radius: 8px;
+                        }
+                        .search-channel-title {
+                            text-align: center;
+                            font-size: 0.72rem;
+                            color: #e5e7eb;
+                            margin-top: 4px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        .no-results-msg {
+                            text-align: center;
+                            color: #f87171;
+                            padding: 20px;
+                            font-size: 1rem;
+                        }
+                    </style>
+
+                    <div id="search-wrapper-container">
+                        <div id="channel-search-wrapper">
+                            <input
+                                type="text"
+                                id="channel-search-input"
+                                placeholder="🔍 Buscar canal por nombre..."
+                                autocomplete="off"
+                            />
+                            <span id="search-icon"><i class="fas fa-search"></i></span>
+                        </div>
+                        <button id="load-search-more-btn" title="Cargar más canales en los resultados">
+                            ⬇️ Cargar Más
+                        </button>
+                    </div>
+                    <div id="search-status">Carga el catálogo primero y luego escribe para buscar.</div>
+                    <div id="search-results-container">
+                        <ul class="search-results-grid" id="search-results-grid"></ul>
+                    </div>
+                </div>
+                <!-- ===== FIN BARRA DE BÚSQUEDA ===== -->
+
+                <!-- ===== CATÁLOGO COMPLETO (m3u_loader_iptv.js) ===== -->
+                <div class="container mt-3 mb-3">
+                    <button id="toggle-dynamic-gallery" class="btn btn-warning btn-lg btn-block w-100 fw-bold">
+                        📂 Cargar Catálogo Completo (Beta)
+                    </button>
+                    <div id="catalog-progress" style="text-align: center; color: #e5e7eb; font-size: 0.95rem; margin-top: 10px; min-height: 24px;">
+                        <span id="progress-text">Listo para cargar</span>
+                    </div>
+                    <div id="dynamic-gallery-wrapper" style="display: none; margin-top: 20px;">
+                        <div id="dynamic-gallery-container"></div>
+                        <div class="text-center mt-3 mb-5">
+                            <button id="load-more-btn" class="btn btn-primary btn-lg">Cargar más resultados</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===== FIN CATÁLOGO ===== -->
 
                 <div class="col-12 col-lg-12">
                     <div class="row">
@@ -308,6 +454,168 @@
     }
 </script>
 <script src="js/m3u_loader_iptv.js"></script>
+
+    <script>
+        // ===== BÚSQUEDA DE CANALES =====
+        (function () {
+            const searchInput  = document.getElementById('channel-search-input');
+            const searchStatus = document.getElementById('search-status');
+            const resultsBox   = document.getElementById('search-results-container');
+            const resultsGrid  = document.getElementById('search-results-grid');
+            const loadMoreBtn  = document.getElementById('load-search-more-btn');
+            const toggleBtn    = document.getElementById('toggle-dynamic-gallery');
+
+            let debounceTimer;
+            let currentSearchQuery = '';
+            let currentFiltered = [];
+            let displayedCount = 12; // Initial items to show
+            const ITEMS_PER_PAGE = 12; // Items to load more
+
+            function getCatalog() {
+                // m3u_loader_iptv.js exposes allVideos via window._iptvCatalog
+                return window._iptvCatalog || [];
+            }
+
+            function isCatalogLoaded() {
+                return getCatalog().length > 0;
+            }
+
+            function buildCard(video) {
+                const li = document.createElement('li');
+                const img = document.createElement('img');
+                img.src = video.logo || 'https://via.placeholder.com/150x100?text=TV';
+                img.alt = video.title;
+                img.className = 'img-thumbnail w-100';
+                img.style.objectFit = 'cover';
+                img.style.height = '80px';
+                img.onerror = function(){ this.src='https://via.placeholder.com/150x100?text=TV'; };
+
+                const name = document.createElement('p');
+                name.className = 'search-channel-title';
+                name.textContent = video.title;
+
+                li.appendChild(img);
+                li.appendChild(name);
+                li.addEventListener('click', () => {
+                    videoUrl(video.url);
+                });
+                return li;
+            }
+
+            function displayResults() {
+                resultsGrid.innerHTML = '';
+
+                if (currentFiltered.length === 0) {
+                    resultsGrid.innerHTML = '<li class="no-results-msg" style="grid-column:1/-1">😕 No se encontraron canales con ese nombre.</li>';
+                    loadMoreBtn.disabled = true;
+                    loadMoreBtn.textContent = '⬇️ Cargar Más';
+                } else {
+                    // Display only the items up to displayedCount
+                    currentFiltered.slice(0, displayedCount).forEach(v => resultsGrid.appendChild(buildCard(v)));
+                    
+                    // Update status
+                    searchStatus.textContent = displayedCount + ' de ' + currentFiltered.length + ' resultado(s) para "' + currentSearchQuery + '"';
+                    
+                    // Enable/disable load more button based on remaining results
+                    if (displayedCount < currentFiltered.length) {
+                        loadMoreBtn.disabled = false;
+                        loadMoreBtn.textContent = '⬇️ Ver ' + Math.min(ITEMS_PER_PAGE, currentFiltered.length - displayedCount) + ' más';
+                    } else {
+                        loadMoreBtn.disabled = true;
+                        loadMoreBtn.textContent = '✅ Todos cargados';
+                    }
+                }
+
+                resultsBox.style.display = 'block';
+                resultsBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            function runSearch(query) {
+                const catalog = getCatalog();
+                query = query.trim().toLowerCase();
+                currentSearchQuery = query;
+                displayedCount = ITEMS_PER_PAGE; // Reset to initial count
+
+                if (query.length < 2) {
+                    resultsBox.style.display = 'none';
+                    resultsGrid.innerHTML = '';
+                    updateLoadMoreBtn();
+                    if (catalog.length > 0) {
+                        searchStatus.textContent = catalog.length + ' canales cargados. Escribe para buscar.';
+                    }
+                    return;
+                }
+
+                if (catalog.length === 0) {
+                    searchStatus.textContent = '⚠️ Carga el catálogo usando el botón "Cargar Más" primero';
+                    loadMoreBtn.disabled = false;
+                    loadMoreBtn.textContent = '📥 Cargar Catálogo';
+                    return;
+                }
+
+                currentFiltered = catalog.filter(v => v.title.toLowerCase().includes(query));
+                displayResults();
+            }
+
+            function loadMoreResults() {
+                displayedCount += ITEMS_PER_PAGE;
+                if (displayedCount >= currentFiltered.length) {
+                    displayedCount = currentFiltered.length;
+                }
+                displayResults();
+            }
+
+            function updateLoadMoreBtn() {
+                if (!isCatalogLoaded()) {
+                    loadMoreBtn.disabled = false;
+                    loadMoreBtn.textContent = '📥 Cargar Catálogo';
+                } else {
+                    loadMoreBtn.disabled = false;
+                    loadMoreBtn.textContent = '⬇️ Cargar Más';
+                }
+            }
+
+            // Handle button click - dual function
+            loadMoreBtn.addEventListener('click', function() {
+                if (!isCatalogLoaded()) {
+                    // First: Load catalog
+                    loadMoreBtn.disabled = true;
+                    loadMoreBtn.textContent = '⏳ Cargando...';
+                    if (toggleBtn) {
+                        toggleBtn.click(); // Trigger the main catalog load button
+                    }
+                    return; // Important: Stop here after loading catalog
+                } else {
+                    // Second: Load more results from the main catalog
+                    const mainLoadMoreBtn = document.getElementById('load-more-btn');
+                    if (mainLoadMoreBtn) {
+                        mainLoadMoreBtn.click(); // Click the main "Cargar más resultados" button
+                    }
+                }
+            });
+
+            searchInput.addEventListener('input', function () {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => runSearch(this.value), 300);
+            });
+
+            // Update status once catalog is loaded
+            const observer = new MutationObserver(() => {
+                const catalog = getCatalog();
+                if (catalog.length > 0) {
+                    searchStatus.textContent = catalog.length + ' canales disponibles. Escribe para buscar.';
+                    updateLoadMoreBtn();
+                } else {
+                    updateLoadMoreBtn();
+                }
+            });
+            const galleryContainer = document.getElementById('dynamic-gallery-container');
+            if (galleryContainer) observer.observe(galleryContainer, { childList: true, subtree: true });
+
+            // Initial button state
+            updateLoadMoreBtn();
+        })();
+    </script>
 </body>
 
 

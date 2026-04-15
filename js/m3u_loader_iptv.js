@@ -53,6 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleBtn.disabled = true;
         }
 
+        const progressText = document.getElementById('progress-text');
+        if (progressText) {
+            progressText.textContent = '⏳ Descargando catálogo...';
+        }
+
         try {
             const response = await fetch(M3U_URL);
             if (!response.ok) throw new Error('Network response was not ok');
@@ -70,6 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (toggleBtn) {
                 toggleBtn.textContent = '❌ Error';
+            }
+            if (progressText) {
+                progressText.textContent = '❌ Error al cargar el catálogo';
             }
         }
     }
@@ -97,6 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Expose catalog globally for search bar integration
+        window._iptvCatalog = allVideos;
+        updateProgress();
         loadMoreVideos();
     }
 
@@ -105,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (nextBatch.length === 0) {
             if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+            updateProgress();
             return;
         }
 
@@ -134,9 +146,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         currentIndex += ITEMS_PER_PAGE;
+        updateProgress();
 
         if (currentIndex >= allVideos.length) {
             if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+        }
+    }
+
+    function updateProgress() {
+        const progressText = document.getElementById('progress-text');
+        if (progressText) {
+            const loaded = Math.min(currentIndex, allVideos.length);
+            const total = allVideos.length;
+            const percentage = total > 0 ? Math.round((loaded / total) * 100) : 0;
+            
+            if (currentIndex >= allVideos.length) {
+                progressText.innerHTML = `✅ ${total} canales cargados <br> <small style="color: #9ca3af;">100% completado</small>`;
+            } else {
+                progressText.innerHTML = `📺 ${loaded} / ${total} canales <br> <small style="color: #9ca3af;">${percentage}% cargado</small>`;
+            }
         }
     }
 
@@ -149,10 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     fetchAndParseM3U();
                 } else {
                     toggleBtn.textContent = '📂 Ocultar Catálogo';
+                    updateProgress(); // Show current progress
                 }
             } else {
                 wrapper.style.display = 'none';
                 toggleBtn.textContent = '📂 Mostrar Catálogo Completo';
+                // Keep progress visible when hidden
             }
         });
     }

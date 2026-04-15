@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776236291027,
+  "projectRoot": "c:\\Users\\JimmyPro\\Desktop\\DISEÑO WEB PAGINAS\\DISEÑO WEB 8",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": {
+      "defaultBranch": "master",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "css": {
+      "path": "css",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1776236290985,
+      "keyFiles": [
+        "burbujas.css",
+        "estilos.css"
+      ]
+    },
+    "imagenes": {
+      "path": "imagenes",
+      "purpose": null,
+      "fileCount": 109,
+      "lastAccessed": 1776236290985,
+      "keyFiles": [
+        "247-32x32.png",
+        "adn40.png",
+        "Adrenalinasport.png",
+        "Ae.png",
+        "AireSantaFe.jpg"
+      ]
+    },
+    "img": {
+      "path": "img",
+      "purpose": null,
+      "fileCount": 31,
+      "lastAccessed": 1776236290986,
+      "keyFiles": [
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png"
+      ]
+    },
+    "js": {
+      "path": "js",
+      "purpose": null,
+      "fileCount": 8,
+      "lastAccessed": 1776236290986,
+      "keyFiles": [
+        "canales.js",
+        "counter.js",
+        "m3u_loader.js",
+        "m3u_loader_iptv.js",
+        "main.js"
+      ]
+    },
+    "temu-img": {
+      "path": "temu-img",
+      "purpose": null,
+      "fileCount": 13,
+      "lastAccessed": 1776236290987,
+      "keyFiles": [
+        "1f679213-4263-4e1f-9d9c-e490b24b957f.png",
+        "282ae456-cd8a-49d6-a2c8-a06c6e8fcb0f.png",
+        "70ca3600-6153-434c-8464-c0d10abb8268.png",
+        "7f7f06a9-d93d-472f-b178-31f80cd360d4.png",
+        "90051e93-e785-4820-8481-4ef76dd643ca.png"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "IPTV22.html",
+      "accessCount": 5,
+      "lastAccessed": 1776236481105,
+      "type": "file"
+    },
+    {
+      "path": "IPTV44.html",
+      "accessCount": 3,
+      "lastAccessed": 1776236416528,
+      "type": "file"
+    },
+    {
+      "path": "IPTV23.html",
+      "accessCount": 2,
+      "lastAccessed": 1776236521534,
+      "type": "file"
+    },
+    {
+      "path": "IPTV24.html",
+      "accessCount": 2,
+      "lastAccessed": 1776236525910,
+      "type": "file"
+    },
+    {
+      "path": "IPTV25.html",
+      "accessCount": 2,
+      "lastAccessed": 1776236529113,
+      "type": "file"
+    },
+    {
+      "path": "IPTV26.html",
+      "accessCount": 2,
+      "lastAccessed": 1776236531719,
+      "type": "file"
+    },
+    {
+      "path": "IPTV27.html",
+      "accessCount": 2,
+      "lastAccessed": 1776236534633,
+      "type": "file"
+    },
+    {
+      "path": "IPTV28.html",
+      "accessCount": 2,
+      "lastAccessed": 1776236537051,
+      "type": "file"
+    },
+    {
+      "path": "IPTV29.html",
+      "accessCount": 2,
+      "lastAccessed": 1776236540689,
+      "type": "file"
+    },
+    {
+      "path": "IPTV30.html",
+      "accessCount": 2,
+      "lastAccessed": 1776236542710,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
