@@ -111,15 +111,21 @@
                     manifestLoadingTimeOut: 12000,
                     manifestLoadingMaxRetry: 1,
                     levelLoadingTimeOut: 12000,
-                };
-                if (proxyFn) {
-                    cfg.xhrSetup = function (xhr, url) {
-                        // Para proxies de tipo "?url=": sólo proxear manifest/segmentos propios
-                        if (!url.includes('corsproxy') && !url.includes('codetabs') && !url.includes('allorigins')) {
-                            xhr.open('GET', proxyFn(url), true);
+                    // No enviar Referer — bypassa hotlink/CDN que bloquean por origen
+                    xhrSetup: function (xhr, reqUrl) {
+                        xhr.referrerPolicy = 'no-referrer';
+                        if (proxyFn &&
+                            !reqUrl.includes('corsproxy') &&
+                            !reqUrl.includes('codetabs') &&
+                            !reqUrl.includes('allorigins')) {
+                            xhr.open('GET', proxyFn(reqUrl), true);
                         }
-                    };
-                }
+                    },
+                    fetchSetup: function (ctx, initParams) {
+                        initParams.referrerPolicy = 'no-referrer';
+                        return new Request(ctx.url, initParams);
+                    }
+                };
                 hlsInst = new Hls(cfg);
                 hlsInst.loadSource(finalUrl);
                 hlsInst.attachMedia(video);

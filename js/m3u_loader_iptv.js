@@ -96,7 +96,11 @@ function _activatePlanB(url) {
 
             function startHls(src) {
                 if (_hlsInstance) { try { _hlsInstance.destroy(); } catch(e) {} }
-                _hlsInstance = new Hls({ enableWorker: true, lowLatencyMode: true });
+                _hlsInstance = new Hls({
+                    enableWorker: true,
+                    lowLatencyMode: true,
+                    xhrSetup: function(xhr) { xhr.referrerPolicy = 'no-referrer'; }
+                });
                 _hlsInstance.loadSource(src);
                 _hlsInstance.attachMedia(video);
                 _hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(() => {}));
