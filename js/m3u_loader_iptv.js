@@ -51,61 +51,61 @@ function _loadHlsJs(cb) {
     }
     _hlsLoading = true;
     const s = document.createElement('script');
-    s.src = 'https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js';
+    s.src = 'https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js';
     s.onload  = () => { _hlsReady = true; _hlsLoading = false; cb(); };
-    s.onerror = () => { _hlsLoading = false; console.warn('hls.js no se pudo cargar'); };
+    s.onerror = () => { _hlsLoading = false; cb(); }; // llamar igual para usar video nativo
     document.head.appendChild(s);
 }
 
 function _activatePlanB(url) {
+    const playerDiv = document.getElementById('player');
+    if (!playerDiv) return;
+
+    // 1. Destruir Clappr INMEDIATAMENTE (síncrono)
+    if (window.player && typeof window.player.destroy === 'function') {
+        try { window.player.destroy(); } catch (e) {}
+        window.player = null;
+    }
+    if (_hlsInstance) { try { _hlsInstance.destroy(); } catch (e) {} _hlsInstance = null; }
+
+    // 2. Crear el video element INMEDIATAMENTE — sin esperar hls.js
+    playerDiv.innerHTML = '';
+
+    const wrapper = document.createElement('div');
+    wrapper.style.cssText = 'position:relative;width:100%;background:#000;';
+
+    const badge = document.createElement('div');
+    badge.id = 'planb-badge';
+    badge.textContent = '▶ hls.js player';
+
+    const video = document.createElement('video');
+    video.controls   = true;
+    video.autoplay   = true;
+    video.setAttribute('playsinline', '');
+    video.style.cssText = 'width:100%;max-height:480px;display:block;';
+
+    wrapper.appendChild(badge);
+    wrapper.appendChild(video);
+    playerDiv.appendChild(wrapper);
+    playerDiv.scrollIntoView({ behavior: 'smooth' });
+
+    // 3. Cargar hls.js y attachar al video ya visible
     _loadHlsJs(() => {
-        const playerDiv = document.getElementById('player');
-        if (!playerDiv) return;
-
-        // Destruir Clappr
-        if (window.player && typeof window.player.destroy === 'function') {
-            try { window.player.destroy(); } catch (e) {}
-            window.player = null;
-        }
-        // Destruir instancia hls anterior
-        if (_hlsInstance) { try { _hlsInstance.destroy(); } catch (e) {} _hlsInstance = null; }
-
-        playerDiv.innerHTML = '';
-
-        const wrapper = document.createElement('div');
-        wrapper.style.cssText = 'position:relative;width:100%;background:#000;';
-
-        const badge = document.createElement('div');
-        badge.id = 'planb-badge';
-        badge.textContent = '▶ Plan B — hls.js';
-
-        const video = document.createElement('video');
-        video.controls   = true;
-        video.autoplay   = true;
-        video.setAttribute('playsinline', '');
-        video.style.cssText = 'width:100%;max-height:480px;display:block;';
-
-        wrapper.appendChild(badge);
-        wrapper.appendChild(video);
-        playerDiv.appendChild(wrapper);
-
         if (typeof Hls !== 'undefined' && Hls.isSupported()) {
             _hlsInstance = new Hls({ enableWorker: true, lowLatencyMode: true });
             _hlsInstance.loadSource(url);
             _hlsInstance.attachMedia(video);
             _hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(() => {}));
             _hlsInstance.on(Hls.Events.ERROR, (_, data) => {
-                if (data.fatal) console.warn('[Plan B] Error fatal hls.js:', data);
+                if (data.fatal) console.warn('[hls.js] Error fatal:', data.type, data.details);
             });
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            // Safari nativo
             video.src = url;
             video.play().catch(() => {});
         } else {
             video.src = url;
+            video.play().catch(() => {});
         }
-
-        playerDiv.scrollIntoView({ behavior: 'smooth' });
     });
 }
 
