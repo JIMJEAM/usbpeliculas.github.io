@@ -539,8 +539,8 @@
                      hlsjsConfig: {
                          xhrSetup: function(xhr, targetUrl) {
                              // Si por casualidad la URL ya tiene el proxy, no lo dobles
-                             if (!targetUrl.includes('corsproxy.io')) {
-                                 const proxyBypass = 'https://corsproxy.io/?' + encodeURIComponent(targetUrl);
+                             if (!targetUrl.includes('codetabs.com') && !targetUrl.includes('allorigins')) {
+                                 const proxyBypass = 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(targetUrl);
                                  // Re-conectamos la petición en vuelo hacia el proxy
                                  xhr.open('GET', proxyBypass, true);
                              }

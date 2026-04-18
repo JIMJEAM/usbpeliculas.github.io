@@ -22,7 +22,7 @@ function videoUrl(url) {
       // Prevenir ciclo infinito si el Plan B tmb falla
       video.onerror = null; 
       
-      const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
+      const proxyUrl = 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(url);
       if (source) source.setAttribute("src", proxyUrl);
       else video.src = proxyUrl;
       
