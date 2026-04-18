@@ -3,161 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CLAVE SECRETA: Ocultar el origen para saltar baneos de Hotlink -->
+    <!-- No-referrer: bypassa hotlink protection / bloqueos por Referer -->
     <meta name="referrer" content="no-referrer">
+    <!-- Fuerza HTTPS en recursos HTTP (mixed content) -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Reproductor VIP Independiente</title>
+    <title>Player Universal</title>
     <style>
-        body, html { 
-            margin: 0; padding: 0; width: 100%; height: 100%; 
-            background: #000; overflow: hidden; 
-            display: flex; align-items: center; justify-content: center; 
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body, html {
+            width: 100%; height: 100%;
+            background: #000;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; font-family: system-ui, sans-serif;
         }
-        video { 
-            width: 100%; height: 100%; max-height: 100vh; outline: none; 
+        video { width: 100%; height: 100%; max-height: 100vh; outline: none; }
+        #loader {
+            position: absolute;
+            border: 3px solid #333; border-top: 3px solid #f59e0b;
+            border-radius: 50%; width: 44px; height: 44px;
+            animation: spin 0.9s linear infinite; z-index: 5;
         }
-        .error-message { 
-            color: #ff4444; font-family: system-ui, sans-serif; 
-            position: absolute; z-index: 10; text-align: center; 
-            background: rgba(0,0,0,0.8); padding: 10px 20px; 
-            border-radius: 8px; display: none; margin: 20px;
+        #statusMsg {
+            position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%);
+            z-index: 10; background: rgba(0,0,0,0.82); color: #e5e7eb;
+            padding: 8px 18px; border-radius: 6px; font-size: 0.82rem;
+            text-align: center; max-width: 90%; display: none;
+            border-left: 3px solid #f59e0b;
         }
-        /* Loader minimalista */
-        .loader {
-            position: absolute; border: 4px solid #333; border-top: 4px solid #fff;
-            border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; z-index: 5;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        #statusMsg.error { border-left-color: #f87171; color: #fca5a5; }
+        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
-    <!-- Usamos el core de HLS.js directamente para máximo control -->
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js"></script>
 </head>
 <body>
-    <div class="loader" id="loader"></div>
-    <div class="error-message" id="errorMsg">Conexión rechazada. El canal podría estar fuera de línea o restringido a su país.</div>
-    <video id="video" controls autoplay crossorigin="anonymous"></video>
+    <div id="loader"></div>
+    <div id="statusMsg"></div>
+    <video id="video" controls autoplay playsinline crossorigin="anonymous"></video>
 
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js"></script>
     <script>
-        const params = new URLSearchParams(window.location.search);
-        let videoSrc = params.get('src');
-        const video = document.getElementById('video');
-        const errorMsg = document.getElementById('errorMsg');
-        const loader = document.getElementById('loader');
+    (function () {
+        const params  = new URLSearchParams(window.location.search);
+        let   src     = params.get('src');
+        const video   = document.getElementById('video');
+        const loader  = document.getElementById('loader');
+        const statusEl = document.getElementById('statusMsg');
 
-        // Generador de UUID para simular tokens dinámicos
-        function uuidv4() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-                return v.toString(16);
-            });
+        function showStatus(msg, isError) {
+            statusEl.textContent = msg;
+            statusEl.className   = isError ? 'error' : '';
+            statusEl.style.display = 'block';
+        }
+        function hideStatus() { statusEl.style.display = 'none'; }
+        function hideLoader()  { loader.style.display  = 'none'; }
+
+        if (!src) {
+            hideLoader();
+            showStatus('⚠️ No se proporcionó URL de stream (?src=...)', true);
+            return;
         }
 
-        if (videoSrc) {
-            // Reparador de URL para plataformas problemáticas
-            if (videoSrc.includes('pluto.tv') && videoSrc.startsWith('http://')) {
-                videoSrc = videoSrc.replace('http://', 'https://');
+        // Normalizar URL: tokens Pluto/SSAI
+        src = src
+            .replace(/\{PSID\}/g,        () => crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2))
+            .replace(/\{APP_DOMAIN\}/g,  'web')
+            .replace(/\{APP_NAME\}/g,    'web')
+            .replace(/\{TARGETOPT\}/g,   '0')
+            .replace(/\%7BPSID%7D/gi,    () => Math.random().toString(36).slice(2))
+            .replace(/\%7BAPP_DOMAIN%7D/gi, 'web')
+            .replace(/\%7BAPP_NAME%7D/gi,   'web')
+            .replace(/\%7BTARGETOPT%7D/gi,  '0');
+
+        // Cadena de proxies — se intenta en orden hasta reproducir
+        const PROXY_CHAIN = [
+            null,                                                          // 1. directo
+            url => 'https://corsproxy.io/?'       + encodeURIComponent(url), // 2. corsproxy.io
+            url => 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(url), // 3. codetabs
+            url => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),        // 4. allorigins
+        ];
+
+        let proxyIdx  = 0;
+        let hlsInst   = null;
+        let succeeded = false;
+
+        function tryPlay(proxyFn) {
+            const finalUrl = proxyFn ? proxyFn(src) : src;
+            const label    = proxyFn ? '🔄 Proxy ' + proxyIdx : '▶ Directo';
+            showStatus(label + ' — conectando...');
+
+            if (hlsInst) { hlsInst.destroy(); hlsInst = null; }
+
+            const isHls = /\.m3u8|m3u8/i.test(src) || /\.m3u(?!8)/i.test(src);
+            const isMp4 = /\.mp4|\.ts|\.webm|\.mkv/i.test(src);
+
+            if (!isHls && isMp4) {
+                // Archivo directo — HTML5 nativo
+                video.src = finalUrl;
+                video.oncanplay  = () => { hideLoader(); hideStatus(); succeeded = true; };
+                video.onerror    = () => nextProxy();
+                video.play().catch(() => {});
+                return;
             }
-            if (videoSrc.includes('%7B')) {
-                videoSrc = videoSrc.replace(/%7BPSID%7D/g, uuidv4())
-                                   .replace(/%7BAPP_DOMAIN%7D/g, 'web')
-                                   .replace(/%7BAPP_NAME%7D/g, 'web')
-                                   .replace(/%7BTARGETOPT%7D/g, '0');
-            }
 
-            function initPlayer(source, useProxy = false) {
-                // Limpiar posibles instancias anteriores
-                if (window.currentHls) {
-                    window.currentHls.destroy();
-                }
-
-                if (Hls.isSupported()) {
-                    const config = {
-                        debug: false,
-                        enableWorker: true,
-                        manifestLoadingTimeOut: 20000,
-                        manifestLoadingMaxRetry: 3,
-                        levelLoadingTimeOut: 20000,
-                        levelLoadingMaxRetry: 3,
-                    };
-                    
-                    // Si el servidor bloqueó la conexión nativa, activamos el Modo Proxy
-                    if (useProxy) {
-                        errorMsg.textContent = "♻️ Reconectando mediante túnel proxy para evadir bloqueo CORS...";
-                        errorMsg.style.display = 'block';
-                        config.xhrSetup = function(xhr, targetUrl) {
-                            if (!targetUrl.includes('codetabs.com') && !targetUrl.includes('allorigins')) {
-                                const proxyBypass = 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(targetUrl);
-                                xhr.open('GET', proxyBypass, true);
-                            }
-                        };
-                    }
-
-                    const hls = new Hls(config);
-                    window.currentHls = hls;
-                    
-                    hls.loadSource(source);
-                    hls.attachMedia(video);
-                    
-                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                        errorMsg.style.display = 'none'; // ocultar mensajes si logró arrancar m3u8
-                        video.play().catch(e => console.log("Autoplay requiere interacción", e));
-                    });
-
-                    hls.on(Hls.Events.ERROR, function(event, data) {
-                        if (data.fatal) {
-                            switch (data.type) {
-                                case Hls.ErrorTypes.NETWORK_ERROR:
-                                    // Si falló al natural, es por culpa de restricciones CORS como las de AmagiTV.
-                                    // Reseteamos e intentamos de nuevo activando el proxy completo.
-                                    if (!useProxy) {
-                                        console.warn("Bloqueo CORS/Red detectado. Activando túnel Proxy...");
-                                        initPlayer(source, true);
-                                    } else {
-                                        console.warn("Fallo crítico en túnel Proxy.", data);
-                                        hls.startLoad();
-                                        setTimeout(() => {
-                                           if(video.paused && !video.ended) {
-                                               loader.style.display = 'none';
-                                               errorMsg.textContent = "Conexión rechazada definitivamente. Servidor bloqueó la señal.";
-                                               errorMsg.style.display = 'block'; 
-                                           }
-                                        }, 5000);
-                                    }
-                                    break;
-                                case Hls.ErrorTypes.MEDIA_ERROR:
-                                    console.warn("Error visual de Media. Intentando recuperar...", data);
-                                    hls.recoverMediaError();
-                                    break;
-                                default:
-                                    console.error("Fallo crítico y definitivo", data);
-                                    hls.destroy();
-                                    loader.style.display = 'none';
-                                    errorMsg.textContent = "Error interno irrecuperable.";
-                                    errorMsg.style.display = 'block';
-                                    break;
-                            }
+            // HLS
+            if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+                const cfg = {
+                    enableWorker: true,
+                    manifestLoadingTimeOut: 12000,
+                    manifestLoadingMaxRetry: 1,
+                    levelLoadingTimeOut: 12000,
+                };
+                if (proxyFn) {
+                    cfg.xhrSetup = function (xhr, url) {
+                        // Para proxies de tipo "?url=": sólo proxear manifest/segmentos propios
+                        if (!url.includes('corsproxy') && !url.includes('codetabs') && !url.includes('allorigins')) {
+                            xhr.open('GET', proxyFn(url), true);
                         }
-                    });
-                } 
-                // Soporte nativo de Apple Safari
-                else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                    video.src = source;
-                    video.addEventListener('loadedmetadata', function() {
-                        video.play();
-                    });
-                    video.addEventListener('error', function() {
-                        loader.style.display = 'none';
-                        errorMsg.style.display = 'block';
-                    });
+                    };
                 }
-            }
+                hlsInst = new Hls(cfg);
+                hlsInst.loadSource(finalUrl);
+                hlsInst.attachMedia(video);
 
-            initPlayer(videoSrc);
-        } else {
-            loader.style.display = 'none';
-            errorMsg.textContent = "Error: Enlace de video no detectado.";
-            errorMsg.style.display = 'block';
+                hlsInst.on(Hls.Events.MANIFEST_PARSED, () => {
+                    succeeded = true;
+                    hideLoader(); hideStatus();
+                    video.play().catch(() => {});
+                });
+
+                hlsInst.on(Hls.Events.ERROR, (_, data) => {
+                    if (!data.fatal) return;
+                    if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+                        hlsInst.recoverMediaError(); return;
+                    }
+                    nextProxy();
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                // Safari nativo
+                video.src = finalUrl;
+                video.onloadedmetadata = () => { hideLoader(); hideStatus(); video.play(); };
+                video.onerror          = () => nextProxy();
+            } else {
+                video.src = finalUrl;
+                video.play().catch(() => {});
+            }
         }
+
+        function nextProxy() {
+            proxyIdx++;
+            if (proxyIdx >= PROXY_CHAIN.length) {
+                hideLoader();
+                showStatus('❌ Stream no disponible — el canal puede estar offline, geo-restringido o requiere proxy de servidor.', true);
+                return;
+            }
+            tryPlay(PROXY_CHAIN[proxyIdx]);
+        }
+
+        // Escuchar evento de ready de video para ocultar loader
+        video.addEventListener('playing', () => { hideLoader(); hideStatus(); }, { once: true });
+
+        tryPlay(PROXY_CHAIN[0]);
+    })();
     </script>
 </body>
 </html>

@@ -101,19 +101,23 @@ function _activatePlanB(url) {
                 _hlsInstance.attachMedia(video);
                 _hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(() => {}));
                 _hlsInstance.on(Hls.Events.ERROR, (_, data) => {
-                    if (data.fatal && !triedProxy) {
+                    if (!data.fatal) return;
+                    if (data.type === Hls.ErrorTypes.MEDIA_ERROR) { _hlsInstance.recoverMediaError(); return; }
+                    if (!triedProxy) {
                         triedProxy = true;
-                        badge.textContent = '▶ hls.js + proxy CORS';
-                        // Reintentar con proxy CORS
-                        const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
-                        startHls(proxyUrl);
-                    } else if (data.fatal && triedProxy) {
-                        badge.textContent = '❌ Stream no disponible';
+                        badge.textContent = '▶ Plan B2 — proxy CORS';
+                        startHls('https://corsproxy.io/?' + encodeURIComponent(url));
+                    } else {
+                        // Plan C: iframe con reproductor.html todo-terreno (no-referrer + 4 proxies)
+                        badge.textContent = '▶ Plan C — reproductor universal';
+                        if (_hlsInstance) { try { _hlsInstance.destroy(); } catch(e) {} _hlsInstance = null; }
                         video.style.display = 'none';
-                        const msg = document.createElement('p');
-                        msg.style.cssText = 'color:#f87171;text-align:center;padding:40px 20px;font-size:1rem;';
-                        msg.textContent = '⚠️ Este canal no está disponible: el stream requiere proxy de servidor o está offline.';
-                        wrapper.appendChild(msg);
+                        const iframe = document.createElement('iframe');
+                        iframe.src = 'reproductor.html?src=' + encodeURIComponent(url);
+                        iframe.style.cssText = 'width:100%;height:480px;border:none;display:block;';
+                        iframe.setAttribute('allowfullscreen', '');
+                        iframe.setAttribute('allow', 'autoplay; fullscreen');
+                        wrapper.appendChild(iframe);
                     }
                 });
             }
