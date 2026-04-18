@@ -491,8 +491,25 @@
   <script>
     function videoUrl(url) {
       if (window.player) {
+        // Remover listeners anteriores para evitar loops
+        window.player.off(Clappr.Events.PLAYER_ERROR);
+        
         window.player.load(url);
+        window.player.play();
         document.getElementById('player')?.scrollIntoView({ behavior: 'smooth' });
+        
+        // Plan B: Si la reproducción falla (por CORS o Mixed Content), intentamos con proxy
+        window.player.once(Clappr.Events.PLAYER_ERROR, function() {
+             console.warn("Fallo en la reproducción del canal. Intentando Plan B con Proxy...");
+             // Mostramos un mensaje temporal si es posible
+             const pText = document.getElementById('progress-text');
+             if(pText) pText.textContent = "⏳ Intentando reproducir con Proxy...";
+             
+             // Agregamos un proxy que soporta CORS
+             const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
+             window.player.load(proxyUrl);
+             window.player.play();
+        });
       }
     }
   </script>

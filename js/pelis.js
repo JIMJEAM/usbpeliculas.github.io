@@ -1,10 +1,37 @@
 var video = document.getElementById("video");
 function videoUrl(url) {
+  if (!video) return;
   video.pause();
+  
+  // Remover en caso de existir, para no crear loops
+  video.onerror = null;
+  
   const source = video.querySelector("source");
-  source.setAttribute("src", url);
+  if (source) source.setAttribute("src", url);
+  else video.src = url;
+
   video.load();
-  video.play();
+  let playPromise = video.play();
+  if (playPromise !== undefined) {
+      playPromise.catch(error => { console.log("Autoplay prevenido en el Plan A", error); });
+  }
+  
+  // Plan B si el recurso falla (CORS o Mixed Content)
+  video.onerror = function() {
+      console.warn("Error reproduciendo el video (Plan A falla). Intentando Plan B con Proxy...");
+      // Prevenir ciclo infinito si el Plan B tmb falla
+      video.onerror = null; 
+      
+      const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
+      if (source) source.setAttribute("src", proxyUrl);
+      else video.src = proxyUrl;
+      
+      video.load();
+      let playPromiseB = video.play();
+      if (playPromiseB !== undefined) {
+          playPromiseB.catch(e => { console.log('Autoplay prevenido en Plan B:', e); });
+      }
+  };
 }
 
 // Inject Responsive Styles
