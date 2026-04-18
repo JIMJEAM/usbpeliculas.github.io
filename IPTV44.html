@@ -446,9 +446,20 @@
         // Función para cargar un canal en el reproductor
         function videoUrl(url) {
             if (window.player) {
-                window.player.load(url);
-                document.getElementById('player')?.scrollIntoView({ behavior: 'smooth' });
+                window.player.destroy();
             }
+            window.player = new Clappr.Player({
+                source: url,
+                parentId: '#player',
+                autoPlay: true,
+                playback: {
+                    hlsjsConfig: {
+                        enableWorker: true,
+                        lowLatencyMode: true
+                    }
+                }
+            });
+            document.getElementById('player')?.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
     <script src="js/m3u_loader_iptv.js"></script>
@@ -494,7 +505,7 @@
                 li.appendChild(img);
                 li.appendChild(name);
                 li.addEventListener('click', () => {
-                    videoUrl(video.url);
+                    window.playChannelWithFallback(video.url);
                 });
                 return li;
             }

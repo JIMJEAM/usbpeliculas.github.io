@@ -6,7 +6,7 @@ if (!document.getElementById('responsive-grid-style')) {
       .video-grid-responsive {
         list-style-type: none;
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Mobile default */
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         padding: 0;
       }
@@ -20,43 +20,168 @@ if (!document.getElementById('responsive-grid-style')) {
           grid-template-columns: repeat(6, 1fr);
         }
       }
+      #planb-badge {
+        position: absolute;
+        top: 6px;
+        left: 10px;
+        z-index: 10;
+        background: rgba(245,158,11,0.92);
+        color: #1a1a2e;
+        font-size: 0.72rem;
+        font-weight: bold;
+        padding: 2px 10px;
+        border-radius: 4px;
+        pointer-events: none;
+      }
     `;
     document.head.appendChild(style);
 }
 
+// ── Plan B: hls.js fallback ──────────────────────────────────────────────────
+
+let _hlsInstance  = null;
+let _hlsReady     = false;
+let _hlsLoading   = false;
+
+function _loadHlsJs(cb) {
+    if (_hlsReady)   { cb(); return; }
+    if (_hlsLoading) {
+        const t = setInterval(() => { if (_hlsReady) { clearInterval(t); cb(); } }, 100);
+        return;
+    }
+    _hlsLoading = true;
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js';
+    s.onload  = () => { _hlsReady = true; _hlsLoading = false; cb(); };
+    s.onerror = () => { _hlsLoading = false; console.warn('hls.js no se pudo cargar'); };
+    document.head.appendChild(s);
+}
+
+function _activatePlanB(url) {
+    _loadHlsJs(() => {
+        const playerDiv = document.getElementById('player');
+        if (!playerDiv) return;
+
+        // Destruir Clappr
+        if (window.player && typeof window.player.destroy === 'function') {
+            try { window.player.destroy(); } catch (e) {}
+            window.player = null;
+        }
+        // Destruir instancia hls anterior
+        if (_hlsInstance) { try { _hlsInstance.destroy(); } catch (e) {} _hlsInstance = null; }
+
+        playerDiv.innerHTML = '';
+
+        const wrapper = document.createElement('div');
+        wrapper.style.cssText = 'position:relative;width:100%;background:#000;';
+
+        const badge = document.createElement('div');
+        badge.id = 'planb-badge';
+        badge.textContent = '▶ Plan B — hls.js';
+
+        const video = document.createElement('video');
+        video.controls   = true;
+        video.autoplay   = true;
+        video.setAttribute('playsinline', '');
+        video.style.cssText = 'width:100%;max-height:480px;display:block;';
+
+        wrapper.appendChild(badge);
+        wrapper.appendChild(video);
+        playerDiv.appendChild(wrapper);
+
+        if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+            _hlsInstance = new Hls({ enableWorker: true, lowLatencyMode: true });
+            _hlsInstance.loadSource(url);
+            _hlsInstance.attachMedia(video);
+            _hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(() => {}));
+            _hlsInstance.on(Hls.Events.ERROR, (_, data) => {
+                if (data.fatal) console.warn('[Plan B] Error fatal hls.js:', data);
+            });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            // Safari nativo
+            video.src = url;
+            video.play().catch(() => {});
+        } else {
+            video.src = url;
+        }
+
+        playerDiv.scrollIntoView({ behavior: 'smooth' });
+    });
+}
+
+// Función global expuesta para los HTML
+window.playChannelWithFallback = function (url) {
+    const playerDiv = document.getElementById('player');
+
+    // Plan A: Clappr vía videoUrl()
+    if (typeof videoUrl === 'function') {
+        try {
+            videoUrl(url);
+
+            // Escuchar error de Clappr para activar Plan B
+            if (window.player) {
+                const onClapprError = () => {
+                    try {
+                        if (window.player) window.player.off('error', onClapprError);
+                    } catch (e) {}
+                    console.warn('[Plan A] Clappr error → activando Plan B');
+                    _activatePlanB(url);
+                };
+                try { window.player.on('error', onClapprError); } catch (e) {}
+
+                // Timeout: si en 9 s no hay video visible, activar Plan B
+                const fallbackTimer = setTimeout(() => {
+                    if (!window.player) return; // ya fue destruido por Plan B
+                    const vid = playerDiv && playerDiv.querySelector('video');
+                    if (!vid || (vid.readyState < 2 && vid.networkState !== 1)) {
+                        console.warn('[Plan A] Timeout sin video → activando Plan B');
+                        _activatePlanB(url);
+                    }
+                }, 9000);
+
+                // Cancelar timer si Clappr arranca bien
+                const onPlaying = () => {
+                    clearTimeout(fallbackTimer);
+                    try { window.player.off('play', onPlaying); } catch (e) {}
+                };
+                try { window.player.on('play', onPlaying); } catch (e) {}
+            }
+        } catch (e) {
+            console.warn('[Plan A] videoUrl() lanzó excepción → Plan B', e);
+            _activatePlanB(url);
+        }
+    } else {
+        // No hay Clappr, ir directo a Plan B
+        _activatePlanB(url);
+    }
+};
+
+// ── M3U Loader ───────────────────────────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', () => {
     const M3U_URL = 'https://raw.githubusercontent.com/TVPRO20/Megatv23/master/tv23.m3u';
-    const ITEMS_PER_PAGE = 27; 
-    let allVideos = [];
+    const ITEMS_PER_PAGE = 27;
+    let allVideos    = [];
     let currentIndex = 0;
-    let isFetched = false;
+    let isFetched    = false;
 
     const galleryContainer = document.getElementById('dynamic-gallery-container');
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    const toggleBtn = document.getElementById('toggle-dynamic-gallery');
-    const wrapper = document.getElementById('dynamic-gallery-wrapper');
+    const loadMoreBtn      = document.getElementById('load-more-btn');
+    const toggleBtn        = document.getElementById('toggle-dynamic-gallery');
+    const wrapper          = document.getElementById('dynamic-gallery-wrapper');
 
-    // Create Grid Container with Responsive Class
     const gridList = document.createElement('ul');
-    gridList.id = 'video_navigation_dynamic';
-    gridList.className = 'video-grid-responsive'; // Use the responsive class
-    
-    if (galleryContainer) {
-        galleryContainer.appendChild(gridList);
-    }
+    gridList.id        = 'video_navigation_dynamic';
+    gridList.className = 'video-grid-responsive';
+    if (galleryContainer) galleryContainer.appendChild(gridList);
 
     async function fetchAndParseM3U() {
         if (isFetched) return;
-        
-        if (toggleBtn) {
-            toggleBtn.textContent = '⏳ Cargando...';
-            toggleBtn.disabled = true;
-        }
+
+        if (toggleBtn) { toggleBtn.textContent = '⏳ Cargando...'; toggleBtn.disabled = true; }
 
         const progressText = document.getElementById('progress-text');
-        if (progressText) {
-            progressText.textContent = '⏳ Descargando catálogo...';
-        }
+        if (progressText) progressText.textContent = '⏳ Descargando catálogo...';
 
         try {
             let text;
@@ -65,33 +190,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!response.ok) throw new Error('Network response was not ok');
                 text = await response.text();
             } catch (errorA) {
-                console.warn('Falló el Plan A (URL principal). Intentando Plan B...', errorA);
-                if (progressText) progressText.textContent = '⏳ Intentando Plan B...';
-                
-                // Plan B: proxy
+                console.warn('Falló Plan A (URL principal). Intentando Plan B proxy...', errorA);
+                if (progressText) progressText.textContent = '⏳ Intentando proxy...';
                 const M3U_URL_PLAN_B = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(M3U_URL);
                 const responseB = await fetch(M3U_URL_PLAN_B);
                 if (!responseB.ok) throw new Error('Network response was not ok en Plan B');
                 text = await responseB.text();
             }
-            
+
             parseM3U(text);
             isFetched = true;
-            if (toggleBtn) {
-                toggleBtn.textContent = '📂 Ocultar Catálogo';
-                toggleBtn.disabled = false;
-            }
+            if (toggleBtn) { toggleBtn.textContent = '📂 Ocultar Catálogo'; toggleBtn.disabled = false; }
         } catch (error) {
             console.error('Error fetching M3U:', error);
-            if (galleryContainer) {
-                galleryContainer.innerHTML = '<p class="text-white text-center">Error al cargar la lista de películas (Plan A y B fallaron).</p>';
-            }
-            if (toggleBtn) {
-                toggleBtn.textContent = '❌ Error';
-            }
-            if (progressText) {
-                progressText.textContent = '❌ Error al cargar el catálogo';
-            }
+            if (galleryContainer) galleryContainer.innerHTML = '<p class="text-white text-center">Error al cargar la lista (Plan A y B fallaron).</p>';
+            if (toggleBtn) toggleBtn.textContent = '❌ Error';
+            if (progressText) progressText.textContent = '❌ Error al cargar el catálogo';
         }
     }
 
@@ -104,21 +218,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (line.startsWith('#EXTINF:')) {
                 const logoMatch = line.match(/tvg-logo="([^"]*)"/);
                 if (logoMatch) currentVideo.logo = logoMatch[1];
-
                 const titleParts = line.split(',');
-                if (titleParts.length > 1) {
-                    currentVideo.title = titleParts.slice(1).join(',').trim();
-                }
+                if (titleParts.length > 1) currentVideo.title = titleParts.slice(1).join(',').trim();
             } else if (line.length > 0 && !line.startsWith('#')) {
                 currentVideo.url = line;
-                if (currentVideo.url && currentVideo.title) {
-                    allVideos.push(currentVideo);
-                }
-                currentVideo = {}; 
+                if (currentVideo.url && currentVideo.title) allVideos.push(currentVideo);
+                currentVideo = {};
             }
         });
 
-        // Expose catalog globally for search bar integration
         window._iptvCatalog = allVideos;
         updateProgress();
         loadMoreVideos();
@@ -134,26 +242,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         nextBatch.forEach(video => {
-            const li = document.createElement('li');
+            const li  = document.createElement('li');
             li.className = 'cursor-pointer';
-            
+
             const img = document.createElement('img');
-            img.src = video.logo || 'https://via.placeholder.com/150x225?text=No+Image';
-            img.alt = video.title;
-            img.className = 'img_video_nav img-thumbnail w-100'; // w-100 to fill the grid cell
-            
-            // Optional: Maintain aspect ratio if needed, though w-100 usually handles it in grid
-            // img.style.aspectRatio = '2/3'; 
-            
-            li.onclick = () => {
-                if (typeof videoUrl === 'function') {
-                    videoUrl(video.url);
-                    document.getElementById('player')?.scrollIntoView({behavior: 'smooth'});
-                } else {
-                    console.error('videoUrl function not found');
-                }
-            };
-            
+            img.src       = video.logo || 'https://via.placeholder.com/150x225?text=No+Image';
+            img.alt       = video.title;
+            img.className = 'img_video_nav img-thumbnail w-100';
+
+            li.onclick = () => window.playChannelWithFallback(video.url);
             li.appendChild(img);
             gridList.appendChild(li);
         });
@@ -161,27 +258,23 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex += ITEMS_PER_PAGE;
         updateProgress();
 
-        if (currentIndex >= allVideos.length) {
-            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-        }
+        if (currentIndex >= allVideos.length && loadMoreBtn) loadMoreBtn.style.display = 'none';
     }
 
     function updateProgress() {
         const progressText = document.getElementById('progress-text');
-        if (progressText) {
-            const loaded = Math.min(currentIndex, allVideos.length);
-            const total = allVideos.length;
-            const percentage = total > 0 ? Math.round((loaded / total) * 100) : 0;
-            
-            if (currentIndex >= allVideos.length) {
-                progressText.innerHTML = `✅ ${total} canales cargados <br> <small style="color: #9ca3af;">100% completado</small>`;
-            } else {
-                progressText.innerHTML = `📺 ${loaded} / ${total} canales <br> <small style="color: #9ca3af;">${percentage}% cargado</small>`;
-            }
+        if (!progressText) return;
+        const loaded     = Math.min(currentIndex, allVideos.length);
+        const total      = allVideos.length;
+        const percentage = total > 0 ? Math.round((loaded / total) * 100) : 0;
+
+        if (currentIndex >= allVideos.length) {
+            progressText.innerHTML = `✅ ${total} canales cargados <br><small style="color:#9ca3af;">100% completado</small>`;
+        } else {
+            progressText.innerHTML = `📺 ${loaded} / ${total} canales <br><small style="color:#9ca3af;">${percentage}% cargado</small>`;
         }
     }
 
-    // Toggle Logic
     if (toggleBtn && wrapper) {
         toggleBtn.addEventListener('click', () => {
             if (wrapper.style.display === 'none') {
@@ -190,17 +283,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     fetchAndParseM3U();
                 } else {
                     toggleBtn.textContent = '📂 Ocultar Catálogo';
-                    updateProgress(); // Show current progress
+                    updateProgress();
                 }
             } else {
                 wrapper.style.display = 'none';
                 toggleBtn.textContent = '📂 Mostrar Catálogo Completo';
-                // Keep progress visible when hidden
             }
         });
     }
 
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', loadMoreVideos);
-    }
+    if (loadMoreBtn) loadMoreBtn.addEventListener('click', loadMoreVideos);
 });
