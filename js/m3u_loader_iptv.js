@@ -92,13 +92,33 @@ function _activatePlanB(url) {
     // 3. Cargar hls.js y attachar al video ya visible
     _loadHlsJs(() => {
         if (typeof Hls !== 'undefined' && Hls.isSupported()) {
-            _hlsInstance = new Hls({ enableWorker: true, lowLatencyMode: true });
-            _hlsInstance.loadSource(url);
-            _hlsInstance.attachMedia(video);
-            _hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(() => {}));
-            _hlsInstance.on(Hls.Events.ERROR, (_, data) => {
-                if (data.fatal) console.warn('[hls.js] Error fatal:', data.type, data.details);
-            });
+            let triedProxy = false;
+
+            function startHls(src) {
+                if (_hlsInstance) { try { _hlsInstance.destroy(); } catch(e) {} }
+                _hlsInstance = new Hls({ enableWorker: true, lowLatencyMode: true });
+                _hlsInstance.loadSource(src);
+                _hlsInstance.attachMedia(video);
+                _hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(() => {}));
+                _hlsInstance.on(Hls.Events.ERROR, (_, data) => {
+                    if (data.fatal && !triedProxy) {
+                        triedProxy = true;
+                        badge.textContent = '▶ hls.js + proxy CORS';
+                        // Reintentar con proxy CORS
+                        const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
+                        startHls(proxyUrl);
+                    } else if (data.fatal && triedProxy) {
+                        badge.textContent = '❌ Stream no disponible';
+                        video.style.display = 'none';
+                        const msg = document.createElement('p');
+                        msg.style.cssText = 'color:#f87171;text-align:center;padding:40px 20px;font-size:1rem;';
+                        msg.textContent = '⚠️ Este canal no está disponible: el stream requiere proxy de servidor o está offline.';
+                        wrapper.appendChild(msg);
+                    }
+                });
+            }
+
+            startHls(url);
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
             video.src = url;
             video.play().catch(() => {});
