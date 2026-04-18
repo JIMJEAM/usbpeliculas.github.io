@@ -490,6 +490,14 @@
   </script>
 
   <script>
+    // Generador de UUID simple para simular un dispositivo válido
+    function uuidv4() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+
     function videoUrl(url) {
       if (window.player) {
         window.player.off(Clappr.Events.PLAYER_ERROR);
@@ -497,6 +505,15 @@
         // Convertir urls viejas de pluto que causan problemas
         if (url.includes('pluto.tv') && url.startsWith('http://')) {
             url = url.replace('http://', 'https://');
+        }
+        
+        // Purgar macros bloqueantes en las listas M3U (Ej. {PSID} -> %7BPSID%7D)
+        if (url.includes('%7B')) {
+            const tempUUID = uuidv4();
+            url = url.replace(/%7BPSID%7D/g, tempUUID);
+            url = url.replace(/%7BAPP_DOMAIN%7D/g, 'web');
+            url = url.replace(/%7BAPP_NAME%7D/g, 'web');
+            url = url.replace(/%7BTARGETOPT%7D/g, '0');
         }
         
         window.player.configure({
