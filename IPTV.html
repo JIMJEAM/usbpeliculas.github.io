@@ -491,11 +491,14 @@
   <script>
     function videoUrl(url) {
       if (window.player) {
-        // Remover listeners anteriores para evitar loops
         window.player.off(Clappr.Events.PLAYER_ERROR);
         
-        // Forzamos el mimeType para evitar el error "Your browser does not support..." 
-        // cuando las URLs tienen parámetros largos al final y Clappr no detecta que es m3u8.
+        // Pluto TV M3U fix: Las listas suelen venir en http:// lo cual es bloqueado por navegadores modernos.
+        // Convertir a https:// resuelve el problema de forma nativa sin necesitar proxy.
+        if (url.includes('pluto.tv') && url.startsWith('http://')) {
+            url = url.replace('http://', 'https://');
+        }
+        
         window.player.configure({
             source: url,
             mimeType: "application/x-mpegURL",
@@ -504,13 +507,13 @@
         
         document.getElementById('player')?.scrollIntoView({ behavior: 'smooth' });
         
-        // Plan B: Si la reproducción falla (por CORS o Mixed Content), intentamos con proxy
-        window.player.once(Clappr.Events.PLAYER_ERROR, function() {
-             console.warn("Fallo en la reproducción del canal. Intentando Plan B con Proxy...");
+        window.player.once(Clappr.Events.PLAYER_ERROR, function(e) {
+             console.warn("Fallo Plan A. Error detectado:", e);
              const pText = document.getElementById('progress-text');
-             if(pText) pText.textContent = "⏳ Intentando reproducir con Proxy...";
+             if(pText) pText.textContent = "⏳ Intentando reproducir con Proxy alternativo...";
              
-             const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
+             // Usar proxy genérico como Plan B (no funciona bien para manifests con rutas absolutas)
+             const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
              window.player.configure({
                  source: proxyUrl,
                  mimeType: "application/x-mpegURL",
