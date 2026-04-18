@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CLAVE SECRETA: Ocultar el origen para saltar baneos de Hotlink -->
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Reproductor VIP Independiente</title>
+    <style>
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            background: #000; overflow: hidden; 
+            display: flex; align-items: center; justify-content: center; 
+        }
+        video { 
+            width: 100%; height: 100%; max-height: 100vh; outline: none; 
+        }
+        .error-message { 
+            color: #ff4444; font-family: system-ui, sans-serif; 
+            position: absolute; z-index: 10; text-align: center; 
+            background: rgba(0,0,0,0.8); padding: 10px 20px; 
+            border-radius: 8px; display: none; margin: 20px;
+        }
+        /* Loader minimalista */
+        .loader {
+            position: absolute; border: 4px solid #333; border-top: 4px solid #fff;
+            border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; z-index: 5;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    <!-- Usamos el core de HLS.js directamente para máximo control -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js"></script>
+</head>
+<body>
+    <div class="loader" id="loader"></div>
+    <div class="error-message" id="errorMsg">Conexión rechazada. El canal podría estar fuera de línea o restringido a su país.</div>
+    <video id="video" controls autoplay crossorigin="anonymous"></video>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        let videoSrc = params.get('src');
+        const video = document.getElementById('video');
+        const errorMsg = document.getElementById('errorMsg');
+        const loader = document.getElementById('loader');
+
+        // Generador de UUID para simular tokens dinámicos
+        function uuidv4() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        if (videoSrc) {
+            // Reparador de URL para plataformas problemáticas
+            if (videoSrc.includes('pluto.tv') && videoSrc.startsWith('http://')) {
+                videoSrc = videoSrc.replace('http://', 'https://');
+            }
+            if (videoSrc.includes('%7B')) {
+                videoSrc = videoSrc.replace(/%7BPSID%7D/g, uuidv4())
+                                   .replace(/%7BAPP_DOMAIN%7D/g, 'web')
+                                   .replace(/%7BAPP_NAME%7D/g, 'web')
+                                   .replace(/%7BTARGETOPT%7D/g, '0');
+            }
+
+            video.addEventListener('playing', () => loader.style.display = 'none');
+            video.addEventListener('waiting', () => loader.style.display = 'block');
+
+            if (Hls.isSupported()) {
+                const hls = new Hls({
+                    debug: false,
+                    enableWorker: true,
+                    // Alta tolerancia a las demoras y caídas de canales IPTV gratuitos
+                    manifestLoadingTimeOut: 20000,
+                    manifestLoadingMaxRetry: 3,
+                    levelLoadingTimeOut: 20000,
+                    levelLoadingMaxRetry: 3,
+                });
+                
+                hls.loadSource(videoSrc);
+                hls.attachMedia(video);
+                
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    video.play().catch(e => console.log("Autoplay requiere interacción", e));
+                });
+
+                hls.on(Hls.Events.ERROR, function(event, data) {
+                    if (data.fatal) {
+                        switch (data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                console.warn("Error de Red detectado en HLS. Intentando recuperar...", data);
+                                hls.startLoad(); // forzar carga
+                                setTimeout(() => {
+                                   if(video.paused && !video.ended) errorMsg.style.display = 'block'; 
+                                }, 5000);
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                console.warn("Error visual de Media. Intentando recuperar...", data);
+                                hls.recoverMediaError();
+                                break;
+                            default:
+                                console.error("Fallo crítico y definitivo", data);
+                                hls.destroy();
+                                loader.style.display = 'none';
+                                errorMsg.style.display = 'block';
+                                break;
+                        }
+                    }
+                });
+            } 
+            // Soporte nativo de Apple Safari
+            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = videoSrc;
+                video.addEventListener('loadedmetadata', function() {
+                    video.play();
+                });
+                video.addEventListener('error', function() {
+                    loader.style.display = 'none';
+                    errorMsg.style.display = 'block';
+                });
+            }
+        } else {
+            loader.style.display = 'none';
+            errorMsg.textContent = "Error: Enlace de video no detectado.";
+            errorMsg.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
