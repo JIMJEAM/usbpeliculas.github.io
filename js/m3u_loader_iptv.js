@@ -110,66 +110,9 @@ function _activatePlanB(url) {
 }
 
 // Función global expuesta para los HTML
+// Va directo a hls.js — más compatible que Clappr para streams m3u arbitrarios
 window.playChannelWithFallback = function (url) {
-    const playerDiv = document.getElementById('player');
-    let _planBTriggered = false;
-
-    function triggerPlanB(reason) {
-        if (_planBTriggered) return;
-        _planBTriggered = true;
-        console.warn('[Plan A] ' + reason + ' → activando Plan B');
-        _activatePlanB(url);
-    }
-
-    // Polling: detecta la pantalla de error de Clappr cada 500 ms
-    function watchClapprError() {
-        if (!playerDiv) return;
-        let attempts = 0;
-        const interval = setInterval(() => {
-            if (_planBTriggered) { clearInterval(interval); return; }
-            attempts++;
-            if (attempts > 24) { clearInterval(interval); return; } // máx 12 s
-
-            const text = playerDiv.textContent || '';
-            if (
-                text.includes('Could not play') ||
-                text.includes('problem trying to load') ||
-                text.includes('manifestLoadError') ||
-                text.includes('networkError') ||
-                text.includes('Error code')
-            ) {
-                clearInterval(interval);
-                triggerPlanB('Error Clappr detectado');
-            }
-        }, 500);
-    }
-
-    // Plan A: Clappr vía videoUrl()
-    if (typeof videoUrl === 'function') {
-        try {
-            videoUrl(url);
-            watchClapprError();
-
-            // Timeout de seguridad: 8 s sin video → Plan B
-            const fallbackTimer = setTimeout(() => {
-                if (_planBTriggered || !window.player) return;
-                const vid = playerDiv && playerDiv.querySelector('video');
-                if (!vid || vid.readyState < 2) {
-                    triggerPlanB('Timeout 8 s sin video');
-                }
-            }, 8000);
-
-            // Cancelar timer si Clappr arranca bien
-            try {
-                window.player && window.player.on('play', () => clearTimeout(fallbackTimer));
-            } catch (e) {}
-        } catch (e) {
-            console.warn('[Plan A] videoUrl() excepción → Plan B', e);
-            _activatePlanB(url);
-        }
-    } else {
-        _activatePlanB(url);
-    }
+    _activatePlanB(url);
 };
 
 // ── M3U Loader ───────────────────────────────────────────────────────────────
