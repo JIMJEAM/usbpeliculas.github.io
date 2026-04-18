@@ -109,8 +109,8 @@ function _activatePlanB(url) {
                     if (data.type === Hls.ErrorTypes.MEDIA_ERROR) { _hlsInstance.recoverMediaError(); return; }
                     if (!triedProxy) {
                         triedProxy = true;
-                        badge.textContent = '▶ Plan B2 — proxy CORS';
-                        startHls('https://corsproxy.io/?' + encodeURIComponent(url));
+                        badge.textContent = '▶ Plan B2 — proxy propio';
+                        startHls('/proxy.php?url=' + encodeURIComponent(url));
                     } else {
                         // Plan C: iframe con reproductor.html todo-terreno (no-referrer + 4 proxies)
                         badge.textContent = '▶ Plan C — reproductor universal';

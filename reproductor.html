@@ -75,10 +75,11 @@
 
         // Cadena de proxies — se intenta en orden hasta reproducir
         const PROXY_CHAIN = [
-            null,                                                          // 1. directo
-            url => 'https://corsproxy.io/?'       + encodeURIComponent(url), // 2. corsproxy.io
-            url => 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(url), // 3. codetabs
-            url => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),        // 4. allorigins
+            null,                                                                           // 1. directo (no-referrer)
+            url => '/proxy.php?url='              + encodeURIComponent(url),               // 2. proxy propio PHP ⭐
+            url => 'https://corsproxy.io/?'       + encodeURIComponent(url),               // 3. corsproxy.io
+            url => 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(url),  // 4. codetabs
+            url => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),        // 5. allorigins
         ];
 
         let proxyIdx  = 0;

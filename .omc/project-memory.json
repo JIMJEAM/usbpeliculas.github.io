@@ -97,15 +97,15 @@
   },
   "hotPaths": [
     {
-      "path": "IPTV22.html",
-      "accessCount": 16,
-      "lastAccessed": 1776554079456,
+      "path": "js\\m3u_loader_iptv.js",
+      "accessCount": 17,
+      "lastAccessed": 1776554539333,
       "type": "file"
     },
     {
-      "path": "js\\m3u_loader_iptv.js",
+      "path": "IPTV22.html",
       "accessCount": 16,
-      "lastAccessed": 1776554344536,
+      "lastAccessed": 1776554079456,
       "type": "file"
     },
     {
@@ -122,8 +122,8 @@
     },
     {
       "path": "reproductor.html",
-      "accessCount": 4,
-      "lastAccessed": 1776554324444,
+      "accessCount": 5,
+      "lastAccessed": 1776554530043,
       "type": "file"
     },
     {
@@ -262,6 +262,12 @@
       "path": "js\\canales.js",
       "accessCount": 1,
       "lastAccessed": 1776552223461,
+      "type": "file"
+    },
+    {
+      "path": "proxy.php",
+      "accessCount": 1,
+      "lastAccessed": 1776554519164,
       "type": "file"
     }
   ],
