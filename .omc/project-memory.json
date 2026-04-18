@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1776236291027,
+  "lastScanned": 1776548219769,
   "projectRoot": "c:\\Users\\JimmyPro\\Desktop\\DISEÑO WEB PAGINAS\\DISEÑO WEB 8",
   "techStack": {
     "languages": [],
@@ -36,7 +36,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 2,
-      "lastAccessed": 1776236290985,
+      "lastAccessed": 1776548219520,
       "keyFiles": [
         "burbujas.css",
         "estilos.css"
@@ -46,7 +46,7 @@
       "path": "imagenes",
       "purpose": null,
       "fileCount": 109,
-      "lastAccessed": 1776236290985,
+      "lastAccessed": 1776548219521,
       "keyFiles": [
         "247-32x32.png",
         "adn40.png",
@@ -59,7 +59,7 @@
       "path": "img",
       "purpose": null,
       "fileCount": 31,
-      "lastAccessed": 1776236290986,
+      "lastAccessed": 1776548219521,
       "keyFiles": [
         "1.png",
         "2.png",
@@ -72,7 +72,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 8,
-      "lastAccessed": 1776236290986,
+      "lastAccessed": 1776548219522,
       "keyFiles": [
         "canales.js",
         "counter.js",
@@ -85,7 +85,7 @@
       "path": "temu-img",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1776236290987,
+      "lastAccessed": 1776548219523,
       "keyFiles": [
         "1f679213-4263-4e1f-9d9c-e490b24b957f.png",
         "282ae456-cd8a-49d6-a2c8-a06c6e8fcb0f.png",

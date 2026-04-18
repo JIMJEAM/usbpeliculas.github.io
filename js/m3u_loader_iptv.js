@@ -59,9 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch(M3U_URL);
-            if (!response.ok) throw new Error('Network response was not ok');
-            const text = await response.text();
+            let text;
+            try {
+                const response = await fetch(M3U_URL);
+                if (!response.ok) throw new Error('Network response was not ok');
+                text = await response.text();
+            } catch (errorA) {
+                console.warn('Falló el Plan A (URL principal). Intentando Plan B...', errorA);
+                if (progressText) progressText.textContent = '⏳ Intentando Plan B...';
+                
+                // Plan B: proxy
+                const M3U_URL_PLAN_B = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(M3U_URL);
+                const responseB = await fetch(M3U_URL_PLAN_B);
+                if (!responseB.ok) throw new Error('Network response was not ok en Plan B');
+                text = await responseB.text();
+            }
+            
             parseM3U(text);
             isFetched = true;
             if (toggleBtn) {
@@ -71,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Error fetching M3U:', error);
             if (galleryContainer) {
-                galleryContainer.innerHTML = '<p class="text-white text-center">Error al cargar la lista de películas.</p>';
+                galleryContainer.innerHTML = '<p class="text-white text-center">Error al cargar la lista de películas (Plan A y B fallaron).</p>';
             }
             if (toggleBtn) {
                 toggleBtn.textContent = '❌ Error';
