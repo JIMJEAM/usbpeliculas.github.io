@@ -494,21 +494,28 @@
         // Remover listeners anteriores para evitar loops
         window.player.off(Clappr.Events.PLAYER_ERROR);
         
-        window.player.load(url);
-        window.player.play();
+        // Forzamos el mimeType para evitar el error "Your browser does not support..." 
+        // cuando las URLs tienen parámetros largos al final y Clappr no detecta que es m3u8.
+        window.player.configure({
+            source: url,
+            mimeType: "application/x-mpegURL",
+            autoPlay: true
+        });
+        
         document.getElementById('player')?.scrollIntoView({ behavior: 'smooth' });
         
         // Plan B: Si la reproducción falla (por CORS o Mixed Content), intentamos con proxy
         window.player.once(Clappr.Events.PLAYER_ERROR, function() {
              console.warn("Fallo en la reproducción del canal. Intentando Plan B con Proxy...");
-             // Mostramos un mensaje temporal si es posible
              const pText = document.getElementById('progress-text');
              if(pText) pText.textContent = "⏳ Intentando reproducir con Proxy...";
              
-             // Agregamos un proxy que soporta CORS
              const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
-             window.player.load(proxyUrl);
-             window.player.play();
+             window.player.configure({
+                 source: proxyUrl,
+                 mimeType: "application/x-mpegURL",
+                 autoPlay: true
+             });
         });
       }
     }
