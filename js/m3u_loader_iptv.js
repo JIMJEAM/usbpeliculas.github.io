@@ -121,27 +121,27 @@ window.playChannelWithFallback = function (url) {
         _activatePlanB(url);
     }
 
-    // MutationObserver: detecta la pantalla de error de Clappr en el DOM
+    // Polling: detecta la pantalla de error de Clappr cada 500 ms
     function watchClapprError() {
         if (!playerDiv) return;
-        const observer = new MutationObserver(() => {
-            // Clappr muestra "Could not play" o tiene clase *error* visible
-            const text = playerDiv.textContent || '';
-            const hasErrorText = text.includes('Could not play') ||
-                                 text.includes('problem trying to load') ||
-                                 text.includes('manifestLoadError') ||
-                                 text.includes('networkError');
-            const hasErrorNode = playerDiv.querySelector('[class*="error"]:not([style*="display:none"]):not([style*="display: none"])');
-            if (hasErrorText || hasErrorNode) {
-                observer.disconnect();
-                clearTimeout(killTimer);
-                triggerPlanB('Clappr error en DOM');
-            }
-        });
-        observer.observe(playerDiv, { childList: true, subtree: true, characterData: true });
+        let attempts = 0;
+        const interval = setInterval(() => {
+            if (_planBTriggered) { clearInterval(interval); return; }
+            attempts++;
+            if (attempts > 24) { clearInterval(interval); return; } // máx 12 s
 
-        // Desconectar observer después de 12 s para no quedar activo
-        const killTimer = setTimeout(() => observer.disconnect(), 12000);
+            const text = playerDiv.textContent || '';
+            if (
+                text.includes('Could not play') ||
+                text.includes('problem trying to load') ||
+                text.includes('manifestLoadError') ||
+                text.includes('networkError') ||
+                text.includes('Error code')
+            ) {
+                clearInterval(interval);
+                triggerPlanB('Error Clappr detectado');
+            }
+        }, 500);
     }
 
     // Plan A: Clappr vía videoUrl()
@@ -150,25 +150,24 @@ window.playChannelWithFallback = function (url) {
             videoUrl(url);
             watchClapprError();
 
-            // Timeout de seguridad: 10 s sin reproducir → Plan B
+            // Timeout de seguridad: 8 s sin video → Plan B
             const fallbackTimer = setTimeout(() => {
                 if (_planBTriggered || !window.player) return;
                 const vid = playerDiv && playerDiv.querySelector('video');
                 if (!vid || vid.readyState < 2) {
-                    triggerPlanB('Timeout 10 s sin video');
+                    triggerPlanB('Timeout 8 s sin video');
                 }
-            }, 10000);
+            }, 8000);
 
             // Cancelar timer si Clappr arranca bien
             try {
                 window.player && window.player.on('play', () => clearTimeout(fallbackTimer));
             } catch (e) {}
         } catch (e) {
-            console.warn('[Plan A] videoUrl() lanzó excepción → Plan B', e);
+            console.warn('[Plan A] videoUrl() excepción → Plan B', e);
             _activatePlanB(url);
         }
     } else {
-        // No hay Clappr, ir directo a Plan B
         _activatePlanB(url);
     }
 };
