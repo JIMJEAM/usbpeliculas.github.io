@@ -97,27 +97,27 @@
   },
   "hotPaths": [
     {
+      "path": "IPTV22.html",
+      "accessCount": 16,
+      "lastAccessed": 1776554079456,
+      "type": "file"
+    },
+    {
       "path": "js\\m3u_loader_iptv.js",
       "accessCount": 15,
       "lastAccessed": 1776553919551,
       "type": "file"
     },
     {
-      "path": "IPTV22.html",
-      "accessCount": 14,
-      "lastAccessed": 1776553325062,
-      "type": "file"
-    },
-    {
       "path": "IPTV44.html",
-      "accessCount": 8,
-      "lastAccessed": 1776552618310,
+      "accessCount": 9,
+      "lastAccessed": 1776554082325,
       "type": "file"
     },
     {
       "path": "IPTV23.html",
-      "accessCount": 7,
-      "lastAccessed": 1776552621337,
+      "accessCount": 8,
+      "lastAccessed": 1776554084671,
       "type": "file"
     },
     {
