@@ -494,8 +494,7 @@
       if (window.player) {
         window.player.off(Clappr.Events.PLAYER_ERROR);
         
-        // Pluto TV M3U fix: Las listas suelen venir en http:// lo cual es bloqueado por navegadores modernos.
-        // Convertir a https:// resuelve el problema de forma nativa sin necesitar proxy.
+        // Convertir urls viejas de pluto que causan problemas
         if (url.includes('pluto.tv') && url.startsWith('http://')) {
             url = url.replace('http://', 'https://');
         }
@@ -509,16 +508,28 @@
         document.getElementById('player')?.scrollIntoView({ behavior: 'smooth' });
         
         window.player.once(Clappr.Events.PLAYER_ERROR, function(e) {
-             console.warn("Fallo Plan A. Error detectado:", e);
+             console.warn("Fallo Plan A. Iniciando Decodificador M3U8 en tiempo real...", e);
              const pText = document.getElementById('progress-text');
-             if(pText) pText.textContent = "⏳ Intentando reproducir con Proxy alternativo...";
+             if(pText) pText.textContent = "⏳ Iniciando Decodificador Multihilo para evasión de bloqueos...";
              
-             // Usar proxy genérico como Plan B (no funciona bien para manifests con rutas absolutas)
-             const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+             // DECODIFICADOR M3U8: Interceptamos TODO el tráfico interno de video (no solo el inicio,
+             // sino todos los segmentos .ts ocultos) y los forzamos a pasar por el proxy en tiempo real.
              window.player.configure({
-                 source: proxyUrl,
+                 source: url,
                  mimeType: "application/x-mpegURL",
-                 autoPlay: true
+                 autoPlay: true,
+                 playback: {
+                     hlsjsConfig: {
+                         xhrSetup: function(xhr, targetUrl) {
+                             // Si por casualidad la URL ya tiene el proxy, no lo dobles
+                             if (!targetUrl.includes('corsproxy.io')) {
+                                 const proxyBypass = 'https://corsproxy.io/?' + encodeURIComponent(targetUrl);
+                                 // Re-conectamos la petición en vuelo hacia el proxy
+                                 xhr.open('GET', proxyBypass, true);
+                             }
+                         }
+                     }
+                 }
              });
         });
       }
