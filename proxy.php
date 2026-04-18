@@ -29,6 +29,41 @@ if (in_array($host, ['localhost', '127.0.0.1', '0.0.0.0']) ||
     exit('Error: URL no permitida');
 }
 
+// Auto-detectar Referer según CDN conocido
+$refererMap = [
+    'tubi.video'           => 'https://tubitv.com/',
+    'warnermediacdn.com'   => 'https://www.cnn.com/',
+    'turner'               => 'https://www.cnn.com/',
+    'akamaized.net'        => '',
+    'cloudfront.net'       => '',
+    'wurl.tv'              => 'https://www.samsung.com/',
+    'uplynk.com'           => 'https://abc7news.com/',
+    'foxnews'              => 'https://www.foxnews.com/',
+];
+
+$autoReferer = '';
+foreach ($refererMap as $pattern => $ref) {
+    if (stripos($url, $pattern) !== false) {
+        $autoReferer = $ref;
+        break;
+    }
+}
+
+// Permitir override manual: proxy.php?url=...&ref=https://tubitv.com/
+if (!empty($_GET['ref'])) {
+    $autoReferer = filter_var($_GET['ref'], FILTER_VALIDATE_URL) ? $_GET['ref'] : $autoReferer;
+}
+
+$headers = [
+    'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36',
+    'Accept: */*',
+    'Accept-Language: en-US,en;q=0.9',
+];
+if ($autoReferer) {
+    $headers[] = 'Referer: ' . $autoReferer;
+    $headers[] = 'Origin: ' . rtrim($autoReferer, '/');
+}
+
 $ch = curl_init();
 curl_setopt_array($ch, [
     CURLOPT_URL            => $url,
@@ -39,15 +74,8 @@ curl_setopt_array($ch, [
     CURLOPT_CONNECTTIMEOUT => 10,
     CURLOPT_SSL_VERIFYPEER => false,
     CURLOPT_SSL_VERIFYHOST => false,
-    // Sin Referer — bypassa hotlink protection
-    CURLOPT_REFERER        => '',
-    CURLOPT_HTTPHEADER     => [
-        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36',
-        'Accept: */*',
-        'Accept-Language: en-US,en;q=0.9',
-        'Origin: ',
-        'Referer: ',
-    ],
+    CURLOPT_REFERER        => $autoReferer,
+    CURLOPT_HTTPHEADER     => $headers,
     CURLOPT_HEADER         => false,
 ]);
 
