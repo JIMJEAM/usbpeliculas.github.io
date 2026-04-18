@@ -64,62 +64,95 @@
                                    .replace(/%7BTARGETOPT%7D/g, '0');
             }
 
-            video.addEventListener('playing', () => loader.style.display = 'none');
-            video.addEventListener('waiting', () => loader.style.display = 'block');
+            function initPlayer(source, useProxy = false) {
+                // Limpiar posibles instancias anteriores
+                if (window.currentHls) {
+                    window.currentHls.destroy();
+                }
 
-            if (Hls.isSupported()) {
-                const hls = new Hls({
-                    debug: false,
-                    enableWorker: true,
-                    // Alta tolerancia a las demoras y caídas de canales IPTV gratuitos
-                    manifestLoadingTimeOut: 20000,
-                    manifestLoadingMaxRetry: 3,
-                    levelLoadingTimeOut: 20000,
-                    levelLoadingMaxRetry: 3,
-                });
-                
-                hls.loadSource(videoSrc);
-                hls.attachMedia(video);
-                
-                hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                    video.play().catch(e => console.log("Autoplay requiere interacción", e));
-                });
-
-                hls.on(Hls.Events.ERROR, function(event, data) {
-                    if (data.fatal) {
-                        switch (data.type) {
-                            case Hls.ErrorTypes.NETWORK_ERROR:
-                                console.warn("Error de Red detectado en HLS. Intentando recuperar...", data);
-                                hls.startLoad(); // forzar carga
-                                setTimeout(() => {
-                                   if(video.paused && !video.ended) errorMsg.style.display = 'block'; 
-                                }, 5000);
-                                break;
-                            case Hls.ErrorTypes.MEDIA_ERROR:
-                                console.warn("Error visual de Media. Intentando recuperar...", data);
-                                hls.recoverMediaError();
-                                break;
-                            default:
-                                console.error("Fallo crítico y definitivo", data);
-                                hls.destroy();
-                                loader.style.display = 'none';
-                                errorMsg.style.display = 'block';
-                                break;
-                        }
+                if (Hls.isSupported()) {
+                    const config = {
+                        debug: false,
+                        enableWorker: true,
+                        manifestLoadingTimeOut: 20000,
+                        manifestLoadingMaxRetry: 3,
+                        levelLoadingTimeOut: 20000,
+                        levelLoadingMaxRetry: 3,
+                    };
+                    
+                    // Si el servidor bloqueó la conexión nativa, activamos el Modo Proxy
+                    if (useProxy) {
+                        errorMsg.textContent = "♻️ Reconectando mediante túnel proxy para evadir bloqueo CORS...";
+                        errorMsg.style.display = 'block';
+                        config.xhrSetup = function(xhr, targetUrl) {
+                            if (!targetUrl.includes('codetabs.com') && !targetUrl.includes('allorigins')) {
+                                const proxyBypass = 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(targetUrl);
+                                xhr.open('GET', proxyBypass, true);
+                            }
+                        };
                     }
-                });
-            } 
-            // Soporte nativo de Apple Safari
-            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = videoSrc;
-                video.addEventListener('loadedmetadata', function() {
-                    video.play();
-                });
-                video.addEventListener('error', function() {
-                    loader.style.display = 'none';
-                    errorMsg.style.display = 'block';
-                });
+
+                    const hls = new Hls(config);
+                    window.currentHls = hls;
+                    
+                    hls.loadSource(source);
+                    hls.attachMedia(video);
+                    
+                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                        errorMsg.style.display = 'none'; // ocultar mensajes si logró arrancar m3u8
+                        video.play().catch(e => console.log("Autoplay requiere interacción", e));
+                    });
+
+                    hls.on(Hls.Events.ERROR, function(event, data) {
+                        if (data.fatal) {
+                            switch (data.type) {
+                                case Hls.ErrorTypes.NETWORK_ERROR:
+                                    // Si falló al natural, es por culpa de restricciones CORS como las de AmagiTV.
+                                    // Reseteamos e intentamos de nuevo activando el proxy completo.
+                                    if (!useProxy) {
+                                        console.warn("Bloqueo CORS/Red detectado. Activando túnel Proxy...");
+                                        initPlayer(source, true);
+                                    } else {
+                                        console.warn("Fallo crítico en túnel Proxy.", data);
+                                        hls.startLoad();
+                                        setTimeout(() => {
+                                           if(video.paused && !video.ended) {
+                                               loader.style.display = 'none';
+                                               errorMsg.textContent = "Conexión rechazada definitivamente. Servidor bloqueó la señal.";
+                                               errorMsg.style.display = 'block'; 
+                                           }
+                                        }, 5000);
+                                    }
+                                    break;
+                                case Hls.ErrorTypes.MEDIA_ERROR:
+                                    console.warn("Error visual de Media. Intentando recuperar...", data);
+                                    hls.recoverMediaError();
+                                    break;
+                                default:
+                                    console.error("Fallo crítico y definitivo", data);
+                                    hls.destroy();
+                                    loader.style.display = 'none';
+                                    errorMsg.textContent = "Error interno irrecuperable.";
+                                    errorMsg.style.display = 'block';
+                                    break;
+                            }
+                        }
+                    });
+                } 
+                // Soporte nativo de Apple Safari
+                else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                    video.src = source;
+                    video.addEventListener('loadedmetadata', function() {
+                        video.play();
+                    });
+                    video.addEventListener('error', function() {
+                        loader.style.display = 'none';
+                        errorMsg.style.display = 'block';
+                    });
+                }
             }
+
+            initPlayer(videoSrc);
         } else {
             loader.style.display = 'none';
             errorMsg.textContent = "Error: Enlace de video no detectado.";
