@@ -73,13 +73,17 @@
             .replace(/\%7BAPP_NAME%7D/gi,   'web')
             .replace(/\%7BTARGETOPT%7D/gi,  '0');
 
+        // ⚙️ CONFIGURA TU CLOUDFLARE WORKER AQUÍ después de desplegarlo
+        // Instrucciones en cloudflare-worker.js
+        const CF_WORKER_URL = ''; // Ej: 'https://mi-proxy.miusuario.workers.dev'
+
         // Cadena de proxies — se intenta en orden hasta reproducir
         const PROXY_CHAIN = [
             null,                                                                           // 1. directo (no-referrer)
-            url => '/proxy.php?url='              + encodeURIComponent(url),               // 2. proxy propio PHP ⭐
-            url => 'https://corsproxy.io/?'       + encodeURIComponent(url),               // 3. corsproxy.io
-            url => 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(url),  // 4. codetabs
-            url => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),        // 5. allorigins
+            url => '/proxy.php?url='              + encodeURIComponent(url),               // 2. proxy PHP propio
+            ...(CF_WORKER_URL ? [url => CF_WORKER_URL + '/?url=' + encodeURIComponent(url)] : []), // 3. CF Worker ⭐ US IP
+            url => 'https://corsproxy.io/?'       + encodeURIComponent(url),               // 4. corsproxy.io
+            url => 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(url),  // 5. codetabs
         ];
 
         let proxyIdx  = 0;

@@ -122,8 +122,8 @@
     },
     {
       "path": "reproductor.html",
-      "accessCount": 5,
-      "lastAccessed": 1776554530043,
+      "accessCount": 6,
+      "lastAccessed": 1776555053767,
       "type": "file"
     },
     {
@@ -268,6 +268,12 @@
       "path": "js\\canales.js",
       "accessCount": 1,
       "lastAccessed": 1776552223461,
+      "type": "file"
+    },
+    {
+      "path": "cloudflare-worker.js",
+      "accessCount": 1,
+      "lastAccessed": 1776555040081,
       "type": "file"
     }
   ],
