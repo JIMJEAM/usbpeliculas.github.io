@@ -97,27 +97,33 @@
   },
   "hotPaths": [
     {
+      "path": "IPTV22.html",
+      "accessCount": 20,
+      "lastAccessed": 1776557809310,
+      "type": "file"
+    },
+    {
       "path": "js\\m3u_loader_iptv.js",
       "accessCount": 17,
       "lastAccessed": 1776554539333,
       "type": "file"
     },
     {
-      "path": "IPTV22.html",
-      "accessCount": 16,
-      "lastAccessed": 1776554079456,
+      "path": "IPTV44.html",
+      "accessCount": 10,
+      "lastAccessed": 1776557770658,
       "type": "file"
     },
     {
-      "path": "IPTV44.html",
-      "accessCount": 9,
-      "lastAccessed": 1776554082325,
-      "type": "file"
+      "path": "estilos.css",
+      "accessCount": 10,
+      "lastAccessed": 1776558001584,
+      "type": "directory"
     },
     {
       "path": "IPTV23.html",
-      "accessCount": 8,
-      "lastAccessed": 1776554084671,
+      "accessCount": 9,
+      "lastAccessed": 1776557774484,
       "type": "file"
     },
     {
@@ -125,6 +131,12 @@
       "accessCount": 6,
       "lastAccessed": 1776555053767,
       "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 3,
+      "lastAccessed": 1776557810387,
+      "type": "directory"
     },
     {
       "path": "IPTV24.html",
@@ -245,12 +257,6 @@
       "accessCount": 2,
       "lastAccessed": 1776236917209,
       "type": "file"
-    },
-    {
-      "path": "",
-      "accessCount": 2,
-      "lastAccessed": 1776553326107,
-      "type": "directory"
     },
     {
       "path": "proxy.php",

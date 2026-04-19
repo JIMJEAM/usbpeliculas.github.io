@@ -1,12 +1,29 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+#player {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+#player iframe,
+#player video {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+    min-height: 220px;
+}
                 body {
                     background: #ff00cc;
-                    /* fallback for old browsers */
                     background: -webkit-linear-gradient(to right, #333399, #ff00cc);
-                    /* Chrome 10-25, Safari 5.1-6 */
                     background: linear-gradient(to right, #333399, #ff00cc);
-                    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                     font-family: verdana;
+                    overflow-x: hidden;
+                    max-width: 100%;
                 }
 
                 .cursor-pointer {
@@ -57,7 +74,8 @@ img {
                 .logo img {
                     display: flex;
                     width: 300px;
-                    margin-left: 900px;
+                    max-width: 100%;
+                    margin-left: auto;
                     padding: 35px;
                     border: none;
                 }
@@ -291,15 +309,12 @@ img {
                 
                 @media only screen and (max-width: 576px) {
                     body {
-                        display: grid;
-                        grid-template-columns: 1fr;
-                        grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
-                        grid-template-areas: "header" "main" "footer";
-                        align-content: center;
-                        justify-content: space-between;
+                        display: block;
                         padding: 0;
                         margin: 0;
-                        max-width: 85%; }
+                        max-width: 100%;
+                        overflow-x: hidden;
+                    }
 
                         .container-pelis
 {
@@ -337,12 +352,10 @@ img {
                     }
                     .padd {
                         display: block;
-                        width: 150%;
-                        height: 150%;
-                        max-width: auto;
-                        margin-left: 62.5px;
-                        padding: calc(20px - 2.5px);
-                        padding-left: 10px;
+                        width: 100%;
+                        max-width: 100%;
+                        margin-left: 0;
+                        padding: 10px;
                     }
                    
                     .logo {
@@ -373,16 +386,18 @@ img {
                     }
                     .logo2 img {
                         display: flex;
-                        width: 300px;
-                        padding: 35px;
+                        width: 100%;
+                        max-width: 200px;
+                        padding: 15px;
                         border: none;
                     }
                     .logo3 {
                         display: flex;
                         transform: translate();
-                        width: 350px;
-                        height: 150px;
-                        padding: 15px;
+                        width: 100%;
+                        max-width: 300px;
+                        height: auto;
+                        padding: 10px;
                         border: hidden;
                         transition-property: translateX(0);
                         transition-duration: 3s;
