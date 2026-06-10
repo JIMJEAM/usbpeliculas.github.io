@@ -39,19 +39,6 @@ html {
                     background-color: #3b5998;
                 }
                 
-                .container {
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    height: 100vh;
-                    width: 100%;
-                    background: inherit;
-                    margin: auto;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    height: 100%;
-                }
 .container-pelis
 {
     display: grid;
@@ -182,12 +169,7 @@ img {
                     width: 65%;
                 }
                 
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border: 2px solid royalblue;
-                }
+
                 
                 h3 {
                     justify-content: end;
@@ -233,12 +215,7 @@ img {
                     flex-grow: 1;
                 }
                 
-                .container {
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    justify-content: flex-start;
-                }
+
                 
                 .img-thumbnail {
                     width: 150px;
@@ -529,3 +506,121 @@ img {
                         margin-left: 0px;
                     }
             }
+
+/* === CARTELERA DE CINE === */
+.cartelera-section {
+  padding: 2rem 0;
+}
+
+.cartelera-title {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.cartelera-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff00cc, #ffcc00);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.movie-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  backdrop-filter: blur(4px);
+  background: rgba(255,255,255,0.06) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  height: 100%;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(255, 0, 204, 0.3) !important;
+  border-color: rgba(255, 0, 204, 0.4) !important;
+}
+
+.movie-card .card-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.movie-poster {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border: none !important;
+}
+
+.movie-card:hover .movie-poster img {
+  transform: scale(1.06);
+}
+
+.movie-year {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 0, 204, 0.9);
+  color: #fff;
+  padding: 0.25rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+}
+
+.movie-info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.movie-desc {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.5;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.movie-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #ffcc00;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
