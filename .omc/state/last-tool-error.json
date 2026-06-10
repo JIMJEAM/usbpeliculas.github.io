@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"cd \\\"c:\\\\Users\\\\JimmyPro\\\\Desktop\\\\DISEÑO WEB PAGINAS\\\\DISEÑO WEB 8\\\" && node _apply_finder.js IPTV43.html && echo \\\"=== JS SYNTAX CHECK ===\\\" && awk 'NR>=490 && /<\\\\/script>/{print NR\\\": ...",
-  "error": "Exit code 1\nOK: IPTV43.html\n\nDone. 1 updated, 0 failed.\n=== JS SYNTAX CHECK ===\n581: </script>\nnode:internal/modules/cjs/loader:1451\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:\\proc\\687\\fd\\63'\r\n    at node:internal/modules/cjs/loader:1448:15\r\n    at node:internal/main/check_syntax:33:20 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.13.1",
-  "timestamp": "2026-06-10T15:25:39.403Z",
-  "retry_count": 1
-}
