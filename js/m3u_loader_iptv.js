@@ -280,4 +280,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (loadMoreBtn) loadMoreBtn.addEventListener('click', loadMoreVideos);
-});
+en});
