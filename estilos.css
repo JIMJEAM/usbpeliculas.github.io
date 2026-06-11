@@ -78,20 +78,122 @@ img {
                     padding: 35px;
                 }
                 
+                /* ===== Futurist menu (mobile-first) ===== */
                 .menu {
                     display: flex;
-                    flex-direction: row;
-                    padding: 10px;
-                    margin: 10px;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    width: 100%;
+                    max-width: 1200px;
+                    padding: 10px 12px;
+                    margin: 10px auto;
                     font-weight: 900;
+                    background: rgba(10, 12, 40, 0.55);
+                    border: 1px solid rgba(0, 240, 255, 0.25);
+                    border-radius: 18px;
+                    backdrop-filter: blur(12px);
+                    -webkit-backdrop-filter: blur(12px);
+                    box-shadow: 0 0 18px rgba(0, 240, 255, 0.25),
+                                inset 0 0 18px rgba(255, 0, 204, 0.08);
                 }
-                
-                .opciones li {
-                    display: inline-flex;
-                    flex-direction: row;
-                    margin-right: 10px;
-                    align-items: flex-start;
+
+                .opciones {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    flex: 1 1 auto;
+                    margin: 0;
+                    padding: 0;
                     list-style: none;
+                }
+
+                .opciones li {
+                    display: flex;
+                    align-items: center;
+                    margin: 0;
+                    list-style: none;
+                }
+
+                /* Hamburger button (mobile only; hidden on desktop) */
+                .hamburger {
+                    display: inline-flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 5px;
+                    order: 2;
+                    margin-left: auto;
+                    width: 46px;
+                    height: 44px;
+                    padding: 0 12px;
+                    cursor: pointer;
+                    background: linear-gradient(135deg, rgba(0, 240, 255, 0.12), rgba(255, 0, 204, 0.12));
+                    border: 1px solid rgba(0, 240, 255, 0.5);
+                    border-radius: 12px;
+                    box-shadow: 0 0 10px rgba(0, 240, 255, 0.35);
+                }
+
+                .hamburger span {
+                    display: block;
+                    width: 22px;
+                    height: 2px;
+                    border-radius: 2px;
+                    background: #eafffd;
+                    box-shadow: 0 0 6px rgba(0, 240, 255, 0.8);
+                    transition: transform 0.25s ease, opacity 0.2s ease;
+                }
+
+                .menu.is-open .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+                .menu.is-open .hamburger span:nth-child(2) { opacity: 0; }
+                .menu.is-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+                /* Collapse the nav links by default on mobile; logo (li without <a>) stays on the bar */
+                .opciones li:has(a) {
+                    display: none;
+                }
+
+                .menu.is-open .opciones {
+                    flex: 1 1 100%;
+                    order: 3;
+                    flex-direction: column;
+                    align-items: stretch;
+                    margin-top: 8px;
+                }
+
+                .menu.is-open .opciones li {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                .menu.is-open .opciones li:has(a) {
+                    display: flex;
+                }
+
+                .menu.is-open .opciones li a {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                .opciones li img {
+                    width: auto !important;
+                    height: 52px;
+                    max-height: 52px;
+                    object-fit: contain;
+                    filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.6));
+                }
+
+                /* Logo gets more presence at the top of the open mobile dropdown */
+                .menu.is-open .opciones li:not(:has(a)) {
+                    order: -1;
+                    margin-bottom: 4px;
+                }
+
+                .menu.is-open .opciones li:not(:has(a)) img {
+                    height: 70px;
+                    max-height: 70px;
                 }
                 
                 .bag-shop {
@@ -118,20 +220,33 @@ img {
                 
                 .opciones li a {
                     display: flex;
-                    flex-direction: row;
-                    text-align: left;
-                    color: white;
-                    padding: 15px;
+                    align-items: center;
+                    gap: 6px;
+                    color: #eafffd;
+                    padding: 10px 16px;
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
                     text-decoration: none;
-                    border: 1px solid white;
+                    white-space: nowrap;
+                    border: 1px solid rgba(0, 240, 255, 0.5);
+                    border-radius: 999px;
+                    background: linear-gradient(135deg, rgba(0, 240, 255, 0.08), rgba(255, 0, 204, 0.08));
+                    text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+                    transition: all 0.25s ease;
                 }
-                
+
                 a:visited {
                     text-decoration: none;
                 }
-                
-                .opciones li a:hover {
-                    background: #005682;
+
+                .opciones li a:hover,
+                .opciones li a:focus {
+                    color: #0a0c28;
+                    background: linear-gradient(135deg, #00f0ff, #ff00cc);
+                    border-color: #ffffff;
+                    box-shadow: 0 0 14px #00f0ff, 0 0 26px rgba(255, 0, 204, 0.7);
+                    transform: translateY(-2px);
                 }
                 
                 .cuerpo {
@@ -383,29 +498,21 @@ img {
                         transform: translateY(-155px);
                     }
                     .menu {
-                        display: inline-block;
-                        margin: auto;
+                        gap: 6px;
+                        padding: 8px;
+                        border-radius: 14px;
                     }
-                    .opciones li {
-                        display: block;
-                        margin: auto;
-                        align-content: space-around;
-                        flex-direction: column;
-                        flex-wrap: wrap;
-                        margin-right: 5px;
-                        text-align: left;
-                        width: 100%;
+                    .opciones {
+                        gap: 6px;
                     }
-                    .opciones,
-                    .bag-shop li a {
-                        display: block;
-                        margin: auto;
-                        align-content: flex-start;
-                        text-align: left;
-                        color: white;
-                        padding: 15px;
-                        text-decoration: none;
-                        border: none;
+                    .opciones li a {
+                        padding: 8px 12px;
+                        font-size: 11px;
+                        letter-spacing: 0.5px;
+                    }
+                    .opciones li img {
+                        height: 44px;
+                        max-height: 44px;
                     }
                     .bag-shop {
                         margin-top: 10px;
@@ -489,6 +596,28 @@ img {
                 /*tablets*/
                 
                 @media (min-width: 768px) {
+                    .menu {
+                        gap: 12px;
+                        padding: 14px 20px;
+                    }
+                    .hamburger {
+                        display: none;
+                    }
+                    .opciones {
+                        gap: 12px;
+                        flex: 1 1 100%;
+                        flex-direction: row;
+                    }
+                    .opciones li:has(a) {
+                        display: flex;
+                    }
+                    .opciones li a {
+                        padding: 12px 22px;
+                        font-size: 15px;
+                    }
+                    .opciones li img {
+                        max-height: 60px;
+                    }
                     .padd {
                         display: block;
                         width: 100%;

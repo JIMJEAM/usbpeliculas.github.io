@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1781062890251,
+  "lastScanned": 1781203956979,
   "projectRoot": "c:\\Users\\JimmyPro\\Desktop\\DISEÑO WEB PAGINAS\\DISEÑO WEB 8",
   "techStack": {
     "languages": [],
@@ -36,7 +36,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 2,
-      "lastAccessed": 1781062890180,
+      "lastAccessed": 1781203956917,
       "keyFiles": [
         "burbujas.css",
         "estilos.css"
@@ -45,8 +45,8 @@
     "imagenes": {
       "path": "imagenes",
       "purpose": null,
-      "fileCount": 109,
-      "lastAccessed": 1781062890181,
+      "fileCount": 104,
+      "lastAccessed": 1781203956918,
       "keyFiles": [
         "247-32x32.png",
         "adn40.png",
@@ -59,7 +59,7 @@
       "path": "img",
       "purpose": null,
       "fileCount": 31,
-      "lastAccessed": 1781062890182,
+      "lastAccessed": 1781203956918,
       "keyFiles": [
         "1.png",
         "2.png",
@@ -72,7 +72,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 8,
-      "lastAccessed": 1781062890183,
+      "lastAccessed": 1781203956918,
       "keyFiles": [
         "canales.js",
         "counter.js",
@@ -85,7 +85,7 @@
       "path": "temu-img",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1781062890183,
+      "lastAccessed": 1781203956919,
       "keyFiles": [
         "1f679213-4263-4e1f-9d9c-e490b24b957f.png",
         "282ae456-cd8a-49d6-a2c8-a06c6e8fcb0f.png",
@@ -103,21 +103,33 @@
       "type": "file"
     },
     {
+      "path": "estilos.css",
+      "accessCount": 16,
+      "lastAccessed": 1781205178034,
+      "type": "file"
+    },
+    {
       "path": "IPTV.html",
       "accessCount": 2,
       "lastAccessed": 1781063210483,
       "type": "directory"
     },
     {
-      "path": "js\\canales.js",
-      "accessCount": 1,
-      "lastAccessed": 1781063247070,
+      "path": "",
+      "accessCount": 2,
+      "lastAccessed": 1781204353889,
+      "type": "directory"
+    },
+    {
+      "path": "index.html",
+      "accessCount": 2,
+      "lastAccessed": 1781204458136,
       "type": "file"
     },
     {
-      "path": "estilos.css",
+      "path": "js\\canales.js",
       "accessCount": 1,
-      "lastAccessed": 1781063263740,
+      "lastAccessed": 1781063247070,
       "type": "file"
     },
     {
@@ -130,6 +142,12 @@
       "path": "_apply_finder.js",
       "accessCount": 1,
       "lastAccessed": 1781105122438,
+      "type": "file"
+    },
+    {
+      "path": "js\\menu-hamburger.js",
+      "accessCount": 1,
+      "lastAccessed": 1781204782016,
       "type": "file"
     }
   ],
