@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1782270305401,
+  "lastScanned": 1781582025444,
   "projectRoot": "c:\\Users\\JimmyPro\\Desktop\\DISEÑO WEB PAGINAS\\DISEÑO WEB 8",
   "techStack": {
     "languages": [],
@@ -36,7 +36,7 @@
       "path": "css",
       "purpose": null,
       "fileCount": 2,
-      "lastAccessed": 1782270305225,
+      "lastAccessed": 1781582023576,
       "keyFiles": [
         "burbujas.css",
         "estilos.css"
@@ -46,7 +46,7 @@
       "path": "imagenes",
       "purpose": null,
       "fileCount": 104,
-      "lastAccessed": 1782270305226,
+      "lastAccessed": 1781582023587,
       "keyFiles": [
         "247-32x32.png",
         "adn40.png",
@@ -59,7 +59,7 @@
       "path": "img",
       "purpose": null,
       "fileCount": 31,
-      "lastAccessed": 1782270305227,
+      "lastAccessed": 1781582023588,
       "keyFiles": [
         "1.png",
         "2.png",
@@ -72,7 +72,7 @@
       "path": "js",
       "purpose": null,
       "fileCount": 9,
-      "lastAccessed": 1782270305227,
+      "lastAccessed": 1781582023789,
       "keyFiles": [
         "canales.js",
         "counter.js",
@@ -85,7 +85,7 @@
       "path": "temu-img",
       "purpose": null,
       "fileCount": 13,
-      "lastAccessed": 1782270305228,
+      "lastAccessed": 1781582023825,
       "keyFiles": [
         "1f679213-4263-4e1f-9d9c-e490b24b957f.png",
         "282ae456-cd8a-49d6-a2c8-a06c6e8fcb0f.png",
@@ -95,13 +95,6 @@
       ]
     }
   },
-  "hotPaths": [
-    {
-      "path": "IPTV12.html",
-      "accessCount": 2,
-      "lastAccessed": 1782270499203,
-      "type": "file"
-    }
-  ],
+  "hotPaths": [],
   "userDirectives": []
 }

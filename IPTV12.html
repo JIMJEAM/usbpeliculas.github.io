@@ -71,11 +71,17 @@
                 </nav>
             </header>
 
-            <!--reproductor-->
-            <div id="player" class="d-flex justify-content-center d-flex align-items-center m-0 w-75"></div>
-            <script>
-                var player = new Clappr.Player({ source: "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8", parentId: "#player" });
-            </script>
+            <!--reproductor iframe-->
+            <style>
+                .iframe-player-wrap{position:relative;width:100%;max-width:960px;margin:0 auto;padding:0;overflow:hidden;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.6);background:#000}
+                .iframe-player-wrap::before{content:"";display:block;padding-top:56.25%}
+                .iframe-player-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+            </style>
+            <div class="iframe-player-wrap">
+                <iframe src="https://www.tvplusgratis2.com/azteca-7-en-vivo.php"
+                        allowfullscreen allow="autoplay; encrypted-media; fullscreen"
+                        scrolling="no" referrerpolicy="no-referrer"></iframe>
+            </div>
             <span> Smart tv, Tv box y dispositivos android <br>
                 🔁 gira la pantalla <i class="fas fa-mobile-alt"></i> y dale play! <i class="fas fa-play"></i> </span>
 
