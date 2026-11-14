@@ -159,10 +159,20 @@ async function _activatePlanB(url) {
     playerDiv.appendChild(wrapper);
     playerDiv.scrollIntoView({ behavior: 'smooth' });
 
+    const addDirectLink = () => {
+        const link = document.createElement('a');
+        link.href = streamUrl.href;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'Abrir enlace original';
+        link.style.cssText = 'display:inline-block;margin-left:8px;color:#fbbf24;';
+        status.appendChild(link);
+    };
     const showError = message => {
         if (requestId === _playbackRequest) {
             status.textContent = message;
             badge.textContent = '⚠ No se pudo reproducir';
+            addDirectLink();
         }
     };
     const playNative = () => {
@@ -242,6 +252,8 @@ async function _activatePlanB(url) {
             }
 
             badge.textContent = '▶ Probando reproductor alternativo';
+            status.textContent = 'Si tampoco reproduce en el reproductor alternativo:';
+            addDirectLink();
             hls.destroy();
             _hlsInstance = null;
             video.style.display = 'none';
@@ -294,6 +306,98 @@ document.addEventListener('DOMContentLoaded', () => {
     gridList.id        = 'video_navigation_dynamic';
     gridList.className = 'video-grid-responsive';
     if (galleryContainer) galleryContainer.appendChild(gridList);
+
+    function addAuthorizedPlaylistActions() {
+        if (!wrapper || !wrapper.parentElement || document.getElementById('authorized-playlist-actions')) return;
+
+        const playlistUrl = new URL('canales-autorizados.m3u', window.location.href).href;
+        const section = document.createElement('section');
+        section.id = 'authorized-playlist-actions';
+        section.className = 'my-3 p-3 rounded text-center';
+        section.style.cssText = 'background:rgba(20,24,44,.95);color:#e5e7eb;border:1px solid rgba(245,158,11,.45);';
+
+        const heading = document.createElement('h5');
+        heading.textContent = 'Lista autorizada para VLC y apps IPTV';
+
+        const description = document.createElement('p');
+        description.textContent = 'Descarga la lista o compártela con una app compatible. En móviles, pulsa el botón y elige VLC o tu app IPTV; la reproducción web requiere streams HTTPS que permitan CORS.';
+
+        const actions = document.createElement('div');
+        actions.className = 'd-flex flex-wrap justify-content-center gap-2';
+
+        const urlInput = document.createElement('input');
+        urlInput.type = 'url';
+        urlInput.readOnly = true;
+        urlInput.value = playlistUrl;
+        urlInput.className = 'form-control mt-2';
+        urlInput.setAttribute('aria-label', 'URL de la lista M3U');
+
+        const downloadLink = document.createElement('a');
+        downloadLink.href = playlistUrl;
+        downloadLink.download = 'canales-autorizados.m3u';
+        downloadLink.className = 'btn btn-warning fw-bold';
+        downloadLink.textContent = '⬇️ Descargar lista M3U';
+
+        const shareButton = document.createElement('button');
+        shareButton.type = 'button';
+        shareButton.className = 'btn btn-outline-light';
+        shareButton.textContent = 'Compartir con VLC / app IPTV';
+
+        const copyButton = document.createElement('button');
+        copyButton.type = 'button';
+        copyButton.className = 'btn btn-outline-light';
+        copyButton.textContent = 'Copiar enlace';
+
+        const status = document.createElement('span');
+        status.className = 'd-block mt-2';
+        status.setAttribute('role', 'status');
+
+        async function copyPlaylistUrl() {
+            try {
+                await navigator.clipboard.writeText(playlistUrl);
+                status.textContent = 'Enlace de la lista copiado.';
+            } catch (error) {
+                console.error('No se pudo copiar el enlace de la lista:', error);
+                urlInput.focus();
+                urlInput.select();
+                status.textContent = 'Enlace seleccionado; cópialo para abrirlo en tu app IPTV.';
+            }
+        }
+
+        shareButton.addEventListener('click', async () => {
+            if (!navigator.share) {
+                await copyPlaylistUrl();
+                return;
+            }
+
+            try {
+                await navigator.share({
+                    title: 'Lista M3U autorizada',
+                    text: 'Abrir esta lista en VLC o una app IPTV compatible',
+                    url: playlistUrl
+                });
+                status.textContent = 'Lista compartida.';
+            } catch (error) {
+                if (error.name !== 'AbortError') {
+                    console.error('No se pudo compartir la lista:', error);
+                    status.textContent = 'No se pudo compartir la lista. Puedes descargarla o copiar el enlace.';
+                }
+            }
+        });
+        copyButton.addEventListener('click', copyPlaylistUrl);
+
+        actions.appendChild(downloadLink);
+        actions.appendChild(shareButton);
+        actions.appendChild(copyButton);
+        section.appendChild(heading);
+        section.appendChild(description);
+        section.appendChild(actions);
+        section.appendChild(urlInput);
+        section.appendChild(status);
+        wrapper.parentElement.insertBefore(section, wrapper);
+    }
+
+    addAuthorizedPlaylistActions();
 
     async function fetchAndParseM3U() {
         if (isFetched) return;
