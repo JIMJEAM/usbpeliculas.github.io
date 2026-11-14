@@ -41,43 +41,50 @@
             app:show_buffering="when_playing"
             app:use_controller="true" />
 
-        <Button
+        <ImageButton
             android:id="@+id/fullscreenToggleButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="top|end"
             android:layout_margin="8dp"
-            android:backgroundTint="#CC101522"
+            android:background="@drawable/player_control_background"
             android:contentDescription="Activar pantalla completa"
-            android:minWidth="0dp"
-            android:minHeight="0dp"
-            android:text="⛶"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_fullscreen"
+            android:tint="#FFFFFF" />
 
-        <Button
+        <ImageButton
             android:id="@+id/resizeModeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="top|start"
             android:layout_margin="8dp"
-            android:backgroundTint="#CC101522"
+            android:background="@drawable/player_control_background"
             android:contentDescription="Modo de imagen: Ajustar pantalla. Pulsa para cambiar el ajuste."
-            android:minHeight="0dp"
-            android:text="Ajustar"
-            android:textColor="#FFFFFF" />
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_fit_screen"
+            android:tint="#FFFFFF" />
 
-        <Button
+        <ImageButton
             android:id="@+id/playlistToggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="bottom|end"
             android:layout_margin="8dp"
-            android:backgroundTint="#CC101522"
+            android:background="@drawable/player_control_background"
             android:contentDescription="Mostrar lista de canales sobre el video"
-            android:minHeight="0dp"
-            android:text="Lista"
-            android:textColor="#FFFFFF" />
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_playlist"
+            android:tint="#FFFFFF" />
 
         <LinearLayout
             android:id="@+id/fullscreenChannelPanel"
@@ -107,14 +114,18 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/closePlaylistButton"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
+                    android:background="@drawable/player_control_background"
                     android:contentDescription="Cerrar lista de canales"
-                    android:minWidth="0dp"
-                    android:text="×"
-                    android:textSize="22sp" />
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:padding="11dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_close"
+                    android:tint="#FFFFFF" />
             </LinearLayout>
 
             <ListView
@@ -145,14 +156,18 @@
         android:paddingStart="6dp"
         android:paddingEnd="6dp">
 
-        <Button
+        <ImageButton
             android:id="@+id/volumeDownButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:background="@drawable/player_control_background"
             android:contentDescription="Bajar volumen"
-            android:minWidth="0dp"
-            android:text="−"
-            android:textSize="22sp" />
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_volume_down"
+            android:tint="#FFFFFF" />
 
         <SeekBar
             android:id="@+id/volumeSeekBar"
@@ -164,23 +179,31 @@
             android:progressTint="#82D8FF"
             android:thumbTint="#FFFFFF" />
 
-        <Button
+        <ImageButton
             android:id="@+id/muteButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:background="@drawable/player_control_background"
             android:contentDescription="Silenciar"
-            android:minWidth="0dp"
-            android:text="🔊"
-            android:textSize="18sp" />
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_volume_up"
+            android:tint="#FFFFFF" />
 
-        <Button
+        <ImageButton
             android:id="@+id/volumeUpButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:background="@drawable/player_control_background"
             android:contentDescription="Subir volumen"
-            android:minWidth="0dp"
-            android:text="+"
-            android:textSize="20sp" />
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_volume_up"
+            android:tint="#FFFFFF" />
     </LinearLayout>
 
     <TextView

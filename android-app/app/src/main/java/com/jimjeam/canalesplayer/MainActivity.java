@@ -7,14 +7,18 @@ import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.SeekBar;
@@ -50,9 +54,12 @@ public final class MainActivity extends Activity {
     private static final Pattern GROUP_PATTERN = Pattern.compile("group-title=\"([^\"]*)\"");
     private static final String CHANNELS_URL =
             "https://pelisplaya.net/canales-autorizados.m3u";
+    private static final long PLAYER_CONTROLS_HIDE_DELAY_MS = 5000;
 
     private final ArrayList<Channel> channels = new ArrayList<>();
     private final ExecutorService ioExecutor = Executors.newSingleThreadExecutor();
+    private final Handler controlsHandler = new Handler(Looper.getMainLooper());
+    private final Runnable hidePlayerControlsRunnable = this::hidePlayerControls;
     private ExoPlayer player;
     private String selectedUrl;
     private String selectedMimeType;
@@ -63,13 +70,13 @@ public final class MainActivity extends Activity {
     private TextView statusText;
     private Button openExternalButton;
     private Button refreshChannelsButton;
-    private Button resizeModeButton;
-    private Button fullscreenToggleButton;
-    private Button playlistToggleButton;
-    private Button closePlaylistButton;
-    private Button muteButton;
-    private Button volumeDownButton;
-    private Button volumeUpButton;
+    private ImageButton resizeModeButton;
+    private ImageButton fullscreenToggleButton;
+    private ImageButton playlistToggleButton;
+    private ImageButton closePlaylistButton;
+    private ImageButton muteButton;
+    private ImageButton volumeDownButton;
+    private ImageButton volumeUpButton;
     private EditText searchInput;
     private SeekBar volumeSeekBar;
     private View volumeControls;
@@ -82,6 +89,7 @@ public final class MainActivity extends Activity {
     private boolean isFullscreen;
     private boolean isAutoFullscreen;
     private boolean hasPlaybackError;
+    private boolean arePlayerControlsVisible = true;
     private int lastAudibleVolume = 100;
 
     @Override
@@ -182,12 +190,13 @@ public final class MainActivity extends Activity {
 
         loadBundledChannels();
         refreshChannels();
+        showPlayerControls();
     }
 
     private void updateResizeModeButton() {
-        String mode = isFillScreen ? "Llenar" : "Ajustar";
         String description = isFillScreen ? "Llenar pantalla" : "Ajustar pantalla";
-        resizeModeButton.setText(mode);
+        resizeModeButton.setImageResource(isFillScreen
+                ? R.drawable.ic_zoom_screen : R.drawable.ic_fit_screen);
         resizeModeButton.setContentDescription(
                 "Modo de imagen: " + description + ". Pulsa para cambiar el ajuste.");
     }
@@ -237,7 +246,8 @@ public final class MainActivity extends Activity {
 
     private void updateMuteButton() {
         boolean muted = volumeSeekBar.getProgress() == 0;
-        muteButton.setText(muted ? "🔇" : "🔊");
+        muteButton.setImageResource(muted
+                ? R.drawable.ic_volume_mute : R.drawable.ic_volume_up);
         muteButton.setContentDescription(muted ? "Activar sonido" : "Silenciar");
     }
 
@@ -260,7 +270,8 @@ public final class MainActivity extends Activity {
                 : Math.round(220 * getResources().getDisplayMetrics().density);
         playerContainer.setLayoutParams(playerParams);
 
-        fullscreenToggleButton.setText(fullscreen ? "×" : "⛶");
+        fullscreenToggleButton.setImageResource(fullscreen
+                ? R.drawable.ic_fullscreen_exit : R.drawable.ic_fullscreen);
         fullscreenToggleButton.setContentDescription(fullscreen
                 ? "Salir de pantalla completa" : "Activar pantalla completa");
 
@@ -274,13 +285,38 @@ public final class MainActivity extends Activity {
             insetsController.show(WindowInsetsCompat.Type.systemBars());
         }
         ViewCompat.requestApplyInsets(rootLayout);
+        showPlayerControls();
     }
 
     private void setPlaylistPanelVisible(boolean visible) {
         fullscreenChannelPanel.setVisibility(visible ? View.VISIBLE : View.GONE);
-        playlistToggleButton.setText(visible ? "Cerrar lista" : "Lista");
         playlistToggleButton.setContentDescription(visible
-                ? "Cerrar lista de canales" : "Mostrar lista de canales sobre el video");
+                ? "Ocultar lista de canales" : "Mostrar lista de canales sobre el video");
+        showPlayerControls();
+    }
+
+    private void showPlayerControls() {
+        controlsHandler.removeCallbacks(hidePlayerControlsRunnable);
+        arePlayerControlsVisible = true;
+        resizeModeButton.setVisibility(View.VISIBLE);
+        fullscreenToggleButton.setVisibility(View.VISIBLE);
+        playlistToggleButton.setVisibility(View.VISIBLE);
+        closePlaylistButton.setVisibility(fullscreenChannelPanel.getVisibility() == View.VISIBLE
+                ? View.VISIBLE : View.INVISIBLE);
+        controlsHandler.postDelayed(hidePlayerControlsRunnable, PLAYER_CONTROLS_HIDE_DELAY_MS);
+    }
+
+    private void hidePlayerControls() {
+        arePlayerControlsVisible = false;
+        View focusedView = getCurrentFocus();
+        if (focusedView == resizeModeButton || focusedView == fullscreenToggleButton
+                || focusedView == playlistToggleButton || focusedView == closePlaylistButton) {
+            focusedView.clearFocus();
+        }
+        resizeModeButton.setVisibility(View.INVISIBLE);
+        fullscreenToggleButton.setVisibility(View.INVISIBLE);
+        playlistToggleButton.setVisibility(View.INVISIBLE);
+        closePlaylistButton.setVisibility(View.INVISIBLE);
     }
 
     private void playSelectedChannel(AdapterView<?> parent, int position) {
@@ -480,8 +516,48 @@ public final class MainActivity extends Activity {
     }
 
     @Override
+    public void onUserInteraction() {
+        super.onUserInteraction();
+        showPlayerControls();
+    }
+
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN && isNavigationKey(event.getKeyCode())) {
+            boolean controlsWereHidden = !arePlayerControlsVisible;
+            boolean channelListHasFocus = channelList.hasFocus() || fullscreenChannelList.hasFocus();
+            showPlayerControls();
+
+            if (controlsWereHidden && !channelListHasFocus) {
+                playlistToggleButton.requestFocus();
+                if (event.getKeyCode() == KeyEvent.KEYCODE_DPAD_CENTER
+                        || event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
+                    return true;
+                }
+            }
+        }
+        return super.dispatchKeyEvent(event);
+    }
+
+    private boolean isNavigationKey(int keyCode) {
+        return keyCode == KeyEvent.KEYCODE_DPAD_UP
+                || keyCode == KeyEvent.KEYCODE_DPAD_DOWN
+                || keyCode == KeyEvent.KEYCODE_DPAD_LEFT
+                || keyCode == KeyEvent.KEYCODE_DPAD_RIGHT
+                || keyCode == KeyEvent.KEYCODE_DPAD_CENTER
+                || keyCode == KeyEvent.KEYCODE_ENTER;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        showPlayerControls();
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
+        controlsHandler.removeCallbacks(hidePlayerControlsRunnable);
         if (player != null) player.pause();
     }
 
@@ -501,6 +577,10 @@ public final class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
+        if (fullscreenChannelPanel.getVisibility() == View.VISIBLE) {
+            setPlaylistPanelVisible(false);
+            return;
+        }
         if (isFullscreen) {
             if (isAutoFullscreen) isAutoFullscreen = false;
             setFullscreen(false);
@@ -513,6 +593,7 @@ public final class MainActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         ioExecutor.shutdownNow();
+        controlsHandler.removeCallbacks(hidePlayerControlsRunnable);
         if (player != null) {
             player.release();
             player = null;
