@@ -4,11 +4,12 @@
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#101522"
+    android:background="@drawable/app_background"
     android:orientation="vertical"
     android:padding="12dp">
 
     <TextView
+        android:id="@+id/appTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="8dp"
@@ -27,20 +28,94 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#AAB2C0" />
 
-    <androidx.media3.ui.PlayerView
-        android:id="@+id/playerView"
+    <FrameLayout
+        android:id="@+id/playerContainer"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:layout_marginTop="8dp"
-        app:show_buffering="when_playing"
-        app:use_controller="true" />
+        android:layout_marginTop="8dp">
 
-    <Button
-        android:id="@+id/resizeModeButton"
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:show_buffering="when_playing"
+            app:use_controller="true" />
+
+        <Button
+            android:id="@+id/fullscreenToggleButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:backgroundTint="#CC101522"
+            android:contentDescription="Activar pantalla completa"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="⛶"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/resizeModeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="top|start"
+            android:layout_margin="8dp"
+            android:backgroundTint="#CC101522"
+            android:contentDescription="Modo de imagen: Ajustar pantalla. Pulsa para cambiar el ajuste."
+            android:minHeight="0dp"
+            android:text="Ajustar"
+            android:textColor="#FFFFFF" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/volumeControls"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="Modo de imagen: Ajustar pantalla. Pulsa para cambiar el ajuste."
-        android:text="Ajustar pantalla" />
+        android:layout_marginTop="4dp"
+        android:background="@drawable/channel_card_glass"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp">
+
+        <Button
+            android:id="@+id/volumeDownButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Bajar volumen"
+            android:minWidth="0dp"
+            android:text="−"
+            android:textSize="22sp" />
+
+        <SeekBar
+            android:id="@+id/volumeSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="100"
+            android:progressTint="#82D8FF"
+            android:thumbTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/muteButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Silenciar"
+            android:minWidth="0dp"
+            android:text="🔊"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/volumeUpButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Subir volumen"
+            android:minWidth="0dp"
+            android:text="+"
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/statusText"
@@ -69,9 +144,14 @@
         android:id="@+id/channelList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="4dp"
         android:layout_weight="1"
-        android:divider="#30384A"
-        android:dividerHeight="1dp"
-        android:fastScrollEnabled="true" />
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fastScrollEnabled="true"
+        android:overScrollMode="never"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
 </LinearLayout>

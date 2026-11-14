@@ -3,20 +3,25 @@ package com.jimjeam.canalesplayer;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.media3.common.MediaItem;
 import androidx.media3.common.MimeTypes;
@@ -49,26 +54,43 @@ public final class MainActivity extends Activity {
     private ExoPlayer player;
     private String selectedUrl;
     private String selectedMimeType;
+    private View rootLayout;
+    private TextView appTitle;
+    private FrameLayout playerContainer;
     private PlayerView playerView;
     private TextView statusText;
     private Button openExternalButton;
     private Button refreshChannelsButton;
     private Button resizeModeButton;
+    private Button fullscreenToggleButton;
+    private Button muteButton;
+    private Button volumeDownButton;
+    private Button volumeUpButton;
     private EditText searchInput;
+    private SeekBar volumeSeekBar;
+    private View volumeControls;
     private ListView channelList;
     private ArrayAdapter<Channel> channelAdapter;
     private boolean isRefreshingChannels;
     private boolean isFillScreen;
+    private boolean isFullscreen;
+    private boolean hasPlaybackError;
+    private int lastAudibleVolume = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
         setContentView(R.layout.activity_main);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.rootLayout), (view, insets) -> {
+        rootLayout = findViewById(R.id.rootLayout);
+        appTitle = findViewById(R.id.appTitle);
+        playerContainer = findViewById(R.id.playerContainer);
+        ViewCompat.setOnApplyWindowInsetsListener(rootLayout, (view, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            int padding = Math.round(12 * getResources().getDisplayMetrics().density);
+            int padding = isFullscreen ? 0
+                    : Math.round(12 * getResources().getDisplayMetrics().density);
             view.setPadding(systemBars.left + padding, systemBars.top + padding,
                     systemBars.right + padding, systemBars.bottom + padding);
             return insets;
@@ -80,6 +102,12 @@ public final class MainActivity extends Activity {
         openExternalButton = findViewById(R.id.openExternalButton);
         refreshChannelsButton = findViewById(R.id.refreshChannelsButton);
         resizeModeButton = findViewById(R.id.resizeModeButton);
+        fullscreenToggleButton = findViewById(R.id.fullscreenToggleButton);
+        volumeControls = findViewById(R.id.volumeControls);
+        volumeSeekBar = findViewById(R.id.volumeSeekBar);
+        muteButton = findViewById(R.id.muteButton);
+        volumeDownButton = findViewById(R.id.volumeDownButton);
+        volumeUpButton = findViewById(R.id.volumeUpButton);
 
         playerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FIT);
         updateResizeModeButton();
@@ -90,17 +118,22 @@ public final class MainActivity extends Activity {
                     : AspectRatioFrameLayout.RESIZE_MODE_FIT);
             updateResizeModeButton();
         });
+        fullscreenToggleButton.setOnClickListener(view -> setFullscreen(!isFullscreen));
+
         player = new ExoPlayer.Builder(this).build();
+        player.setVolume(1f);
         playerView.setPlayer(player);
         player.addListener(new Player.Listener() {
             @Override
             public void onPlayerError(PlaybackException error) {
+                hasPlaybackError = true;
                 statusText.setText("No se pudo reproducir este stream. Prueba abrirlo en otra app.");
-                openExternalButton.setVisibility(View.VISIBLE);
+                if (!isFullscreen) openExternalButton.setVisibility(View.VISIBLE);
             }
         });
 
         openExternalButton.setOnClickListener(view -> openSelectedChannelExternally());
+        setupVolumeControls();
 
         channelAdapter = createChannelAdapter();
         channelList.setAdapter(channelAdapter);
@@ -128,29 +161,122 @@ public final class MainActivity extends Activity {
     }
 
     private void updateResizeModeButton() {
-        String mode = isFillScreen ? "Llenar pantalla" : "Ajustar pantalla";
+        String mode = isFillScreen ? "Llenar" : "Ajustar";
+        String description = isFillScreen ? "Llenar pantalla" : "Ajustar pantalla";
         resizeModeButton.setText(mode);
         resizeModeButton.setContentDescription(
-                "Modo de imagen: " + mode + ". Pulsa para cambiar el ajuste.");
+                "Modo de imagen: " + description + ". Pulsa para cambiar el ajuste.");
+    }
+
+    private void setupVolumeControls() {
+        volumeSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (fromUser) setPlayerVolume(progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+        volumeDownButton.setOnClickListener(view -> adjustPlayerVolume(-10));
+        volumeUpButton.setOnClickListener(view -> adjustPlayerVolume(10));
+        muteButton.setOnClickListener(view -> toggleMute());
+        updateMuteButton();
+    }
+
+    private void adjustPlayerVolume(int change) {
+        int volume = Math.max(0, Math.min(100, volumeSeekBar.getProgress() + change));
+        volumeSeekBar.setProgress(volume);
+        setPlayerVolume(volume);
+    }
+
+    private void toggleMute() {
+        int volume = volumeSeekBar.getProgress();
+        if (volume > 0) {
+            lastAudibleVolume = volume;
+            volume = 0;
+        } else {
+            volume = lastAudibleVolume > 0 ? lastAudibleVolume : 50;
+        }
+        volumeSeekBar.setProgress(volume);
+        setPlayerVolume(volume);
+    }
+
+    private void setPlayerVolume(int volume) {
+        player.setVolume(volume / 100f);
+        if (volume > 0) lastAudibleVolume = volume;
+        updateMuteButton();
+    }
+
+    private void updateMuteButton() {
+        boolean muted = volumeSeekBar.getProgress() == 0;
+        muteButton.setText(muted ? "🔇" : "🔊");
+        muteButton.setContentDescription(muted ? "Activar sonido" : "Silenciar");
+    }
+
+    private void setFullscreen(boolean fullscreen) {
+        isFullscreen = fullscreen;
+        int visibility = fullscreen ? View.GONE : View.VISIBLE;
+        appTitle.setVisibility(visibility);
+        searchInput.setVisibility(visibility);
+        volumeControls.setVisibility(visibility);
+        statusText.setVisibility(visibility);
+        refreshChannelsButton.setVisibility(visibility);
+        channelList.setVisibility(visibility);
+        openExternalButton.setVisibility(!fullscreen && hasPlaybackError
+                ? View.VISIBLE : View.GONE);
+
+        ViewGroup.LayoutParams playerParams = playerContainer.getLayoutParams();
+        playerParams.height = fullscreen
+                ? ViewGroup.LayoutParams.MATCH_PARENT
+                : Math.round(220 * getResources().getDisplayMetrics().density);
+        playerContainer.setLayoutParams(playerParams);
+
+        fullscreenToggleButton.setText(fullscreen ? "×" : "⛶");
+        fullscreenToggleButton.setContentDescription(fullscreen
+                ? "Salir de pantalla completa" : "Activar pantalla completa");
+
+        WindowInsetsControllerCompat insetsController =
+                WindowCompat.getInsetsController(getWindow(), rootLayout);
+        if (fullscreen) {
+            insetsController.setSystemBarsBehavior(
+                    WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+            insetsController.hide(WindowInsetsCompat.Type.systemBars());
+        } else {
+            insetsController.show(WindowInsetsCompat.Type.systemBars());
+        }
+        ViewCompat.requestApplyInsets(rootLayout);
     }
 
     private ArrayAdapter<Channel> createChannelAdapter() {
         return new ArrayAdapter<Channel>(
                 this,
-                android.R.layout.simple_list_item_1,
+                R.layout.channel_list_item,
+                R.id.channelName,
                 channels
         ) {
             @Override
             public View getView(int position, View convertView, android.view.ViewGroup parent) {
-                TextView row = (TextView) super.getView(position, convertView, parent);
+                View row = convertView == null
+                        ? MainActivity.this.getLayoutInflater()
+                                .inflate(R.layout.channel_list_item, parent, false)
+                        : convertView;
                 Channel channel = getItem(position);
-                if (channel != null && channel.group != null && !channel.group.isEmpty()
-                        && !channel.group.equals("-")) {
-                    row.setText(channel.name + "\n" + channel.group);
-                    row.setTextSize(15);
+                if (channel != null) {
+                    TextView name = row.findViewById(R.id.channelName);
+                    TextView group = row.findViewById(R.id.channelGroup);
+                    name.setText(channel.name);
+                    if (channel.group != null && !channel.group.isEmpty()
+                            && !channel.group.equals("-")) {
+                        group.setText(channel.group);
+                        group.setVisibility(View.VISIBLE);
+                    } else {
+                        group.setVisibility(View.GONE);
+                    }
                 }
-                row.setTextColor(0xFFFFFFFF);
-                row.setPadding(20, 14, 20, 14);
                 return row;
             }
         };
@@ -272,6 +398,7 @@ public final class MainActivity extends Activity {
     private void playChannel(Channel channel) {
         selectedUrl = channel.url;
         selectedMimeType = inferMimeType(channel.url);
+        hasPlaybackError = false;
         openExternalButton.setVisibility(View.GONE);
         statusText.setText("Cargando: " + channel.name);
 
@@ -310,6 +437,15 @@ public final class MainActivity extends Activity {
     protected void onStop() {
         super.onStop();
         if (player != null) player.pause();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (isFullscreen) {
+            setFullscreen(false);
+            return;
+        }
+        super.onBackPressed();
     }
 
     @Override
