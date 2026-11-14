@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="8dp"
-        android:text="Canales M3U"
+        android:text="Player IPTV M3U"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold" />
@@ -66,6 +66,72 @@
             android:minHeight="0dp"
             android:text="Ajustar"
             android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/playlistToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:backgroundTint="#CC101522"
+            android:contentDescription="Mostrar lista de canales sobre el video"
+            android:minHeight="0dp"
+            android:text="Lista"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:id="@+id/fullscreenChannelPanel"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:background="@drawable/channel_panel_glass"
+            android:elevation="12dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="8dp"
+                    android:text="Lista de canales"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/closePlaylistButton"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="Cerrar lista de canales"
+                    android:minWidth="0dp"
+                    android:text="×"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/fullscreenChannelList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:cacheColorHint="@android:color/transparent"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:fastScrollEnabled="true"
+                android:overScrollMode="never"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+        </LinearLayout>
     </FrameLayout>
 
     <LinearLayout

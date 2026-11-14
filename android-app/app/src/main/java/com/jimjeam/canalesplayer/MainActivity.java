@@ -3,6 +3,7 @@ package com.jimjeam.canalesplayer;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,17 +65,22 @@ public final class MainActivity extends Activity {
     private Button refreshChannelsButton;
     private Button resizeModeButton;
     private Button fullscreenToggleButton;
+    private Button playlistToggleButton;
+    private Button closePlaylistButton;
     private Button muteButton;
     private Button volumeDownButton;
     private Button volumeUpButton;
     private EditText searchInput;
     private SeekBar volumeSeekBar;
     private View volumeControls;
+    private View fullscreenChannelPanel;
     private ListView channelList;
+    private ListView fullscreenChannelList;
     private ArrayAdapter<Channel> channelAdapter;
     private boolean isRefreshingChannels;
     private boolean isFillScreen;
     private boolean isFullscreen;
+    private boolean isAutoFullscreen;
     private boolean hasPlaybackError;
     private int lastAudibleVolume = 100;
 
@@ -103,6 +110,10 @@ public final class MainActivity extends Activity {
         refreshChannelsButton = findViewById(R.id.refreshChannelsButton);
         resizeModeButton = findViewById(R.id.resizeModeButton);
         fullscreenToggleButton = findViewById(R.id.fullscreenToggleButton);
+        playlistToggleButton = findViewById(R.id.playlistToggleButton);
+        closePlaylistButton = findViewById(R.id.closePlaylistButton);
+        fullscreenChannelPanel = findViewById(R.id.fullscreenChannelPanel);
+        fullscreenChannelList = findViewById(R.id.fullscreenChannelList);
         volumeControls = findViewById(R.id.volumeControls);
         volumeSeekBar = findViewById(R.id.volumeSeekBar);
         muteButton = findViewById(R.id.muteButton);
@@ -118,7 +129,19 @@ public final class MainActivity extends Activity {
                     : AspectRatioFrameLayout.RESIZE_MODE_FIT);
             updateResizeModeButton();
         });
-        fullscreenToggleButton.setOnClickListener(view -> setFullscreen(!isFullscreen));
+        fullscreenToggleButton.setOnClickListener(view -> {
+            if (isFullscreen && isAutoFullscreen) isAutoFullscreen = false;
+            setFullscreen(!isFullscreen);
+        });
+        playlistToggleButton.setOnClickListener(view -> {
+            if (fullscreenChannelPanel.getVisibility() == View.VISIBLE) {
+                setPlaylistPanelVisible(false);
+            } else {
+                searchInput.setText("");
+                setPlaylistPanelVisible(true);
+            }
+        });
+        closePlaylistButton.setOnClickListener(view -> setPlaylistPanelVisible(false));
 
         player = new ExoPlayer.Builder(this).build();
         player.setVolume(1f);
@@ -137,10 +160,11 @@ public final class MainActivity extends Activity {
 
         channelAdapter = createChannelAdapter();
         channelList.setAdapter(channelAdapter);
-        channelList.setOnItemClickListener((parent, view, position, id) -> {
-            Channel channel = (Channel) parent.getItemAtPosition(position);
-            if (channel != null) playChannel(channel);
-        });
+        fullscreenChannelList.setAdapter(channelAdapter);
+        channelList.setOnItemClickListener((parent, view, position, id) ->
+                playSelectedChannel(parent, position));
+        fullscreenChannelList.setOnItemClickListener((parent, view, position, id) ->
+                playSelectedChannel(parent, position));
 
         refreshChannelsButton.setOnClickListener(view -> refreshChannels());
         searchInput.addTextChangedListener(new TextWatcher() {
@@ -219,6 +243,7 @@ public final class MainActivity extends Activity {
 
     private void setFullscreen(boolean fullscreen) {
         isFullscreen = fullscreen;
+        if (!fullscreen) setPlaylistPanelVisible(false);
         int visibility = fullscreen ? View.GONE : View.VISIBLE;
         appTitle.setVisibility(visibility);
         searchInput.setVisibility(visibility);
@@ -249,6 +274,21 @@ public final class MainActivity extends Activity {
             insetsController.show(WindowInsetsCompat.Type.systemBars());
         }
         ViewCompat.requestApplyInsets(rootLayout);
+    }
+
+    private void setPlaylistPanelVisible(boolean visible) {
+        fullscreenChannelPanel.setVisibility(visible ? View.VISIBLE : View.GONE);
+        playlistToggleButton.setText(visible ? "Cerrar lista" : "Lista");
+        playlistToggleButton.setContentDescription(visible
+                ? "Cerrar lista de canales" : "Mostrar lista de canales sobre el video");
+    }
+
+    private void playSelectedChannel(AdapterView<?> parent, int position) {
+        Channel channel = (Channel) parent.getItemAtPosition(position);
+        if (channel != null) {
+            playChannel(channel);
+            setPlaylistPanelVisible(false);
+        }
     }
 
     private ArrayAdapter<Channel> createChannelAdapter() {
@@ -379,6 +419,7 @@ public final class MainActivity extends Activity {
         channels.addAll(updatedChannels);
         channelAdapter = createChannelAdapter();
         channelList.setAdapter(channelAdapter);
+        fullscreenChannelList.setAdapter(channelAdapter);
         if (!query.isEmpty()) channelAdapter.getFilter().filter(query);
     }
 
@@ -408,6 +449,11 @@ public final class MainActivity extends Activity {
         player.setMediaItem(mediaItem.build());
         player.prepare();
         player.play();
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE
+                && !isFullscreen) {
+            isAutoFullscreen = true;
+            setFullscreen(true);
+        }
     }
 
     private String inferMimeType(String url) {
@@ -440,8 +486,23 @@ public final class MainActivity extends Activity {
     }
 
     @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE
+                && selectedUrl != null && !isFullscreen) {
+            isAutoFullscreen = true;
+            setFullscreen(true);
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT
+                && isAutoFullscreen) {
+            isAutoFullscreen = false;
+            setFullscreen(false);
+        }
+    }
+
+    @Override
     public void onBackPressed() {
         if (isFullscreen) {
+            if (isAutoFullscreen) isAutoFullscreen = false;
             setFullscreen(false);
             return;
         }
