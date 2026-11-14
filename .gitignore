@@ -1,0 +1,25 @@
+# Android Studio and Gradle local/build files
+.gradle/
+**/.gradle/
+**/build/
+local.properties
+*.iml
+.idea/
+
+# Local agent/session data
+.omc/
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache
+__pycache__/
+*.py[cod]

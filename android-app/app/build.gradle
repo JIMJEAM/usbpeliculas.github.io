@@ -1,0 +1,45 @@
+plugins {
+    id 'com.android.application'
+}
+
+def channelsAssetDir = layout.buildDirectory.dir('generated/channelsAssets')
+
+android {
+    namespace 'com.jimjeam.canalesplayer'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.jimjeam.canalesplayer'
+        minSdk 23
+        targetSdk 36
+        versionCode 1
+        versionName '1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    sourceSets {
+        main.assets.srcDir(channelsAssetDir)
+    }
+}
+
+tasks.register('copyChannelsM3u', Copy) {
+    from(rootProject.file('../canales-autorizados.m3u'))
+    into(channelsAssetDir)
+    rename { 'channels.m3u' }
+}
+
+tasks.named('preBuild').configure {
+    dependsOn tasks.named('copyChannelsM3u')
+}
+
+dependencies {
+    implementation 'androidx.media3:media3-exoplayer:1.11.1'
+    implementation 'androidx.media3:media3-exoplayer-hls:1.11.1'
+    implementation 'androidx.media3:media3-exoplayer-dash:1.11.1'
+    implementation 'androidx.media3:media3-ui:1.11.1'
+    implementation 'androidx.core:core:1.17.0'
+}

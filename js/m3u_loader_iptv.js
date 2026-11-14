@@ -311,6 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!wrapper || !wrapper.parentElement || document.getElementById('authorized-playlist-actions')) return;
 
         const playlistUrl = new URL('canales-autorizados.m3u', window.location.href).href;
+        const appUrl = new URL('CanalesPlayer.apk', document.baseURI).href;
         const section = document.createElement('section');
         section.id = 'authorized-playlist-actions';
         section.className = 'my-3 p-3 rounded text-center';
@@ -337,6 +338,12 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadLink.download = 'canales-autorizados.m3u';
         downloadLink.className = 'btn btn-warning fw-bold';
         downloadLink.textContent = '⬇️ Descargar lista M3U';
+
+        const appDownloadLink = document.createElement('a');
+        appDownloadLink.href = appUrl;
+        appDownloadLink.download = 'CanalesPlayer.apk';
+        appDownloadLink.className = 'btn btn-success fw-bold';
+        appDownloadLink.textContent = '⬇️ Descargar app Android (APK)';
 
         const shareButton = document.createElement('button');
         shareButton.type = 'button';
@@ -388,6 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         actions.appendChild(downloadLink);
         actions.appendChild(shareButton);
+        actions.appendChild(appDownloadLink);
         actions.appendChild(copyButton);
         section.appendChild(heading);
         section.appendChild(description);
