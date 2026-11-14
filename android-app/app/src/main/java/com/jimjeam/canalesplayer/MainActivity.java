@@ -23,6 +23,7 @@ import androidx.media3.common.MimeTypes;
 import androidx.media3.common.PlaybackException;
 import androidx.media3.common.Player;
 import androidx.media3.exoplayer.ExoPlayer;
+import androidx.media3.ui.AspectRatioFrameLayout;
 import androidx.media3.ui.PlayerView;
 
 import java.io.BufferedReader;
@@ -48,13 +49,16 @@ public final class MainActivity extends Activity {
     private ExoPlayer player;
     private String selectedUrl;
     private String selectedMimeType;
+    private PlayerView playerView;
     private TextView statusText;
     private Button openExternalButton;
     private Button refreshChannelsButton;
+    private Button resizeModeButton;
     private EditText searchInput;
     private ListView channelList;
     private ArrayAdapter<Channel> channelAdapter;
     private boolean isRefreshingChannels;
+    private boolean isFillScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,13 +73,23 @@ public final class MainActivity extends Activity {
                     systemBars.right + padding, systemBars.bottom + padding);
             return insets;
         });
-        PlayerView playerView = findViewById(R.id.playerView);
+        playerView = findViewById(R.id.playerView);
         searchInput = findViewById(R.id.searchInput);
         channelList = findViewById(R.id.channelList);
         statusText = findViewById(R.id.statusText);
         openExternalButton = findViewById(R.id.openExternalButton);
         refreshChannelsButton = findViewById(R.id.refreshChannelsButton);
+        resizeModeButton = findViewById(R.id.resizeModeButton);
 
+        playerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FIT);
+        updateResizeModeButton();
+        resizeModeButton.setOnClickListener(view -> {
+            isFillScreen = !isFillScreen;
+            playerView.setResizeMode(isFillScreen
+                    ? AspectRatioFrameLayout.RESIZE_MODE_ZOOM
+                    : AspectRatioFrameLayout.RESIZE_MODE_FIT);
+            updateResizeModeButton();
+        });
         player = new ExoPlayer.Builder(this).build();
         playerView.setPlayer(player);
         player.addListener(new Player.Listener() {
@@ -111,6 +125,13 @@ public final class MainActivity extends Activity {
 
         loadBundledChannels();
         refreshChannels();
+    }
+
+    private void updateResizeModeButton() {
+        String mode = isFillScreen ? "Llenar pantalla" : "Ajustar pantalla";
+        resizeModeButton.setText(mode);
+        resizeModeButton.setContentDescription(
+                "Modo de imagen: " + mode + ". Pulsa para cambiar el ajuste.");
     }
 
     private ArrayAdapter<Channel> createChannelAdapter() {

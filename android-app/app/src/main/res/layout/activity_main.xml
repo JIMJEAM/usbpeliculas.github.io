@@ -35,6 +35,13 @@
         app:show_buffering="when_playing"
         app:use_controller="true" />
 
+    <Button
+        android:id="@+id/resizeModeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Modo de imagen: Ajustar pantalla. Pulsa para cambiar el ajuste."
+        android:text="Ajustar pantalla" />
+
     <TextView
         android:id="@+id/statusText"
         android:layout_width="match_parent"
