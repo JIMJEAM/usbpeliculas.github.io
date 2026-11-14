@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -253,6 +254,10 @@ public final class MainActivity extends Activity {
 
     private void setFullscreen(boolean fullscreen) {
         isFullscreen = fullscreen;
+        rootLayout.setBackgroundResource(fullscreen
+                ? android.R.color.black : R.drawable.app_background);
+        getWindow().setStatusBarColor(fullscreen ? Color.BLACK : Color.TRANSPARENT);
+        getWindow().setNavigationBarColor(fullscreen ? Color.BLACK : Color.TRANSPARENT);
         if (!fullscreen) setPlaylistPanelVisible(false);
         int visibility = fullscreen ? View.GONE : View.VISIBLE;
         appTitle.setVisibility(visibility);

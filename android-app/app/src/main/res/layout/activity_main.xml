@@ -32,12 +32,14 @@
         android:id="@+id/playerContainer"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:background="#FF000000">
 
         <androidx.media3.ui.PlayerView
             android:id="@+id/playerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#FF000000"
             app:show_buffering="when_playing"
             app:use_controller="true" />
 
