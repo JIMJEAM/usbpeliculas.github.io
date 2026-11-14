@@ -46,6 +46,12 @@
         android:textSize="14sp" />
 
     <Button
+        android:id="@+id/refreshChannelsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualizar lista" />
+
+    <Button
         android:id="@+id/openExternalButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

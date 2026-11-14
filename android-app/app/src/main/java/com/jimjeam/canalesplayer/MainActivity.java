@@ -28,21 +28,33 @@ import androidx.media3.ui.PlayerView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public final class MainActivity extends Activity {
     private static final Pattern GROUP_PATTERN = Pattern.compile("group-title=\"([^\"]*)\"");
+    private static final String CHANNELS_URL =
+            "https://pelisplaya.net/canales-autorizados.m3u";
 
     private final ArrayList<Channel> channels = new ArrayList<>();
+    private final ExecutorService ioExecutor = Executors.newSingleThreadExecutor();
     private ExoPlayer player;
     private String selectedUrl;
     private String selectedMimeType;
     private TextView statusText;
     private Button openExternalButton;
+    private Button refreshChannelsButton;
+    private EditText searchInput;
+    private ListView channelList;
+    private ArrayAdapter<Channel> channelAdapter;
+    private boolean isRefreshingChannels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +70,11 @@ public final class MainActivity extends Activity {
             return insets;
         });
         PlayerView playerView = findViewById(R.id.playerView);
-        EditText searchInput = findViewById(R.id.searchInput);
-        ListView channelList = findViewById(R.id.channelList);
+        searchInput = findViewById(R.id.searchInput);
+        channelList = findViewById(R.id.channelList);
         statusText = findViewById(R.id.statusText);
         openExternalButton = findViewById(R.id.openExternalButton);
+        refreshChannelsButton = findViewById(R.id.refreshChannelsButton);
 
         player = new ExoPlayer.Builder(this).build();
         playerView.setPlayer(player);
@@ -75,7 +88,33 @@ public final class MainActivity extends Activity {
 
         openExternalButton.setOnClickListener(view -> openSelectedChannelExternally());
 
-        ArrayAdapter<Channel> adapter = new ArrayAdapter<Channel>(
+        channelAdapter = createChannelAdapter();
+        channelList.setAdapter(channelAdapter);
+        channelList.setOnItemClickListener((parent, view, position, id) -> {
+            Channel channel = (Channel) parent.getItemAtPosition(position);
+            if (channel != null) playChannel(channel);
+        });
+
+        refreshChannelsButton.setOnClickListener(view -> refreshChannels());
+        searchInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence value, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence value, int start, int before, int count) {
+                channelAdapter.getFilter().filter(value);
+            }
+
+            @Override
+            public void afterTextChanged(Editable value) {}
+        });
+
+        loadBundledChannels();
+        refreshChannels();
+    }
+
+    private ArrayAdapter<Channel> createChannelAdapter() {
+        return new ArrayAdapter<Channel>(
                 this,
                 android.R.layout.simple_list_item_1,
                 channels
@@ -94,53 +133,106 @@ public final class MainActivity extends Activity {
                 return row;
             }
         };
-        channelList.setAdapter(adapter);
-        channelList.setOnItemClickListener((parent, view, position, id) -> {
-            Channel channel = adapter.getItem(position);
-            if (channel != null) playChannel(channel);
-        });
-
-        searchInput.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence value, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence value, int start, int before, int count) {
-                adapter.getFilter().filter(value);
-            }
-
-            @Override
-            public void afterTextChanged(Editable value) {}
-        });
-
-        loadChannels(adapter);
     }
 
-    private void loadChannels(ArrayAdapter<Channel> adapter) {
-        String currentInfo = null;
-        int loaded = 0;
-
+    private void loadBundledChannels() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(
                 getAssets().open("channels.m3u"), StandardCharsets.UTF_8))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                line = line.trim();
-                if (line.startsWith("#EXTINF:")) {
-                    currentInfo = line;
-                } else if (!line.isEmpty() && !line.startsWith("#") && currentInfo != null
-                        && (line.startsWith("http://") || line.startsWith("https://"))) {
-                    String name = parseName(currentInfo);
-                    String group = parseGroup(currentInfo);
-                    channels.add(new Channel(name, group, line));
-                    currentInfo = null;
-                    loaded++;
-                }
-            }
-            adapter.notifyDataSetChanged();
-            statusText.setText(loaded + " canales disponibles");
+            ArrayList<Channel> bundledChannels = parseChannels(reader);
+            replaceChannels(bundledChannels);
+            statusText.setText(bundledChannels.size() + " canales (lista incluida en la app)");
         } catch (IOException error) {
             statusText.setText("No se pudo cargar channels.m3u: " + error.getMessage());
         }
+    }
+
+    private void refreshChannels() {
+        if (isRefreshingChannels) return;
+
+        isRefreshingChannels = true;
+        refreshChannelsButton.setEnabled(false);
+        statusText.setText("Comprobando actualizaciones de la lista...");
+
+        ioExecutor.execute(() -> {
+            try {
+                ArrayList<Channel> updatedChannels = downloadChannels();
+                runOnUiThread(() -> {
+                    if (isFinishing() || isDestroyed()) return;
+                    replaceChannels(updatedChannels);
+                    statusText.setText(updatedChannels.size() + " canales (lista actualizada)");
+                    finishChannelRefresh();
+                });
+            } catch (IOException error) {
+                android.util.Log.w("CanalesPlayer", "No se pudo actualizar la lista M3U.", error);
+                runOnUiThread(() -> {
+                    if (isFinishing() || isDestroyed()) return;
+                    int availableChannels = channelAdapter.getCount();
+                    if (availableChannels > 0) {
+                        statusText.setText("No se pudo actualizar; se conserva la lista local ("
+                                + availableChannels + " canales).");
+                    } else {
+                        statusText.setText("No se pudo descargar la lista ni cargar la copia local.");
+                    }
+                    finishChannelRefresh();
+                });
+            }
+        });
+    }
+
+    private void finishChannelRefresh() {
+        isRefreshingChannels = false;
+        refreshChannelsButton.setEnabled(true);
+    }
+
+    private ArrayList<Channel> downloadChannels() throws IOException {
+        HttpURLConnection connection = (HttpURLConnection) new URL(CHANNELS_URL).openConnection();
+        connection.setConnectTimeout(10000);
+        connection.setReadTimeout(15000);
+        connection.setInstanceFollowRedirects(true);
+        connection.setRequestProperty("Accept", "audio/x-mpegurl, application/vnd.apple.mpegurl, text/plain");
+
+        try {
+            int responseCode = connection.getResponseCode();
+            if (responseCode < 200 || responseCode >= 300) {
+                throw new IOException("El servidor respondió con HTTP " + responseCode + ".");
+            }
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    connection.getInputStream(), StandardCharsets.UTF_8))) {
+                return parseChannels(reader);
+            }
+        } finally {
+            connection.disconnect();
+        }
+    }
+
+    private ArrayList<Channel> parseChannels(BufferedReader reader) throws IOException {
+        ArrayList<Channel> parsedChannels = new ArrayList<>();
+        String currentInfo = null;
+        String line;
+
+        while ((line = reader.readLine()) != null) {
+            line = line.trim();
+            if (line.startsWith("#EXTINF:")) {
+                currentInfo = line;
+            } else if (!line.isEmpty() && !line.startsWith("#") && currentInfo != null
+                    && (line.startsWith("http://") || line.startsWith("https://"))) {
+                parsedChannels.add(new Channel(parseName(currentInfo), parseGroup(currentInfo), line));
+                currentInfo = null;
+            }
+        }
+        if (parsedChannels.isEmpty()) {
+            throw new IOException("La lista recibida no contiene canales válidos.");
+        }
+        return parsedChannels;
+    }
+
+    private void replaceChannels(ArrayList<Channel> updatedChannels) {
+        String query = searchInput.getText().toString();
+        channels.clear();
+        channels.addAll(updatedChannels);
+        channelAdapter = createChannelAdapter();
+        channelList.setAdapter(channelAdapter);
+        if (!query.isEmpty()) channelAdapter.getFilter().filter(query);
     }
 
     private String parseName(String extinf) {
@@ -202,6 +294,7 @@ public final class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        ioExecutor.shutdownNow();
         if (player != null) {
             player.release();
             player = null;
