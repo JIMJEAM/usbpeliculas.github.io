@@ -71,41 +71,41 @@ class Menu extends HTMLElement {
     
     <div style="conten-visivility: auto;">
     <ul id="video_navigation" class="video-grid-responsive">
-    <li class="cursor-pointer"><a href="https://hexload.com/pbv78rlcsagr"  target="_blank "><img src="https://lumiere-a.akamaihd.net/v1/images/41_coral3_payoff_1sht_spain_spanish_71c1681f.jpeg" alt="
-Avatar fuego y ceniza (2025) class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/m2wctdqrdnn4"  target="_blank "><img src="https://media.themoviedb.org/t/p/w220_and_h330_face/u2xyvEmgkXmfMeCQcGf6mERNFfd.jpg" alt="
- Mátate, amor (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/uz8pevkt6v61"  target="_blank "><img src="https://portadas.latinomegahd.net/files/cover_sin-sin_1766132165_50587c.webp" alt="
- Un buen ladrón (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/o0qwhojl46ph"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/760SP4VsZagpyB9WLfeZykE3DFg.jpg" alt="
+Sleepwalker (2026) class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/ylq9mvazr6tx"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/aQ9uc9CtgN05qedbD8aSFp6NQn5.jpg" alt="
+ 9 lunas (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/drkvdn9lmnl1"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/tVJITyPQXww6DypTDlpILM0Ppzi.jpg" alt="
+ Un buen abogado (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
 
     <ul id="video_navigation" class="video-grid-responsive">
-    <li class="cursor-pointer"><a href="https://hexload.com/hlwyd0hpk23k"  target="_blank "><img src="https://image.tmdb.org/t/p/w500/am6O7221qGtb5ba5uJKw7PfPZkJ.jpg" alt="
-Five Nights at Freddy’s 2 (2025) class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/p4e6ldzrfrxx"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/aR4JhzROYwxYp1D6EvyGFrSLo80.jpg" alt="
- El secreto de Santa (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/psa636tzevac"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/8Ibddnv5SpQGLp2r90bHRRBSpf5.jpg" alt="
- Un buen ladrón (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/lxcyqreii0hj"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/w82vKEoYNZ9SxYxvccxO85CnZKE.jpg" alt="
+The 12 Dates of Christmas (2026) class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/yu4h23deeupb"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/aRVlgVMyCuEHiPlGbnOydsVaD85.jpg" alt="
+ Don't Let the Sun (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/b0dmn5zynfic"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/m9aKkiCwlQWri27z9WEwezfkUcw.jpg" alt="
+The Restoration at Grayson Manor (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
     <div style="conten-visivility: auto;">
     <ul id="video_navigation" class="video-grid-responsive">
-    <li class="cursor-pointer"><a href="https://hexload.com/indmtl38v919"  target="_blank "><img src="https://m.media-amazon.com/images/M/MV5BNzljZTg5NGUtOTQ3YS00MTlkLTkwMmYtYzRiZmI5YTQ0Yzg5XkEyXkFqcGc@._V1_.jpg" alt="
-El valiente (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/m5t2ovrv51h7"  target="_blank "><img src="https://image.tmdb.org/t/p/w342//lUJIBUjEab71fJ8U9gs0NouUJ18.jpg" alt="
- La muejer del camarote 10 (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/rzmtig2ry2cd"  target="_blank "><img src="https://es.web.img3.acsta.net/c_310_420/img/a8/de/a8debcd65ea85d53243a3aacd3468fa4.jpg" alt="
- Regalo maldito (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/nc8peg9relzp"  target="_blank "><img src="https://a.ltrbxd.com/resized/film-poster/1/6/5/5/5/4/5/1655545-a-richer-christmas-0-1000-0-1500-crop.jpg?v=3587408da4" alt="
+A Richer Christmas (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/hrbhu60kl13b"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/tur8rRYXYeWN7Kq2CWEPC5PiJr0.jpg" alt="
+ Terrell & T.O. (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/xjbg4zlbayiv"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/zp749VDFadCAsUcWmNXI2j1h1mV.jpg" alt="
+Savage Mountain (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
      <ul id="video_navigation" class="video-grid-responsive">
-    <li class="cursor-pointer"><a href="https://mdfx9dc8n.net/f/67rwlxgwcve87r"  target="_blank "><img src="https://lumiere-a.akamaihd.net/v1/images/image002_eef65ea3.jpeg?region=0,0,670,957" alt="
-Un virernes loco (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/qm0n0ggp27j6"  target="_blank "><img src="https://www.universalpictures.com.mx/tl_files/content/movies/him/posters/01.jpg" alt="
- Him el elegido (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/60akuqm8zkk9"  target="_blank "><img src="https://image.tmdb.org/t/p/w342/kn63tQpkGoOqbncnrGhpr1tFHsJ.jpg" alt="
- Regalo maldito (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/zffgcuctu1d9"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/fZD9b4RRmFWwYVn6MCcrHebTDDc.jpg" alt="
+Robotica (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/yh4lb7jrux3h"  target="_blank "><img src="https://a.ltrbxd.com/resized/film-poster/1/6/0/9/6/9/3/1609693-el-club-del-pie-izquierdo-0-1000-0-1500-crop.jpg?v=eb971738c6" alt="
+ El Club del Pie Izquierdo (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://arianathankspecial.com/e/pjjh83luu5kp"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/dS2EUbnMyfv1bWsGa6GBgzwp5cF.jpg" alt="
+ The Last Temptation of Becky (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
     <ul id="video_navigation" class="video-grid-responsive">
