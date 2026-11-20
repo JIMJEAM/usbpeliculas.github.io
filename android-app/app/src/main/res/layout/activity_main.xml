@@ -43,20 +43,72 @@
             app:show_buffering="when_playing"
             app:use_controller="true" />
 
-        <ImageButton
-            android:id="@+id/fullscreenToggleButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="top|end"
-            android:layout_margin="8dp"
-            android:background="@drawable/player_control_background"
-            android:contentDescription="Activar pantalla completa"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:padding="12dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_fullscreen"
-            android:tint="#FFFFFF" />
+        <!-- Floating HUD for gesture controls (volume & brightness) -->
+        <LinearLayout
+            android:id="@+id/gestureHud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/gesture_hud_background"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="12dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/gestureHudIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_volume_up"
+                android:tint="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/gestureHudText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="100%"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Live buffer / reconnect overlay -->
+        <LinearLayout
+            android:id="@+id/bufferingOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/gesture_hud_background"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="18dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="12dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:indeterminate="true"
+                android:indeterminateTint="#82D8FF" />
+
+            <TextView
+                android:id="@+id/bufferingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Cargando señal en vivo..."
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/resizeModeButton"
@@ -71,6 +123,37 @@
             android:padding="12dp"
             android:scaleType="centerInside"
             android:src="@drawable/ic_fit_screen"
+            android:tint="#FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/pipToggleButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/player_control_background"
+            android:contentDescription="Modo ventana flotante (Picture-in-Picture)"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_pip"
+            android:tint="#FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/fullscreenToggleButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:background="@drawable/player_control_background"
+            android:contentDescription="Activar pantalla completa"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_fullscreen"
             android:tint="#FFFFFF" />
 
         <ImageButton
@@ -208,11 +291,29 @@
             android:tint="#FFFFFF" />
     </LinearLayout>
 
+    <!-- Horizontal Category Tabs (Segmented bar like xuper_app) -->
+    <HorizontalScrollView
+        android:id="@+id/categoryScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="4dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/categoryContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
     <TextView
         android:id="@+id/statusText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="6dp"
+        android:paddingTop="2dp"
         android:paddingBottom="4dp"
         android:text="Elige un canal para reproducirlo"
         android:textColor="#D8DEE9"

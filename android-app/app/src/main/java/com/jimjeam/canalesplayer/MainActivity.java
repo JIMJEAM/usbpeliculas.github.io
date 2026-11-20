@@ -1,26 +1,35 @@
 package com.jimjeam.canalesplayer;
 
 import android.app.Activity;
+import android.app.PictureInPictureParams;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Rational;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.Filter;
 import android.widget.FrameLayout;
+import android.widget.HorizontalScrollView;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -28,8 +37,8 @@ import android.widget.TextView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
-import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.media3.common.MediaItem;
 import androidx.media3.common.MimeTypes;
 import androidx.media3.common.PlaybackException;
@@ -45,25 +54,34 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.Locale;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class MainActivity extends Activity {
     private static final Pattern GROUP_PATTERN = Pattern.compile("group-title=\"([^\"]*)\"");
-    private static final String CHANNELS_URL =
-            "https://pelisplaya.net/canales-autorizados.m3u";
+    private static final String CHANNELS_URL = "https://pelisplaya.net/canales-autorizados.m3u";
     private static final long PLAYER_CONTROLS_HIDE_DELAY_MS = 5000;
+    private static final int MAX_RECONNECT_ATTEMPTS = 3;
 
-    private final ArrayList<Channel> channels = new ArrayList<>();
+    private final ArrayList<Channel> allChannels = new ArrayList<>();
+    private final ArrayList<Channel> displayedChannels = new ArrayList<>();
+    private final ArrayList<String> categories = new ArrayList<>();
     private final ExecutorService ioExecutor = Executors.newSingleThreadExecutor();
     private final Handler controlsHandler = new Handler(Looper.getMainLooper());
     private final Runnable hidePlayerControlsRunnable = this::hidePlayerControls;
+    private final Runnable hideGestureHudRunnable = this::hideGestureHud;
+
     private ExoPlayer player;
     private String selectedUrl;
     private String selectedMimeType;
+    private String selectedChannelName = "";
+    private String currentCategory = "Todos";
+    private int reconnectAttempts = 0;
+
     private View rootLayout;
     private TextView appTitle;
     private FrameLayout playerContainer;
@@ -72,6 +90,7 @@ public final class MainActivity extends Activity {
     private Button openExternalButton;
     private Button refreshChannelsButton;
     private ImageButton resizeModeButton;
+    private ImageButton pipToggleButton;
     private ImageButton fullscreenToggleButton;
     private ImageButton playlistToggleButton;
     private ImageButton closePlaylistButton;
@@ -84,6 +103,14 @@ public final class MainActivity extends Activity {
     private View fullscreenChannelPanel;
     private ListView channelList;
     private ListView fullscreenChannelList;
+    private LinearLayout categoryContainer;
+    private HorizontalScrollView categoryScrollView;
+    private LinearLayout gestureHud;
+    private ImageView gestureHudIcon;
+    private TextView gestureHudText;
+    private LinearLayout bufferingOverlay;
+    private TextView bufferingText;
+
     private ArrayAdapter<Channel> channelAdapter;
     private boolean isRefreshingChannels;
     private boolean isFillScreen;
@@ -100,17 +127,21 @@ public final class MainActivity extends Activity {
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
         setContentView(R.layout.activity_main);
 
+        initViews();
+        setupPlayer();
+        setupVolumeControls();
+        setupGestures();
+        setupChannelAdapters();
+
+        loadBundledChannels();
+        refreshChannels();
+        showPlayerControls();
+    }
+
+    private void initViews() {
         rootLayout = findViewById(R.id.rootLayout);
         appTitle = findViewById(R.id.appTitle);
         playerContainer = findViewById(R.id.playerContainer);
-        ViewCompat.setOnApplyWindowInsetsListener(rootLayout, (view, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            int padding = isFullscreen ? 0
-                    : Math.round(12 * getResources().getDisplayMetrics().density);
-            view.setPadding(systemBars.left + padding, systemBars.top + padding,
-                    systemBars.right + padding, systemBars.bottom + padding);
-            return insets;
-        });
         playerView = findViewById(R.id.playerView);
         searchInput = findViewById(R.id.searchInput);
         channelList = findViewById(R.id.channelList);
@@ -118,6 +149,7 @@ public final class MainActivity extends Activity {
         openExternalButton = findViewById(R.id.openExternalButton);
         refreshChannelsButton = findViewById(R.id.refreshChannelsButton);
         resizeModeButton = findViewById(R.id.resizeModeButton);
+        pipToggleButton = findViewById(R.id.pipToggleButton);
         fullscreenToggleButton = findViewById(R.id.fullscreenToggleButton);
         playlistToggleButton = findViewById(R.id.playlistToggleButton);
         closePlaylistButton = findViewById(R.id.closePlaylistButton);
@@ -128,6 +160,22 @@ public final class MainActivity extends Activity {
         muteButton = findViewById(R.id.muteButton);
         volumeDownButton = findViewById(R.id.volumeDownButton);
         volumeUpButton = findViewById(R.id.volumeUpButton);
+        categoryContainer = findViewById(R.id.categoryContainer);
+        categoryScrollView = findViewById(R.id.categoryScrollView);
+        gestureHud = findViewById(R.id.gestureHud);
+        gestureHudIcon = findViewById(R.id.gestureHudIcon);
+        gestureHudText = findViewById(R.id.gestureHudText);
+        bufferingOverlay = findViewById(R.id.bufferingOverlay);
+        bufferingText = findViewById(R.id.bufferingText);
+
+        ViewCompat.setOnApplyWindowInsetsListener(rootLayout, (view, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            int padding = isFullscreen ? 0
+                    : Math.round(12 * getResources().getDisplayMetrics().density);
+            view.setPadding(systemBars.left + padding, systemBars.top + padding,
+                    systemBars.right + padding, systemBars.bottom + padding);
+            return insets;
+        });
 
         playerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FIT);
         updateResizeModeButton();
@@ -138,68 +186,190 @@ public final class MainActivity extends Activity {
                     : AspectRatioFrameLayout.RESIZE_MODE_FIT);
             updateResizeModeButton();
         });
+
+        pipToggleButton.setOnClickListener(view -> enterPipMode());
         fullscreenToggleButton.setOnClickListener(view -> {
             if (isFullscreen && isAutoFullscreen) isAutoFullscreen = false;
             setFullscreen(!isFullscreen);
         });
+
         playlistToggleButton.setOnClickListener(view -> {
             if (fullscreenChannelPanel.getVisibility() == View.VISIBLE) {
                 setPlaylistPanelVisible(false);
             } else {
-                searchInput.setText("");
                 setPlaylistPanelVisible(true);
             }
         });
         closePlaylistButton.setOnClickListener(view -> setPlaylistPanelVisible(false));
+        openExternalButton.setOnClickListener(view -> openSelectedChannelExternally());
+        refreshChannelsButton.setOnClickListener(view -> refreshChannels());
 
+        searchInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                applyCurrentFilters();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+    }
+
+    private void setupPlayer() {
         player = new ExoPlayer.Builder(this).build();
         player.setVolume(1f);
         playerView.setPlayer(player);
         player.addListener(new Player.Listener() {
             @Override
+            public void onPlaybackStateChanged(int playbackState) {
+                if (playbackState == Player.STATE_BUFFERING) {
+                    bufferingOverlay.setVisibility(View.VISIBLE);
+                    bufferingText.setText("Cargando señal en vivo...");
+                } else if (playbackState == Player.STATE_READY) {
+                    bufferingOverlay.setVisibility(View.GONE);
+                    reconnectAttempts = 0;
+                    hasPlaybackError = false;
+                    statusText.setText("En vivo: " + selectedChannelName);
+                }
+            }
+
+            @Override
             public void onPlayerError(PlaybackException error) {
-                hasPlaybackError = true;
-                statusText.setText("No se pudo reproducir este stream. Prueba abrirlo en otra app.");
-                if (!isFullscreen) openExternalButton.setVisibility(View.VISIBLE);
+                if (reconnectAttempts < MAX_RECONNECT_ATTEMPTS && selectedUrl != null) {
+                    reconnectAttempts++;
+                    bufferingOverlay.setVisibility(View.VISIBLE);
+                    bufferingText.setText("Reconectando canal (" + reconnectAttempts + "/" + MAX_RECONNECT_ATTEMPTS + ")...");
+                    controlsHandler.postDelayed(() -> {
+                        if (player != null && selectedUrl != null) {
+                            player.prepare();
+                            player.play();
+                        }
+                    }, 2000);
+                } else {
+                    bufferingOverlay.setVisibility(View.GONE);
+                    hasPlaybackError = true;
+                    statusText.setText("No se pudo reproducir este stream. Prueba abrirlo en otra app.");
+                    if (!isFullscreen) openExternalButton.setVisibility(View.VISIBLE);
+                }
             }
         });
-
-        openExternalButton.setOnClickListener(view -> openSelectedChannelExternally());
-        setupVolumeControls();
-
-        channelAdapter = createChannelAdapter();
-        channelList.setAdapter(channelAdapter);
-        fullscreenChannelList.setAdapter(channelAdapter);
-        channelList.setOnItemClickListener((parent, view, position, id) ->
-                playSelectedChannel(parent, position));
-        fullscreenChannelList.setOnItemClickListener((parent, view, position, id) ->
-                playSelectedChannel(parent, position));
-
-        refreshChannelsButton.setOnClickListener(view -> refreshChannels());
-        searchInput.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence value, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence value, int start, int before, int count) {
-                channelAdapter.getFilter().filter(value);
-            }
-
-            @Override
-            public void afterTextChanged(Editable value) {}
-        });
-
-        loadBundledChannels();
-        refreshChannels();
-        showPlayerControls();
     }
 
-    private void updateResizeModeButton() {
-        String description = isFillScreen ? "Llenar pantalla" : "Ajustar pantalla";
-        resizeModeButton.setImageResource(isFillScreen
-                ? R.drawable.ic_zoom_screen : R.drawable.ic_fit_screen);
-        resizeModeButton.setContentDescription(
-                "Modo de imagen: " + description + ". Pulsa para cambiar el ajuste.");
+    private void setupGestures() {
+        playerView.setOnTouchListener(new View.OnTouchListener() {
+            private float startX;
+            private float startY;
+            private int startVolume;
+            private float startBrightness;
+            private boolean isDragging;
+            private static final int TOUCH_SLOP = 20;
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        startX = event.getX();
+                        startY = event.getY();
+                        startVolume = volumeSeekBar.getProgress();
+                        WindowManager.LayoutParams lp = getWindow().getAttributes();
+                        startBrightness = lp.screenBrightness < 0 ? 0.5f : lp.screenBrightness;
+                        isDragging = false;
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        float deltaY = startY - event.getY();
+                        if (!isDragging && (Math.abs(deltaY) > TOUCH_SLOP || Math.abs(event.getX() - startX) > TOUCH_SLOP)) {
+                            isDragging = true;
+                        }
+                        if (isDragging) {
+                            float height = v.getHeight() > 0 ? v.getHeight() : 500f;
+                            float percentDelta = (deltaY / height);
+                            if (startX < v.getWidth() / 2f) {
+                                // Gesture left: Brightness
+                                float newBrightness = Math.max(0.05f, Math.min(1.0f, startBrightness + percentDelta));
+                                WindowManager.LayoutParams layoutParams = getWindow().getAttributes();
+                                layoutParams.screenBrightness = newBrightness;
+                                getWindow().setAttributes(layoutParams);
+                                showGestureHud(R.drawable.ic_brightness, "Brillo: " + Math.round(newBrightness * 100) + "%");
+                            } else {
+                                // Gesture right: Volume
+                                int newVol = Math.max(0, Math.min(100, Math.round(startVolume + percentDelta * 100)));
+                                volumeSeekBar.setProgress(newVol);
+                                setPlayerVolume(newVol);
+                                showGestureHud(newVol == 0 ? R.drawable.ic_volume_mute : R.drawable.ic_volume_up,
+                                        "Volumen: " + newVol + "%");
+                            }
+                            return true;
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        if (!isDragging) {
+                            togglePlayerControls();
+                        }
+                        break;
+                }
+                return true;
+            }
+        });
+    }
+
+    private void showGestureHud(int iconRes, String text) {
+        controlsHandler.removeCallbacks(hideGestureHudRunnable);
+        gestureHudIcon.setImageResource(iconRes);
+        gestureHudText.setText(text);
+        gestureHud.setVisibility(View.VISIBLE);
+        controlsHandler.postDelayed(hideGestureHudRunnable, 1200);
+    }
+
+    private void hideGestureHud() {
+        if (gestureHud != null) {
+            gestureHud.setVisibility(View.GONE);
+        }
+    }
+
+    private void enterPipMode() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            try {
+                PictureInPictureParams.Builder pipBuilder = new PictureInPictureParams.Builder();
+                pipBuilder.setAspectRatio(new Rational(16, 9));
+                enterPictureInPictureMode(pipBuilder.build());
+            } catch (Exception e) {
+                android.util.Log.w("CanalesPlayer", "Error al activar Picture-in-Picture", e);
+            }
+        }
+    }
+
+    @Override
+    public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode, Configuration newConfig) {
+        super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig);
+        if (isInPictureInPictureMode) {
+            hidePlayerControls();
+            setPlaylistPanelVisible(false);
+            rootLayout.setPadding(0, 0, 0, 0);
+            appTitle.setVisibility(View.GONE);
+            searchInput.setVisibility(View.GONE);
+            volumeControls.setVisibility(View.GONE);
+            categoryScrollView.setVisibility(View.GONE);
+            statusText.setVisibility(View.GONE);
+            refreshChannelsButton.setVisibility(View.GONE);
+            openExternalButton.setVisibility(View.GONE);
+            channelList.setVisibility(View.GONE);
+            ViewGroup.LayoutParams params = playerContainer.getLayoutParams();
+            params.height = ViewGroup.LayoutParams.MATCH_PARENT;
+            playerContainer.setLayoutParams(params);
+        } else {
+            setFullscreen(isFullscreen);
+        }
+    }
+
+    @Override
+    protected void onUserLeaveHint() {
+        super.onUserLeaveHint();
+        if (player != null && player.isPlaying() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            enterPipMode();
+        }
     }
 
     private void setupVolumeControls() {
@@ -240,7 +410,7 @@ public final class MainActivity extends Activity {
     }
 
     private void setPlayerVolume(int volume) {
-        player.setVolume(volume / 100f);
+        if (player != null) player.setVolume(volume / 100f);
         if (volume > 0) lastAudibleVolume = volume;
         updateMuteButton();
     }
@@ -252,6 +422,14 @@ public final class MainActivity extends Activity {
         muteButton.setContentDescription(muted ? "Activar sonido" : "Silenciar");
     }
 
+    private void updateResizeModeButton() {
+        String description = isFillScreen ? "Llenar pantalla" : "Ajustar pantalla";
+        resizeModeButton.setImageResource(isFillScreen
+                ? R.drawable.ic_zoom_screen : R.drawable.ic_fit_screen);
+        resizeModeButton.setContentDescription(
+                "Modo de imagen: " + description + ". Pulsa para cambiar el ajuste.");
+    }
+
     private void setFullscreen(boolean fullscreen) {
         isFullscreen = fullscreen;
         rootLayout.setBackgroundResource(fullscreen
@@ -259,15 +437,16 @@ public final class MainActivity extends Activity {
         getWindow().setStatusBarColor(fullscreen ? Color.BLACK : Color.TRANSPARENT);
         getWindow().setNavigationBarColor(fullscreen ? Color.BLACK : Color.TRANSPARENT);
         if (!fullscreen) setPlaylistPanelVisible(false);
+
         int visibility = fullscreen ? View.GONE : View.VISIBLE;
         appTitle.setVisibility(visibility);
         searchInput.setVisibility(visibility);
         volumeControls.setVisibility(visibility);
+        categoryScrollView.setVisibility(visibility);
         statusText.setVisibility(visibility);
         refreshChannelsButton.setVisibility(visibility);
         channelList.setVisibility(visibility);
-        openExternalButton.setVisibility(!fullscreen && hasPlaybackError
-                ? View.VISIBLE : View.GONE);
+        openExternalButton.setVisibility(!fullscreen && hasPlaybackError ? View.VISIBLE : View.GONE);
 
         ViewGroup.LayoutParams playerParams = playerContainer.getLayoutParams();
         playerParams.height = fullscreen
@@ -300,10 +479,19 @@ public final class MainActivity extends Activity {
         showPlayerControls();
     }
 
+    private void togglePlayerControls() {
+        if (arePlayerControlsVisible) {
+            hidePlayerControls();
+        } else {
+            showPlayerControls();
+        }
+    }
+
     private void showPlayerControls() {
         controlsHandler.removeCallbacks(hidePlayerControlsRunnable);
         arePlayerControlsVisible = true;
         resizeModeButton.setVisibility(View.VISIBLE);
+        pipToggleButton.setVisibility(View.VISIBLE);
         fullscreenToggleButton.setVisibility(View.VISIBLE);
         playlistToggleButton.setVisibility(View.VISIBLE);
         closePlaylistButton.setVisibility(fullscreenChannelPanel.getVisibility() == View.VISIBLE
@@ -314,14 +502,26 @@ public final class MainActivity extends Activity {
     private void hidePlayerControls() {
         arePlayerControlsVisible = false;
         View focusedView = getCurrentFocus();
-        if (focusedView == resizeModeButton || focusedView == fullscreenToggleButton
-                || focusedView == playlistToggleButton || focusedView == closePlaylistButton) {
+        if (focusedView == resizeModeButton || focusedView == pipToggleButton
+                || focusedView == fullscreenToggleButton || focusedView == playlistToggleButton
+                || focusedView == closePlaylistButton) {
             focusedView.clearFocus();
         }
         resizeModeButton.setVisibility(View.INVISIBLE);
+        pipToggleButton.setVisibility(View.INVISIBLE);
         fullscreenToggleButton.setVisibility(View.INVISIBLE);
         playlistToggleButton.setVisibility(View.INVISIBLE);
         closePlaylistButton.setVisibility(View.INVISIBLE);
+    }
+
+    private void setupChannelAdapters() {
+        channelAdapter = createChannelAdapter();
+        channelList.setAdapter(channelAdapter);
+        fullscreenChannelList.setAdapter(channelAdapter);
+        channelList.setOnItemClickListener((parent, view, position, id) ->
+                playSelectedChannel(parent, position));
+        fullscreenChannelList.setOnItemClickListener((parent, view, position, id) ->
+                playSelectedChannel(parent, position));
     }
 
     private void playSelectedChannel(AdapterView<?> parent, int position) {
@@ -337,21 +537,19 @@ public final class MainActivity extends Activity {
                 this,
                 R.layout.channel_list_item,
                 R.id.channelName,
-                channels
+                displayedChannels
         ) {
             @Override
-            public View getView(int position, View convertView, android.view.ViewGroup parent) {
+            public View getView(int position, View convertView, ViewGroup parent) {
                 View row = convertView == null
-                        ? MainActivity.this.getLayoutInflater()
-                                .inflate(R.layout.channel_list_item, parent, false)
+                        ? MainActivity.this.getLayoutInflater().inflate(R.layout.channel_list_item, parent, false)
                         : convertView;
                 Channel channel = getItem(position);
                 if (channel != null) {
                     TextView name = row.findViewById(R.id.channelName);
                     TextView group = row.findViewById(R.id.channelGroup);
                     name.setText(channel.name);
-                    if (channel.group != null && !channel.group.isEmpty()
-                            && !channel.group.equals("-")) {
+                    if (channel.group != null && !channel.group.isEmpty() && !channel.group.equals("-")) {
                         group.setText(channel.group);
                         group.setVisibility(View.VISIBLE);
                     } else {
@@ -360,7 +558,91 @@ public final class MainActivity extends Activity {
                 }
                 return row;
             }
+
+            @Override
+            public Filter getFilter() {
+                return new Filter() {
+                    @Override
+                    protected FilterResults performFiltering(CharSequence constraint) {
+                        String query = constraint == null ? "" : constraint.toString().trim().toLowerCase(Locale.ROOT);
+                        ArrayList<Channel> filtered = new ArrayList<>();
+                        for (Channel channel : allChannels) {
+                            boolean matchesCategory = currentCategory.equals("Todos")
+                                    || (channel.group != null && channel.group.equalsIgnoreCase(currentCategory));
+                            boolean matchesQuery = query.isEmpty()
+                                    || channel.name.toLowerCase(Locale.ROOT).contains(query)
+                                    || (channel.group != null && channel.group.toLowerCase(Locale.ROOT).contains(query));
+                            if (matchesCategory && matchesQuery) {
+                                filtered.add(channel);
+                            }
+                        }
+                        FilterResults results = new FilterResults();
+                        results.values = filtered;
+                        results.count = filtered.size();
+                        return results;
+                    }
+
+                    @Override
+                    @SuppressWarnings("unchecked")
+                    protected void publishResults(CharSequence constraint, FilterResults results) {
+                        displayedChannels.clear();
+                        if (results.values != null) {
+                            displayedChannels.addAll((ArrayList<Channel>) results.values);
+                        }
+                        notifyDataSetChanged();
+                    }
+                };
+            }
         };
+    }
+
+    private void applyCurrentFilters() {
+        if (channelAdapter != null) {
+            channelAdapter.getFilter().filter(searchInput.getText().toString());
+        }
+    }
+
+    private void updateCategoriesBar() {
+        LinkedHashSet<String> distinctGroups = new LinkedHashSet<>();
+        distinctGroups.add("Todos");
+        for (Channel channel : allChannels) {
+            if (channel.group != null && !channel.group.trim().isEmpty() && !channel.group.trim().equals("-")) {
+                distinctGroups.add(channel.group.trim());
+            }
+        }
+        categories.clear();
+        categories.addAll(distinctGroups);
+
+        categoryContainer.removeAllViews();
+        float density = getResources().getDisplayMetrics().density;
+        int padH = Math.round(14 * density);
+        int padV = Math.round(6 * density);
+        int marginH = Math.round(4 * density);
+
+        for (String cat : categories) {
+            Button pill = new Button(this);
+            pill.setText(cat);
+            pill.setTextSize(12);
+            pill.setAllCaps(false);
+            pill.setPadding(padH, padV, padH, padV);
+            pill.setFocusable(true);
+
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT, Math.round(36 * density));
+            lp.setMargins(marginH, 0, marginH, 0);
+            pill.setLayoutParams(lp);
+
+            boolean isSelected = cat.equalsIgnoreCase(currentCategory);
+            pill.setBackgroundResource(isSelected ? R.drawable.category_tab_selected : R.drawable.category_tab_unselected);
+            pill.setTextColor(isSelected ? Color.WHITE : Color.parseColor("#CBD5E1"));
+
+            pill.setOnClickListener(v -> {
+                currentCategory = cat;
+                updateCategoriesBar();
+                applyCurrentFilters();
+            });
+            categoryContainer.addView(pill);
+        }
     }
 
     private void loadBundledChannels() {
@@ -394,10 +676,9 @@ public final class MainActivity extends Activity {
                 android.util.Log.w("CanalesPlayer", "No se pudo actualizar la lista M3U.", error);
                 runOnUiThread(() -> {
                     if (isFinishing() || isDestroyed()) return;
-                    int availableChannels = channelAdapter.getCount();
+                    int availableChannels = displayedChannels.size();
                     if (availableChannels > 0) {
-                        statusText.setText("No se pudo actualizar; se conserva la lista local ("
-                                + availableChannels + " canales).");
+                        statusText.setText("Se conserva la lista local (" + availableChannels + " canales).");
                     } else {
                         statusText.setText("No se pudo descargar la lista ni cargar la copia local.");
                     }
@@ -455,13 +736,10 @@ public final class MainActivity extends Activity {
     }
 
     private void replaceChannels(ArrayList<Channel> updatedChannels) {
-        String query = searchInput.getText().toString();
-        channels.clear();
-        channels.addAll(updatedChannels);
-        channelAdapter = createChannelAdapter();
-        channelList.setAdapter(channelAdapter);
-        fullscreenChannelList.setAdapter(channelAdapter);
-        if (!query.isEmpty()) channelAdapter.getFilter().filter(query);
+        allChannels.clear();
+        allChannels.addAll(updatedChannels);
+        updateCategoriesBar();
+        applyCurrentFilters();
     }
 
     private String parseName(String extinf) {
@@ -479,7 +757,9 @@ public final class MainActivity extends Activity {
 
     private void playChannel(Channel channel) {
         selectedUrl = channel.url;
+        selectedChannelName = channel.name;
         selectedMimeType = inferMimeType(channel.url);
+        reconnectAttempts = 0;
         hasPlaybackError = false;
         openExternalButton.setVisibility(View.GONE);
         statusText.setText("Cargando: " + channel.name);
@@ -563,7 +843,14 @@ public final class MainActivity extends Activity {
     protected void onStop() {
         super.onStop();
         controlsHandler.removeCallbacks(hidePlayerControlsRunnable);
-        if (player != null) player.pause();
+        controlsHandler.removeCallbacks(hideGestureHudRunnable);
+        if (player != null && !isInPictureInPictureModeCompat()) {
+            player.pause();
+        }
+    }
+
+    private boolean isInPictureInPictureModeCompat() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && isInPictureInPictureMode();
     }
 
     @Override
@@ -599,6 +886,7 @@ public final class MainActivity extends Activity {
         super.onDestroy();
         ioExecutor.shutdownNow();
         controlsHandler.removeCallbacks(hidePlayerControlsRunnable);
+        controlsHandler.removeCallbacks(hideGestureHudRunnable);
         if (player != null) {
             player.release();
             player = null;

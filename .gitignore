@@ -8,6 +8,8 @@ local.properties
 
 # Local agent/session data
 .omc/
+REA/
+jdk-17.0.13+11/
 
 # Local environment and logs
 .env
