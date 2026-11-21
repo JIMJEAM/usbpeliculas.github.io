@@ -109,32 +109,32 @@ Robotica (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
     <ul id="video_navigation" class="video-grid-responsive">
-    <li class="cursor-pointer"><a href="https://hexload.com/3nbki8jiqopb"  target="_blank "><img src="https://m.media-amazon.com/images/M/MV5BNjUwNDBjZmUtOGI3OC00YzcwLWJhZWMtMWQ1ZDg5OWVjOWQ4XkEyXkFqcGc@._V1_.jpg" alt="
-Rockstar: DUKI desde el fin del mundo (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/ok3clqd8ri7w"  target="_blank "><img src="https://image.tmdb.org/t/p/w342/m4MRICGqqwf76GgVrVm3qObyaGw.jpg" alt="
- A través del fuego (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://hexload.com/ff34trfve9sd"  target="_blank "><img src="https://m.media-amazon.com/images/M/MV5BYTY4ODFkZTgtMWI2ZS00ZDRhLTk1MmItNmQ1Y2UyMjdjMWFmXkEyXkFqcGc@._V1_.jpg" alt="
- Putin (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/mizvvfxkr0ji"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/1amYmUeoBi23kGcR2pWQclEzXk2.jpg" alt="
+Perfectos mentirosos (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/rxnbi8muk2oi"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/bBPDstXaaQAGueDMVTS29vhHLfs.jpg" alt="
+ Un monstruo amable (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/3gsm2rqo6371"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/oeOmayFaiGz6km5vShPpDBQnZf1.jpg" alt="
+ Culpa Tuya: Londres (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
 
  
     <ul id="video_navigation" class="video-grid-responsive">
-    <li class="cursor-pointer"><a href="https://pixeldrain.com/u/crxtuuCX"  target="_blank "><img src="https://imgs.search.brave.com/sxCslCUrDBNKOGB3KzkvnDR1-bf3uxI3hplIm6O9cc4/rs:fit:860:0:0:0/g:ce/aHR0cDovL3d3dy5p/bXBhd2FyZHMuY29t/LzIwMjUvcG9zdGVy/cy9tZWdhbl90d29f/cG9pbnRfb192ZXIy/LmpwZw" alt="
-M3GAN 2.0 (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://powcloud.one/lh2jjh6e6085"  target="_blank "><img src="https://imgs.search.brave.com/fKXi2kDwSXVZCfA_dUCEV7mspH5aNPGsvDQ3P0rEfNg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmFuZGFuZ28u/Y29tL0ltYWdlUmVu/ZGVyZXIvODIwLzAv/cmVkZXNpZ24vc3Rh/dGljL2ltZy9kZWZh/dWx0X3Bvc3Rlci5w/bmcvMC9pbWFnZXMv/bWFzdGVycmVwb3Np/dG9yeS9mYW5kYW5n/by8yMzIyMTcvRUxJ/T19QYXlvZmZfUnVu/bmluZ18xc192NDBf/TWVjaDRiX0ZTLmpw/Zw" alt="
- Elio (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://powcloud.one/b0jdcgvwtwr4"  target="_blank "><img src="https://imgs.search.brave.com/A1q420dan4Z7bjSLo106auQM--EARUzQPrKMVwOB87U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly92ZXJ0/aWdvZmlsbXMuZXMv/d3AtY29udGVudC91/cGxvYWRzLzIwMjQv/MTEvQXVuLUVzdG95/LUFxdWktUG9zdGVy/LTcweDEwMGNtLWdv/eWEtc2NhbGVkLmpw/Zw" alt="
- Aún Estoy Aquí (2024)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/snzwzdmiyulm"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/8K4lZ5oepk3kArMWfQuqSegxSRe.jpg" alt="
+Maestros Del Crimen (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/arzji16uqjut"  target="_blank "><img src="https://image.tmdb.org/t/p/w500/mstDPKNKgSGFvVFVdfzeMNkcyw2.jpg" alt="
+ Gordon (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/i7r3c3vvaa3w"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/5VhfAWFs005xxN9akWJ2VIF5ozJ.jpg" alt="
+ Son Yemek (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
     <ul id="video_navigation" class="video-grid-responsive">
-    <li class="cursor-pointer"><a href="https://powcloud.one/wtizxn0d50zd"  target="_blank "><img src="https://imgs.search.brave.com/Sdau3-_66R-y3bF4jn5465A41kTjW1T2g_pLkDTJCxk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXNp/emVyLmdsYW5hY2lv/bi5jb20vcmVzaXpl/ci92Mi9HV1RDSzNE/MlRSQ1JYT05QUE1N/SUlTMzJIVS5wbmc_/YXV0aD00OWQ4MGMw/ZDhhNjEwODQzZTdj/MzlhMDBjZTk3ZWM2/ODQxZDdmNTMzZTM3/Yzk5ZmM3NTVjZDQ5/MjA5YTRkZDM1Jndp/ZHRoPTIxMCZoZWln/aHQ9MzAwJnNtYXJ0/PXRydWU" alt="
- El amateur: Operación Venganza (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://powcloud.one/1kvyd0t99xdi"  target="_blank "><img src="https://imgs.search.brave.com/k3IWVycpKJLWWF-AdBbWwcPI8IevTmzl45P6jZEIU40/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bXViaXMuZXMvbWVk/aWEvbW92aWVzLzgx/NDUvMzQ1NTM3LzI4/LWFub3MtZGVzcHVl/cy1sX2NvdmVyLmpw/Zw" alt="
- 28 años después (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://powcloud.one/hazjcxooj7lr"  target="_blank "><img src="https://imgs.search.brave.com/isph-YadexmVGwxSVNfwH2xOz5sU4gxrFK0oPMW9Rls/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QlkyRTVZakUy/WVRRdFpHSXhZaTAw/WVRVNExUazNZekl0/WW1NeVpUTTNNMkk1/WlRNM1hrRXlYa0Zx/Y0djQC5qcGc" alt="
- Cómo entrenar a tu dragón (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/9ryecmnfzuvk"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/wQUXEPumBrVJR3Fe9h0xnwcnyFp.jpg" alt="
+ Guarding Stars (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/pvodijw4xdgm"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/bRa83oPFFPqaAF3wrpVWPqqfFel.jpg" alt="
+ Madden (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/om70xm9jiozf"  target="_blank "><img src="https://media.themoviedb.org/t/p/w300_and_h450_face/rMJ4hIdvCCmBGXGASLLV08q8Z07.jpg" alt="
+ Monkeyâ€™s Magic Merry Go Round (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
     <ul id="video_navigation" class="video-grid-responsive">
