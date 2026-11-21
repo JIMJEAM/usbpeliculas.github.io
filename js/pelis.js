@@ -138,22 +138,76 @@ Maestros Del Crimen (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
     <ul id="video_navigation" class="video-grid-responsive">
-    <li class="cursor-pointer"><a href="https://powcloud.one/ww4pyheq03v2"  target="_blank "><img src="https://image.tmdb.org/t/p/original/5GZeoDCS9kIeTKT7oPejIr0r7LG.jpg" alt="
- Destino final: Lazos de sangre (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"><a href="https://powcloud.one/xli7m3dg4yh5"  target="_blank "><img src="https://http2.mlstatic.com/D_NQ_NP_952522-MLM82846236583_032025-O-poster-adherible-lilo-stitch-2025-5-40x28cm.webp" alt="
- Lilo y Stitch (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-      <li class="cursor-pointer"><a href="https://powcloud.one/oa9i5cqk1x2l"  target="_blank "><img src="https://pics.filmaffinity.com/Misiaon_imposible_Sentencia_final-672350282-large.jpg" alt="
-Misión imposible: La sentencia final (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/3vkywl2g0bcz"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/wFjWt33Atg3j43hR7Q0cH1y9uY6.jpg" alt="
+ No Rest for the Wicked (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/vd3lxkxfcl0l"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/uN8NTdWa6TfPCa9kJWwh8fKJn8Z.jpg" alt="
+ Cobarde (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/waff01nzjbzi"  target="_blank "><img src="https://www.sinsitio.site/uploads/posts/2026-11/medium/lo.jpg" alt="
+Suzane von Richthofen: Lo que el tiempo no borra (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
      <ul id="video_navigation" class="video-grid-responsive">
-   <li class="cursor-pointer"><a href="https://powcloud.one/fg6nb2t1bb5g"  target="_blank "><img src="https://pics.filmaffinity.com/Una_pelaicula_de_Minecraft-276344892-large.jpg" alt="
-Minecraft (2025)" class="img_video_nav img-thumbnail w-100"></a></li>
-    <li class="cursor-pointer"> <img src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/49551-615592-20250314041252.jpg" alt="Rescate implacable (2025)" class="img_video_nav img-thumbnail w-100" onclick="videoUrl('https://ia600708.us.archive.org/28/items/vaca-super-rescue/vaca%20super%20Rescue.mp4')"> </li> 
-     <li class="cursor-pointer"> <img src=https://m.media-amazon.com/images/M/MV5BYmY0M2Y1YzgtM2FkMC00M2ZjLTljNzgtZDM0NzM2ZTIwZDM5XkEyXkFqcGc@._V1_.jpg" alt="
-     Código Negro (2025)" class="img_video_nav img-thumbnail w-100" onclick="videoUrl('https://ia600709.us.archive.org/28/items/codigo-de-barras/Codigo%20de%20barras.mp4')"> </li>
+   <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/6x3nvdlpqqm9"  target="_blank "><img src="https://media.themoviedb.org/t/p/w300_and_h450_face/g4kCd4rMuN7G3VQQDUT6mLbrBqQ.jpg" alt="
+Mahou Shoujo Madoka Magica: Walpurgisnacht Rising (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/sfsswsldi84f"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/4vP54uZTDAnycDyVwp0i6L9jWmN.jpg" alt="
+ El deshielo (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="hhttps://caseyseemavoid.com/e/sbpn9ytd0hxq"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/dPHG2GEIFHkjMtswYltBAEU4UK4.jpg" alt="
+Fightland (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
+     <ul id="video_navigation" class="video-grid-responsive">
+   <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/ixphnhthkf1b"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/8JY6G5DSp8NUweUz5xJ5NtyqSp3.jpg" alt="
+A Proud Family Wizmas (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/9b8zqau4bycf"  target="_blank "><img src="https://imgs.search.brave.com/a82QAZtAbCsIGTsZgr2zX2LDVyE_ffwzV9y2-PKUlHc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wb3N0/ZXJzLm1vdmllcG9z/dGVyZGIuY29tLzI2/XzEwLzIwMjYvNDAw/OTY5ODYvbF9jb21l/LWF3YXktd2l0aC1t/ZS0yMDI2LW1vdmll/LXBvc3Rlcl83YTgz/MDg2Yy5qcGc_dj0y" alt="
+ El deshielo (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/xz8nlkeanww8"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/jBDIainOGJbpjiyCrfRgPvzpiia.jpg" alt="
+Marrow (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    </ul>
+
+    <ul id="video_navigation" class="video-grid-responsive">
+   <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/j6jjmvdqtzlz"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/yhHRpLhtaFXGYMsE5LuaRvZYs77.jpg" alt="
+Extra Geography (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/oejuzfel8v3u"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/ziyEHM0P1TgvhVXIqqguoMAD0TJ.jpg" alt="
+ Avedon (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/ukrmnzxtfcfw"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/xS35fgWgRdF2em5MGxg5WG9dPKd.jpg" alt="
+Como robar un banco (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    </ul>
+
+    <ul id="video_navigation" class="video-grid-responsive">
+   <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/aoqdxg59kx6g"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/zhxlzxBlO1sWB1rPn7RmAoeQ2na.jpg" alt="
+Heartland (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/9rivk3rrbfaw"  target="_blank "><img src="https://mx.web.img2.acsta.net/c_310_420/img/06/d1/06d147ca04f80b0ecb3b4ed27fb59dd3.jpg" alt="
+ La Psicopata (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/e5wehg3m5x7k"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/ekfB30eDEJAHHEW7yI4gLcq0k3A.jpg" alt="
+Ebenezer: Los fantasmas de Navidad (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    </ul>
+
+    <ul id="video_navigation" class="video-grid-responsive">
+   <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/y6p2jqeqq6rn"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/in3F0moyJ5EDpwRmXRFV9UVac1B.jpg" alt="
+La venganza del Charro Negro (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/gyaawhvbtj8c"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/3FzjY7P79R5sb3hCQUWEy7MT6Fs.jpg" alt="
+Insecta (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/dpefld5ewibz"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/bFw3y0v6xl24qxG36ve1ZjNnufo.jpg" alt="
+Ser Heumann (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    </ul>
+
+    <ul id="video_navigation" class="video-grid-responsive">
+   <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/84xd4jiwfnie"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/bC0Rb0Mls2b493O3ic2IypUFo57.jpg" alt="
+Snoopy presenta: 12 días de Snoopy (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/o44mlukgwj3c"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/alhhrpj1PSAn5bfz4Os1k7Bweoj.jpg" alt="
+Allen (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/rjiez2tzsqbv"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/xKhsKS0VY21uHXTBk5Wyrx9VfPZ.jpg" alt="
+El intercambio navideño (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    </ul>
+
+    <ul id="video_navigation" class="video-grid-responsive">
+   <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/1tn4xw8kyziz"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/6cHYHIv2tcUAZsyzUi5Hcwa1IAB.jpg" alt="
+No nos rendimos (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/tj0har4ngir6"  target="_blank "><img src="https://i.ibb.co/TqLV7QDt/1b9944d3834b.jpg" alt="
+Les Mariages de Saint Antoine (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/er6b4bcenkjv"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/8qy2dbkyeLj0Jh2lUPLCNTHMmxy.jpg" alt="
+Blue Heron (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    </ul>
 
     <ul id="video_navigation" class="video-grid-responsive">
     <li class="cursor-pointer"> <img src="https://assets.biggerpicture.ai/assets/HO-1600/eventmaster/1136_4.png" alt="El mono (2025)" class="img_video_nav img-thumbnail w-100" onclick="videoUrl('https://ia903207.us.archive.org/9/items/Kmonito/Kmonito.mp4')"> </li>
