@@ -318,6 +318,14 @@
 
   var PAGE_SIZE = 48;
   var PROXY = 'https://api.codetabs.com/v1/proxy/?quest=';
+
+  // TMDB (misma llave que usa app.js / apitmd.html)
+  var TMDB_KEY = '192e0b9821564f26f52949758ea3c473';
+  var TMDB_API = 'https://api.themoviedb.org/3';
+  var TMDB_IMG = 'https://image.tmdb.org/t/p/w342';
+  var TMDB_LANG = 'es-MX';
+  var CACHE_KEY = 'pelis-sinopsis-v1';
+  var CACHE_DAYS = 30;
   var PLACEHOLDER = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">' +
     '<rect width="200" height="300" fill="#22224a"/>' +
@@ -449,6 +457,254 @@
   window.videoUrl = videoUrl;
 
   // ------------------------------------------------------------------
+  // Sinopsis desde TMDB
+  // ------------------------------------------------------------------
+  var memCache = {};      // resultados de esta sesión (incluye "no encontrada")
+  var pending = {};       // evita pedir dos veces la misma película a la vez
+
+  function readCache() {
+    try { return JSON.parse(localStorage.getItem(CACHE_KEY)) || {}; } catch (e) { return {}; }
+  }
+
+  function writeCache(title, info) {
+    try {
+      var all = readCache();
+      all[title] = { at: Date.now(), info: info };
+      var keys = Object.keys(all);
+      if (keys.length > 400) { // límite para no llenar el almacenamiento
+        keys.sort(function (a, b) { return all[a].at - all[b].at; });
+        keys.slice(0, keys.length - 400).forEach(function (k) { delete all[k]; });
+      }
+      localStorage.setItem(CACHE_KEY, JSON.stringify(all));
+    } catch (e) { /* almacenamiento lleno o bloqueado: se ignora */ }
+  }
+
+  function cleanTitle(title) {
+    return String(title).replace(/\(\d{4}\)\s*$/, '').replace(/\s+/g, ' ').trim();
+  }
+
+  // Si el póster viene de TMDB, su nombre de archivo identifica la película exacta
+  function tmdbPosterPath(img) {
+    if (!/(tmdb\.org|themoviedb\.org)\//i.test(img)) return '';
+    var m = /\/t\/p\/[^/]+\/+([\w-]+\.(?:jpg|jpeg|png|webp))/i.exec(img);
+    return m ? '/' + m[1] : '';
+  }
+
+  function tmdbGet(path, params) {
+    var qs = 'api_key=' + TMDB_KEY;
+    Object.keys(params || {}).forEach(function (k) {
+      if (params[k] !== '' && params[k] != null) qs += '&' + k + '=' + encodeURIComponent(params[k]);
+    });
+    return fetch(TMDB_API + path + '?' + qs).then(function (r) {
+      if (!r.ok) throw new Error('TMDB ' + r.status);
+      return r.json();
+    });
+  }
+
+  function pickResult(results, peli, query) {
+    if (!results || !results.length) return null;
+    var poster = tmdbPosterPath(peli.img);
+    var q = normalizeText(query);
+    var byPoster = poster && results.filter(function (r) { return r.poster_path === poster; })[0];
+    if (byPoster) return byPoster;
+    var exact = results.filter(function (r) {
+      return normalizeText(r.title) === q || normalizeText(r.original_title) === q;
+    })[0];
+    return exact || results[0];
+  }
+
+  function searchTmdb(peli) {
+    var query = cleanTitle(peli.t);
+    var year = yearOf(peli.t);
+    var attempts = [{ query: query, year: year }];
+    if (year) attempts.push({ query: query, year: '' });
+    var short = query.split(/\s*[:\-–]\s+/)[0];
+    if (short && short !== query && short.length > 2) attempts.push({ query: short, year: year });
+
+    function next(i) {
+      if (i >= attempts.length) return Promise.resolve(null);
+      var a = attempts[i];
+      return tmdbGet('/search/movie', { query: a.query, year: a.year, language: TMDB_LANG, include_adult: 'false' })
+        .then(function (data) { return pickResult(data.results, peli, a.query) || next(i + 1); });
+    }
+    return next(0);
+  }
+
+  function fetchSinopsis(peli) {
+    var key = peli.t;
+    if (Object.prototype.hasOwnProperty.call(memCache, key)) return Promise.resolve(memCache[key]);
+    var stored = readCache()[key];
+    if (stored && Date.now() - stored.at < CACHE_DAYS * 864e5) {
+      memCache[key] = stored.info;
+      return Promise.resolve(stored.info);
+    }
+    if (pending[key]) return pending[key];
+
+    pending[key] = searchTmdb(peli).then(function (hit) {
+      if (!hit) return null;
+      return tmdbGet('/movie/' + hit.id, { language: TMDB_LANG }).then(function (d) {
+        var info = {
+          id: d.id,
+          title: d.title || hit.title,
+          original: d.original_title || '',
+          overview: d.overview || hit.overview || '',
+          date: d.release_date || hit.release_date || '',
+          vote: d.vote_average || 0,
+          votes: d.vote_count || 0,
+          runtime: d.runtime || 0,
+          genres: (d.genres || []).map(function (g) { return g.name; }),
+          poster: d.poster_path || hit.poster_path || ''
+        };
+        if (info.overview) return info;
+        // Sin sinopsis en español: se intenta en inglés
+        return tmdbGet('/movie/' + hit.id, { language: 'en-US' }).then(function (en) {
+          info.overview = en.overview || '';
+          info.overviewLang = 'en';
+          return info;
+        }, function () { return info; });
+      });
+    }).then(function (info) {
+      memCache[key] = info;
+      if (info) writeCache(key, info);
+      delete pending[key];
+      return info;
+    }, function (err) {
+      delete pending[key]; // error de red: no se guarda, se puede reintentar
+      throw err;
+    });
+    return pending[key];
+  }
+
+  // ------------------------------------------------------------------
+  // Ventana de sinopsis (<dialog>)
+  // ------------------------------------------------------------------
+  var modal = null;
+
+  function formatRuntime(min) {
+    if (!min) return '';
+    var h = Math.floor(min / 60), m = min % 60;
+    return (h ? h + ' h ' : '') + (m ? m + ' min' : '');
+  }
+
+  function getModal() {
+    if (modal) return modal;
+    var dlg = el('dialog', 'pelis-modal');
+    dlg.setAttribute('aria-labelledby', 'pelis-modal-titulo');
+
+    var closeBtn = el('button', 'pelis-modal-cerrar', '×');
+    closeBtn.type = 'button';
+    closeBtn.setAttribute('aria-label', 'Cerrar');
+
+    var body = el('div', 'pelis-modal-cuerpo');
+    var poster = el('img', 'pelis-modal-poster');
+    poster.alt = '';
+    poster.referrerPolicy = 'no-referrer';
+    poster.onerror = function () { poster.src = PLACEHOLDER; };
+
+    var info = el('div', 'pelis-modal-info');
+    var title = el('h3', 'pelis-modal-titulo');
+    title.id = 'pelis-modal-titulo';
+    var original = el('p', 'pelis-modal-original');
+    var meta = el('p', 'pelis-modal-meta');
+    var text = el('p', 'pelis-modal-texto');
+    text.setAttribute('aria-live', 'polite');
+    var actions = el('div', 'pelis-modal-acciones');
+    var credit = el('p', 'pelis-modal-credito');
+
+    info.appendChild(title);
+    info.appendChild(original);
+    info.appendChild(meta);
+    info.appendChild(text);
+    info.appendChild(actions);
+    info.appendChild(credit);
+    body.appendChild(poster);
+    body.appendChild(info);
+    dlg.appendChild(closeBtn);
+    dlg.appendChild(body);
+    document.body.appendChild(dlg);
+
+    function close() {
+      if (typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open');
+    }
+    closeBtn.addEventListener('click', close);
+    // Clic fuera del recuadro (en el fondo oscuro) cierra la ventana
+    dlg.addEventListener('click', function (ev) { if (ev.target === dlg) close(); });
+
+    modal = { dlg: dlg, poster: poster, title: title, original: original, meta: meta, text: text,
+      actions: actions, credit: credit, close: close, token: 0 };
+    return modal;
+  }
+
+  function openSinopsis(peli, onPlay) {
+    var m = getModal();
+    var token = ++m.token;
+
+    m.poster.src = peli.img;
+    m.title.textContent = peli.t;
+    m.original.textContent = '';
+    m.original.hidden = true;
+    m.meta.textContent = '';
+    m.meta.hidden = true;
+    m.text.textContent = 'Buscando sinopsis…';
+    m.text.className = 'pelis-modal-texto is-cargando';
+    m.credit.textContent = '';
+
+    m.actions.textContent = '';
+    var action;
+    if (peli.v) {
+      action = el('button', 'btn btn-danger fw-bold', '▶ Ver aquí');
+      action.type = 'button';
+      action.addEventListener('click', function () { m.close(); onPlay(); });
+    } else {
+      action = el('a', 'btn btn-primary fw-bold', '↗ Abrir película');
+      action.href = peli.e;
+      action.target = '_blank';
+      action.rel = 'noopener noreferrer';
+    }
+    m.actions.appendChild(action);
+
+    if (!m.dlg.open) {
+      if (typeof m.dlg.showModal === 'function') m.dlg.showModal(); else m.dlg.setAttribute('open', '');
+    }
+    action.focus();
+
+    fetchSinopsis(peli).then(function (info) {
+      if (token !== m.token) return; // el usuario ya abrió otra película
+      if (!info) {
+        m.text.textContent = 'No encontramos la sinopsis de esta película en TMDB.';
+        m.text.className = 'pelis-modal-texto is-vacio';
+        return;
+      }
+      if (info.poster && !tmdbPosterPath(peli.img)) m.poster.src = TMDB_IMG + info.poster;
+      var year = (info.date || '').slice(0, 4);
+      m.title.textContent = info.title + (year ? ' (' + year + ')' : '');
+      if (info.original && normalizeText(info.original) !== normalizeText(info.title)) {
+        m.original.textContent = 'Título original: ' + info.original;
+        m.original.hidden = false;
+      }
+      var parts = [];
+      if (info.votes) parts.push('★ ' + info.vote.toFixed(1));
+      if (info.runtime) parts.push(formatRuntime(info.runtime));
+      if (info.genres.length) parts.push(info.genres.slice(0, 3).join(', '));
+      m.meta.textContent = parts.join('  ·  ');
+      m.meta.hidden = !parts.length;
+      m.text.className = 'pelis-modal-texto';
+      m.text.textContent = info.overview || 'Esta película no tiene sinopsis en TMDB.';
+      if (info.overviewLang === 'en' && info.overview) m.text.textContent += ' (sinopsis disponible solo en inglés)';
+      var link = el('a', null, 'Ver en TMDB');
+      link.href = 'https://www.themoviedb.org/movie/' + info.id + '?language=' + TMDB_LANG;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      m.credit.appendChild(document.createTextNode('Datos de TMDB · '));
+      m.credit.appendChild(link);
+    }, function () {
+      if (token !== m.token) return;
+      m.text.textContent = 'No se pudo consultar la sinopsis. Revisa tu conexión e inténtalo de nuevo.';
+      m.text.className = 'pelis-modal-texto is-vacio';
+    });
+  }
+
+  // ------------------------------------------------------------------
   // Estilos (se inyectan una sola vez)
   // ------------------------------------------------------------------
   function injectStyles() {
@@ -466,7 +722,25 @@
       '.pelis-toolbar select{flex:0 1 180px;width:auto;}',
       '.pelis-contador{flex:1 0 100%;font-size:.9rem;opacity:.85;}',
       '@media (min-width:768px){.pelis-contador{flex:0 0 auto;}}',
-      '.pelis-card{margin:0;}',
+      '.pelis-card{margin:0;position:relative;}',
+      '.pelis-info{position:absolute;top:6px;left:6px;z-index:2;display:flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border:0;border-radius:50%;background:rgba(0,0,0,.72);color:#fff;cursor:pointer;transition:background .15s ease,transform .15s ease;}',
+      '.pelis-info:hover{background:#ffc107;color:#000;transform:scale(1.08);}',
+      '.pelis-info:focus-visible{outline:3px solid #ffc107;outline-offset:2px;}',
+      '.pelis-modal{width:min(760px,94vw);max-height:90vh;padding:0;border:0;border-radius:12px;background:#15152e;color:#f1f1f6;box-shadow:0 20px 60px rgba(0,0,0,.6);overflow:auto;}',
+      '.pelis-modal::backdrop{background:rgba(0,0,0,.75);}',
+      '.pelis-modal-cerrar{position:absolute;top:8px;right:10px;z-index:1;width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:26px;line-height:1;cursor:pointer;}',
+      '.pelis-modal-cerrar:hover{background:rgba(255,255,255,.25);}',
+      '.pelis-modal-cuerpo{display:flex;gap:20px;padding:22px;}',
+      '.pelis-modal-poster{flex:0 0 200px;width:200px;aspect-ratio:2/3;height:auto;object-fit:cover;border-radius:8px;background:#22224a;}',
+      '.pelis-modal-info{flex:1;min-width:0;padding-right:28px;}',
+      '.pelis-modal-titulo{margin:0 0 6px;font-size:1.5rem;font-weight:bold;color:#fff;}',
+      '.pelis-modal-original{margin:0 0 6px;font-size:.9rem;color:#c3c3d8;}',
+      '.pelis-modal-meta{margin:0 0 12px;font-size:.9rem;color:#ffd54f;}',
+      '.pelis-modal-texto{margin:0 0 16px;line-height:1.55;font-size:1rem;}',
+      '.pelis-modal-texto.is-cargando,.pelis-modal-texto.is-vacio{color:#c3c3d8;font-style:italic;}',
+      '.pelis-modal-credito{margin:14px 0 0;font-size:.8rem;color:#a9a9c4;}',
+      '.pelis-modal-credito a{color:#7fc8ff;}',
+      '@media (max-width:575px){.pelis-modal-cuerpo{flex-direction:column;align-items:center;padding:18px;}.pelis-modal-poster{flex-basis:auto;width:150px;}.pelis-modal-info{padding-right:0;width:100%;}}',
       '.pelis-card-link{display:block;width:100%;padding:0;border:0;background:none;color:inherit;text-align:left;text-decoration:none;cursor:pointer;border-radius:8px;}',
       '.pelis-card-link:hover,.pelis-card-link:focus{color:inherit;text-decoration:none;}',
       '.pelis-card-link:focus-visible{outline:3px solid #ffc107;outline-offset:2px;}',
@@ -525,8 +799,21 @@
     link.appendChild(poster);
     link.appendChild(el('span', 'pelis-titulo', peli.t));
     li.appendChild(link);
+
+    // Lupa: botón aparte (no puede ir dentro del botón/enlace de la tarjeta)
+    var info = el('button', 'pelis-info');
+    info.type = 'button';
+    info.title = 'Ver sinopsis';
+    info.setAttribute('aria-label', 'Ver sinopsis de ' + peli.t);
+    info.setAttribute('data-index', index);
+    info.innerHTML = LUPA_SVG; // SVG fijo, no contiene datos externos
+    li.appendChild(info);
     return li;
   }
+
+  var LUPA_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">' +
+    '<circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.5"/>' +
+    '<line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>';
 
   function buildOption(value, text) {
     var o = el('option', null, text);
@@ -610,18 +897,27 @@
     this.moreBtn.addEventListener('click', function () { self.shown += PAGE_SIZE; self.apply(); });
 
     this.grid.addEventListener('click', function (ev) {
+      var lupa = ev.target.closest('.pelis-info');
+      if (lupa) {
+        var j = Number(lupa.getAttribute('data-index'));
+        if (PELIS[j]) openSinopsis(PELIS[j], function () { self.play(j); });
+        return;
+      }
       var link = ev.target.closest('.pelis-card-link');
       if (!link || link.tagName !== 'BUTTON') return; // los <a> externos se abren solos
-      var i = Number(link.getAttribute('data-index'));
-      var peli = PELIS[i];
-      if (!peli || !peli.v) return;
-      self.cards.forEach(function (c) { c.classList.remove('is-active'); });
-      self.cards[i].classList.add('is-active');
-      videoUrl(peli.v, peli.t);
+      self.play(Number(link.getAttribute('data-index')));
     });
 
     this.apply();
   }
+
+  Catalogo.prototype.play = function (i) {
+    var peli = PELIS[i];
+    if (!peli || !peli.v) return;
+    this.cards.forEach(function (c) { c.classList.remove('is-active'); });
+    this.cards[i].classList.add('is-active');
+    videoUrl(peli.v, peli.t);
+  };
 
   Catalogo.prototype.apply = function () {
     var q = normalizeText(this.input.value).trim();
