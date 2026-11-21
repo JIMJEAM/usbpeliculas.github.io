@@ -210,6 +210,33 @@ Blue Heron (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
     </ul>
 
     <ul id="video_navigation" class="video-grid-responsive">
+   <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/rsqwtfptgoik"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/cbDWLVV7b3RAHvQBMd7eSvR5gBy.jpg" alt="
+Fresh Meat (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/lhvwq83jid0h"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/6VHAOIOO4MJXv19EtW5WFVRWztH.jpg" alt="
+The Floaters (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/sjevss8aaimw"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/kzTJg0zhWJRDHJPYEpSqxkFigTv.jpg" alt="
+The Gospel of Christmas (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    </ul>
+
+    <ul id="video_navigation" class="video-grid-responsive">
+   <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/kbhzv2wwwmgj"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/zQPB0tL1sH1r54EDlqMugYqmcuu.jpg" alt="
+Atonement (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/poppe7bs6rdb"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/m9eKFDSRFkCBoFw2oPRAUvTEUCH.jpg" alt="
+Reckless (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/vgtqdclsqjdf"  target="_blank "><img src="https://image.tmdb.org/t/p/w600_and_h900_face/fGwz8f16pYPErspL0QpQYvOZMZj.jpg" alt="
+Everybody Digs Bill Evans (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    </ul>
+
+    <ul id="video_navigation" class="video-grid-responsive">
+   <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/tgzq02qeupca"  target="_blank "><img src=https://image.tmdb.org/t/p/w600_and_h900_face/w98RWv9o05OhXYfTvauDrotRZ13.jpg" alt="
+Ha-Chan, Shake Your Booty! (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/bfmcuxjejrmi"  target="_blank "><img src="https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_portrait_of_an_artist_stephen_curry_v2_9a03c509.jpeg" alt="
+Portrait of an Artist: Stephen Curry (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+      <li class="cursor-pointer"><a href="https://caseyseemavoid.com/e/hwz6nmdnoyyx"  target="_blank "><img src="https://a.ltrbxd.com/resized/film-poster/1/5/9/0/8/5/5/1590855-tina-arena-unravel-me-0-1000-0-1500-crop.jpg?v=7a6b5317f3" alt="
+Tina Arena: Unravel Me (2026)" class="img_video_nav img-thumbnail w-100"></a></li>
+    </ul>
+
+    <ul id="video_navigation" class="video-grid-responsive">
     <li class="cursor-pointer"> <img src="https://assets.biggerpicture.ai/assets/HO-1600/eventmaster/1136_4.png" alt="El mono (2025)" class="img_video_nav img-thumbnail w-100" onclick="videoUrl('https://ia903207.us.archive.org/9/items/Kmonito/Kmonito.mp4')"> </li>
     <li class="cursor-pointer"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH_jwdXm6FHdNgv88RD39gMGgIDCDG8LRpOA&s" alt="La compañera perfecta (2025)" class="img_video_nav img-thumbnail w-100" onclick="videoUrl('https://ia601300.us.archive.org/30/items/Copernico/Copernico.mp4')"> </li> 
      <li class="cursor-pointer"> <img src="https://image.tmdb.org/t/p/original/xVwP4GCbEfO66JSSyonnAhU3Fad.jpg" alt="
